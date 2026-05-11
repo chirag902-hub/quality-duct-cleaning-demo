@@ -1,0 +1,1732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MJ Aire | Sioux Falls HVAC — AC Repair, Furnace Service & Emergency HVAC</title>
+  <meta name="description" content="MJ Aire — locally owned HVAC in Sioux Falls & Tea, SD. Same-day AC repair, furnace service, and 24/7 emergency HVAC. Call Mike: (605) 214-9418." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --steel: #3B6E8F;
+      --steel-hover: #2A5572;
+      --navy: #162433;
+      --ice: #F4F8FA;
+      --white: #FFFFFF;
+      --text: #1A2733;
+      --text-light: #4A6070;
+      --border: #DDE6EC;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: var(--white);
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: 0.01em;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    img { max-width: 100%; display: block; }
+
+    /* ── SCROLL FADE ANIMATION ────────────────────────────── */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── HEADER ───────────────────────────────────────────── */
+    #site-header {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background: var(--navy);
+      border-bottom: 3px solid var(--steel);
+      padding: 0 24px;
+      transition: background 0.3s;
+    }
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .header-logo {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 1.75rem;
+      letter-spacing: 0.06em;
+      color: var(--white);
+      text-transform: uppercase;
+    }
+    .header-logo span { color: var(--steel); }
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .header-phone {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 1.45rem;
+      color: var(--white);
+      letter-spacing: 0.03em;
+      white-space: nowrap;
+    }
+    .header-phone:hover { color: #A8C8DC; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--steel);
+      color: var(--white);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 13px 26px;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+      white-space: nowrap;
+    }
+    .btn:hover {
+      background: var(--steel-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(59,110,143,0.35);
+    }
+    .btn-outline {
+      background: transparent;
+      border: 2px solid var(--steel);
+      color: var(--steel);
+    }
+    .btn-outline:hover {
+      background: var(--steel);
+      color: var(--white);
+    }
+    .btn-lg {
+      font-size: 1.25rem;
+      padding: 17px 36px;
+    }
+    .btn-white {
+      background: var(--white);
+      color: var(--navy);
+    }
+    .btn-white:hover {
+      background: var(--ice);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    }
+
+    /* ── SECTION WRAPPER ─────────────────────────────────── */
+    .section {
+      padding: 96px 24px;
+    }
+    .section-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .section-tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--steel);
+      margin-bottom: 14px;
+    }
+    .section-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--navy);
+      margin-bottom: 16px;
+    }
+    .section-sub {
+      font-size: 1.1rem;
+      color: var(--text-light);
+      line-height: 1.65;
+      max-width: 580px;
+    }
+
+    /* ── DIAGONAL CLIP ──────────────────────────────────── */
+    .clip-bottom {
+      clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
+      padding-bottom: 140px;
+    }
+    .clip-top {
+      clip-path: polygon(0 8%, 100% 0, 100% 100%, 0 100%);
+      margin-top: -60px;
+      padding-top: 120px;
+    }
+
+    /* ── HERO ────────────────────────────────────────────── */
+    #hero {
+      position: relative;
+      min-height: 680px;
+      background: var(--navy);
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://static.wixstatic.com/media/3b1244_fc9f43c3c7064da19eb5b6721f648d37~mv2.jpg');
+      background-size: cover;
+      background-position: center top;
+      opacity: 0.22;
+    }
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(105deg, rgba(22,36,51,0.92) 45%, rgba(22,36,51,0.55) 100%);
+    }
+    /* subtle noise texture on dark sections */
+    .dark-texture::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      background-size: 256px;
+      opacity: 0.5;
+      pointer-events: none;
+      z-index: 1;
+    }
+    .hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 64px;
+      align-items: center;
+      padding: 90px 0;
+      position: relative;
+      z-index: 2;
+    }
+    .hero-copy { color: var(--white); }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(59,110,143,0.25);
+      border: 1px solid rgba(59,110,143,0.5);
+      border-radius: 100px;
+      padding: 6px 14px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #A8C8DC;
+      margin-bottom: 24px;
+    }
+    .hero-badge .dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: #4ABFDD;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+    .hero-h1 {
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      color: var(--white);
+      margin-bottom: 18px;
+      line-height: 1.0;
+    }
+    .hero-h1 em {
+      font-style: normal;
+      color: #7BB8D4;
+    }
+    .hero-sub {
+      font-size: 1.05rem;
+      color: #A8C0CC;
+      margin-bottom: 32px;
+      line-height: 1.55;
+      font-weight: 500;
+    }
+    .hero-bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+      margin-bottom: 40px;
+    }
+    .hero-bullets li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1rem;
+      color: #C8D8E0;
+      font-weight: 500;
+    }
+    .hero-bullets li svg {
+      flex-shrink: 0;
+      color: var(--steel);
+    }
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+    }
+    .hero-ctas .link-cta {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #A8C8DC;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s;
+    }
+    .hero-ctas .link-cta:hover { color: var(--white); }
+
+    /* ── LEAD FORM ───────────────────────────────────────── */
+    .hero-form-card {
+      background: var(--white);
+      border-radius: 8px;
+      padding: 36px 32px;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.35);
+    }
+    .form-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .form-sub {
+      font-size: 0.88rem;
+      color: var(--text-light);
+      margin-bottom: 24px;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 14px;
+    }
+    .form-group label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--navy);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1.5px solid var(--border);
+      border-radius: 4px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      color: var(--text);
+      background: var(--white);
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      appearance: none;
+    }
+    .form-group input:focus,
+    .form-group select:focus {
+      border-color: var(--steel);
+      box-shadow: 0 0 0 3px rgba(59,110,143,0.15);
+    }
+    .form-submit { margin-top: 6px; }
+    .form-submit .btn { width: 100%; font-size: 1.1rem; padding: 15px; }
+    .form-disclaimer {
+      font-size: 0.78rem;
+      color: var(--text-light);
+      text-align: center;
+      margin-top: 12px;
+      line-height: 1.5;
+    }
+    .form-trust {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 18px;
+    }
+    .form-trust-item {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--text-light);
+    }
+    .form-trust-item svg { color: var(--steel); flex-shrink: 0; }
+
+    /* ── TRUST BAR ───────────────────────────────────────── */
+    #trust-bar {
+      background: #1E2E3A;
+      padding: 28px 24px;
+    }
+    .trust-bar-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0;
+      justify-content: space-around;
+      align-items: center;
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 20px;
+      color: var(--white);
+    }
+    .trust-item svg { color: var(--steel); flex-shrink: 0; }
+    .trust-item-text {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    /* ── STATS BAR ───────────────────────────────────────── */
+    #stats-bar {
+      background: var(--ice);
+      padding: 64px 24px;
+    }
+    .stats-grid {
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      text-align: center;
+    }
+    .stat-num {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 3.5rem;
+      font-weight: 900;
+      color: var(--navy);
+      line-height: 1;
+    }
+    .stat-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      margin-top: 8px;
+    }
+
+    /* ── SERVICES GRID ───────────────────────────────────── */
+    #services { background: var(--white); }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-top: 56px;
+    }
+    .service-card {
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: 6px;
+      padding: 32px 26px;
+      transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+      position: relative;
+    }
+    .service-card:hover {
+      border-color: var(--steel);
+      box-shadow: 0 0 0 1px var(--steel), 0 12px 40px rgba(59,110,143,0.12);
+      transform: translateY(-3px);
+    }
+    .service-icon {
+      width: 48px;
+      height: 48px;
+      color: var(--steel);
+      margin-bottom: 20px;
+    }
+    .service-card h3 {
+      font-size: 1.2rem;
+      color: var(--navy);
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .service-card p {
+      font-size: 0.9rem;
+      color: var(--text-light);
+      line-height: 1.6;
+      margin-bottom: 18px;
+    }
+    .service-link {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--steel);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      transition: gap 0.2s;
+    }
+    .service-card:hover .service-link { gap: 9px; }
+
+    /* ── ABOUT ───────────────────────────────────────────── */
+    #about { background: var(--ice); }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: center;
+    }
+    .about-photo-wrap {
+      position: relative;
+    }
+    .about-photo {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      object-position: top center;
+      border-radius: 6px;
+      filter: brightness(0.9) contrast(1.05) saturate(0.92);
+    }
+    .about-badge {
+      position: absolute;
+      bottom: -20px;
+      right: -20px;
+      background: var(--navy);
+      color: var(--white);
+      border-radius: 6px;
+      padding: 20px 24px;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+    }
+    .about-badge-num {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1;
+    }
+    .about-badge-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #7BB8D4;
+      margin-top: 4px;
+    }
+    .about-copy h2 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); color: var(--navy); margin-bottom: 24px; }
+    .about-copy p { font-size: 1.05rem; color: var(--text-light); line-height: 1.7; margin-bottom: 16px; }
+    .cred-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 32px;
+    }
+    .cred-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+    .cred-item svg { color: var(--steel); flex-shrink: 0; margin-top: 2px; }
+
+    /* ── TESTIMONIALS ────────────────────────────────────── */
+    #testimonials { background: var(--navy); }
+    #testimonials .section-title { color: var(--white); }
+    #testimonials .section-sub { color: #A8C0CC; }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 56px;
+    }
+    .testi-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px;
+      padding: 36px 32px;
+      position: relative;
+    }
+    .testi-quote {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 5rem;
+      font-weight: 900;
+      color: rgba(59,110,143,0.35);
+      line-height: 0.8;
+      margin-bottom: 16px;
+    }
+    .testi-text {
+      font-size: 1rem;
+      color: #C8D8E0;
+      line-height: 1.7;
+      margin-bottom: 28px;
+    }
+    .testi-author {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .testi-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--steel);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--white);
+      flex-shrink: 0;
+    }
+    .testi-name {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--white);
+    }
+    .testi-loc {
+      font-size: 0.78rem;
+      color: #7899A8;
+      margin-top: 2px;
+    }
+    .testi-stars {
+      color: #F5BE42;
+      font-size: 0.95rem;
+      letter-spacing: 1px;
+      margin-bottom: 3px;
+    }
+    .testimonials-footer {
+      margin-top: 48px;
+      text-align: center;
+    }
+    .testimonials-footer .rating-big {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: var(--white);
+    }
+    .testimonials-footer .rating-sub {
+      font-size: 0.85rem;
+      color: #7899A8;
+      margin-top: 4px;
+    }
+    .testimonials-footer a {
+      display: inline-block;
+      margin-top: 14px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--steel);
+      transition: color 0.2s;
+    }
+    .testimonials-footer a:hover { color: #A8C8DC; }
+
+    /* ── OFFER ───────────────────────────────────────────── */
+    #offer {
+      background: var(--steel);
+      padding: 96px 24px;
+    }
+    #offer .section-tag { color: rgba(255,255,255,0.7); }
+    #offer .section-title { color: var(--white); }
+    #offer .section-sub { color: rgba(255,255,255,0.8); max-width: 100%; }
+    .offer-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .offer-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: center;
+      margin-top: 48px;
+    }
+    .offer-includes {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .offer-includes li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: rgba(255,255,255,0.9);
+    }
+    .offer-includes li svg { color: rgba(255,255,255,0.6); flex-shrink: 0; }
+    .offer-cta-block { text-align: center; }
+    .offer-cta-block p {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.65);
+      margin-top: 16px;
+      line-height: 1.5;
+    }
+
+    /* ── WHY CHOOSE ──────────────────────────────────────── */
+    #why { background: var(--ice); }
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: center;
+    }
+    .why-photo {
+      width: 100%;
+      height: 460px;
+      object-fit: cover;
+      border-radius: 6px;
+      filter: brightness(0.9) contrast(1.05) saturate(0.9);
+    }
+    .why-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 36px;
+    }
+    .why-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 20px 22px;
+      background: var(--white);
+      border-radius: 5px;
+      border-left: 3px solid var(--steel);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    }
+    .why-item svg { color: var(--steel); flex-shrink: 0; margin-top: 2px; }
+    .why-item-text {
+      font-size: 0.95rem;
+      color: var(--text);
+      font-weight: 500;
+      line-height: 1.55;
+    }
+    .why-item-text strong {
+      display: block;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 2px;
+    }
+
+    /* ── HOW IT WORKS ────────────────────────────────────── */
+    #how { background: var(--white); }
+    .how-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      margin-top: 64px;
+      position: relative;
+    }
+    .how-steps::before {
+      content: '';
+      position: absolute;
+      top: 36px;
+      left: calc(16.66% + 20px);
+      right: calc(16.66% + 20px);
+      height: 2px;
+      background: var(--border);
+    }
+    .step {
+      text-align: center;
+      position: relative;
+    }
+    .step-num {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: var(--navy);
+      color: var(--white);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 900;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 28px;
+      position: relative;
+      z-index: 2;
+      border: 4px solid var(--ice);
+    }
+    .step h3 {
+      font-size: 1.3rem;
+      color: var(--navy);
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .step p {
+      font-size: 0.95rem;
+      color: var(--text-light);
+      line-height: 1.65;
+    }
+
+    /* ── EMERGENCY BAND ──────────────────────────────────── */
+    #emergency {
+      background: #111C24;
+      padding: 80px 24px;
+      text-align: center;
+      position: relative;
+    }
+    #emergency .section-tag { color: #E06060; }
+    #emergency h2 {
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+    #emergency p {
+      font-size: 1.1rem;
+      color: #7899A8;
+      margin-bottom: 40px;
+    }
+    .emergency-btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    /* ── FAQ ─────────────────────────────────────────────── */
+    #faq { background: var(--ice); }
+    .faq-list {
+      max-width: 780px;
+      margin: 56px auto 0;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .faq-item {
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    .faq-q {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 24px;
+      cursor: pointer;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--navy);
+      letter-spacing: 0.02em;
+      user-select: none;
+      transition: background 0.15s;
+    }
+    .faq-q:hover { background: var(--ice); }
+    .faq-q svg {
+      flex-shrink: 0;
+      color: var(--steel);
+      transition: transform 0.25s;
+    }
+    .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.2s;
+      font-size: 0.97rem;
+      color: var(--text-light);
+      line-height: 1.7;
+    }
+    .faq-a-inner { padding: 0 24px 22px; }
+    .faq-item.open .faq-a { max-height: 300px; }
+    .faq-item.open .faq-q svg { transform: rotate(180deg); }
+    .faq-item.open { border-color: var(--steel); }
+
+    /* ── FINAL FORM SECTION ──────────────────────────────── */
+    #final-form {
+      background: var(--navy);
+      padding: 96px 24px;
+    }
+    #final-form .section-tag { color: #7BB8D4; }
+    #final-form .section-title { color: var(--white); }
+    #final-form .section-sub { color: #7899A8; }
+    .final-form-inner {
+      max-width: 560px;
+      margin: 48px auto 0;
+    }
+    .final-form-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px;
+      padding: 40px 36px;
+    }
+    .final-form-card .form-group label { color: #A8C0CC; }
+    .final-form-card .form-group input,
+    .final-form-card .form-group select {
+      background: rgba(255,255,255,0.07);
+      border-color: rgba(255,255,255,0.15);
+      color: var(--white);
+    }
+    .final-form-card .form-group input::placeholder { color: rgba(255,255,255,0.3); }
+    .final-form-card .form-group input:focus,
+    .final-form-card .form-group select:focus {
+      border-color: var(--steel);
+    }
+    .final-form-card .form-group select option { background: var(--navy); }
+
+    /* ── FOOTER ──────────────────────────────────────────── */
+    footer {
+      background: #0C1820;
+      padding: 48px 24px 32px;
+      color: #5A7080;
+    }
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .footer-top {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 40px;
+      align-items: start;
+      padding-bottom: 32px;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      margin-bottom: 28px;
+    }
+    .footer-logo {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: var(--white);
+      letter-spacing: 0.06em;
+    }
+    .footer-logo span { color: var(--steel); }
+    .footer-contact { text-align: center; }
+    .footer-contact a {
+      display: block;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--white);
+      letter-spacing: 0.03em;
+      transition: color 0.2s;
+    }
+    .footer-contact a:hover { color: var(--steel); }
+    .footer-contact .footer-email {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 400;
+      margin-top: 4px;
+      color: #5A7080;
+    }
+    .footer-social a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #5A7080;
+      transition: color 0.2s;
+    }
+    .footer-social a:hover { color: var(--white); }
+    .footer-bottom {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.8rem;
+      line-height: 1.6;
+    }
+    .footer-bottom a { color: #3B6E8F; transition: color 0.2s; }
+    .footer-bottom a:hover { color: var(--white); }
+
+    /* ── MOBILE STICKY CTA ───────────────────────────────── */
+    #mobile-cta {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 998;
+      background: var(--navy);
+      padding: 14px 20px;
+      border-top: 2px solid var(--steel);
+      box-shadow: 0 -8px 32px rgba(0,0,0,0.4);
+    }
+    #mobile-cta a {
+      display: block;
+      text-align: center;
+      width: 100%;
+      background: var(--steel);
+      color: var(--white);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 1.25rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 16px;
+      border-radius: 4px;
+    }
+
+    /* ── RESPONSIVE ──────────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 860px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 48px;
+        padding: 64px 0;
+      }
+      .hero-form-card { max-width: 480px; }
+      .about-grid { grid-template-columns: 1fr; gap: 40px; }
+      .about-photo { height: 340px; }
+      .about-badge { right: 0; bottom: -16px; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .offer-grid { grid-template-columns: 1fr; gap: 36px; }
+      .why-grid { grid-template-columns: 1fr; gap: 40px; }
+      .why-photo { height: 300px; }
+      .how-steps { grid-template-columns: 1fr; }
+      .how-steps::before { display: none; }
+      .footer-top { grid-template-columns: 1fr; gap: 24px; }
+      .footer-contact { text-align: left; }
+    }
+
+    @media (max-width: 640px) {
+      .section { padding: 72px 20px; }
+      .services-grid { grid-template-columns: 1fr; }
+      .cred-grid { grid-template-columns: 1fr; }
+      .form-trust { grid-template-columns: 1fr; }
+      .header-phone { font-size: 1.1rem; }
+      #mobile-cta { display: block; }
+      body { padding-bottom: 76px; }
+      .trust-bar-inner { flex-direction: column; gap: 4px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══ HEADER ══════════════════════════════════════════ -->
+  <header id="site-header">
+    <div class="header-inner">
+      <a href="#hero" class="header-logo">MJ<span>.</span>AIRE</a>
+      <div class="header-right">
+        <a href="tel:6052149418" class="header-phone">&#9742; (605) 214-9418</a>
+        <a href="#hero-form" class="btn">Schedule Service</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ══ HERO ════════════════════════════════════════════ -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-inner">
+      <div class="hero-copy fade-up">
+        <div class="hero-badge"><span class="dot"></span>Serving Sioux Falls &amp; Tea, SD</div>
+        <h1 class="hero-h1">Sioux Falls AC &amp; Heating —<br /><em>Honest Work, No Upselling.</em></h1>
+        <p class="hero-sub">Same-Day Service &nbsp;·&nbsp; Licensed &amp; Insured &nbsp;·&nbsp; 12+ Years Local Experience</p>
+        <ul class="hero-bullets">
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Same-Day Appointments Available
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Upfront, Transparent Pricing
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Emergency HVAC Repair — 24/7
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Locally Owned — You Talk Directly to Mike
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Free Estimates
+          </li>
+        </ul>
+        <div class="hero-ctas">
+          <a href="tel:6052149418" class="btn btn-lg">Call Mike: (605) 214-9418</a>
+          <a href="#hero-form" class="link-cta">Or request a callback &rarr;</a>
+        </div>
+      </div>
+
+      <!-- FORM -->
+      <div class="hero-form-card fade-up" id="hero-form" style="transition-delay:0.15s">
+        <div class="form-title">Get Your Free Estimate</div>
+        <div class="form-sub">No obligation. No pressure. Just an honest answer.</div>
+        <form onsubmit="handleFormSubmit(event)">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="John Smith" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="(605) 555-0100" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="john@email.com" />
+          </div>
+          <div class="form-group">
+            <label for="zip">ZIP Code</label>
+            <input type="text" id="zip" name="zip" placeholder="57104" maxlength="5" />
+          </div>
+          <div class="form-group">
+            <label for="service">Service Needed</label>
+            <select id="service" name="service">
+              <option value="">Select a service…</option>
+              <option>AC Repair</option>
+              <option>Furnace Repair</option>
+              <option>HVAC Tune-Up</option>
+              <option>Emergency HVAC</option>
+              <option>System Replacement</option>
+              <option>Indoor Air Quality</option>
+              <option>New Construction / Basement Finish</option>
+              <option>Garage Heater</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="time">Best Time to Reach You</label>
+            <select id="time" name="time">
+              <option value="">Select a time…</option>
+              <option>Morning (8am – 12pm)</option>
+              <option>Afternoon (12pm – 5pm)</option>
+              <option>Evening (5pm – 8pm)</option>
+              <option>Anytime</option>
+            </select>
+          </div>
+          <div class="form-submit">
+            <button type="submit" class="btn">Get My Free Estimate</button>
+          </div>
+        </form>
+        <p class="form-disclaimer"><em>"No obligation. No pressure. Just an honest answer."</em></p>
+        <div class="form-trust">
+          <div class="form-trust-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            5-Star Rated
+          </div>
+          <div class="form-trust-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Licensed &amp; Insured
+          </div>
+          <div class="form-trust-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            Family Owned
+          </div>
+          <div class="form-trust-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            24/7 Emergency
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ TRUST BAR ════════════════════════════════════════ -->
+  <div id="trust-bar">
+    <div class="trust-bar-inner">
+      <div class="trust-item">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <span class="trust-item-text">5-Star Reviews</span>
+      </div>
+      <div class="trust-item">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        <span class="trust-item-text">12+ Years Experience</span>
+      </div>
+      <div class="trust-item">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span class="trust-item-text">Licensed &amp; Insured</span>
+      </div>
+      <div class="trust-item">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <span class="trust-item-text">Emergency Service 24/7</span>
+      </div>
+      <div class="trust-item">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+        <span class="trust-item-text">Free Estimates</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ STATS BAR ════════════════════════════════════════ -->
+  <section id="stats-bar">
+    <div class="stats-grid">
+      <div class="fade-up">
+        <div class="stat-num">12+</div>
+        <div class="stat-label">Years in HVAC</div>
+      </div>
+      <div class="fade-up" style="transition-delay:0.1s">
+        <div class="stat-num">5&#9733;</div>
+        <div class="stat-label">Average Rating</div>
+      </div>
+      <div class="fade-up" style="transition-delay:0.2s">
+        <div class="stat-num">24/7</div>
+        <div class="stat-label">Emergency Service</div>
+      </div>
+      <div class="fade-up" style="transition-delay:0.3s">
+        <div class="stat-num">$0</div>
+        <div class="stat-label">Cost to Estimate</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ SERVICES ═════════════════════════════════════════ -->
+  <section id="services" class="section">
+    <div class="section-inner">
+      <div class="fade-up">
+        <span class="section-tag">What We Do</span>
+        <h2 class="section-title">HVAC Services for Sioux Falls Homeowners</h2>
+        <p class="section-sub">Every job is handled by Mike — no subcontractors, no surprises. Just solid HVAC work at a fair price.</p>
+      </div>
+
+      <div class="services-grid">
+
+        <!-- AC Repair -->
+        <div class="service-card fade-up">
+          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/><path d="M8 11h8"/><path d="M10 8l2 2 2-2"/>
+          </svg>
+          <h3>AC Repair</h3>
+          <p>Fast diagnosis, same-day fixes on most units. Don't sweat it out — Mike comes to you.</p>
+          <a href="tel:6052149418" class="service-link">Call Now &rarr;</a>
+        </div>
+
+        <!-- Furnace Repair -->
+        <div class="service-card fade-up" style="transition-delay:0.05s">
+          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2a7 7 0 017 7c0 4-3 6-3 9H8c0-3-3-5-3-9a7 7 0 017-7z"/><line x1="9" y1="21" x2="15" y2="21"/><line x1="10" y1="17" x2="14" y2="17"/>
+          </svg>
+          <h3>Furnace Repair</h3>
+          <p>South Dakota winters don't wait. Neither do we. Get your heat back the same day.</p>
+          <a href="tel:6052149418" class="service-link">Call Now &rarr;</a>
+        </div>
+
+        <!-- Tune-Ups -->
+        <div class="service-card fade-up" style="transition-delay:0.1s">
+          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/>
+          </svg>
+          <h3>HVAC Tune-Ups</h3>
+          <p>Seasonal maintenance that catches problems early — before they cost you thousands.</p>
+          <a href="#hero-form" class="service-link">Schedule Now &rarr;</a>
+        </div>
+
+        <!-- Emergency -->
+        <div class="service-card fade-up" style="transition-delay:0.15s">
+          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+          </svg>
+          <h3>Emergency HVAC</h3>
+          <p>24/7 — call Mike directly. No dispatch queue. No runaround. Just help.</p>
+          <a href="tel:6052149418" class="service-link">Call 24/7 &rarr;</a>
+        </div>
+
+        <!-- Replacement -->
+        <div class="service-card fade-up" style="transition-delay:0.2s">
+          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/>
+          </svg>
+          <h3>System Replacement</h3>
+          <p>Honest recommendations based on your home — not on what makes us the most money.</p>
+          <a href="#hero-form" class="service-link">Get an Estimate &rarr;</a>
+        </div>
+
+        <!-- Indoor Air Quality -->
+        <div class="service-card fade-up" style="transition-delay:0.25s">
+          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 12h1m8-9v1m8 8h1M5.6 5.6l.7.7m12.1-.7l-.7.7M12 19a7 7 0 000-14 7 7 0 000 14z"/><path d="M12 19v2m-3-2.5l-.5 2m6.5-2l.5 2"/>
+          </svg>
+          <h3>Indoor Air Quality</h3>
+          <p>Humidifiers, air cleaners, and UV installs. Breathe easier this season.</p>
+          <a href="#hero-form" class="service-link">Learn More &rarr;</a>
+        </div>
+
+        <!-- New Construction -->
+        <div class="service-card fade-up" style="transition-delay:0.3s">
+          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/>
+          </svg>
+          <h3>New Construction</h3>
+          <p>Full HVAC installs for new builds and basement finishes. Done right from day one.</p>
+          <a href="#hero-form" class="service-link">Get a Quote &rarr;</a>
+        </div>
+
+        <!-- Garage Heaters -->
+        <div class="service-card fade-up" style="transition-delay:0.35s">
+          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M8 3H5a2 2 0 00-2 2v3m18 0V5a2 2 0 00-2-2h-3m0 18h3a2 2 0 002-2v-3M3 16v3a2 2 0 002 2h3"/><path d="M12 7v5l3 3"/>
+          </svg>
+          <h3>Garage Heaters</h3>
+          <p>Keep your workspace warm through the South Dakota winter. Mike installs them right.</p>
+          <a href="#hero-form" class="service-link">Get a Quote &rarr;</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ ABOUT MIKE ════════════════════════════════════════ -->
+  <section id="about" class="section">
+    <div class="section-inner">
+      <div class="about-grid">
+        <div class="about-photo-wrap fade-up">
+          <img class="about-photo" src="https://static.wixstatic.com/media/3b1244_492d96ab01ff4230b67dfb635330c334~mv2.jpg" alt="Mike Hatch — Owner, MJ Aire HVAC" loading="lazy" />
+          <div class="about-badge">
+            <div class="about-badge-num">12+</div>
+            <div class="about-badge-label">Years in the Trade</div>
+          </div>
+        </div>
+        <div class="about-copy fade-up" style="transition-delay:0.15s">
+          <span class="section-tag">About Mike</span>
+          <h2>You're Calling Mike —<br />Not a Call Center.</h2>
+          <p>Mike Hatch started MJ Aire with one goal: bring hometown service back to HVAC. He's been in the trade for over 12 years — and when you call, you get Mike. Not a dispatcher, not a sales rep. Just a straight answer and a fair price.</p>
+          <p>Based in Tea, SD, Mike serves the entire Sioux Falls area. He's a husband, dad of two boys, and a guy who takes real pride in the work he leaves behind.</p>
+          <div class="cred-grid">
+            <div class="cred-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              12+ Years HVAC Experience
+            </div>
+            <div class="cred-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Licensed in SD (SF MCL# 271)
+            </div>
+            <div class="cred-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Fully Insured
+            </div>
+            <div class="cred-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              EPA Certified
+            </div>
+            <div class="cred-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Green Products &amp; Practices
+            </div>
+            <div class="cred-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Free Estimates &amp; Warranties
+            </div>
+          </div>
+          <div style="margin-top:36px">
+            <a href="tel:6052149418" class="btn btn-lg">Call Mike: (605) 214-9418</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ TESTIMONIALS ══════════════════════════════════════ -->
+  <section id="testimonials" class="section dark-texture" style="position:relative;background:var(--navy)">
+    <div class="section-inner">
+      <div class="fade-up" style="text-align:center">
+        <span class="section-tag">What Customers Say</span>
+        <h2 class="section-title" style="color:var(--white)">Sioux Falls Homeowners Trust Mike</h2>
+        <p class="section-sub" style="color:#7899A8;margin:0 auto">Real feedback from real homeowners across the Sioux Falls area.</p>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testi-card fade-up">
+          <div class="testi-quote">&ldquo;</div>
+          <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="testi-text">Mike did a great job on our humidifier install. You couldn't even tell he'd been there — he cleaned up perfectly. He kept us updated the whole time and let us know exactly when he was coming and when he finished. Highly recommend!</p>
+          <div class="testi-author">
+            <div class="testi-avatar">JR</div>
+            <div>
+              <div class="testi-name">Jenna R.</div>
+              <div class="testi-loc">Tea, SD</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card fade-up" style="transition-delay:0.1s">
+          <div class="testi-quote">&ldquo;</div>
+          <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="testi-text">Mike with MJ Aire was outstanding. Prompt, professional, and great at explaining everything throughout the whole process. You won't find a more honest HVAC guy in the Sioux Falls area.</p>
+          <div class="testi-author">
+            <div class="testi-avatar">TM</div>
+            <div>
+              <div class="testi-name">Travis M.</div>
+              <div class="testi-loc">Sioux Falls, SD</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card fade-up" style="transition-delay:0.2s">
+          <div class="testi-quote">&ldquo;</div>
+          <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="testi-text">We needed AC repair fast and Mike came out same day. No upsell, no runaround — just diagnosed it, fixed it, and told us exactly what was done. Fair price and great work. He's our HVAC guy from now on.</p>
+          <div class="testi-author">
+            <div class="testi-avatar">CB</div>
+            <div>
+              <div class="testi-name">Carrie B.</div>
+              <div class="testi-loc">Tea, SD</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonials-footer fade-up">
+        <div class="rating-big">5.0 / 5.0 &nbsp;&#9733;&nbsp; 100% Recommended</div>
+        <div class="rating-sub">Based on verified HomeAdvisor reviews</div>
+        <a href="https://www.google.com/maps/place/MJ+Aire/@43.4663385,-97.2492724,10z" target="_blank" rel="noopener">Read our Google Reviews &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ OFFER ════════════════════════════════════════════ -->
+  <section id="offer">
+    <div class="offer-inner">
+      <div class="fade-up" style="text-align:center">
+        <span class="section-tag">Limited Availability</span>
+        <h2 class="section-title" style="color:var(--white);font-size:clamp(2rem,4vw,3.2rem)">Book a Seasonal HVAC Tune-Up —<br />Spots Fill Fast</h2>
+        <p class="section-sub" style="color:rgba(255,255,255,0.8);margin:0 auto 0">Get your system ready before it fails on the coldest or hottest day of the year.</p>
+      </div>
+      <div class="offer-grid">
+        <ul class="offer-includes fade-up">
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Full system inspection
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Airflow &amp; pressure testing
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Thermostat calibration
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Filter check
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Efficiency optimization
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Written summary of findings
+          </li>
+        </ul>
+        <div class="offer-cta-block fade-up" style="transition-delay:0.15s">
+          <a href="#hero-form" class="btn btn-white btn-lg">Schedule My Tune-Up</a>
+          <p>Limited appointments available — especially heading into summer and winter seasons.</p>
+          <p style="margin-top:12px"><a href="tel:6052149418" style="color:rgba(255,255,255,0.9);font-weight:600">Or just call Mike: (605) 214-9418</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ WHY CHOOSE ════════════════════════════════════════ -->
+  <section id="why" class="section">
+    <div class="section-inner">
+      <div class="why-grid">
+        <div class="fade-up">
+          <img class="why-photo" src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=700&q=80&auto=format&fit=crop" alt="HVAC technician servicing outdoor AC unit" loading="lazy" />
+        </div>
+        <div class="fade-up" style="transition-delay:0.15s">
+          <span class="section-tag">Why MJ Aire</span>
+          <h2 class="section-title">Why Sioux Falls Homeowners Call Mike First</h2>
+          <div class="why-list">
+            <div class="why-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+              <div class="why-item-text"><strong>Upfront Pricing</strong>You know the cost before we start. No surprises on the invoice.</div>
+            </div>
+            <div class="why-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"/></svg>
+              <div class="why-item-text"><strong>Talk Directly to Mike</strong>Every call, every visit — the owner picks up. No call center, no runaround.</div>
+            </div>
+            <div class="why-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <div class="why-item-text"><strong>Licensed, Bonded &amp; Insured</strong>SF MCL# 271. You're covered — every job, every visit.</div>
+            </div>
+            <div class="why-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+              <div class="why-item-text"><strong>Work Backed by Warranty</strong>If something isn't right, Mike makes it right.</div>
+            </div>
+            <div class="why-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+              <div class="why-item-text"><strong>Financing Available</strong>Larger repairs or replacements — ask Mike about payment options.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ HOW IT WORKS ══════════════════════════════════════ -->
+  <section id="how" class="section" style="background:var(--ice)">
+    <div class="section-inner">
+      <div class="fade-up" style="text-align:center">
+        <span class="section-tag">Simple Process</span>
+        <h2 class="section-title">How It Works</h2>
+        <p class="section-sub" style="margin:0 auto">Three steps from problem to comfortable. No surprises in between.</p>
+      </div>
+      <div class="how-steps">
+        <div class="step fade-up">
+          <div class="step-num">1</div>
+          <h3>Call or Request Online</h3>
+          <p>Reach Mike directly — no phone trees, no call centers. You get the owner from the first call.</p>
+        </div>
+        <div class="step fade-up" style="transition-delay:0.1s">
+          <div class="step-num">2</div>
+          <h3>Fast Diagnosis</h3>
+          <p>Same-day or next-day service. Honest assessment, written estimate. You decide before any work starts.</p>
+        </div>
+        <div class="step fade-up" style="transition-delay:0.2s">
+          <div class="step-num">3</div>
+          <h3>Problem Solved</h3>
+          <p>Clean work, clear communication, and a home that's comfortable again. Every time.</p>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:56px" class="fade-up">
+        <a href="tel:6052149418" class="btn btn-lg">Get Started — Call Mike</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ EMERGENCY CTA ═════════════════════════════════════ -->
+  <section id="emergency" class="dark-texture">
+    <div style="position:relative;z-index:2">
+      <span class="section-tag" style="display:block;margin-bottom:16px">24/7 Emergency Service</span>
+      <h2>HVAC Out? Mike's Ready.</h2>
+      <p>Same-day emergency service for Sioux Falls and surrounding areas.</p>
+      <div class="emergency-btns">
+        <a href="tel:6052149418" class="btn btn-lg">Call Mike Now: (605) 214-9418</a>
+        <a href="#hero-form" class="btn btn-lg btn-outline" style="border-color:rgba(255,255,255,0.4);color:var(--white)">Request Emergency Service</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FAQ ══════════════════════════════════════════════ -->
+  <section id="faq" class="section">
+    <div class="section-inner">
+      <div class="fade-up" style="text-align:center">
+        <span class="section-tag">FAQs</span>
+        <h2 class="section-title">Common Questions</h2>
+        <p class="section-sub" style="margin:0 auto">Straight answers — no sales pitch attached.</p>
+      </div>
+      <div class="faq-list">
+
+        <div class="faq-item open">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            How fast can you come out?
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="faq-a"><div class="faq-a-inner">Most jobs get same-day or next-day service. If it's an emergency, call Mike directly at (605) 214-9418 and he'll get to you as fast as possible — 24/7.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            Do you offer emergency HVAC repair?
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="faq-a"><div class="faq-a-inner">Yes — 24/7. Call Mike directly at (605) 214-9418 any time of day or night. No answering service, no callback queue. You'll talk to Mike.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            Are estimates free?
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="faq-a"><div class="faq-a-inner">Yes. Mike gives free estimates for all HVAC work — repair, replacement, new installs. No obligation. You'll know the full cost before any work starts.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            Do you offer financing?
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="faq-a"><div class="faq-a-inner">Financing is available for larger repairs and system replacements. Ask Mike about options when he gives you your estimate — he'll work with you to find something that fits.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            What HVAC brands do you work on?
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="faq-a"><div class="faq-a-inner">All major brands — Carrier, Lennox, Trane, Goodman, Rheem, York, and more. If it heats or cools, Mike can work on it.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            Do you serve all of Sioux Falls, not just Tea?
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="faq-a"><div class="faq-a-inner">Yes. Mike is based in Tea, SD but serves the entire Sioux Falls metro and surrounding communities. Not sure if you're in the service area? Call and ask — odds are he can get to you.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            Will I talk to Mike directly when I call?
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="faq-a"><div class="faq-a-inner">Every time. There's no dispatcher, no call center, no "we'll have someone call you back." When you call MJ Aire, you get Mike.</div></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FINAL FORM ════════════════════════════════════════ -->
+  <section id="final-form">
+    <div class="section-inner" style="text-align:center">
+      <div class="fade-up">
+        <span class="section-tag">Get Started Today</span>
+        <h2 class="section-title" style="color:var(--white)">Comfortable Home. Honest Price.<br />Real Local Service.</h2>
+        <p class="section-sub" style="color:#7899A8;margin:16px auto 0">Book with MJ Aire and get straight answers from the guy doing the work.</p>
+      </div>
+      <div class="final-form-inner fade-up" style="transition-delay:0.1s">
+        <div class="final-form-card">
+          <form onsubmit="handleFormSubmit(event)">
+            <div class="form-group">
+              <label for="name2">Your Name</label>
+              <input type="text" id="name2" name="name" placeholder="John Smith" required />
+            </div>
+            <div class="form-group">
+              <label for="phone2">Phone Number</label>
+              <input type="tel" id="phone2" name="phone" placeholder="(605) 555-0100" required />
+            </div>
+            <div class="form-group">
+              <label for="email2">Email Address</label>
+              <input type="email" id="email2" name="email" placeholder="john@email.com" />
+            </div>
+            <div class="form-group">
+              <label for="service2">Service Needed</label>
+              <select id="service2" name="service">
+                <option value="">Select a service…</option>
+                <option>AC Repair</option>
+                <option>Furnace Repair</option>
+                <option>HVAC Tune-Up</option>
+                <option>Emergency HVAC</option>
+                <option>System Replacement</option>
+                <option>Indoor Air Quality</option>
+                <option>New Construction / Basement Finish</option>
+                <option>Garage Heater</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="time2">Best Time to Reach You</label>
+              <select id="time2" name="time">
+                <option value="">Select a time…</option>
+                <option>Morning (8am – 12pm)</option>
+                <option>Afternoon (12pm – 5pm)</option>
+                <option>Evening (5pm – 8pm)</option>
+                <option>Anytime</option>
+              </select>
+            </div>
+            <div class="form-submit">
+              <button type="submit" class="btn" style="font-size:1.15rem;padding:17px">Get My Free Estimate</button>
+            </div>
+          </form>
+          <p class="form-disclaimer" style="color:#5A7080;margin-top:14px"><em>No obligation. No pressure. Just an honest answer.</em></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ════════════════════════════════════════════ -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-logo">MJ<span>.</span>AIRE</div>
+        <div class="footer-contact">
+          <a href="tel:6052149418">(605) 214-9418</a>
+          <a href="mailto:mike@mjaire.com" class="footer-email">mike@mjaire.com</a>
+          <div style="margin-top:8px;font-size:0.83rem">Sioux Falls, Tea, and surrounding South Dakota communities</div>
+        </div>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/MJAIRESD" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            Facebook
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>SF MCL# 271 &nbsp;|&nbsp; Licensed &amp; Insured &nbsp;|&nbsp; Tea, SD</div>
+        <div>&copy; 2025 MJ Aire LLC &nbsp;|&nbsp; <a href="#">Privacy Policy</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ══ MOBILE STICKY CTA ═════════════════════════════════ -->
+  <div id="mobile-cta">
+    <a href="tel:6052149418">&#9742; Call Mike: (605) 214-9418</a>
+  </div>
+
+  <!-- ══ SCRIPTS ══════════════════════════════════════════ -->
+  <script>
+    // Scroll fade-up animation
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    // FAQ accordion
+    function toggleFaq(el) {
+      const item = el.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    }
+
+    // Form submission
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const btn = e.target.querySelector('button[type="submit"]');
+      const orig = btn.textContent;
+      btn.textContent = 'Sent! Mike will be in touch.';
+      btn.disabled = true;
+      btn.style.background = '#2A7A50';
+      setTimeout(() => {
+        btn.textContent = orig;
+        btn.disabled = false;
+        btn.style.background = '';
+        e.target.reset();
+      }, 5000);
+    }
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

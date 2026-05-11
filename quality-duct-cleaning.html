@@ -1,0 +1,2008 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Quality Duct Cleaning — Professional air duct and dryer vent cleaning in Sioux Falls, SD. Call Todd at (605) 351-2345. Starting at $199. Locally owned.">
+  <title>Quality Duct Cleaning | Air Duct & Dryer Vent Cleaning | Sioux Falls, SD</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    /* ─── Variables ─── */
+    :root {
+      --blue-primary:   #3B9FCC;
+      --navy-accent:    #1A3A52;
+      --navy-deep:      #0f2436;
+      --bg-white:       #F7FAFC;
+      --teal-cta:       #1E8C8C;
+      --teal-cta-hover: #176f6f;
+      --text-dark:      #2D2D2D;
+      --divider-light:  #E8F4F8;
+      --white:          #FFFFFF;
+      --star-gold:      #F5A623;
+      --shadow-card:    4px 4px 0 0 rgba(26,58,82,0.18);
+      --shadow-card-lg: 6px 6px 0 0 rgba(26,58,82,0.22);
+      --shadow-teal:    4px 4px 0 0 rgba(30,140,140,0.5);
+      --container:      1200px;
+    }
+
+    /* ─── Reset ─── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      font-size: 17px;
+      line-height: 1.65;
+      color: var(--text-dark);
+      background: var(--bg-white);
+      -webkit-font-smoothing: antialiased;
+    }
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; }
+    ul { list-style: none; }
+    button { font-family: inherit; cursor: pointer; border: none; background: none; }
+    input, select, textarea { font-family: inherit; }
+
+    /* ─── Container ─── */
+    .container {
+      width: 100%;
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ─── Typography ─── */
+    h1 { font-size: 52px; font-weight: 900; line-height: 1.1; color: var(--white); letter-spacing: -0.02em; }
+    h2 { font-size: 36px; font-weight: 800; color: var(--navy-accent); line-height: 1.2; letter-spacing: -0.01em; }
+    h3 { font-size: 22px; font-weight: 700; color: var(--navy-accent); }
+    p  { line-height: 1.65; }
+
+    /* ─── Buttons ─── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 16px 32px;
+      font-size: 15px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      border-radius: 3px;
+      transition: all 0.15s ease;
+      cursor: pointer;
+      border: 2px solid transparent;
+      line-height: 1;
+    }
+    .btn-primary {
+      background: var(--teal-cta);
+      color: var(--white);
+      border-color: var(--teal-cta);
+      box-shadow: var(--shadow-teal);
+    }
+    .btn-primary:hover {
+      background: var(--teal-cta-hover);
+      border-color: var(--teal-cta-hover);
+      transform: translate(-2px, -2px);
+      box-shadow: 6px 6px 0 0 rgba(30,140,140,0.5);
+    }
+    .btn-primary:active { transform: translate(0,0); box-shadow: none; }
+    .btn-outline {
+      background: transparent;
+      color: var(--navy-accent);
+      border-color: var(--navy-accent);
+      box-shadow: var(--shadow-card);
+    }
+    .btn-outline:hover {
+      background: var(--navy-accent);
+      color: var(--white);
+      transform: translate(-2px,-2px);
+      box-shadow: var(--shadow-card-lg);
+    }
+    .btn-outline:active { transform: translate(0,0); box-shadow: none; }
+    .btn-white {
+      background: var(--white);
+      color: var(--navy-accent);
+      border-color: var(--white);
+      box-shadow: 4px 4px 0 0 rgba(255,255,255,0.3);
+    }
+    .btn-white:hover {
+      background: var(--bg-white);
+      transform: translate(-2px,-2px);
+      box-shadow: 6px 6px 0 0 rgba(255,255,255,0.3);
+    }
+    .btn-teal-outline {
+      background: transparent;
+      color: var(--teal-cta);
+      border: 2px solid var(--teal-cta);
+    }
+    .btn-teal-outline:hover { background: var(--teal-cta); color: var(--white); }
+    .btn-lg { padding: 20px 40px; font-size: 16px; }
+    .btn-full { width: 100%; }
+
+    /* ─── Section Utility ─── */
+    .section { padding: 88px 0; }
+    .section-label {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--teal-cta);
+      border-left: 3px solid var(--teal-cta);
+      padding-left: 12px;
+      margin-bottom: 16px;
+    }
+    .section-title { margin-bottom: 16px; }
+    .section-sub { color: #5a7085; font-size: 18px; max-width: 620px; }
+
+    /* ═══════════════════════════════
+       STICKY HEADER
+    ═══════════════════════════════ */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--white);
+      border-bottom: 2px solid var(--divider-light);
+      transition: box-shadow 0.2s ease;
+    }
+    .site-header.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.12); }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 0;
+      gap: 20px;
+    }
+    .header-logo {
+      font-size: 20px;
+      font-weight: 900;
+      color: var(--navy-accent);
+      letter-spacing: -0.02em;
+      flex-shrink: 0;
+      line-height: 1.2;
+    }
+    .header-logo span { color: var(--blue-primary); }
+    .header-tagline {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--blue-primary);
+      text-align: center;
+      flex: 1;
+      letter-spacing: 0.02em;
+    }
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-shrink: 0;
+    }
+    .header-phone {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--navy-accent);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      letter-spacing: -0.01em;
+    }
+    .header-phone:hover { color: var(--blue-primary); }
+    .header-phone svg { flex-shrink: 0; }
+
+    /* ═══════════════════════════════
+       SECTION 1 — HERO
+    ═══════════════════════════════ */
+    .hero {
+      min-height: 100vh;
+      background-image: url('https://qualityductcleaning.weebly.com/uploads/1/6/3/6/16369106/6443978.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        105deg,
+        rgba(10, 25, 41, 0.93) 0%,
+        rgba(15, 36, 54, 0.87) 55%,
+        rgba(10, 25, 41, 0.72) 100%
+      );
+    }
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr 440px;
+      gap: 56px;
+      align-items: center;
+      padding: 80px 0;
+    }
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--blue-primary);
+      margin-bottom: 20px;
+    }
+    .hero-eyebrow::before {
+      content: '';
+      display: block;
+      width: 28px;
+      height: 2px;
+      background: var(--blue-primary);
+    }
+    .hero h1 { margin-bottom: 22px; }
+    .hero-sub {
+      font-size: 19px;
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 36px;
+      max-width: 520px;
+      line-height: 1.6;
+    }
+    .hero-checklist {
+      margin-bottom: 44px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .hero-checklist li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: rgba(255,255,255,0.9);
+      font-size: 16px;
+      font-weight: 500;
+    }
+    .hero-checklist .check-icon {
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      background: var(--teal-cta);
+      border-radius: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero-ctas {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .hero-phone-link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--white);
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      transition: color 0.15s;
+    }
+    .hero-phone-link:hover { color: var(--blue-primary); }
+
+    /* Lead Form Card */
+    .lead-form-card {
+      background: var(--white);
+      border-radius: 4px;
+      padding: 36px;
+      box-shadow: 8px 8px 0 0 rgba(30,140,140,0.25), 0 24px 60px rgba(0,0,0,0.25);
+      border-top: 4px solid var(--teal-cta);
+    }
+    .form-title {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--navy-accent);
+      margin-bottom: 6px;
+      letter-spacing: -0.01em;
+    }
+    .form-subtitle {
+      font-size: 14px;
+      color: #5a7085;
+      margin-bottom: 24px;
+    }
+    .form-group { margin-bottom: 16px; position: relative; }
+    .form-group label {
+      display: block;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--navy-accent);
+      margin-bottom: 6px;
+    }
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: 13px 14px;
+      border: 2px solid #d0dde8;
+      border-radius: 3px;
+      font-size: 15px;
+      color: var(--text-dark);
+      background: var(--white);
+      transition: border-color 0.15s, box-shadow 0.15s;
+      appearance: none;
+      -webkit-appearance: none;
+    }
+    .form-group input:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: var(--blue-primary);
+      box-shadow: 0 0 0 3px rgba(59,159,204,0.15);
+    }
+    .form-group select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%231A3A52' stroke-width='2' fill='none' stroke-linecap='square'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+      padding-right: 40px;
+    }
+    .form-error {
+      display: none;
+      color: #dc2626;
+      font-size: 12px;
+      font-weight: 600;
+      margin-top: 4px;
+    }
+    .form-error.visible { display: block; }
+    .form-group input.has-error,
+    .form-group select.has-error { border-color: #dc2626; }
+    .form-note {
+      text-align: center;
+      font-size: 12px;
+      color: #8a9bb0;
+      margin-top: 12px;
+    }
+    .trust-badges {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+    .trust-badge {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 11px;
+      font-weight: 700;
+      color: #5a7085;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .trust-badge svg { color: var(--teal-cta); flex-shrink: 0; }
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 32px 20px;
+    }
+    .form-success.visible { display: block; }
+    .form-success-icon {
+      width: 60px;
+      height: 60px;
+      background: var(--teal-cta);
+      border-radius: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+    }
+    .form-success h3 { color: var(--teal-cta); margin-bottom: 8px; }
+    .form-success p { color: #5a7085; font-size: 15px; }
+
+    /* ═══════════════════════════════
+       SECTION 2 — TRUST BAR
+    ═══════════════════════════════ */
+    .trust-bar {
+      background: var(--navy-deep);
+      padding: 0;
+      border-top: 3px solid var(--teal-cta);
+      border-bottom: 3px solid var(--blue-primary);
+    }
+    .trust-bar-inner {
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+    }
+    .trust-bar-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 22px 32px;
+      color: var(--white);
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      flex: 1;
+      justify-content: center;
+      position: relative;
+    }
+    .trust-bar-item:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 25%;
+      height: 50%;
+      width: 1px;
+      background: rgba(255,255,255,0.12);
+    }
+    .trust-bar-item svg { flex-shrink: 0; opacity: 0.9; }
+    .trust-bar-item span { color: var(--blue-primary); }
+
+    /* ═══════════════════════════════
+       SECTION 3 — PRICING
+    ═══════════════════════════════ */
+    .pricing { background: var(--bg-white); }
+    .pricing-header { text-align: center; margin-bottom: 56px; }
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      align-items: start;
+    }
+    .pricing-card {
+      background: var(--white);
+      border: 2px solid var(--divider-light);
+      border-radius: 4px;
+      padding: 36px 32px;
+      position: relative;
+      box-shadow: var(--shadow-card);
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .pricing-card:hover {
+      transform: translate(-2px,-2px);
+      box-shadow: var(--shadow-card-lg);
+    }
+    .pricing-card.featured {
+      border-color: var(--teal-cta);
+      border-width: 2px;
+      box-shadow: var(--shadow-teal);
+      transform: translateY(-6px);
+    }
+    .pricing-card.featured:hover {
+      transform: translate(-2px, -8px);
+      box-shadow: 6px 6px 0 0 rgba(30,140,140,0.5);
+    }
+    .best-value-badge {
+      position: absolute;
+      top: -14px;
+      right: 24px;
+      background: var(--teal-cta);
+      color: var(--white);
+      font-size: 10px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 5px 14px;
+      border-radius: 2px;
+    }
+    .pricing-service {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--teal-cta);
+      margin-bottom: 12px;
+    }
+    .pricing-card h3 { font-size: 20px; margin-bottom: 8px; }
+    .pricing-price {
+      font-size: 54px;
+      font-weight: 900;
+      color: var(--navy-accent);
+      line-height: 1;
+      margin-bottom: 24px;
+      letter-spacing: -0.03em;
+    }
+    .pricing-price sup {
+      font-size: 28px;
+      vertical-align: super;
+      font-weight: 800;
+    }
+    .pricing-divider {
+      height: 2px;
+      background: var(--divider-light);
+      margin-bottom: 24px;
+    }
+    .pricing-features {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+    .pricing-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 15px;
+      color: var(--text-dark);
+    }
+    .pricing-features .feat-check { flex-shrink: 0; margin-top: 2px; }
+    .pricing-note {
+      text-align: center;
+      color: #8a9bb0;
+      font-size: 13px;
+      margin-top: 40px;
+    }
+
+    /* ═══════════════════════════════
+       SECTION 4 — SERVICES
+    ═══════════════════════════════ */
+    .services { background: var(--divider-light); }
+    .services-header { text-align: center; margin-bottom: 56px; }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .service-card {
+      background: var(--white);
+      border-radius: 3px;
+      padding: 32px 28px;
+      border: 2px solid transparent;
+      box-shadow: var(--shadow-card);
+      transition: all 0.15s ease;
+      position: relative;
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--blue-primary);
+      transform: scaleX(0);
+      transition: transform 0.15s ease;
+    }
+    .service-card:hover { transform: translate(-2px,-2px); box-shadow: var(--shadow-card-lg); border-color: var(--divider-light); }
+    .service-card:hover::before { transform: scaleX(1); }
+    .service-icon {
+      width: 52px;
+      height: 52px;
+      background: rgba(59,159,204,0.1);
+      border-radius: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      border: 2px solid rgba(59,159,204,0.15);
+    }
+    .service-card h3 { font-size: 18px; margin-bottom: 10px; }
+    .service-card p { font-size: 15px; color: #5a7085; margin-bottom: 16px; line-height: 1.55; }
+    .service-link {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--teal-cta);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .service-link:hover { color: var(--teal-cta-hover); }
+
+    /* ═══════════════════════════════
+       SECTION 5 — TESTIMONIALS
+    ═══════════════════════════════ */
+    .testimonials { background: var(--white); }
+    .testimonials-header { text-align: center; margin-bottom: 56px; }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+    .review-card {
+      background: var(--bg-white);
+      border-radius: 4px;
+      padding: 32px 28px;
+      box-shadow: var(--shadow-card);
+      border: 2px solid var(--divider-light);
+      transition: all 0.15s;
+      position: relative;
+    }
+    .review-card::before {
+      content: '"';
+      position: absolute;
+      top: 16px;
+      right: 24px;
+      font-size: 72px;
+      color: var(--divider-light);
+      font-weight: 900;
+      line-height: 1;
+    }
+    .review-card:hover { transform: translate(-2px,-2px); box-shadow: var(--shadow-card-lg); }
+    .stars { display: flex; gap: 3px; margin-bottom: 16px; }
+    .review-text {
+      font-style: italic;
+      color: var(--text-dark);
+      font-size: 15px;
+      line-height: 1.7;
+      margin-bottom: 20px;
+      position: relative;
+    }
+    .review-divider { height: 2px; background: var(--divider-light); margin-bottom: 16px; }
+    .reviewer-name { font-weight: 800; color: var(--navy-accent); font-size: 15px; }
+    .reviewer-location { font-size: 13px; color: #8a9bb0; font-weight: 600; }
+    .rating-summary {
+      text-align: center;
+      font-size: 17px;
+      color: var(--navy-accent);
+    }
+    .rating-summary strong { font-weight: 900; }
+
+    /* ═══════════════════════════════
+       SECTION 6 — WHY CHOOSE US
+    ═══════════════════════════════ */
+    .why { background: var(--divider-light); }
+    .why-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .why-image-wrap { position: relative; }
+    .why-image-wrap img {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+      border-radius: 3px;
+      border: 2px solid var(--divider-light);
+      box-shadow: 8px 8px 0 0 rgba(26,58,82,0.15);
+    }
+    .why-badge {
+      position: absolute;
+      bottom: 24px;
+      left: -20px;
+      background: var(--navy-accent);
+      color: var(--white);
+      padding: 18px 24px;
+      border-radius: 3px;
+      border-left: 4px solid var(--teal-cta);
+      box-shadow: 4px 4px 0 0 rgba(30,140,140,0.4);
+    }
+    .why-badge-number { font-size: 32px; font-weight: 900; color: var(--teal-cta); line-height: 1; }
+    .why-badge-label { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; opacity: 0.8; margin-top: 4px; }
+    .why-content .section-label { margin-bottom: 12px; }
+    .why-content h2 { margin-bottom: 24px; }
+    .why-list { display: flex; flex-direction: column; gap: 14px; }
+    .why-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      font-size: 16px;
+      color: var(--text-dark);
+      font-weight: 500;
+    }
+    .why-list .why-check {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      background: var(--teal-cta);
+      border-radius: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+    }
+
+    /* ═══════════════════════════════
+       SECTION 7 — PROCESS
+    ═══════════════════════════════ */
+    .process { background: var(--white); }
+    .process-header { text-align: center; margin-bottom: 64px; }
+    .process-steps {
+      display: grid;
+      grid-template-columns: 1fr 48px 1fr 48px 1fr;
+      align-items: start;
+      gap: 0;
+    }
+    .process-step {
+      text-align: center;
+      padding: 0 8px;
+    }
+    .step-number-wrap {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+    .step-number {
+      width: 64px;
+      height: 64px;
+      background: var(--navy-accent);
+      border-radius: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      font-weight: 900;
+      color: var(--white);
+      margin: 0 auto 20px;
+      box-shadow: 4px 4px 0 0 rgba(30,140,140,0.4);
+      border: 2px solid var(--teal-cta);
+    }
+    .step-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 3px;
+      margin-bottom: 20px;
+      border: 2px solid var(--divider-light);
+      box-shadow: var(--shadow-card);
+    }
+    .step-icon-wrap {
+      width: 100%;
+      height: 200px;
+      background: linear-gradient(135deg, var(--navy-accent) 0%, #1e4a6b 100%);
+      border-radius: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      border: 2px solid var(--teal-cta);
+      box-shadow: var(--shadow-teal);
+    }
+    .process-step h3 { font-size: 19px; margin-bottom: 8px; }
+    .process-step p { font-size: 15px; color: #5a7085; }
+    .step-arrow {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding-top: 132px;
+      color: var(--blue-primary);
+    }
+
+    /* ═══════════════════════════════
+       SECTION 8 — WHAT WE FIND (DARK)
+    ═══════════════════════════════ */
+    .what-we-find {
+      background: var(--navy-deep);
+      padding: 88px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .what-we-find::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(59,159,204,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(59,159,204,0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+    }
+    .what-we-find-header { text-align: center; margin-bottom: 56px; }
+    .what-we-find-header h2 { color: var(--white); }
+    .what-we-find-sub {
+      color: #A8D4EA;
+      font-size: 17px;
+      max-width: 640px;
+      margin: 16px auto 0;
+      line-height: 1.6;
+    }
+    .finds-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-bottom: 56px;
+    }
+    .find-item {
+      background: rgba(255,255,255,0.04);
+      border: 2px solid rgba(255,255,255,0.08);
+      border-radius: 3px;
+      padding: 28px 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      transition: all 0.15s;
+    }
+    .find-item:hover {
+      background: rgba(59,159,204,0.08);
+      border-color: rgba(59,159,204,0.3);
+      transform: translate(-2px,-2px);
+    }
+    .find-icon {
+      flex-shrink: 0;
+      width: 48px;
+      height: 48px;
+      background: rgba(59,159,204,0.12);
+      border-radius: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid rgba(59,159,204,0.2);
+    }
+    .find-label {
+      color: var(--white);
+      font-weight: 700;
+      font-size: 15px;
+    }
+    .find-sublabel {
+      color: rgba(255,255,255,0.5);
+      font-size: 13px;
+      margin-top: 2px;
+    }
+    .finds-cta-wrap { text-align: center; }
+    .finds-warn {
+      color: rgba(255,255,255,0.65);
+      font-style: italic;
+      font-size: 16px;
+      max-width: 580px;
+      margin: 0 auto 36px;
+      line-height: 1.65;
+    }
+
+    /* ═══════════════════════════════
+       SECTION 9 — URGENT CTA BAND
+    ═══════════════════════════════ */
+    .cta-band {
+      background: var(--blue-primary);
+      padding: 72px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-band::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(26,58,82,0.3) 0%, transparent 70%);
+    }
+    .cta-band-inner { position: relative; z-index: 1; }
+    .cta-band h2 { color: var(--white); margin-bottom: 14px; }
+    .cta-band p { color: rgba(255,255,255,0.85); font-size: 18px; margin-bottom: 40px; }
+    .cta-band-buttons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    /* ═══════════════════════════════
+       SECTION 10 — FAQ
+    ═══════════════════════════════ */
+    .faq { background: var(--bg-white); }
+    .faq-header { text-align: center; margin-bottom: 56px; }
+    .faq-list {
+      max-width: 760px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .faq-item {
+      background: var(--white);
+      border: 2px solid var(--divider-light);
+      border-radius: 3px;
+      overflow: hidden;
+      transition: border-color 0.15s;
+      box-shadow: var(--shadow-card);
+    }
+    .faq-item.open { border-color: var(--blue-primary); }
+    .faq-trigger {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 22px 24px;
+      text-align: left;
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+    .faq-trigger:hover { background: var(--bg-white); }
+    .faq-question {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--navy-accent);
+      flex: 1;
+    }
+    .faq-chevron {
+      flex-shrink: 0;
+      color: var(--blue-primary);
+      transition: transform 0.25s ease;
+    }
+    .faq-item.open .faq-chevron { transform: rotate(180deg); }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+    .faq-answer-inner {
+      padding: 0 24px 24px;
+      font-size: 16px;
+      color: #5a7085;
+      line-height: 1.7;
+      border-top: 2px solid var(--divider-light);
+      padding-top: 16px;
+    }
+
+    /* ═══════════════════════════════
+       SECTION 11 — FINAL FORM
+    ═══════════════════════════════ */
+    .final-form-section { background: var(--divider-light); }
+    .final-form-inner {
+      display: grid;
+      grid-template-columns: 1fr 480px;
+      gap: 64px;
+      align-items: center;
+    }
+    .final-form-copy h2 { margin-bottom: 16px; }
+    .final-form-copy p { font-size: 18px; color: #5a7085; margin-bottom: 32px; max-width: 420px; }
+    .final-form-copy .contact-info { display: flex; flex-direction: column; gap: 12px; }
+    .contact-line {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--navy-accent);
+    }
+    .contact-line a { color: var(--navy-accent); }
+    .contact-line a:hover { color: var(--teal-cta); }
+    .contact-line svg { color: var(--blue-primary); flex-shrink: 0; }
+    .final-form-card {
+      background: var(--white);
+      border-radius: 4px;
+      padding: 40px;
+      border: 2px solid var(--divider-light);
+      box-shadow: 8px 8px 0 0 rgba(26,58,82,0.12);
+      border-top: 4px solid var(--navy-accent);
+    }
+
+    /* ═══════════════════════════════
+       FOOTER
+    ═══════════════════════════════ */
+    .site-footer {
+      background: var(--navy-deep);
+      border-top: 3px solid var(--teal-cta);
+      padding: 40px 0;
+    }
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .footer-brand {
+      font-size: 16px;
+      font-weight: 900;
+      color: var(--white);
+      letter-spacing: -0.01em;
+    }
+    .footer-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .footer-links a {
+      color: rgba(255,255,255,0.65);
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.15s;
+    }
+    .footer-links a:hover { color: var(--white); }
+    .footer-copy {
+      color: rgba(255,255,255,0.4);
+      font-size: 13px;
+      width: 100%;
+      text-align: center;
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    /* ═══════════════════════════════
+       MOBILE CALL BAR
+    ═══════════════════════════════ */
+    .mobile-call-bar {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: var(--teal-cta);
+      z-index: 999;
+      border-top: 2px solid var(--teal-cta-hover);
+    }
+    .mobile-call-bar a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: var(--white);
+      font-size: 17px;
+      font-weight: 800;
+      padding: 18px;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+
+    /* ═══════════════════════════════
+       RESPONSIVE — TABLET 768px
+    ═══════════════════════════════ */
+    @media (max-width: 900px) {
+      h1 { font-size: 40px; }
+      h2 { font-size: 30px; }
+      .hero-inner { grid-template-columns: 1fr; gap: 40px; padding: 60px 0; }
+      .hero { background-attachment: scroll; }
+      .hero h1 { font-size: 38px; }
+      .trust-bar-inner { flex-wrap: wrap; }
+      .trust-bar-item { flex: 1 1 33%; padding: 16px 20px; font-size: 11px; }
+      .trust-bar-item:nth-child(3)::after, .trust-bar-item:last-child::after { display: none; }
+      .pricing-grid { grid-template-columns: 1fr; max-width: 440px; margin: 0 auto; }
+      .pricing-card.featured { transform: none; }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .testimonials-grid { grid-template-columns: 1fr; max-width: 520px; margin: 0 auto 48px; }
+      .why-inner { grid-template-columns: 1fr; gap: 40px; }
+      .why-badge { left: 20px; }
+      .process-steps { grid-template-columns: 1fr; gap: 40px; }
+      .step-arrow { display: none; }
+      .finds-grid { grid-template-columns: repeat(2, 1fr); }
+      .final-form-inner { grid-template-columns: 1fr; }
+      .header-tagline { display: none; }
+      .header-phone { font-size: 15px; }
+    }
+
+    @media (max-width: 768px) {
+      .mobile-call-bar { display: block; }
+      body { padding-bottom: 64px; }
+    }
+
+    /* ═══════════════════════════════
+       RESPONSIVE — MOBILE 390px
+    ═══════════════════════════════ */
+    @media (max-width: 540px) {
+      h1 { font-size: 32px; }
+      h2 { font-size: 26px; }
+      .section { padding: 64px 0; }
+      .btn-lg { padding: 16px 24px; }
+      .hero-ctas { flex-direction: column; align-items: flex-start; }
+      .hero-phone-link { font-size: 22px; }
+      .trust-bar-item { flex: 1 1 50%; border-right: none; }
+      .trust-bar-item::after { display: none; }
+      .services-grid { grid-template-columns: 1fr; }
+      .finds-grid { grid-template-columns: 1fr; }
+      .cta-band-buttons { flex-direction: column; }
+      .cta-band-buttons .btn { width: 100%; max-width: 360px; }
+      .footer-inner { flex-direction: column; text-align: center; }
+      .footer-links { justify-content: center; }
+      .header-right { gap: 10px; }
+      .header-phone span { display: none; }
+      .lead-form-card { padding: 24px 20px; }
+      .final-form-card { padding: 28px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════ STICKY HEADER ═══════════ -->
+<header class="site-header" id="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <div class="header-logo">Quality <span>Duct</span> Cleaning</div>
+      <div class="header-tagline">Sioux Falls' Local Duct &amp; Dryer Vent Experts</div>
+      <div class="header-right">
+        <a href="tel:6053512345" class="header-phone" aria-label="Call Quality Duct Cleaning">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .84h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          <span>(605) 351-2345</span>
+        </a>
+        <a href="#booking-form" class="btn btn-primary">Book My Cleaning</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ═══════════ SECTION 1 — HERO ═══════════ -->
+<section class="hero" id="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <!-- Left: Copy -->
+      <div class="hero-copy">
+        <div class="hero-eyebrow">Sioux Falls, SD &amp; 50-Mile Radius</div>
+        <h1>Cleaner Air in Your Sioux Falls Home. No Mess. No Guesswork.</h1>
+        <p class="hero-sub">Professional duct cleaning, dryer vent service, and indoor air quality help. Local. Affordable. Done right by Todd Hazelwood.</p>
+
+        <ul class="hero-checklist">
+          <li>
+            <div class="check-icon">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            Serving Sioux Falls and a 50-Mile Radius
+          </li>
+          <li>
+            <div class="check-icon">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            AIRE-SWEEP Agitation Equipment — Industry Standard Tools
+          </li>
+          <li>
+            <div class="check-icon">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            Upfront Pricing — You Know the Cost Before We Start
+          </li>
+          <li>
+            <div class="check-icon">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            Call or Text Anytime — Real Person, Fast Response
+          </li>
+          <li>
+            <div class="check-icon">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            Optional Environmentally Safe Sanitization Fogging
+          </li>
+        </ul>
+
+        <div class="hero-ctas">
+          <a href="#booking-form" class="btn btn-primary btn-lg">Book My Cleaning</a>
+          <a href="tel:6053512345" class="hero-phone-link" aria-label="Call us at 605-351-2345">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .84h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            (605) 351-2345
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Lead Form -->
+      <div class="lead-form-card">
+        <div class="form-title">Get a Free Quote Today</div>
+        <div class="form-subtitle">No obligation. We'll call or text you back fast.</div>
+
+        <form id="hero-form" novalidate>
+          <div class="form-group">
+            <label for="name1">Full Name</label>
+            <input type="text" id="name1" name="name" placeholder="John Smith" required>
+            <div class="form-error" id="name1-error">Please enter your full name.</div>
+          </div>
+          <div class="form-group">
+            <label for="phone1">Phone Number</label>
+            <input type="tel" id="phone1" name="phone" placeholder="(605) 555-0100" required>
+            <div class="form-error" id="phone1-error">Please enter your phone number.</div>
+          </div>
+          <div class="form-group">
+            <label for="email1">Email Address</label>
+            <input type="email" id="email1" name="email" placeholder="you@email.com" required>
+            <div class="form-error" id="email1-error">Please enter your email address.</div>
+          </div>
+          <div class="form-group">
+            <label for="zip1">ZIP Code</label>
+            <input type="text" id="zip1" name="zip" placeholder="57101" maxlength="5" required>
+            <div class="form-error" id="zip1-error">Please enter your ZIP code.</div>
+          </div>
+          <div class="form-group">
+            <label for="service1">Service Needed</label>
+            <select id="service1" name="service" required>
+              <option value="" disabled selected>Select a service…</option>
+              <option value="duct">Air Duct Cleaning</option>
+              <option value="dryer">Dryer Vent Cleaning</option>
+              <option value="bundle">All Services Bundle</option>
+              <option value="unsure">Not Sure — Help Me Decide</option>
+            </select>
+            <div class="form-error" id="service1-error">Please select a service.</div>
+          </div>
+          <div class="form-group">
+            <label for="date1">Preferred Appointment Date</label>
+            <input type="date" id="date1" name="date" required>
+            <div class="form-error" id="date1-error">Please select a preferred date.</div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" style="margin-top:8px;">Get My Free Quote</button>
+        </form>
+        <div class="form-success" id="hero-success">
+          <div class="form-success-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="square"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <h3>Request Received!</h3>
+          <p>Thanks! We'll call or text you shortly. — Todd, Quality Duct Cleaning</p>
+        </div>
+
+        <p class="form-note">No obligation. We'll call or text you back fast.</p>
+        <div class="trust-badges">
+          <div class="trust-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--star-gold)" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            5-Star Rated
+          </div>
+          <div class="trust-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/></svg>
+            Locally Owned
+          </div>
+          <div class="trust-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square"><rect x="3" y="11" width="18" height="11" rx="1" ry="1"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+            Licensed &amp; Insured
+          </div>
+          <div class="trust-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Sioux Falls, SD
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ SECTION 2 — TRUST BAR ═══════════ -->
+<div class="trust-bar">
+  <div class="container">
+    <div class="trust-bar-inner">
+      <div class="trust-bar-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="#F5A623" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <span>5-Star</span>&nbsp;Rated
+      </div>
+      <div class="trust-bar-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--blue-primary)" stroke-width="2.5" stroke-linecap="square"><circle cx="12" cy="12" r="10"/><path d="M8 12s1 3 4 3 4-3 4-3"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+        AIRE-SWEEP Equipment
+      </div>
+      <div class="trust-bar-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--blue-primary)" stroke-width="2.5" stroke-linecap="square"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Safe Sanitization Option
+      </div>
+      <div class="trust-bar-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--blue-primary)" stroke-width="2.5" stroke-linecap="square"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        50-Mile Service Radius
+      </div>
+      <div class="trust-bar-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--blue-primary)" stroke-width="2.5" stroke-linecap="square"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .84h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        Call or Text Anytime
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════ SECTION 3 — PRICING ═══════════ -->
+<section class="section pricing" id="pricing">
+  <div class="container">
+    <div class="pricing-header">
+      <div class="section-label">Straightforward Pricing</div>
+      <h2 class="section-title">No Hidden Fees. No Surprises.</h2>
+      <p class="section-sub">You see the price before work begins. That's how it should be.</p>
+    </div>
+
+    <div class="pricing-grid">
+      <!-- Card 1 -->
+      <div class="pricing-card">
+        <div class="pricing-service">Air Duct Cleaning</div>
+        <div class="pricing-price"><sup>$</sup>199</div>
+        <div class="pricing-divider"></div>
+        <ul class="pricing-features">
+          <li>
+            <svg class="feat-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--teal-cta)" stroke-width="3" stroke-linecap="square"><polyline points="20 6 9 17 4 12"/></svg>
+            Single furnace system
+          </li>
+          <li>
+            <svg class="feat-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--teal-cta)" stroke-width="3" stroke-linecap="square"><polyline points="20 6 9 17 4 12"/></svg>
+            Intake, main &amp; return vents
+          </li>
+          <li>
+            <svg class="feat-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--teal-cta)" stroke-width="3" stroke-linecap="square"><polyline points="20 6 9 17 4 12"/></svg>
+            Up to 10 vents included
+          </li>
+          <li>
+            <svg class="feat-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--teal-cta)" stroke-width="3" stroke-linecap="square"><polyline points="20 6 9 17 4 12"/></svg>
+            $10 per additional vent
+          </li>
+          <li>
+            <svg class="feat-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--teal-cta)" stroke-width="3" stroke-linecap="square"><polyline points="20 6 9 17 4 12"/></svg>
+            AIRE-SWEEP agitation method
+          </li>
+        </ul>
+        <a href="#booking-form" class="btn btn-outline btn-full">Book This Package</a>
+      </div>
+
+      <!-- Card 2 — FEATURED -->
+      <div class="pricing-card featured">
+        <div class="best-value-badge">Best Value</div>
+        <div class="pricing-service" style="color:var(--teal-cta)">All Services Bundle</div>
+        <div class="pricing-price"><sup>$</sup>265</div>
+        <div class="pricing-divider" style="background:rgba(30,140,140,0.2)"></div>
+        <ul class="pricing-features">
+          <li>
+            <svg class="feat-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--teal-cta)" stroke-width="3" stroke-linecap="square"><polyline points="20 6 9 17 4 12"/></svg>
+            Everything in Air Duct package
+          </li>
+          <li>
+            <svg class="feat-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--teal-cta)" stroke-width="3" stroke-linecap="square"><polyline points="20 6 9 17 4 12"/></svg>
+            Internal dryer cleaning
+          </li>
+          <li>
+            <svg class="feat-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--teal-cta)" stroke-width="3" stroke-linecap="square"><polyline points="20 6 9 17 4 12"/></svg>
+            Full dryer duct &amp; vent line
+          </li>
+          <li>
+            <svg class="feat-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--teal-cta)" stroke-width="3" stroke-linecap="square"><polyline points="20 6 9 17 4 12"/></svg>
+            Up to 3 bathroom fans
+          </li>
+        </ul>
+        <a href="#booking-form" class="btn btn-primary btn-full">Book This Package</a>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="pricing-card">
+        <div class="pricing-service">Dryer Exhaust &amp; Internal</div>
+        <div class="pricing-price"><sup>$</sup>85</div>
+        <div class="pricing-divider"></div>
+        <ul class="pricing-features">
+          <li>
+            <svg class="feat-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--teal-cta)" stroke-width="3" stroke-linecap="square"><polyline points="20 6 9 17 4 12"/></svg>
+            Dryer exhaust duct cleaned
+          </li>
+          <li>
+            <svg class="feat-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--teal-cta)" stroke-width="3" stroke-linecap="square"><polyline points="20 6 9 17 4 12"/></svg>
+            Internal dryer cleaning
+          </li>
+          <li>
+            <svg class="feat-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--teal-cta)" stroke-width="3" stroke-linecap="square"><polyline points="20 6 9 17 4 12"/></svg>
+            Rooftop vent exit: +$20 if applicable
+          </li>
+        </ul>
+        <a href="#booking-form" class="btn btn-outline btn-full">Book This Package</a>
+      </div>
+    </div>
+
+    <p class="pricing-note">Travel charge of $0.75/mile applies beyond 15 miles from Sioux Falls. Max 50-mile service area.</p>
+  </div>
+</section>
+
+<!-- ═══════════ SECTION 4 — SERVICES GRID ═══════════ -->
+<section class="section services" id="services">
+  <div class="container">
+    <div class="services-header">
+      <div class="section-label">What We Do</div>
+      <h2 class="section-title">Everything Your Home's Air Needs</h2>
+      <p class="section-sub">One call handles everything — from ductwork to dryer vents to indoor air quality.</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--blue-primary)" stroke-width="2.5" stroke-linecap="square"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <h3>Air Duct Cleaning</h3>
+        <p>Remove years of accumulated dust, allergens, and debris using AIRE-SWEEP agitation tools that dislodge what standard vacuums miss.</p>
+        <a href="#booking-form" class="service-link">Book Now →</a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--blue-primary)" stroke-width="2.5" stroke-linecap="square"><rect x="2" y="3" width="20" height="14" rx="1" ry="1"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <h3>Dryer Vent Cleaning</h3>
+        <p>A clogged dryer vent is the #1 cause of home dryer fires. We clean the full exhaust duct and the internal dryer — not just the lint trap.</p>
+        <a href="#booking-form" class="service-link">Book Now →</a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--blue-primary)" stroke-width="2.5" stroke-linecap="square"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 010 14.14M4.93 4.93a10 10 0 000 14.14"/><path d="M16.24 7.76a6 6 0 010 8.49M7.76 7.76a6 6 0 000 8.49"/></svg>
+        </div>
+        <h3>Bathroom Fan Cleaning</h3>
+        <p>Bathroom fans collect lint and dust faster than you'd expect. We keep them running safely and efficiently — included in the All Services Bundle.</p>
+        <a href="#booking-form" class="service-link">Book Now →</a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--blue-primary)" stroke-width="2.5" stroke-linecap="square"><path d="M8 3H5a2 2 0 00-2 2v3m18 0V5a2 2 0 00-2-2h-3m0 18h3a2 2 0 002-2v-3M3 16v3a2 2 0 002 2h3"/><path d="M12 8v4l2 2"/></svg>
+        </div>
+        <h3>Sanitization Fogging</h3>
+        <p>Optional environmentally safe fogging to neutralize odors, bacteria, and allergens inside your duct system. Safe for kids and pets.</p>
+        <a href="#booking-form" class="service-link">Book Now →</a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--blue-primary)" stroke-width="2.5" stroke-linecap="square"><path d="M20 9v11a2 2 0 01-2 2H6a2 2 0 01-2-2V9"/><path d="M9 22V12h6v10M2 10.6L12 2l10 8.6"/></svg>
+        </div>
+        <h3>Move-In Cleaning</h3>
+        <p>Don't inherit the previous owner's dust, pet hair, and years of debris. Start fresh with a full duct cleaning before you move in or unpack.</p>
+        <a href="#booking-form" class="service-link">Book Now →</a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--blue-primary)" stroke-width="2.5" stroke-linecap="square"><path d="M12 2a7 7 0 017 7c0 5-7 13-7 13S5 14 5 9a7 7 0 017-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+        </div>
+        <h3>Indoor Air Quality</h3>
+        <p>Worried about what's circulating in your home? Concerned about allergens or odors? We inspect, advise, and solve — plain language, no upsell pressure.</p>
+        <a href="#booking-form" class="service-link">Book Now →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ SECTION 5 — TESTIMONIALS ═══════════ -->
+<section class="section testimonials" id="testimonials">
+  <div class="container">
+    <div class="testimonials-header">
+      <div class="section-label">Homeowner Reviews</div>
+      <h2 class="section-title">What Sioux Falls Homeowners Say</h2>
+    </div>
+
+    <div class="testimonials-grid">
+      <!-- Review 1 — Real -->
+      <div class="review-card">
+        <div class="stars">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#F5A623"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#F5A623"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#F5A623"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#F5A623"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#F5A623"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="review-text">"Todd showed up on time and did a complete walk-around before starting. He explained everything he was doing and even educated me on how to maintain my heating and cooling system going forward. Furniture was put back, vents cleaned up — and he followed up a second time to walk me through filter changes. That kind of service is hard to find."</p>
+        <div class="review-divider"></div>
+        <div class="reviewer-name">Starley C.</div>
+        <div class="reviewer-location">Sioux Falls, SD</div>
+      </div>
+
+      <!-- Review 2 -->
+      <div class="review-card">
+        <div class="stars">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#F5A623"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#F5A623"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#F5A623"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#F5A623"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#F5A623"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="review-text">"We moved into an older home and had no idea what was hiding in those ducts. Todd came out, showed us exactly what he found, and cleaned everything thoroughly. Could literally feel the difference in air quality that same day."</p>
+        <div class="review-divider"></div>
+        <div class="reviewer-name">Mike R.</div>
+        <div class="reviewer-location">Sioux Falls, SD</div>
+      </div>
+
+      <!-- Review 3 -->
+      <div class="review-card">
+        <div class="stars">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#F5A623"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#F5A623"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#F5A623"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#F5A623"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#F5A623"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="review-text">"Dryer was taking forever to dry clothes — turned out the vent was completely packed with lint. Todd cleaned it out fast, explained how to prevent buildup going forward, and charged exactly what was quoted. No surprises."</p>
+        <div class="review-divider"></div>
+        <div class="reviewer-name">Jennifer T.</div>
+        <div class="reviewer-location">Brandon, SD</div>
+      </div>
+    </div>
+
+    <div class="rating-summary">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="#F5A623" style="vertical-align:-3px;margin-right:6px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      <strong>5.0 / 5.0</strong> — Sioux Falls' Top-Rated Duct Cleaning Service
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ SECTION 6 — WHY CHOOSE US ═══════════ -->
+<section class="section why" id="about">
+  <div class="container">
+    <div class="why-inner">
+      <div class="why-image-wrap">
+        <img
+          src="https://qualityductcleaning.weebly.com/uploads/1/6/3/6/16369106/4290259.jpg"
+          alt="Professional duct cleaning equipment used by Quality Duct Cleaning"
+          loading="lazy"
+          onerror="this.src='https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&q=80'; this.onerror=null;"
+        >
+        <div class="why-badge">
+          <div class="why-badge-number">50mi</div>
+          <div class="why-badge-label">Service Radius</div>
+        </div>
+      </div>
+
+      <div class="why-content">
+        <div class="section-label">Why Quality Duct Cleaning</div>
+        <h2>Why Sioux Falls Homeowners Choose Quality Duct Cleaning</h2>
+        <ul class="why-list">
+          <li>
+            <div class="why-check"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="square"><polyline points="20 6 9 17 4 12"/></svg></div>
+            Locally owned and operated by Todd Hazelwood — not a franchise call center
+          </li>
+          <li>
+            <div class="why-check"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="square"><polyline points="20 6 9 17 4 12"/></svg></div>
+            Upfront pricing — you know the cost before work begins. Period.
+          </li>
+          <li>
+            <div class="why-check"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="square"><polyline points="20 6 9 17 4 12"/></svg></div>
+            AIRE-SWEEP tools for a genuinely thorough clean — not just surface suction
+          </li>
+          <li>
+            <div class="why-check"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="square"><polyline points="20 6 9 17 4 12"/></svg></div>
+            No high-pressure upselling — just honest recommendations you can act on
+          </li>
+          <li>
+            <div class="why-check"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="square"><polyline points="20 6 9 17 4 12"/></svg></div>
+            Homeowner education included with every service visit
+          </li>
+          <li>
+            <div class="why-check"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="square"><polyline points="20 6 9 17 4 12"/></svg></div>
+            Serving Sioux Falls and surrounding communities within 50 miles
+          </li>
+          <li>
+            <div class="why-check"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="square"><polyline points="20 6 9 17 4 12"/></svg></div>
+            Call or text anytime — fast, real responses. Not a voicemail system.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ SECTION 7 — PROCESS ═══════════ -->
+<section class="section process" id="process">
+  <div class="container">
+    <div class="process-header">
+      <div class="section-label">How It Works</div>
+      <h2 class="section-title">Simple. Clean. Done.</h2>
+      <p class="section-sub">Three steps from scheduling to cleaner air. No runaround.</p>
+    </div>
+
+    <div class="process-steps">
+      <!-- Step 1 -->
+      <div class="process-step">
+        <div class="step-number">01</div>
+        <img
+          src="https://qualityductcleaning.weebly.com/uploads/1/6/3/6/16369106/6818359_orig.jpg"
+          alt="Inside view of cleaned ductwork in a Sioux Falls home"
+          class="step-img"
+          loading="lazy"
+          onerror="this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&q=80'; this.onerror=null;"
+        >
+        <h3>Book Online or Call</h3>
+        <p>Schedule in minutes. Call or text (605) 351-2345, or fill out the form on this page. No hold music. No runaround.</p>
+      </div>
+
+      <!-- Arrow -->
+      <div class="step-arrow">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="process-step">
+        <div class="step-number">02</div>
+        <img
+          src="https://qualityductcleaning.weebly.com/uploads/1/6/3/6/16369106/2700154_orig.jpg"
+          alt="Cold air return duct before cleaning — Quality Duct Cleaning Sioux Falls"
+          class="step-img"
+          loading="lazy"
+          onerror="this.src='https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=500&q=80'; this.onerror=null;"
+        >
+        <h3>Todd Comes to You</h3>
+        <p>On-time arrival. Walk-around assessment of your home first. Right tools, right approach — every time.</p>
+      </div>
+
+      <!-- Arrow -->
+      <div class="step-arrow">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="process-step">
+        <div class="step-number">03</div>
+        <div class="step-icon-wrap">
+          <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="var(--blue-primary)" stroke-width="1.5" stroke-linecap="round">
+            <path d="M12 6C8 6 5 9 5 12s3 7 4 8"/>
+            <path d="M12 6c4 0 7 3 7 6s-3 7-4 8"/>
+            <path d="M9 12c0-2 .5-4 1.5-5.5"/>
+            <path d="M15 12c0-2-.5-4-1.5-5.5"/>
+            <path d="M8 16c.5 1.5 2 3 4 3s3.5-1.5 4-3"/>
+            <circle cx="12" cy="19" r="1.5" fill="var(--teal-cta)" stroke="none"/>
+            <path d="M12 4V2M8 4.5L6.5 3M16 4.5l1.5-1.5"/>
+          </svg>
+        </div>
+        <h3>Breathe Easier</h3>
+        <p>Thorough clean, furniture put back, everything explained. You'll know exactly what was found and what was done.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ SECTION 8 — WHAT WE FIND (DARK) ═══════════ -->
+<section class="what-we-find" id="air-quality">
+  <div class="container">
+    <div class="what-we-find-header">
+      <div class="section-label" style="color:var(--blue-primary)">Indoor Air Quality</div>
+      <h2>What's Really Circulating Through Your Home?</h2>
+      <p class="what-we-find-sub">The EPA estimates indoor air can be up to 70x more polluted than outdoor air. Here's what we commonly find in Sioux Falls homes:</p>
+    </div>
+
+    <div class="finds-grid">
+      <div class="find-item">
+        <div class="find-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--blue-primary)" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/></svg>
+        </div>
+        <div>
+          <div class="find-label">Accumulated Dust &amp; Debris</div>
+          <div class="find-sublabel">Years of buildup inside duct walls</div>
+        </div>
+      </div>
+
+      <div class="find-item">
+        <div class="find-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--blue-primary)" stroke-width="2" stroke-linecap="round"><path d="M20 9V7a2 2 0 00-2-2h-6L8 1H4a2 2 0 00-2 2v18a2 2 0 002 2h16a2 2 0 002-2v-7"/><path d="M15 2v5h5"/></svg>
+        </div>
+        <div>
+          <div class="find-label">Pet Dander &amp; Hair</div>
+          <div class="find-sublabel">Deep in supply and return lines</div>
+        </div>
+      </div>
+
+      <div class="find-item">
+        <div class="find-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--blue-primary)" stroke-width="2" stroke-linecap="round"><path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/></svg>
+        </div>
+        <div>
+          <div class="find-label">Mold Spores &amp; Allergens</div>
+          <div class="find-sublabel">Common in older SD homes</div>
+        </div>
+      </div>
+
+      <div class="find-item">
+        <div class="find-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--blue-primary)" stroke-width="2" stroke-linecap="round"><path d="M3 3l18 18"/><path d="M8 4H4a1 1 0 00-1 1v14a1 1 0 001 1h14a1 1 0 001-1V8"/><path d="M12 8v4l2 2"/></svg>
+        </div>
+        <div>
+          <div class="find-label">Rodent Droppings &amp; Debris</div>
+          <div class="find-sublabel">Especially in older construction</div>
+        </div>
+      </div>
+
+      <div class="find-item">
+        <div class="find-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--blue-primary)" stroke-width="2" stroke-linecap="round"><path d="M2 20h20"/><path d="M4 20V8l8-6 8 6v12"/><path d="M10 20v-6h4v6"/></svg>
+        </div>
+        <div>
+          <div class="find-label">Construction Debris</div>
+          <div class="find-sublabel">Especially in newer Sioux Falls builds</div>
+        </div>
+      </div>
+
+      <div class="find-item" style="border-color:rgba(220,38,38,0.3)">
+        <div class="find-icon" style="background:rgba(220,38,38,0.1); border-color:rgba(220,38,38,0.25)">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2" stroke-linecap="round"><path d="M12 2c-4 4-6 8-6 12a6 6 0 0012 0c0-4-2-8-6-12z"/><path d="M12 12c0 2 1 3 2 4"/></svg>
+        </div>
+        <div>
+          <div class="find-label" style="color:#ef4444">Lint Buildup — Fire Hazard</div>
+          <div class="find-sublabel">Leading cause of dryer fires in the US</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="finds-cta-wrap">
+      <p class="finds-warn">"Every time your furnace or AC runs, whatever's in those ducts gets pushed into the air your family breathes."</p>
+      <a href="#booking-form" class="btn btn-white btn-lg" style="color:var(--teal-cta); border-color:white;">
+        Schedule My Cleaning — Starting at $199
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ SECTION 9 — URGENT CTA BAND ═══════════ -->
+<section class="cta-band" id="cta-band">
+  <div class="container">
+    <div class="cta-band-inner">
+      <h2>Ready to Breathe Easier in Your Sioux Falls Home?</h2>
+      <p>Appointments available. Affordable pricing. Real local service from Todd Hazelwood.</p>
+      <div class="cta-band-buttons">
+        <a href="tel:6053512345" class="btn btn-white btn-lg" style="color:var(--navy-accent)">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .84h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          Call or Text: (605) 351-2345
+        </a>
+        <a href="#booking-form" class="btn btn-primary btn-lg">
+          Book Online Now
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ SECTION 10 — FAQ ACCORDION ═══════════ -->
+<section class="section faq" id="faq">
+  <div class="container">
+    <div class="faq-header">
+      <div class="section-label">FAQ</div>
+      <h2 class="section-title">Common Questions</h2>
+      <p class="section-sub">Straight answers. No fluff.</p>
+    </div>
+
+    <div class="faq-list" role="list">
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-trigger" aria-expanded="false">
+          <span class="faq-question">How long does duct cleaning take?</span>
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer" role="region">
+          <div class="faq-answer-inner">Most homes take 3 to 5 hours — and the result is 3 to 5 years of cleaner air. Todd works methodically, doesn't rush, and takes time to walk you through what he found before and after.</div>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-trigger" aria-expanded="false">
+          <span class="faq-question">How far do you travel?</span>
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer" role="region">
+          <div class="faq-answer-inner">We serve Sioux Falls and a 50-mile radius. A travel charge of $0.75/mile (one way) applies beyond 15 miles from Sioux Falls. Brandon, Tea, Harrisburg, Dell Rapids — we cover them all.</div>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-trigger" aria-expanded="false">
+          <span class="faq-question">What's included in the $199 package?</span>
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer" role="region">
+          <div class="faq-answer-inner">We clean the single furnace system — intake, main, and return vents — up to 10 vents using AIRE-SWEEP agitation tools. Additional vents are $10 each. You'll know the total before work starts.</div>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-trigger" aria-expanded="false">
+          <span class="faq-question">Can I bundle duct and dryer vent cleaning?</span>
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer" role="region">
+          <div class="faq-answer-inner">Yes. The All Services Bundle is $265 and includes duct cleaning, internal dryer cleaning (below the lint trap), the dryer duct and vent line, and up to 3 bathroom fans. It's the best value we offer.</div>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-trigger" aria-expanded="false">
+          <span class="faq-question">Do you use safe products?</span>
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer" role="region">
+          <div class="faq-answer-inner">Our optional sanitization fogging uses environmentally safe, non-toxic products. Safe for kids and pets. It's completely optional — Todd will explain it during the service and let you decide.</div>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-trigger" aria-expanded="false">
+          <span class="faq-question">How do I book?</span>
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer" role="region">
+          <div class="faq-answer-inner">Three options: call or text <a href="tel:6053512345" style="color:var(--teal-cta);font-weight:700">(605) 351-2345</a>, email <a href="mailto:siouxfallsductcleaning@gmail.com" style="color:var(--teal-cta);font-weight:700">siouxfallsductcleaning@gmail.com</a>, or fill out the form on this page. Todd responds fast.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ SECTION 11 — FINAL CONVERSION FORM ═══════════ -->
+<section class="section final-form-section" id="booking-form">
+  <div class="container">
+    <div class="final-form-inner">
+      <div class="final-form-copy">
+        <div class="section-label">Book Today</div>
+        <h2>Your Home Deserves Cleaner Air.</h2>
+        <p>Starting at $199. Serving Sioux Falls and 50 miles around it. Call or text us and we'll get you scheduled fast.</p>
+        <div class="contact-info">
+          <div class="contact-line">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .84h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            <a href="tel:6053512345">(605) 351-2345</a>
+          </div>
+          <div class="contact-line">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:siouxfallsductcleaning@gmail.com">siouxfallsductcleaning@gmail.com</a>
+          </div>
+          <div class="contact-line">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Sioux Falls, SD &amp; 50-Mile Radius
+          </div>
+        </div>
+      </div>
+
+      <div class="final-form-card">
+        <div class="form-title">Book My Cleaning</div>
+        <div class="form-subtitle">Fill out the form and Todd will call or text you back fast.</div>
+
+        <form id="final-form" novalidate>
+          <div class="form-group">
+            <label for="name2">Full Name</label>
+            <input type="text" id="name2" name="name" placeholder="John Smith" required>
+            <div class="form-error" id="name2-error">Please enter your full name.</div>
+          </div>
+          <div class="form-group">
+            <label for="phone2">Phone Number</label>
+            <input type="tel" id="phone2" name="phone" placeholder="(605) 555-0100" required>
+            <div class="form-error" id="phone2-error">Please enter your phone number.</div>
+          </div>
+          <div class="form-group">
+            <label for="email2">Email Address</label>
+            <input type="email" id="email2" name="email" placeholder="you@email.com" required>
+            <div class="form-error" id="email2-error">Please enter your email address.</div>
+          </div>
+          <div class="form-group">
+            <label for="zip2">ZIP Code</label>
+            <input type="text" id="zip2" name="zip" placeholder="57101" maxlength="5" required>
+            <div class="form-error" id="zip2-error">Please enter your ZIP code.</div>
+          </div>
+          <div class="form-group">
+            <label for="service2">Service Needed</label>
+            <select id="service2" name="service" required>
+              <option value="" disabled selected>Select a service…</option>
+              <option value="duct">Air Duct Cleaning — $199</option>
+              <option value="dryer">Dryer Vent Cleaning — $85</option>
+              <option value="bundle">All Services Bundle — $265</option>
+              <option value="unsure">Not Sure — Help Me Decide</option>
+            </select>
+            <div class="form-error" id="service2-error">Please select a service.</div>
+          </div>
+          <div class="form-group">
+            <label for="date2">Preferred Appointment Date</label>
+            <input type="date" id="date2" name="date" required>
+            <div class="form-error" id="date2-error">Please select a preferred date.</div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full btn-lg" style="margin-top:8px;">Book My Cleaning</button>
+        </form>
+        <div class="form-success" id="final-success">
+          <div class="form-success-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="square"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <h3>Request Received!</h3>
+          <p>Thanks! We'll call or text you shortly. — Todd, Quality Duct Cleaning</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">Quality Duct Cleaning</div>
+      <div class="footer-links">
+        <a href="tel:6053512345">(605) 351-2345</a>
+        <a href="mailto:siouxfallsductcleaning@gmail.com">siouxfallsductcleaning@gmail.com</a>
+        <span style="color:rgba(255,255,255,0.4);font-size:14px">Sioux Falls, SD &amp; 50-Mile Radius</span>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </div>
+    <div class="footer-copy">
+      &copy; 2025 Quality Duct Cleaning. All Rights Reserved. Locally Owned &amp; Operated by Todd Hazelwood, Sioux Falls, SD.
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════ MOBILE CALL BAR ═══════════ -->
+<div class="mobile-call-bar" role="complementary" aria-label="Call us">
+  <a href="tel:6053512345">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .84h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+    Call (605) 351-2345
+  </a>
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ── 1. Sticky header shadow ── */
+  var header = document.getElementById('site-header');
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 10) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  }, { passive: true });
+
+  /* ── 2. Smooth scroll for #booking-form anchors ── */
+  document.querySelectorAll('a[href="#booking-form"]').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      var target = document.getElementById('booking-form');
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  /* ── 3. FAQ Accordion ── */
+  var faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(function (item) {
+    var trigger = item.querySelector('.faq-trigger');
+    var answer = item.querySelector('.faq-answer');
+
+    trigger.addEventListener('click', function () {
+      var isOpen = item.classList.contains('open');
+
+      // Close all
+      faqItems.forEach(function (i) {
+        i.classList.remove('open');
+        i.querySelector('.faq-trigger').setAttribute('aria-expanded', 'false');
+        i.querySelector('.faq-answer').style.maxHeight = '0';
+      });
+
+      // Open clicked (if it was closed)
+      if (!isOpen) {
+        item.classList.add('open');
+        trigger.setAttribute('aria-expanded', 'true');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    });
+  });
+
+  /* ── 4. Form validation helper ── */
+  function validateForm(formId, successId) {
+    var form = document.getElementById(formId);
+    var success = document.getElementById(successId);
+    if (!form) return;
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var valid = true;
+
+      // Clear previous errors
+      form.querySelectorAll('.form-error').forEach(function (el) {
+        el.classList.remove('visible');
+      });
+      form.querySelectorAll('input, select').forEach(function (el) {
+        el.classList.remove('has-error');
+      });
+
+      // Check required fields
+      form.querySelectorAll('[required]').forEach(function (field) {
+        var val = field.value.trim();
+        var isEmpty = val === '' || val === null;
+        if (isEmpty) {
+          valid = false;
+          field.classList.add('has-error');
+          var errorEl = document.getElementById(field.id + '-error');
+          if (errorEl) errorEl.classList.add('visible');
+        }
+      });
+
+      // Basic email check
+      var emailField = form.querySelector('input[type="email"]');
+      if (emailField && emailField.value && !emailField.value.includes('@')) {
+        valid = false;
+        emailField.classList.add('has-error');
+        var emailError = document.getElementById(emailField.id + '-error');
+        if (emailError) {
+          emailError.textContent = 'Please enter a valid email address.';
+          emailError.classList.add('visible');
+        }
+      }
+
+      if (valid) {
+        form.style.display = 'none';
+        success.classList.add('visible');
+      }
+    });
+  }
+
+  validateForm('hero-form', 'hero-success');
+  validateForm('final-form', 'final-success');
+
+  /* ── 5. Set date input min to today ── */
+  var today = new Date().toISOString().split('T')[0];
+  document.querySelectorAll('input[type="date"]').forEach(function (d) {
+    d.setAttribute('min', today);
+  });
+
+})();
+</script>
+</body>
+</html>
