@@ -1,0 +1,1918 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carlson's Heating & Cooling | SE South Dakota HVAC — Homes, Cabins & Farms</title>
+<meta name="description" content="Veteran-owned HVAC contractor serving Sioux Falls, Lincoln County & Rural SE South Dakota. Ductless mini-splits, geothermal, AC repair, furnace install. Free estimates. Call (605) 763-8008.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --green: #1C3A2B;
+    --green-dark: #112518;
+    --green-mid: #254d39;
+    --black: #0F1410;
+    --steel: #4A6274;
+    --steel-light: #6a8294;
+    --cream: #F5F2ED;
+    --cream-dark: #E8E4DD;
+    --orange: #E05C2A;
+    --orange-dark: #c04e22;
+    --white: #ffffff;
+    --text-light: #b8c4bb;
+    --border: rgba(255,255,255,0.08);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Barlow', sans-serif;
+    background: var(--black);
+    color: var(--cream);
+    line-height: 1.5;
+    overflow-x: hidden;
+  }
+
+  /* TYPOGRAPHY */
+  h1, h2, h3, h4 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+  }
+
+  h1 { font-size: clamp(2.4rem, 6vw, 4.2rem); text-transform: uppercase; }
+  h2 { font-size: clamp(2rem, 4vw, 3.2rem); text-transform: uppercase; }
+  h3 { font-size: clamp(1.4rem, 2.5vw, 2rem); text-transform: uppercase; }
+
+  p { font-size: 1rem; font-weight: 400; color: var(--text-light); }
+
+  /* UTILITIES */
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+  .orange { color: var(--orange); }
+  .cream { color: var(--cream); }
+
+  /* BUTTONS */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 1.05rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0.85rem 1.8rem;
+    border-radius: 3px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+  }
+  .btn-primary {
+    background: var(--orange);
+    color: var(--white);
+  }
+  .btn-primary:hover { background: var(--orange-dark); transform: translateY(-1px); }
+  .btn-outline {
+    background: transparent;
+    color: var(--cream);
+    border: 2px solid rgba(245,242,237,0.4);
+  }
+  .btn-outline:hover { border-color: var(--cream); background: rgba(245,242,237,0.05); }
+  .btn-lg { padding: 1.1rem 2.4rem; font-size: 1.2rem; }
+  .btn-full { width: 100%; justify-content: center; }
+
+  /* ARROW ICON */
+  .btn svg { width: 16px; height: 16px; transition: transform 0.2s; }
+  .btn:hover svg { transform: translateX(3px); }
+
+  /* SECTION SPACING */
+  .section { padding: 5rem 0; }
+  .section-sm { padding: 3rem 0; }
+
+  /* DIVIDER LINE */
+  .divider { height: 1px; background: var(--border); margin: 0; }
+
+  /* NOISE TEXTURE OVERLAY */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.4;
+  }
+
+  /* =====================
+     STICKY HEADER
+  ===================== */
+  #header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(15,20,16,0.97);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+    padding: 0.75rem 0;
+  }
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .header-brand {
+    flex: 1;
+    text-align: center;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    font-size: 1.25rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--cream);
+    white-space: nowrap;
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .logo img {
+    height: 72px;
+    width: auto;
+    display: block;
+    filter: brightness(1.3) contrast(1.05);
+  }
+
+  .header-phone {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--cream);
+    letter-spacing: 0.02em;
+  }
+
+  .header-phone svg { color: var(--orange); }
+
+  .header-phone:hover { color: var(--orange); }
+
+  @media (max-width: 640px) {
+    .header-phone span { display: none; }
+    .header-phone .num { font-size: 1.1rem; }
+  }
+
+  /* =====================
+     HERO
+  ===================== */
+  #hero {
+    position: relative;
+    background: var(--black);
+    padding: 5rem 0 4rem;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('https://static.wixstatic.com/media/3b1244_9f8f81895aa44bfca22c9525e89a5aeb~mv2.jpg');
+    background-size: cover;
+    background-position: center top;
+    opacity: 0.45;
+  }
+
+  .hero-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(15,20,16,0.72) 30%, rgba(28,58,43,0.25) 100%);
+  }
+
+  .hero-inner {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  @media (max-width: 900px) {
+    .hero-inner { grid-template-columns: 1fr; }
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: rgba(224,92,42,0.15);
+    border: 1px solid rgba(224,92,42,0.4);
+    color: var(--orange);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.35rem 0.9rem;
+    border-radius: 2px;
+    margin-bottom: 1.2rem;
+  }
+
+  .hero-title {
+    color: var(--cream);
+    margin-bottom: 1.2rem;
+  }
+
+  .hero-sub {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    max-width: 560px;
+    font-weight: 500;
+  }
+
+  .hero-bullets {
+    list-style: none;
+    margin-bottom: 2.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6rem;
+  }
+
+  .hero-bullets li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--cream-dark);
+  }
+
+  .hero-bullets li::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: var(--orange);
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 0.45rem;
+  }
+
+  @media (max-width: 480px) {
+    .hero-bullets { grid-template-columns: 1fr; }
+  }
+
+  .hero-ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .hero-phone-link {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--cream);
+    text-decoration: none;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    letter-spacing: 0.02em;
+  }
+
+  .hero-phone-link:hover { color: var(--orange); }
+
+  /* HERO FORM */
+  .hero-form-card {
+    background: rgba(28,58,43,0.4);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 6px;
+    padding: 2rem;
+    backdrop-filter: blur(20px);
+  }
+
+  .form-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--cream);
+    margin-bottom: 1.5rem;
+  }
+
+  .form-group { margin-bottom: 1rem; }
+
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    background: rgba(15,20,16,0.7);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 3px;
+    padding: 0.75rem 1rem;
+    color: var(--cream);
+    font-family: 'Barlow', sans-serif;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s;
+    -webkit-appearance: none;
+  }
+
+  .form-group input::placeholder { color: rgba(245,242,237,0.35); }
+
+  .form-group input:focus,
+  .form-group select:focus {
+    border-color: var(--orange);
+  }
+
+  .form-group select option { background: var(--green-dark); color: var(--cream); }
+
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+
+  .form-note {
+    font-size: 0.8rem;
+    color: rgba(245,242,237,0.5);
+    text-align: center;
+    margin-top: 0.75rem;
+    line-height: 1.4;
+  }
+
+  .form-trust {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  .trust-chip {
+    font-size: 0.75rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--text-light);
+    padding: 0.3rem 0.7rem;
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 2px;
+  }
+
+  /* =====================
+     TRUST BAR
+  ===================== */
+  #trust-bar {
+    background: var(--green-dark);
+    border-top: 1px solid rgba(255,255,255,0.07);
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    padding: 1.5rem 0;
+  }
+
+  .trust-bar-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+  }
+
+  .trust-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    border-right: 1px solid rgba(255,255,255,0.1);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--cream-dark);
+    white-space: nowrap;
+  }
+
+  .trust-item:last-child { border-right: none; }
+  .trust-item svg { color: var(--orange); flex-shrink: 0; }
+
+  @media (max-width: 768px) {
+    .trust-item { border-right: none; padding: 0.4rem 1rem; font-size: 0.8rem; }
+  }
+
+  /* =====================
+     MINI-SPLIT BLOCK
+  ===================== */
+  #minisplit {
+    background: var(--green-dark);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .minisplit-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1400&q=80');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1;
+  }
+
+  .minisplit-inner {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  @media (max-width: 768px) { .minisplit-inner { grid-template-columns: 1fr; gap: 2rem; } }
+
+  .minisplit-label {
+    display: inline-block;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 0.75rem;
+  }
+
+  .minisplit-features {
+    list-style: none;
+    margin: 1.5rem 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .minisplit-features li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--cream-dark);
+    font-weight: 500;
+  }
+
+  .check {
+    width: 20px;
+    height: 20px;
+    background: var(--orange);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .check svg { width: 11px; height: 11px; color: white; }
+
+  .rebate-note {
+    font-size: 0.85rem;
+    color: rgba(245,242,237,0.5);
+    margin-top: 0.75rem;
+    font-style: italic;
+  }
+
+  .minisplit-visual {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 6px;
+    padding: 2.5rem;
+    text-align: center;
+  }
+
+  .big-stat {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(4rem, 8vw, 7rem);
+    font-weight: 900;
+    color: var(--orange);
+    line-height: 1;
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+
+  .big-stat-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-light);
+  }
+
+  .brand-badges {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .brand-badge {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--cream);
+  }
+
+  /* =====================
+     REVIEWS
+  ===================== */
+  #reviews {
+    background: var(--black);
+  }
+
+  .section-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .eyebrow-text {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--orange);
+  }
+
+  .eyebrow-line {
+    height: 1px;
+    width: 40px;
+    background: var(--orange);
+  }
+
+  .section-header { margin-bottom: 3rem; }
+  .section-header h2 { color: var(--cream); margin-bottom: 0.5rem; }
+  .section-header p { max-width: 500px; }
+
+  .stars {
+    display: flex;
+    gap: 2px;
+    color: #f5a623;
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  @media (max-width: 768px) { .reviews-grid { grid-template-columns: 1fr; } }
+
+  .review-card {
+    background: rgba(28,58,43,0.25);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 6px;
+    padding: 1.75rem;
+    position: relative;
+  }
+
+  .review-card::before {
+    content: '"';
+    position: absolute;
+    top: 0.5rem;
+    right: 1.25rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 5rem;
+    font-weight: 900;
+    color: rgba(224,92,42,0.12);
+    line-height: 1;
+  }
+
+  .review-text {
+    font-size: 0.95rem;
+    color: var(--cream-dark);
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+    font-style: italic;
+  }
+
+  .reviewer {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--cream);
+  }
+
+  .reviewer-loc {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    margin-top: 0.2rem;
+  }
+
+  .rating-display {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 2rem;
+    background: rgba(224,92,42,0.08);
+    border: 1px solid rgba(224,92,42,0.2);
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .rating-number {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 4rem;
+    font-weight: 900;
+    color: var(--orange);
+    line-height: 1;
+  }
+
+  .rating-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-light);
+  }
+
+  /* =====================
+     SERVICES GRID
+  ===================== */
+  #services { background: var(--green-dark); }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  @media (max-width: 900px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 480px) { .services-grid { grid-template-columns: 1fr; } }
+
+  .service-card {
+    background: rgba(15,20,16,0.8);
+    padding: 2rem 1.5rem;
+    transition: background 0.2s;
+    cursor: default;
+  }
+
+  .service-card:hover { background: rgba(28,58,43,0.5); }
+
+  .service-icon {
+    width: 42px;
+    height: 42px;
+    background: rgba(224,92,42,0.12);
+    border: 1px solid rgba(224,92,42,0.25);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .service-icon svg { color: var(--orange); width: 20px; height: 20px; }
+
+  .service-name {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 800;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--cream);
+    margin-bottom: 0.5rem;
+  }
+
+  .service-desc {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    line-height: 1.5;
+  }
+
+  /* =====================
+     WHY CARLSON'S
+  ===================== */
+  #why {
+    background: var(--black);
+  }
+
+  .why-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  @media (max-width: 768px) { .why-inner { grid-template-columns: 1fr; gap: 2.5rem; } }
+
+  .why-img {
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .why-img img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    display: block;
+    filter: saturate(0.7);
+  }
+
+  .why-img::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(15,20,16,0.6) 0%, transparent 60%);
+    z-index: 1;
+  }
+
+  .why-bullets {
+    list-style: none;
+    margin: 1.5rem 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+
+  .why-bullets li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    font-size: 0.95rem;
+    color: var(--cream-dark);
+    font-weight: 500;
+    line-height: 1.4;
+  }
+
+  .why-bullets li .check { margin-top: 0.1rem; }
+
+  .partner-logos {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .partner-logos img {
+    height: 52px;
+    width: auto;
+    object-fit: contain;
+    filter: brightness(0.9) saturate(0.8);
+  }
+
+  /* =====================
+     HOW IT WORKS
+  ===================== */
+  #how { background: var(--green-dark); }
+
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    position: relative;
+  }
+
+  @media (max-width: 768px) { .steps-grid { grid-template-columns: 1fr; } }
+
+  .steps-grid::before {
+    content: '';
+    position: absolute;
+    top: 2.5rem;
+    left: calc(16.6% + 1rem);
+    right: calc(16.6% + 1rem);
+    height: 1px;
+    background: linear-gradient(to right, var(--orange), rgba(224,92,42,0.3));
+    z-index: 0;
+  }
+
+  @media (max-width: 768px) { .steps-grid::before { display: none; } }
+
+  .step-card {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .step-num {
+    width: 52px;
+    height: 52px;
+    background: var(--orange);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: white;
+    margin: 0 auto 1.5rem;
+  }
+
+  .step-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--cream);
+    margin-bottom: 0.75rem;
+  }
+
+  .step-desc {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    line-height: 1.6;
+    max-width: 260px;
+    margin: 0 auto;
+  }
+
+  /* =====================
+     GEOTHERMAL SPOTLIGHT
+  ===================== */
+  #geo {
+    background: var(--black);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .geo-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=1400&q=80');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.07;
+  }
+
+  .geo-inner {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  @media (max-width: 768px) { .geo-inner { grid-template-columns: 1fr; gap: 2.5rem; } }
+
+  .geo-benefits {
+    list-style: none;
+    margin: 1.5rem 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .geo-benefits li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--cream-dark);
+    font-weight: 500;
+  }
+
+  .geo-visual {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .geo-stat {
+    background: rgba(28,58,43,0.4);
+    padding: 2rem 1.5rem;
+    text-align: center;
+  }
+
+  .geo-stat-num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 900;
+    color: var(--orange);
+    line-height: 1;
+    display: block;
+  }
+
+  .geo-stat-label {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    margin-top: 0.3rem;
+    line-height: 1.3;
+  }
+
+  /* =====================
+     EMERGENCY BAND
+  ===================== */
+  #emergency {
+    background: var(--orange);
+    padding: 4rem 0;
+  }
+
+  .emergency-inner {
+    text-align: center;
+  }
+
+  .emergency-inner h2 {
+    color: var(--white);
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    margin-bottom: 0.75rem;
+  }
+
+  .emergency-inner p {
+    font-size: 1.15rem;
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 2rem;
+    font-weight: 500;
+  }
+
+  .emergency-ctas {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .btn-white {
+    background: var(--white);
+    color: var(--orange);
+  }
+
+  .btn-white:hover { background: var(--cream); transform: translateY(-1px); }
+
+  .btn-outline-white {
+    background: transparent;
+    color: var(--white);
+    border: 2px solid rgba(255,255,255,0.5);
+  }
+
+  .btn-outline-white:hover { border-color: white; background: rgba(255,255,255,0.1); }
+
+  /* =====================
+     FAQ
+  ===================== */
+  #faq { background: var(--green-dark); }
+
+  .faq-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 3rem;
+  }
+
+  @media (max-width: 768px) { .faq-grid { grid-template-columns: 1fr; } }
+
+  .faq-item {
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding: 1.25rem 0;
+  }
+
+  .faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    gap: 1rem;
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    padding: 0;
+  }
+
+  .faq-q-text {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--cream);
+  }
+
+  .faq-chevron {
+    width: 22px;
+    height: 22px;
+    background: rgba(224,92,42,0.15);
+    border: 1px solid rgba(224,92,42,0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: var(--orange);
+    transition: transform 0.25s;
+  }
+
+  .faq-chevron svg { width: 12px; height: 12px; }
+
+  .faq-item.open .faq-chevron { transform: rotate(180deg); }
+
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .faq-item.open .faq-answer { max-height: 200px; }
+
+  .faq-answer-text {
+    font-size: 0.92rem;
+    color: var(--text-light);
+    line-height: 1.65;
+    padding: 0.75rem 0 0;
+  }
+
+  /* =====================
+     ABOUT
+  ===================== */
+  #about { background: var(--black); }
+
+  .about-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  @media (max-width: 768px) { .about-inner { grid-template-columns: 1fr; gap: 2.5rem; } }
+
+  .about-img img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+    display: block;
+    filter: saturate(0.65);
+  }
+
+  .about-body {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    line-height: 1.7;
+    margin: 1.5rem 0 2rem;
+  }
+
+  .vet-badge img {
+    height: 80px;
+    width: auto;
+    display: block;
+    filter: brightness(0.85);
+  }
+
+  /* =====================
+     FINAL CTA
+  ===================== */
+  #final-cta {
+    background: var(--green-dark);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .final-cta-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('https://images.unsplash.com/photo-1501854140801-50d01698950b?w=1400&q=80');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.07;
+  }
+
+  .final-cta-inner {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  @media (max-width: 900px) { .final-cta-inner { grid-template-columns: 1fr; gap: 2.5rem; } }
+
+  .final-cta-phone {
+    display: block;
+    text-decoration: none;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--orange);
+    letter-spacing: 0.02em;
+    margin-top: 1.5rem;
+  }
+
+  /* =====================
+     FOOTER
+  ===================== */
+  #footer {
+    background: var(--black);
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding: 3rem 0 1.5rem;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: auto 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 2.5rem;
+    align-items: start;
+  }
+
+  @media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr; gap: 2rem; } }
+
+  .footer-logo img { height: 50px; width: auto; display: block; margin-bottom: 1rem; }
+
+  .footer-contact a {
+    display: block;
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 0.9rem;
+    line-height: 2;
+  }
+
+  .footer-contact a:hover { color: var(--orange); }
+
+  .footer-col-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 0.75rem;
+  }
+
+  .footer-col p {
+    font-size: 0.88rem;
+    line-height: 1.8;
+    color: var(--text-light);
+  }
+
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding-top: 1.5rem;
+  }
+
+  .footer-bottom p {
+    font-size: 0.8rem;
+    color: rgba(245,242,237,0.3);
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .footer-links a {
+    font-size: 0.8rem;
+    color: rgba(245,242,237,0.3);
+    text-decoration: none;
+  }
+
+  .footer-links a:hover { color: var(--text-light); }
+
+  /* =====================
+     MOBILE STICKY BAR
+  ===================== */
+  #mobile-bar {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background: var(--orange);
+    padding: 0.85rem 1rem;
+    text-align: center;
+  }
+
+  #mobile-bar a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    color: white;
+    text-decoration: none;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    font-size: 1.2rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 768px) {
+    #mobile-bar { display: block; }
+    body { padding-bottom: 60px; }
+  }
+
+  /* PAGE LOAD ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-content > * {
+    animation: fadeUp 0.6s ease both;
+  }
+
+  .hero-content > *:nth-child(1) { animation-delay: 0.05s; }
+  .hero-content > *:nth-child(2) { animation-delay: 0.15s; }
+  .hero-content > *:nth-child(3) { animation-delay: 0.25s; }
+  .hero-content > *:nth-child(4) { animation-delay: 0.35s; }
+  .hero-content > *:nth-child(5) { animation-delay: 0.45s; }
+
+  .hero-form-card {
+    animation: fadeUp 0.6s ease 0.2s both;
+  }
+</style>
+</head>
+<body>
+
+<!-- ==================== HEADER ==================== -->
+<header id="header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="#" class="logo">
+        <img src="https://static.wixstatic.com/media/3b1244_21d6c9b21a144062afd409433e1f4533~mv2.png" alt="Carlson's Heating & Cooling" loading="eager">
+      </a>
+      <span class="header-brand">Carlson's Heating &amp; Cooling</span>
+      <div class="header-right">
+        <a href="tel:6057638008" class="header-phone">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.89 12 19.79 19.79 0 0 1 1.84 3.44 2 2 0 0 1 3.82 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 5.94 5.94l.97-.97a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span class="num">(605) 763-8008</span>
+        </a>
+        <a href="#hero" class="btn btn-primary">Schedule Free Estimate
+          <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ==================== HERO ==================== -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="container">
+    <div class="hero-inner">
+      <!-- LEFT: COPY -->
+      <div class="hero-content">
+        <div class="hero-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          Veteran-Owned &amp; Family-Operated Since 2000+
+        </div>
+        <h1 class="hero-title">Southeast South Dakota's HVAC Crew for <span class="orange">Homes, Cabins, and Farms.</span></h1>
+        <p class="hero-sub">Ductless Mini-Splits. Geothermal. Coleman Installs. We go where other contractors won't.</p>
+        <ul class="hero-bullets">
+          <li>Serving Sioux Falls, Lincoln County &amp; Rural SE SD</li>
+          <li>Authorized Coleman &amp; Fujitsu Dealer</li>
+          <li>Veteran-Owned, Family-Operated</li>
+          <li>Free Estimates — No Trip Charge to Look</li>
+          <li>Emergency Service Available</li>
+          <li>Financing Available</li>
+        </ul>
+        <div class="hero-ctas">
+          <a href="#hero-form" class="btn btn-primary btn-lg">
+            Schedule My Free Estimate
+            <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="tel:6057638008" class="hero-phone-link">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.89 12 19.79 19.79 0 0 1 1.84 3.44 2 2 0 0 1 3.82 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 5.94 5.94l.97-.97a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call (605) 763-8008
+          </a>
+        </div>
+      </div>
+      <!-- RIGHT: FORM -->
+      <div class="hero-form-card" id="hero-form">
+        <div class="form-title">Get Your Free Estimate</div>
+        <form onsubmit="return false;">
+          <div class="form-row">
+            <div class="form-group"><input type="text" placeholder="Full Name" required></div>
+            <div class="form-group"><input type="tel" placeholder="Phone Number" required></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><input type="email" placeholder="Email Address"></div>
+            <div class="form-group"><input type="text" placeholder="ZIP Code"></div>
+          </div>
+          <div class="form-group">
+            <select>
+              <option value="" disabled selected>Service Needed</option>
+              <option>AC Repair</option>
+              <option>Furnace Repair</option>
+              <option>Mini-Split Install</option>
+              <option>Geothermal</option>
+              <option>Tune-Up / Maintenance</option>
+              <option>Emergency Service</option>
+              <option>New System Install</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <select>
+                <option value="" disabled selected>Property Type</option>
+                <option>Home</option>
+                <option>Cabin / Lake House</option>
+                <option>Farm / Agricultural</option>
+                <option>Commercial</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <select>
+                <option value="" disabled selected>Best Time to Call</option>
+                <option>Morning (8am–12pm)</option>
+                <option>Afternoon (12pm–5pm)</option>
+                <option>Evening (5pm–8pm)</option>
+                <option>Anytime</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full btn-lg">Request My Free Estimate
+            <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </form>
+        <p class="form-note">No pressure. No trip charge to look. Local crew, real answers.</p>
+        <div class="form-trust">
+          <span class="trust-chip">4.9-Star Rated</span>
+          <span class="trust-chip">Veteran-Owned</span>
+          <span class="trust-chip">Licensed &amp; Insured</span>
+          <span class="trust-chip">20+ Years SE SD</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== TRUST BAR ==================== -->
+<div id="trust-bar">
+  <div class="container">
+    <div class="trust-bar-inner">
+      <div class="trust-item">
+        <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        4.9-Star Rated
+      </div>
+      <div class="trust-item">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Authorized Coleman Dealer
+      </div>
+      <div class="trust-item">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Authorized Fujitsu Dealer
+      </div>
+      <div class="trust-item">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a6 6 0 0 1 12 0v2"/></svg>
+        Veteran-Owned &amp; Family-Operated
+      </div>
+      <div class="trust-item">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        Emergency Service Available
+      </div>
+      <div class="trust-item">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2"/><path d="M1 10h22"/></svg>
+        Financing Available
+      </div>
+      <div class="trust-item">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+        Free Estimates
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== MINI-SPLIT BLOCK ==================== -->
+<section id="minisplit" class="section">
+  <div class="minisplit-bg"></div>
+  <div class="container">
+    <div class="minisplit-inner">
+      <div>
+        <span class="minisplit-label">Ductless Mini-Splits</span>
+        <h2 class="cream">No Ductwork?<br><span class="orange">No Problem.</span></h2>
+        <p style="margin-top:0.75rem;">Carlson's is Southeast South Dakota's go-to installer for ductless mini-splits — perfect for cabins, additions, lake houses, and older homes.</p>
+        <ul class="minisplit-features">
+          <li><span class="check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Fujitsu &amp; Coleman mini-split systems</li>
+          <li><span class="check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Zone-by-zone comfort control</li>
+          <li><span class="check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Works where forced air can't</li>
+          <li><span class="check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Energy-efficient year-round heating and cooling</li>
+          <li><span class="check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Professional sizing and installation</li>
+        </ul>
+        <a href="#hero-form" class="btn btn-primary btn-lg">Get a Mini-Split Estimate
+          <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <p class="rebate-note">Ask about current manufacturer rebates.</p>
+      </div>
+      <div class="minisplit-visual">
+        <span class="big-stat">SE SD's</span>
+        <span class="big-stat-label">PREFERRED MINI-SPLIT INSTALLER</span>
+        <div style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.08);">
+          <p style="font-size:0.85rem;color:var(--text-light);margin-bottom:1rem;font-family:'Barlow Condensed',sans-serif;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;">Authorized Dealers</p>
+          <div class="brand-badges">
+            <span class="brand-badge">Coleman Systems</span>
+            <span class="brand-badge">Fujitsu Mini-Splits</span>
+          </div>
+        </div>
+        <div style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.08);">
+          <p style="font-size:2.5rem;font-family:'Barlow Condensed',sans-serif;font-weight:900;color:var(--orange);">20+</p>
+          <p style="font-size:0.8rem;color:var(--text-light);font-family:'Barlow Condensed',sans-serif;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;">Years Serving SE South Dakota</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== REVIEWS ==================== -->
+<section id="reviews" class="section">
+  <div class="container">
+    <div class="section-eyebrow">
+      <span class="eyebrow-line"></span>
+      <span class="eyebrow-text">Real Customer Reviews</span>
+    </div>
+    <div class="section-header">
+      <h2>What SE South Dakota<br><span class="orange">Homeowners Say</span></h2>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"We moved here a few months ago and called Carlson's for the second time for assistance. The service was prompt and our issues were fixed immediately. Both Dan and Pat have my appreciation and recommendation."</p>
+        <div class="reviewer">Patrice Gadd</div>
+        <div class="reviewer-loc">Beresford, SD &bull; HomeAdvisor Verified</div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"Extremely happy with the promptness of the service — had our central air cooling again in no time flat. I'd call them again in a heartbeat. They were phenomenal."</p>
+        <div class="reviewer">Verified Customer</div>
+        <div class="reviewer-loc">SE South Dakota &bull; HomeAdvisor Verified</div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"They got our new AC unit replaced quickly and at a reasonable price. I texted after hours, they came out the next day to diagnose it, and had the new unit installed the day after. Highly recommend."</p>
+        <div class="reviewer">Ang M. Peterson</div>
+        <div class="reviewer-loc">SE South Dakota &bull; Verified Review</div>
+      </div>
+    </div>
+    <div class="rating-display" style="max-width:320px;margin:3rem auto 0;">
+      <div class="stars" style="font-size:1.5rem;margin-bottom:0.25rem;">★★★★★</div>
+      <div class="rating-number">4.9</div>
+      <div class="rating-label">Out of 5 Stars — Average Rating</div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SERVICES ==================== -->
+<section id="services" class="section">
+  <div class="container">
+    <div class="section-eyebrow">
+      <span class="eyebrow-line"></span>
+      <span class="eyebrow-text">What We Do</span>
+    </div>
+    <div class="section-header">
+      <h2>Full-Service HVAC for<br><span class="orange">Every Property Type</span></h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
+        <div class="service-name">AC Repair &amp; Replacement</div>
+        <p class="service-desc">Fast diagnosis, upfront pricing. All makes and models serviced and replaced.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 19H2l1 1H1l1 1h1.5l.5.5-.5.5H5l1-1h1l1-1h1.18C11.1 17.83 14.5 14 17 8z"/></svg></div>
+        <div class="service-name">Furnace Repair &amp; Install</div>
+        <p class="service-desc">Keep your family warm through a South Dakota winter. We service and install all systems.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18"/></svg></div>
+        <div class="service-name">Ductless Mini-Splits</div>
+        <p class="service-desc">Fujitsu and Coleman systems. Ideal for cabins, room additions, and older homes without ductwork.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><path d="M2 12h20"/></svg></div>
+        <div class="service-name">Geothermal Systems</div>
+        <p class="service-desc">Energy-efficient ground-source heating and cooling designed for rural South Dakota properties.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+        <div class="service-name">Seasonal Tune-Ups</div>
+        <p class="service-desc">Prevent costly breakdowns before they happen. Spring and fall maintenance programs available.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+        <div class="service-name">Emergency HVAC Service</div>
+        <p class="service-desc">When it breaks at the worst time, we're ready. Fast response throughout SE South Dakota.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <div class="service-name">Agricultural &amp; Bin Dryers</div>
+        <p class="service-desc">HVAC service for farm operations throughout SE South Dakota. We know the land and the equipment.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div class="service-name">Boilers &amp; Radiant Heat</div>
+        <p class="service-desc">Install, repair, and service for residential and commercial boiler and radiant heating systems.</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:2.5rem;">
+      <a href="#hero-form" class="btn btn-primary btn-lg">Get a Free Quote on Any Service
+        <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== WHY CARLSON'S ==================== -->
+<section id="why" class="section">
+  <div class="container">
+    <div class="why-inner">
+      <div class="why-img">
+        <img src="https://static.wixstatic.com/media/3b1244_31a7bfd1ccec414b8fed46895d5221b7~mv2.jpg" alt="Carlson's Heating & Cooling Crew" loading="lazy">
+      </div>
+      <div>
+        <div class="section-eyebrow">
+          <span class="eyebrow-line"></span>
+          <span class="eyebrow-text">Why Carlson's</span>
+        </div>
+        <h2>Why SE South Dakota<br><span class="orange">Calls Carlson's First</span></h2>
+        <ul class="why-bullets" style="margin-top:1.5rem;">
+          <li><span class="check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>No trip charge just to look — estimates are free</li>
+          <li><span class="check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Upfront, honest pricing before any work begins</li>
+          <li><span class="check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Veteran-owned — we know what integrity means</li>
+          <li><span class="check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>We service farms, cabins, and rural properties other contractors skip</li>
+          <li><span class="check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Authorized dealer for Coleman and Fujitsu systems</li>
+          <li><span class="check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Licensed, insured, and rooted in this community for 20+ years</li>
+          <li><span class="check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Financing available through Synchrony</li>
+        </ul>
+        <div class="partner-logos">
+          <img src="https://static.wixstatic.com/media/3b1244_d2433b0f1e9947dbb1532349e90a7d59~mv2.png" alt="Veteran-Owned Business">
+          <img src="https://static.wixstatic.com/media/3b1244_14fbad4165c444cba338a667d1f37598~mv2.jpg" alt="Authorized Coleman Dealer">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== HOW IT WORKS ==================== -->
+<section id="how" class="section">
+  <div class="container">
+    <div class="section-eyebrow" style="justify-content:center;">
+      <span class="eyebrow-line"></span>
+      <span class="eyebrow-text">Simple Process</span>
+      <span class="eyebrow-line"></span>
+    </div>
+    <div class="section-header" style="text-align:center;">
+      <h2>Getting Started is <span class="orange">Dead Simple</span></h2>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <div class="step-title">Call or Request Online</div>
+        <p class="step-desc">Reach out by phone or fill out the estimate form. We respond fast — no call centers, no runaround.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <div class="step-title">We Come to You</div>
+        <p class="step-desc">Our licensed tech shows up, diagnoses the issue, and gives you an upfront price. No surprises, no pressure.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <div class="step-title">Done Right, Guaranteed</div>
+        <p class="step-desc">We get the job done with quality parts and back our work. You get comfort you can count on.</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:3rem;">
+      <a href="tel:6057638008" class="btn btn-primary btn-lg">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.89 12 19.79 19.79 0 0 1 1.84 3.44 2 2 0 0 1 3.82 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 5.94 5.94l.97-.97a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call (605) 763-8008
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== GEOTHERMAL SPOTLIGHT ==================== -->
+<section id="geo" class="section">
+  <div class="geo-bg"></div>
+  <div class="container">
+    <div class="geo-inner">
+      <div>
+        <span class="minisplit-label">Geothermal Systems</span>
+        <h2 class="cream">Built for South Dakota.<br><span class="orange">Ground-Source Geothermal.</span></h2>
+        <p style="margin-top:0.75rem;">Carlson's designs and installs geothermal heating and cooling systems for rural and residential properties throughout Southeast South Dakota. Ground-source systems use the earth's stable temperature to heat and cool efficiently year-round, slashing energy bills and eliminating dependence on propane.</p>
+        <ul class="geo-benefits" style="margin-top:1.5rem;">
+          <li><span class="check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>50-70% reduction in heating and cooling costs</li>
+          <li><span class="check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Ideal for rural properties and new construction</li>
+          <li><span class="check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Qualifies for federal energy tax credits</li>
+          <li><span class="check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Carlson's handles design, installation, and service</li>
+        </ul>
+        <a href="#hero-form" class="btn btn-primary btn-lg">Ask About Geothermal for Your Property
+          <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+      <div class="geo-visual">
+        <div class="geo-stat">
+          <span class="geo-stat-num">50%</span>
+          <div class="geo-stat-label">Avg. Reduction in<br>Heating &amp; Cooling Costs</div>
+        </div>
+        <div class="geo-stat">
+          <span class="geo-stat-num">30%</span>
+          <div class="geo-stat-label">Federal Energy<br>Tax Credit</div>
+        </div>
+        <div class="geo-stat" style="grid-column:1/-1;background:rgba(28,58,43,0.25);">
+          <span class="geo-stat-num" style="font-size:2rem;">No Propane</span>
+          <div class="geo-stat-label">Eliminate propane dependence — perfect for rural SD properties</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== EMERGENCY BAND ==================== -->
+<section id="emergency">
+  <div class="container">
+    <div class="emergency-inner">
+      <h2>HVAC Emergency in Southeast South Dakota?</h2>
+      <p>We're local. We respond fast. Call us now.</p>
+      <div class="emergency-ctas">
+        <a href="tel:6057638008" class="btn btn-white btn-lg">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.89 12 19.79 19.79 0 0 1 1.84 3.44 2 2 0 0 1 3.82 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 5.94 5.94l.97-.97a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call (605) 763-8008
+        </a>
+        <a href="#hero-form" class="btn btn-outline-white btn-lg">Request Emergency Service</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FAQ ==================== -->
+<section id="faq" class="section">
+  <div class="container">
+    <div class="section-eyebrow">
+      <span class="eyebrow-line"></span>
+      <span class="eyebrow-text">Common Questions</span>
+    </div>
+    <div class="section-header">
+      <h2>Straight Answers,<br><span class="orange">No Runaround</span></h2>
+    </div>
+    <div class="faq-grid">
+      <div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span class="faq-q-text">How quickly can you come out?</span>
+            <span class="faq-chevron"><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+          </button>
+          <div class="faq-answer"><p class="faq-answer-text">For emergency calls we prioritize same-day or next-day response throughout SE South Dakota. For scheduled work, we'll get you on the calendar as quickly as possible and give you a real time window, not a 4-hour wait.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span class="faq-q-text">Do you service cabins and lake houses?</span>
+            <span class="faq-chevron"><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+          </button>
+          <div class="faq-answer"><p class="faq-answer-text">Absolutely. Cabins and lake houses are one of our specialties. We install ductless mini-splits for properties without ductwork, handle propane and electric system service, and we're comfortable driving to rural and remote lake properties throughout the region.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span class="faq-q-text">What is a ductless mini-split and is it right for my home?</span>
+            <span class="faq-chevron"><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+          </button>
+          <div class="faq-answer"><p class="faq-answer-text">A ductless mini-split is a heating and cooling system that doesn't require ductwork. An outdoor compressor connects to one or more indoor air handlers, giving you zone control with no major renovation. They're ideal for cabins, additions, older homes, and any space where running ducts is impractical or too expensive.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span class="faq-q-text">Do you offer geothermal installs for rural properties?</span>
+            <span class="faq-chevron"><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+          </button>
+          <div class="faq-answer"><p class="faq-answer-text">Yes. Geothermal is one of our core services and rural properties are often the best candidates. We handle the full project from site assessment and system design through installation and commissioning. We'll walk you through the economics and available federal tax credits during your free estimate.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span class="faq-q-text">Are estimates free?</span>
+            <span class="faq-chevron"><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+          </button>
+          <div class="faq-answer"><p class="faq-answer-text">Yes. We don't charge a trip fee just to come out and look. You'll get an honest assessment and an upfront price before any work begins. No pressure, no obligation.</p></div>
+        </div>
+      </div>
+      <div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span class="faq-q-text">Do you offer financing?</span>
+            <span class="faq-chevron"><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+          </button>
+          <div class="faq-answer"><p class="faq-answer-text">Yes. We offer financing through Synchrony, which means you can get the system you need now and pay over time. Ask about current financing options and promotional rates when you request your estimate.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span class="faq-q-text">What brands do you install and service?</span>
+            <span class="faq-chevron"><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+          </button>
+          <div class="faq-answer"><p class="faq-answer-text">We're authorized dealers for Coleman and Fujitsu, and we service all major brands. Coleman is built for tough climates like South Dakota's. Fujitsu makes some of the most reliable ductless mini-split systems on the market. We'll recommend the right system for your situation and budget.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span class="faq-q-text">Do you service agricultural properties and bin dryers?</span>
+            <span class="faq-chevron"><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+          </button>
+          <div class="faq-answer"><p class="faq-answer-text">Yes. We understand farm operations throughout SE South Dakota and offer HVAC service for agricultural properties including grain bin dryers. We know this equipment and we know what's at stake during harvest.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span class="faq-q-text">Are you veteran-owned?</span>
+            <span class="faq-chevron"><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+          </button>
+          <div class="faq-answer"><p class="faq-answer-text">Yes. Carlson's Heating &amp; Cooling is veteran-owned and family-operated. That means we hold ourselves to a higher standard of reliability, honesty, and accountability. When we say we're going to show up, we show up.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span class="faq-q-text">What areas do you serve?</span>
+            <span class="faq-chevron"><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+          </button>
+          <div class="faq-answer"><p class="faq-answer-text">We're based in Beresford, SD and serve all of Southeast South Dakota including Sioux Falls, Lincoln County, and surrounding rural communities. We go to cabins, lake houses, farms, and rural properties throughout the region. If you're not sure whether we cover your area, just call us.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== ABOUT ==================== -->
+<section id="about" class="section">
+  <div class="container">
+    <div class="about-inner">
+      <div class="about-img">
+        <img src="https://static.wixstatic.com/media/3b1244_29f4f075e40d4cb7ad1aaf44611171d1~mv2.jpg" alt="Carlson's Heating & Cooling Job Site" loading="lazy">
+      </div>
+      <div>
+        <div class="section-eyebrow">
+          <span class="eyebrow-line"></span>
+          <span class="eyebrow-text">About Carlson's</span>
+        </div>
+        <h2>Family-Owned.<br><span class="orange">Veteran-Operated.<br>Built for This Region.</span></h2>
+        <p class="about-body">Carlson's Heating &amp; Cooling has been serving Southeast South Dakota for over 20 years. We're based in Beresford and built this business the right way: showing up on time, giving honest estimates, and doing work we're proud of.<br><br>We're not a national brand with a call center. When you call, you're talking to us. We service homes in Sioux Falls, cabins on the lakes, furnaces on the farms, and everything in between.<br><br>As an authorized Coleman and Fujitsu dealer, we install systems built to handle South Dakota winters and summers, and we back every job with our warranty. Veteran-owned. Licensed. Insured. Locally rooted.</p>
+        <div class="vet-badge">
+          <img src="https://static.wixstatic.com/media/3b1244_d2433b0f1e9947dbb1532349e90a7d59~mv2.png" alt="Veteran-Owned Business Badge">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FINAL CTA ==================== -->
+<section id="final-cta" class="section">
+  <div class="final-cta-bg"></div>
+  <div class="container">
+    <div class="final-cta-inner">
+      <div style="position:relative;z-index:1;">
+        <div class="section-eyebrow">
+          <span class="eyebrow-line"></span>
+          <span class="eyebrow-text">Get Started Today</span>
+        </div>
+        <h2>Comfort That Works<br><span class="orange">as Hard as You Do.</span></h2>
+        <p style="margin-top:1rem;font-size:1.1rem;font-weight:500;">Get your free estimate today. No pressure, no trip charge, no runaround.</p>
+        <a href="tel:6057638008" class="final-cta-phone">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.89 12 19.79 19.79 0 0 1 1.84 3.44 2 2 0 0 1 3.82 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 5.94 5.94l.97-.97a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          (605) 763-8008
+        </a>
+      </div>
+      <div class="hero-form-card" style="position:relative;z-index:1;">
+        <div class="form-title">Schedule My Free Estimate</div>
+        <form onsubmit="return false;">
+          <div class="form-row">
+            <div class="form-group"><input type="text" placeholder="Full Name" required></div>
+            <div class="form-group"><input type="tel" placeholder="Phone Number" required></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><input type="email" placeholder="Email Address"></div>
+            <div class="form-group"><input type="text" placeholder="ZIP Code"></div>
+          </div>
+          <div class="form-group">
+            <select>
+              <option value="" disabled selected>Service Needed</option>
+              <option>AC Repair</option>
+              <option>Furnace Repair</option>
+              <option>Mini-Split Install</option>
+              <option>Geothermal</option>
+              <option>Tune-Up / Maintenance</option>
+              <option>Emergency Service</option>
+              <option>New System Install</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <select>
+                <option value="" disabled selected>Property Type</option>
+                <option>Home</option>
+                <option>Cabin / Lake House</option>
+                <option>Farm / Agricultural</option>
+                <option>Commercial</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <select>
+                <option value="" disabled selected>Best Time to Call</option>
+                <option>Morning (8am–12pm)</option>
+                <option>Afternoon (12pm–5pm)</option>
+                <option>Evening (5pm–8pm)</option>
+                <option>Anytime</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full btn-lg">Schedule My Free Estimate
+            <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </form>
+        <p class="form-note">No pressure. No trip charge to look. Local crew, real answers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-logo">
+        <img src="https://static.wixstatic.com/media/3b1244_21d6c9b21a144062afd409433e1f4533~mv2.png" alt="Carlson's Heating & Cooling">
+        <img src="https://static.wixstatic.com/media/3b1244_d2433b0f1e9947dbb1532349e90a7d59~mv2.png" alt="Veteran-Owned" style="height:40px;margin-top:0.5rem;filter:brightness(0.7);">
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Contact Us</div>
+        <div class="footer-contact">
+          <a href="tel:6057638008">(605) 763-8008</a>
+          <a href="mailto:carlsonsheating@yahoo.com">carlsonsheating@yahoo.com</a>
+          <a href="https://maps.google.com/?q=1108+W+Cedar+St+Beresford+SD+57004" target="_blank">1108 W. Cedar St., Beresford, SD 57004</a>
+          <a href="https://carlsonshvac.com" target="_blank">carlsonshvac.com</a>
+          <a href="https://facebook.com/carlsonshvac" target="_blank">Facebook</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Service Area</div>
+        <p>Beresford, Sioux Falls, Lincoln County, and throughout Southeast South Dakota. Homes, cabins, lake houses, farms, and rural properties.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Carlson's Heating &amp; Cooling. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="https://carlsonshvac.com" target="_blank">Full Website</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ==================== MOBILE STICKY BAR ==================== -->
+<div id="mobile-bar">
+  <a href="tel:6057638008">
+    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.89 12 19.79 19.79 0 0 1 1.84 3.44 2 2 0 0 1 3.82 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 5.94 5.94l.97-.97a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    Tap to Call (605) 763-8008
+  </a>
+</div>
+
+<script>
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    // Close all
+    document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        const offset = document.getElementById('header').offsetHeight;
+        const top = target.getBoundingClientRect().top + window.scrollY - offset - 20;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
