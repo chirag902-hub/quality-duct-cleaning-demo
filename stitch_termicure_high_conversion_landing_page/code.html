@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Termicure | Fort Worth Pest Control — Same-Day Service</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          primary: '#012d1d',
+          'primary-mid': '#1b4332',
+          'primary-light': '#c1ecd4',
+          secondary: '#c85a1a',
+          'secondary-hover': '#a14000',
+          bg: '#fcf9f8',
+          'bg-alt': '#f6f3f2',
+          'on-dark': '#86af99',
+          charcoal: '#1c1b1b',
+          muted: '#717973',
+          border: '#c1c8c2',
+        },
+        fontFamily: {
+          display: ['Montserrat', 'sans-serif'],
+          body: ['Outfit', 'sans-serif'],
+        },
+      }
+    }
+  }
+</script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  body { font-family: 'Outfit', sans-serif; background: #fcf9f8; color: #1c1b1b; -webkit-font-smoothing: antialiased; }
+  h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; }
+
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+    vertical-align: middle;
+    line-height: 1;
+  }
+  .icon-fill { font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48; }
+
+  /* Scroll reveal */
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  .reveal-d1 { transition-delay: 0.1s; }
+  .reveal-d2 { transition-delay: 0.2s; }
+  .reveal-d3 { transition-delay: 0.3s; }
+  .reveal-d4 { transition-delay: 0.4s; }
+
+  /* FAQ */
+  .faq-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .faq-body.open { max-height: 260px; }
+  .faq-chevron { transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1); }
+  .faq-item.open .faq-chevron { transform: rotate(180deg); }
+
+  /* CTA tactile */
+  .btn-cta { cursor: pointer; transition: background-color 0.2s ease, transform 0.1s ease; }
+  .btn-cta:active { transform: scale(0.98); }
+
+  /* Service card hover */
+  .svc-card { transition: transform 0.25s cubic-bezier(0.16,1,0.3,1), box-shadow 0.25s ease; }
+  .svc-card:hover { transform: translateY(-2px); box-shadow: 0 14px 36px -10px rgba(1,45,29,0.13); }
+
+  /* Mobile sticky CTA bar */
+  @media (max-width: 767px) {
+    body { padding-bottom: 72px; }
+    .mobile-bar { display: flex; }
+  }
+  @media (min-width: 768px) {
+    .mobile-bar { display: none; }
+  }
+
+  /* Trust scroll on mobile */
+  @media (max-width: 767px) {
+    .trust-row { overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+    .trust-row::-webkit-scrollbar { display: none; }
+    .trust-inner { min-width: max-content; padding: 0 1rem; }
+  }
+
+  /* Phone pulse */
+  @keyframes ring {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(200, 90, 26, 0.35); }
+    60%       { box-shadow: 0 0 0 10px rgba(200, 90, 26, 0); }
+  }
+  .phone-ring { animation: ring 2.4s ease-in-out infinite; }
+
+  /* Input focus */
+  .field-input:focus { outline: none; border-color: #012d1d; box-shadow: 0 0 0 2px rgba(1,45,29,0.12); }
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     STICKY HEADER
+============================================================ -->
+<header class="fixed top-0 w-full z-50 bg-bg/96 backdrop-blur-md border-b border-primary/10" style="box-shadow:0 1px 10px rgba(1,45,29,0.06);">
+  <div class="max-w-[1200px] mx-auto px-4 md:px-6 h-[70px] flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <span class="font-display font-extrabold text-xl tracking-tight text-secondary">Termicure</span>
+      <span class="hidden sm:inline text-[10px] font-body font-semibold uppercase tracking-[0.15em] text-muted px-2 py-1 border border-muted/25" style="border-radius:2px;">Pest Control</span>
+    </div>
+    <div class="flex items-center gap-3">
+      <a href="tel:6823424788" class="hidden md:flex items-center gap-1.5 text-sm font-display font-bold text-secondary hover:text-secondary-hover transition-colors tracking-wide">
+        <span class="material-symbols-outlined text-secondary" style="font-size:16px;">phone</span>
+        (682) 342-4788
+      </a>
+      <a href="#book" class="btn-cta bg-secondary text-white font-display font-bold text-[11px] uppercase tracking-[0.12em] px-5 py-3 hover:bg-secondary-hover" style="border-radius:2px;">
+        Book Inspection
+      </a>
+    </div>
+  </div>
+</header>
+
+
+<!-- ============================================================
+     HERO — SPLIT SCREEN with full-bleed background
+============================================================ -->
+<section class="min-h-[100dvh] pt-[70px] relative overflow-hidden px-4 md:px-6">
+
+  <!-- Stock background image (Pexels #5587964 — suburban brick home) -->
+  <img
+    src="https://images.pexels.com/photos/5587964/pexels-photo-5587964.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=1"
+    alt=""
+    aria-hidden="true"
+    class="absolute inset-0 w-full h-full object-cover"
+    style="object-position:center 60%; z-index:0;"
+    loading="eager"
+    fetchpriority="high"
+  >
+  <!-- Gradient overlay: left heavy for legibility, fades to show home on right -->
+  <div class="absolute inset-0" style="z-index:1; background:linear-gradient(108deg, rgba(1,45,29,0.96) 0%, rgba(1,45,29,0.91) 38%, rgba(1,45,29,0.72) 62%, rgba(1,45,29,0.38) 100%);"></div>
+
+  <div class="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-[1fr_420px] gap-8 lg:gap-16 items-center py-14 lg:py-0 relative" style="min-height:calc(100dvh - 70px); z-index:2;">
+
+    <!-- Left: Copy -->
+    <div class="reveal">
+      <div class="inline-flex items-center gap-2 bg-white/10 border border-white/20 px-3 py-1.5 mb-6" style="border-radius:2px;">
+        <span class="material-symbols-outlined text-secondary" style="font-size:14px;">location_on</span>
+        <span class="font-body text-[11px] font-semibold uppercase tracking-[0.14em] text-white">Fort Worth &amp; Tarrant County</span>
+      </div>
+
+      <h1 class="font-display font-extrabold leading-[1.06] tracking-tight text-white mb-5" style="font-size:clamp(36px,5vw,58px);">
+        Pest Control That<br>
+        <span style="color:rgba(255,255,255,0.88);">Shows Up, Does the Job,</span><br>
+        <span class="text-secondary">and Returns If It Doesn't.</span>
+      </h1>
+
+      <p class="font-body text-[17px] leading-relaxed mb-8 max-w-[500px]" style="color:rgba(255,255,255,0.78);">
+        Same-day inspections. Upfront pricing. A free re-service guarantee that means we own the result — not just the visit.
+      </p>
+
+      <ul class="space-y-3 mb-10">
+        <li class="flex items-center gap-3 font-body text-[15px] text-white">
+          <span class="w-5 h-5 flex-shrink-0 bg-secondary flex items-center justify-center" style="border-radius:50%;">
+            <span class="material-symbols-outlined text-white icon-fill" style="font-size:12px;">check</span>
+          </span>
+          Same-Day Appointments Available
+        </li>
+        <li class="flex items-center gap-3 font-body text-[15px] text-white">
+          <span class="w-5 h-5 flex-shrink-0 bg-secondary flex items-center justify-center" style="border-radius:50%;">
+            <span class="material-symbols-outlined text-white icon-fill" style="font-size:12px;">check</span>
+          </span>
+          Upfront Pricing — No Surprise Fees
+        </li>
+        <li class="flex items-center gap-3 font-body text-[15px] text-white">
+          <span class="w-5 h-5 flex-shrink-0 bg-secondary flex items-center justify-center" style="border-radius:50%;">
+            <span class="material-symbols-outlined text-white icon-fill" style="font-size:12px;">check</span>
+          </span>
+          State-Licensed &amp; Insured Technicians
+        </li>
+        <li class="flex items-center gap-3 font-body text-[15px] text-white">
+          <span class="w-5 h-5 flex-shrink-0 bg-secondary flex items-center justify-center" style="border-radius:50%;">
+            <span class="material-symbols-outlined text-white icon-fill" style="font-size:12px;">check</span>
+          </span>
+          Free Re-Service if Pests Return
+        </li>
+        <li class="flex items-center gap-3 font-body text-[15px] text-white">
+          <span class="w-5 h-5 flex-shrink-0 bg-secondary flex items-center justify-center" style="border-radius:50%;">
+            <span class="material-symbols-outlined text-white icon-fill" style="font-size:12px;">check</span>
+          </span>
+          Serving Tarrant County Since 2010
+        </li>
+      </ul>
+
+      <!-- Mobile CTAs -->
+      <div class="flex flex-col sm:flex-row gap-3 lg:hidden mb-8">
+        <a href="#book" class="btn-cta bg-secondary text-white font-display font-bold text-[11px] uppercase tracking-[0.12em] px-8 py-4 text-center hover:bg-secondary-hover" style="border-radius:2px;">
+          Book My Free Inspection
+        </a>
+        <a href="tel:6823424788" class="flex items-center justify-center gap-2 border-2 border-white text-white font-display font-bold text-[11px] uppercase tracking-[0.12em] px-8 py-4 hover:bg-white hover:text-primary transition-all" style="border-radius:2px;">
+          <span class="material-symbols-outlined" style="font-size:15px;">phone</span>
+          (682) 342-4788
+        </a>
+      </div>
+
+      <!-- Trust micro-bar (desktop) -->
+      <div class="hidden lg:flex items-center gap-6 pt-8 border-t border-white/15">
+        <div class="flex items-center gap-1">
+          <span class="material-symbols-outlined text-secondary icon-fill" style="font-size:16px;">star</span>
+          <span class="material-symbols-outlined text-secondary icon-fill" style="font-size:16px;">star</span>
+          <span class="material-symbols-outlined text-secondary icon-fill" style="font-size:16px;">star</span>
+          <span class="material-symbols-outlined text-secondary icon-fill" style="font-size:16px;">star</span>
+          <span class="material-symbols-outlined text-secondary icon-fill" style="font-size:16px;">star</span>
+          <span class="font-body text-sm font-semibold text-white ml-1.5">5.0 on Google</span>
+        </div>
+        <div class="w-px h-4 bg-white/20"></div>
+        <span class="font-body text-sm" style="color:rgba(255,255,255,0.65);">200+ reviews</span>
+        <div class="w-px h-4 bg-white/20"></div>
+        <span class="font-body text-sm" style="color:rgba(255,255,255,0.65);">TX License #49281</span>
+      </div>
+    </div>
+
+    <!-- Right: Form card -->
+    <div class="reveal reveal-d2 hidden lg:block" id="book-hero">
+      <div class="bg-white border border-primary/10 p-8" style="border-radius:4px; box-shadow:0 20px 60px -12px rgba(0,0,0,0.35),0 4px 16px rgba(0,0,0,0.12);">
+        <div class="mb-5">
+          <p class="font-body text-[11px] font-semibold uppercase tracking-[0.14em] text-secondary mb-1.5">Start Here</p>
+          <h2 class="font-display font-bold text-[21px] text-primary leading-tight">Schedule Your Free Inspection</h2>
+          <p class="font-body text-sm text-muted mt-1">Most calls get same-day availability.</p>
+        </div>
+        <form class="space-y-4" onsubmit="handleSubmit(event)">
+          <div>
+            <label class="block font-body font-semibold text-[11px] uppercase tracking-[0.12em] text-charcoal mb-1.5">Full Name</label>
+            <input type="text" placeholder="Your name" class="field-input w-full h-12 border border-border px-4 font-body text-sm transition-all" style="border-radius:2px;">
+          </div>
+          <div class="grid grid-cols-2 gap-3">
+            <div>
+              <label class="block font-body font-semibold text-[11px] uppercase tracking-[0.12em] text-charcoal mb-1.5">Phone</label>
+              <input type="tel" placeholder="(682) ___-____" class="field-input w-full h-12 border border-border px-4 font-body text-sm transition-all" style="border-radius:2px;">
+            </div>
+            <div>
+              <label class="block font-body font-semibold text-[11px] uppercase tracking-[0.12em] text-charcoal mb-1.5">ZIP Code</label>
+              <input type="text" placeholder="76102" class="field-input w-full h-12 border border-border px-4 font-body text-sm transition-all" style="border-radius:2px;">
+            </div>
+          </div>
+          <div>
+            <label class="block font-body font-semibold text-[11px] uppercase tracking-[0.12em] text-charcoal mb-1.5">Service Needed</label>
+            <select class="field-input w-full h-12 border border-border px-4 font-body text-sm bg-white transition-all" style="border-radius:2px;">
+              <option>General Pest Control</option>
+              <option>Termite Inspection</option>
+              <option>Roach Elimination</option>
+              <option>Rodent Removal</option>
+              <option>Ant Control</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-cta w-full h-14 bg-secondary text-white font-display font-bold text-[11px] uppercase tracking-[0.12em] hover:bg-secondary-hover" style="border-radius:2px;">
+            Get My Free Inspection
+          </button>
+        </form>
+        <p class="font-body text-[11px] text-muted text-center mt-4 flex items-center justify-center gap-1.5">
+          <span class="material-symbols-outlined text-border" style="font-size:13px;">lock</span>
+          No spam. No contracts. Cancel anytime.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+     STATS BAR
+============================================================ -->
+<div class="bg-primary-mid py-10 px-4 md:px-6">
+  <div class="trust-row">
+    <div class="trust-inner max-w-[1200px] mx-auto flex gap-10 md:gap-0 md:justify-between items-center">
+      <div class="text-center min-w-[120px] md:min-w-0">
+        <div class="font-display font-extrabold text-3xl text-white tracking-tight">10+</div>
+        <div class="font-body text-[10px] font-semibold uppercase tracking-[0.14em] text-on-dark mt-1">Years in Fort Worth</div>
+      </div>
+      <div class="hidden md:block w-px h-8 bg-white/12"></div>
+      <div class="text-center min-w-[120px] md:min-w-0">
+        <div class="font-display font-extrabold text-3xl text-white tracking-tight">200+</div>
+        <div class="font-body text-[10px] font-semibold uppercase tracking-[0.14em] text-on-dark mt-1">5-Star Reviews</div>
+      </div>
+      <div class="hidden md:block w-px h-8 bg-white/12"></div>
+      <div class="text-center min-w-[120px] md:min-w-0">
+        <div class="font-display font-extrabold text-3xl text-secondary tracking-tight">100%</div>
+        <div class="font-body text-[10px] font-semibold uppercase tracking-[0.14em] text-on-dark mt-1">Re-Service Guarantee</div>
+      </div>
+      <div class="hidden md:block w-px h-8 bg-white/12"></div>
+      <div class="text-center min-w-[120px] md:min-w-0">
+        <div class="font-display font-extrabold text-3xl text-white tracking-tight">Same</div>
+        <div class="font-body text-[10px] font-semibold uppercase tracking-[0.14em] text-on-dark mt-1">Day Availability</div>
+      </div>
+      <div class="hidden md:block w-px h-8 bg-white/12"></div>
+      <div class="text-center min-w-[120px] md:min-w-0">
+        <div class="font-display font-extrabold text-3xl text-white tracking-tight">$0</div>
+        <div class="font-body text-[10px] font-semibold uppercase tracking-[0.14em] text-on-dark mt-1">Hidden Fees</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     HERO IMAGE BREAK
+============================================================ -->
+<div class="relative overflow-hidden" style="height:clamp(260px,35vw,420px);">
+  <img src="hero.jpg" alt="Termicure technician inspecting a Fort Worth home exterior" class="absolute inset-0 w-full h-full object-cover" style="object-position:center 30%;">
+  <div class="absolute inset-0" style="background:linear-gradient(105deg, rgba(1,45,29,0.82) 0%, rgba(1,45,29,0.6) 55%, rgba(1,45,29,0.18) 100%);"></div>
+  <div class="absolute inset-0 flex items-center px-6 md:px-12 lg:px-16">
+    <div class="max-w-[580px]">
+      <p class="font-body text-[11px] font-semibold uppercase tracking-[0.14em] text-secondary mb-3">Real Work. Real Results.</p>
+      <p class="font-display font-bold text-white leading-tight tracking-tight" style="font-size:clamp(20px,3vw,34px);">"They inspected every corner of the foundation — not just the obvious spots."</p>
+      <p class="font-body text-sm text-on-dark mt-4 flex items-center gap-2">
+        <span class="flex gap-0.5">
+          <span class="material-symbols-outlined text-secondary icon-fill" style="font-size:13px;">star</span>
+          <span class="material-symbols-outlined text-secondary icon-fill" style="font-size:13px;">star</span>
+          <span class="material-symbols-outlined text-secondary icon-fill" style="font-size:13px;">star</span>
+          <span class="material-symbols-outlined text-secondary icon-fill" style="font-size:13px;">star</span>
+          <span class="material-symbols-outlined text-secondary icon-fill" style="font-size:13px;">star</span>
+        </span>
+        Verified Google Review — Fort Worth, TX
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     OUR PROMISE — dark section
+============================================================ -->
+<section class="py-20 md:py-32 px-4 md:px-6 bg-primary text-white">
+  <div class="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+    <!-- Copy -->
+    <div class="reveal">
+      <p class="font-body text-[11px] font-semibold uppercase tracking-[0.14em] text-secondary mb-4">Our Ironclad Commitment</p>
+      <h2 class="font-display font-bold leading-tight tracking-tight mb-6" style="font-size:clamp(30px,4vw,44px);">
+        If the Pests Come Back,<br>So Do We — At No Charge.
+      </h2>
+      <p class="font-body text-[17px] leading-relaxed text-on-dark mb-8 max-w-[460px]">
+        We believe in work done right the first time. If pests return between scheduled visits, we come back for free until they are gone — permanently.
+      </p>
+      <a href="#book" class="btn-cta inline-flex items-center gap-2.5 bg-secondary text-white font-display font-bold text-[11px] uppercase tracking-[0.12em] px-8 py-4 hover:bg-secondary-hover" style="border-radius:2px;">
+        Hold Us to It — Book Now
+        <span class="material-symbols-outlined" style="font-size:16px;">arrow_forward</span>
+      </a>
+    </div>
+
+    <!-- Feature list -->
+    <div class="space-y-4 reveal reveal-d2">
+      <div class="p-6 border border-white/10 bg-white/5 flex items-start gap-4" style="border-radius:4px;">
+        <div class="w-10 h-10 bg-secondary/20 flex items-center justify-center flex-shrink-0" style="border-radius:2px;">
+          <span class="material-symbols-outlined text-secondary" style="font-size:20px;">phone_forwarded</span>
+        </div>
+        <div>
+          <h3 class="font-display font-bold text-[16px] mb-1.5">Direct Line to Your Tech</h3>
+          <p class="font-body text-sm text-on-dark leading-relaxed">Talk directly with the specialist handling your home — not a call center.</p>
+        </div>
+      </div>
+      <div class="p-6 border border-white/10 bg-white/5 flex items-start gap-4" style="border-radius:4px;">
+        <div class="w-10 h-10 bg-secondary/20 flex items-center justify-center flex-shrink-0" style="border-radius:2px;">
+          <span class="material-symbols-outlined text-secondary" style="font-size:20px;">receipt_long</span>
+        </div>
+        <div>
+          <h3 class="font-display font-bold text-[16px] mb-1.5">No-Surprise Pricing</h3>
+          <p class="font-body text-sm text-on-dark leading-relaxed">The price we quote is the price you pay — handed to you before a single treatment begins.</p>
+        </div>
+      </div>
+      <div class="p-6 border border-white/10 bg-white/5 flex items-start gap-4" style="border-radius:4px;">
+        <div class="w-10 h-10 bg-secondary/20 flex items-center justify-center flex-shrink-0" style="border-radius:2px;">
+          <span class="material-symbols-outlined text-secondary" style="font-size:20px;">verified_user</span>
+        </div>
+        <div>
+          <h3 class="font-display font-bold text-[16px] mb-1.5">TX-Licensed &amp; Fully Insured</h3>
+          <p class="font-body text-sm text-on-dark leading-relaxed">License #49281 issued by the Texas Dept. of Agriculture. Every tech carries full liability coverage.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+     TESTIMONIALS — featured + 2 stacked (no 3-equal-columns)
+============================================================ -->
+<section class="py-20 md:py-32 px-4 md:px-6 bg-bg">
+  <div class="max-w-[1200px] mx-auto">
+
+    <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-12 reveal">
+      <div>
+        <p class="font-body text-[11px] font-semibold uppercase tracking-[0.14em] text-secondary mb-3">Customer Reviews</p>
+        <h2 class="font-display font-bold tracking-tight text-primary" style="font-size:clamp(28px,3.5vw,40px);">Rated 5/5 Stars on Google</h2>
+      </div>
+      <div class="flex items-center gap-2 flex-shrink-0">
+        <div class="flex gap-0.5">
+          <span class="material-symbols-outlined text-secondary icon-fill" style="font-size:18px;">star</span>
+          <span class="material-symbols-outlined text-secondary icon-fill" style="font-size:18px;">star</span>
+          <span class="material-symbols-outlined text-secondary icon-fill" style="font-size:18px;">star</span>
+          <span class="material-symbols-outlined text-secondary icon-fill" style="font-size:18px;">star</span>
+          <span class="material-symbols-outlined text-secondary icon-fill" style="font-size:18px;">star</span>
+        </div>
+        <span class="font-body text-sm text-muted">200+ reviews</span>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-5">
+
+      <!-- Featured large -->
+      <div class="bg-primary p-8 md:p-10 reveal" style="border-radius:4px;">
+        <div class="flex gap-0.5 mb-6">
+          <span class="material-symbols-outlined text-secondary icon-fill" style="font-size:16px;">star</span>
+          <span class="material-symbols-outlined text-secondary icon-fill" style="font-size:16px;">star</span>
+          <span class="material-symbols-outlined text-secondary icon-fill" style="font-size:16px;">star</span>
+          <span class="material-symbols-outlined text-secondary icon-fill" style="font-size:16px;">star</span>
+          <span class="material-symbols-outlined text-secondary icon-fill" style="font-size:16px;">star</span>
+        </div>
+        <blockquote class="font-body font-medium text-xl md:text-2xl leading-relaxed text-white mb-8">
+          "Termicure was out the same day I called about ants in our kitchen. Professional, on time, and the price was exactly what they quoted. Zero surprises. I've used three other companies over the years — this is the only one I'll call again."
+        </blockquote>
+        <div class="flex items-center gap-4">
+          <img src="https://picsum.photos/seed/moefw2024/48/48" alt="" class="w-12 h-12 object-cover" style="border-radius:50%;">
+          <div>
+            <div class="font-display font-bold text-sm text-white">Mohamed R.</div>
+            <div class="font-body text-xs text-on-dark">Fort Worth, TX</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Two stacked -->
+      <div class="flex flex-col gap-5">
+        <div class="bg-white border border-primary/8 p-6 reveal reveal-d1" style="border-radius:4px; box-shadow:0 2px 12px rgba(1,45,29,0.05);">
+          <div class="flex gap-0.5 mb-4">
+            <span class="material-symbols-outlined text-secondary icon-fill" style="font-size:14px;">star</span>
+            <span class="material-symbols-outlined text-secondary icon-fill" style="font-size:14px;">star</span>
+            <span class="material-symbols-outlined text-secondary icon-fill" style="font-size:14px;">star</span>
+            <span class="material-symbols-outlined text-secondary icon-fill" style="font-size:14px;">star</span>
+            <span class="material-symbols-outlined text-secondary icon-fill" style="font-size:14px;">star</span>
+          </div>
+          <blockquote class="font-body text-[15px] text-charcoal leading-relaxed mb-5">
+            "I've used three other companies that kept trying to upsell me. The tech explained everything, gave me a flat price, and I haven't seen a bug since."
+          </blockquote>
+          <div class="flex items-center gap-3">
+            <img src="https://picsum.photos/seed/sarahhaltom/40/40" alt="" class="w-10 h-10 object-cover" style="border-radius:50%;">
+            <div>
+              <div class="font-display font-bold text-xs text-primary">Sarah T.</div>
+              <div class="font-body text-xs text-muted">Haltom City, TX</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white border border-primary/8 p-6 reveal reveal-d2" style="border-radius:4px; box-shadow:0 2px 12px rgba(1,45,29,0.05);">
+          <div class="flex gap-0.5 mb-4">
+            <span class="material-symbols-outlined text-secondary icon-fill" style="font-size:14px;">star</span>
+            <span class="material-symbols-outlined text-secondary icon-fill" style="font-size:14px;">star</span>
+            <span class="material-symbols-outlined text-secondary icon-fill" style="font-size:14px;">star</span>
+            <span class="material-symbols-outlined text-secondary icon-fill" style="font-size:14px;">star</span>
+            <span class="material-symbols-outlined text-secondary icon-fill" style="font-size:14px;">star</span>
+          </div>
+          <blockquote class="font-body text-[15px] text-charcoal leading-relaxed mb-5">
+            "Best service in Tarrant County. They come back if there's an issue and actually show up on time. That alone separates them from everyone else."
+          </blockquote>
+          <div class="flex items-center gap-3">
+            <img src="https://picsum.photos/seed/jamesfw2024/40/40" alt="" class="w-10 h-10 object-cover" style="border-radius:50%;">
+            <div>
+              <div class="font-display font-bold text-xs text-primary">James K.</div>
+              <div class="font-body text-xs text-muted">Fort Worth, TX</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SERVICES — asymmetric grid (no 3-equal-columns)
+============================================================ -->
+<section class="py-20 md:py-32 px-4 md:px-6 bg-bg-alt">
+  <div class="max-w-[1200px] mx-auto">
+
+    <div class="mb-12 reveal">
+      <p class="font-body text-[11px] font-semibold uppercase tracking-[0.14em] text-secondary mb-3">What We Handle</p>
+      <h2 class="font-display font-bold tracking-tight text-primary" style="font-size:clamp(28px,3.5vw,40px);">Total Protection Services</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+      <!-- Wide feature card -->
+      <div class="svc-card md:col-span-2 bg-white border border-primary/8 p-7 flex flex-col md:flex-row md:items-center gap-6 reveal" style="border-radius:4px;">
+        <div class="w-14 h-14 bg-primary flex items-center justify-center flex-shrink-0" style="border-radius:4px;">
+          <span class="material-symbols-outlined text-white" style="font-size:28px;">home</span>
+        </div>
+        <div class="flex-1">
+          <h3 class="font-display font-bold text-xl text-primary mb-2">General Pest Control</h3>
+          <p class="font-body text-sm leading-relaxed max-w-xl" style="color:#414844;">Comprehensive exterior and interior barrier protection against common Texas household invaders — ants, spiders, wasps, silverfish, and more. Quarterly plans available.</p>
+        </div>
+        <a href="#book" class="flex-shrink-0 inline-flex items-center gap-1.5 text-secondary font-display font-bold text-[11px] uppercase tracking-[0.12em] hover:gap-3 transition-all whitespace-nowrap">
+          Book Now <span class="material-symbols-outlined" style="font-size:15px;">arrow_forward</span>
+        </a>
+      </div>
+
+      <!-- Termite -->
+      <div class="svc-card bg-white border border-primary/8 p-7 reveal reveal-d1" style="border-radius:4px;">
+        <div class="w-12 h-12 bg-primary-light flex items-center justify-center mb-5" style="border-radius:4px;">
+          <span class="material-symbols-outlined text-primary" style="font-size:24px;">pest_control</span>
+        </div>
+        <h3 class="font-display font-bold text-lg text-primary mb-2">Termite Treatment</h3>
+        <p class="font-body text-sm leading-relaxed mb-5" style="color:#414844;">Advanced liquid barriers and bait systems to stop the $5 billion-per-year threat to your home's structure.</p>
+        <a href="#book" class="inline-flex items-center gap-1.5 text-secondary font-display font-bold text-[11px] uppercase tracking-[0.12em] hover:gap-3 transition-all">
+          Book Now <span class="material-symbols-outlined" style="font-size:15px;">arrow_forward</span>
+        </a>
+      </div>
+
+      <!-- Roach -->
+      <div class="svc-card bg-white border border-primary/8 p-7 reveal reveal-d2" style="border-radius:4px;">
+        <div class="w-12 h-12 bg-primary-light flex items-center justify-center mb-5" style="border-radius:4px;">
+          <span class="material-symbols-outlined text-primary" style="font-size:24px;">bug_report</span>
+        </div>
+        <h3 class="font-display font-bold text-lg text-primary mb-2">Roach Elimination</h3>
+        <p class="font-body text-sm leading-relaxed mb-5" style="color:#414844;">Multi-phase treatment plans targeting German and American roach infestations at the source — not just the surface.</p>
+        <a href="#book" class="inline-flex items-center gap-1.5 text-secondary font-display font-bold text-[11px] uppercase tracking-[0.12em] hover:gap-3 transition-all">
+          Book Now <span class="material-symbols-outlined" style="font-size:15px;">arrow_forward</span>
+        </a>
+      </div>
+
+      <!-- Ant -->
+      <div class="svc-card bg-white border border-primary/8 p-7 reveal reveal-d1" style="border-radius:4px;">
+        <div class="w-12 h-12 bg-primary-light flex items-center justify-center mb-5" style="border-radius:4px;">
+          <span class="material-symbols-outlined text-primary" style="font-size:24px;">pest_control_rodent</span>
+        </div>
+        <h3 class="font-display font-bold text-lg text-primary mb-2">Ant Control</h3>
+        <p class="font-body text-sm leading-relaxed mb-5" style="color:#414844;">Targeted nest elimination for Fire Ants, Carpenter Ants, and invasive sugar ant colonies throughout your property.</p>
+        <a href="#book" class="inline-flex items-center gap-1.5 text-secondary font-display font-bold text-[11px] uppercase tracking-[0.12em] hover:gap-3 transition-all">
+          Book Now <span class="material-symbols-outlined" style="font-size:15px;">arrow_forward</span>
+        </a>
+      </div>
+
+      <!-- Rodent -->
+      <div class="svc-card bg-white border border-primary/8 p-7 reveal reveal-d2" style="border-radius:4px;">
+        <div class="w-12 h-12 bg-primary-light flex items-center justify-center mb-5" style="border-radius:4px;">
+          <span class="material-symbols-outlined text-primary" style="font-size:24px;">crisis_alert</span>
+        </div>
+        <h3 class="font-display font-bold text-lg text-primary mb-2">Rodent Removal</h3>
+        <p class="font-body text-sm leading-relaxed mb-5" style="color:#414844;">Exclusion, trapping, and sanitation services to seal rats and mice out of your attic, walls, and crawl spaces.</p>
+        <a href="#book" class="inline-flex items-center gap-1.5 text-secondary font-display font-bold text-[11px] uppercase tracking-[0.12em] hover:gap-3 transition-all">
+          Book Now <span class="material-symbols-outlined" style="font-size:15px;">arrow_forward</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     WHY CHOOSE — split with image
+============================================================ -->
+<section class="py-20 md:py-32 px-4 md:px-6 bg-bg">
+  <div class="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+    <!-- Image (shows first on mobile via order) -->
+    <div class="order-2 lg:order-1 reveal">
+      <div class="relative">
+        <img
+          src="why-choose.jpg"
+          alt="Termicure technician talking with a Fort Worth homeowner"
+          class="w-full object-cover"
+          style="border-radius:4px; aspect-ratio:680/560;"
+        >
+        <!-- Badge overlay -->
+        <div class="absolute bottom-5 left-5 bg-white p-4 flex items-center gap-4" style="border-radius:4px; box-shadow:0 8px 24px rgba(0,0,0,0.13);">
+          <div class="w-10 h-10 bg-secondary/15 flex items-center justify-center" style="border-radius:2px;">
+            <span class="material-symbols-outlined text-secondary" style="font-size:20px;">verified_user</span>
+          </div>
+          <div>
+            <div class="font-display font-extrabold text-xl text-primary leading-none">10+</div>
+            <div class="font-body text-xs text-muted">Years serving Fort Worth</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copy -->
+    <div class="order-1 lg:order-2 reveal reveal-d2">
+      <p class="font-body text-[11px] font-semibold uppercase tracking-[0.14em] text-secondary mb-4">Why Choose Termicure</p>
+      <h2 class="font-display font-bold tracking-tight text-primary mb-8 leading-tight" style="font-size:clamp(28px,3.5vw,40px);">
+        Why Fort Worth Homeowners Call Us First
+      </h2>
+      <div class="space-y-5">
+        <div class="flex gap-4 pb-5 border-b border-primary/8">
+          <div class="w-8 h-8 bg-primary/7 flex items-center justify-center flex-shrink-0 mt-0.5" style="border-radius:2px;">
+            <span class="material-symbols-outlined text-secondary" style="font-size:16px;">sell</span>
+          </div>
+          <div>
+            <div class="font-display font-bold text-sm uppercase tracking-wide text-primary mb-1">Upfront Pricing</div>
+            <p class="font-body text-sm leading-relaxed" style="color:#414844;">Know exactly what you'll pay before we ever start the treatment.</p>
+          </div>
+        </div>
+        <div class="flex gap-4 pb-5 border-b border-primary/8">
+          <div class="w-8 h-8 bg-primary/7 flex items-center justify-center flex-shrink-0 mt-0.5" style="border-radius:2px;">
+            <span class="material-symbols-outlined text-secondary" style="font-size:16px;">schedule</span>
+          </div>
+          <div>
+            <div class="font-display font-bold text-sm uppercase tracking-wide text-primary mb-1">Punctuality</div>
+            <p class="font-body text-sm leading-relaxed" style="color:#414844;">We respect your time. If we're running late, we call you immediately.</p>
+          </div>
+        </div>
+        <div class="flex gap-4 pb-5 border-b border-primary/8">
+          <div class="w-8 h-8 bg-primary/7 flex items-center justify-center flex-shrink-0 mt-0.5" style="border-radius:2px;">
+            <span class="material-symbols-outlined text-secondary" style="font-size:16px;">chat_bubble</span>
+          </div>
+          <div>
+            <div class="font-display font-bold text-sm uppercase tracking-wide text-primary mb-1">Clear Explanations</div>
+            <p class="font-body text-sm leading-relaxed" style="color:#414844;">No jargon. We show you the problem and explain the solution in plain terms.</p>
+          </div>
+        </div>
+        <div class="flex gap-4 pb-5 border-b border-primary/8">
+          <div class="w-8 h-8 bg-primary/7 flex items-center justify-center flex-shrink-0 mt-0.5" style="border-radius:2px;">
+            <span class="material-symbols-outlined text-secondary" style="font-size:16px;">block</span>
+          </div>
+          <div>
+            <div class="font-display font-bold text-sm uppercase tracking-wide text-primary mb-1">No Upsells</div>
+            <p class="font-body text-sm leading-relaxed" style="color:#414844;">We treat what's needed. We never push services you don't require.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="w-8 h-8 bg-primary/7 flex items-center justify-center flex-shrink-0 mt-0.5" style="border-radius:2px;">
+            <span class="material-symbols-outlined text-secondary" style="font-size:16px;">home_pin</span>
+          </div>
+          <div>
+            <div class="font-display font-bold text-sm uppercase tracking-wide text-primary mb-1">Locally Owned</div>
+            <p class="font-body text-sm leading-relaxed" style="color:#414844;">We're your neighbors. We understand the specific pests in Tarrant County.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+     HOW IT WORKS
+============================================================ -->
+<section class="py-20 md:py-32 px-4 md:px-6 bg-primary text-white">
+  <div class="max-w-[1200px] mx-auto">
+    <div class="text-center mb-16 reveal">
+      <p class="font-body text-[11px] font-semibold uppercase tracking-[0.14em] text-secondary mb-4">Our Process</p>
+      <h2 class="font-display font-bold tracking-tight" style="font-size:clamp(28px,3.5vw,40px);">Simple. Effective. Guaranteed.</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 relative gap-8">
+      <!-- connector line desktop -->
+      <div class="hidden md:block absolute top-10 left-[calc(16.66%+24px)] right-[calc(16.66%+24px)] h-px bg-white/14"></div>
+
+      <div class="flex flex-col items-center text-center px-6 reveal">
+        <div class="w-20 h-20 bg-secondary flex items-center justify-center font-display font-extrabold text-3xl text-white mb-6 flex-shrink-0" style="border-radius:2px;">1</div>
+        <h3 class="font-display font-bold text-xl mb-3">Book Inspection</h3>
+        <p class="font-body text-sm text-on-dark leading-relaxed">Call or book online. We're usually at your door within hours of first contact.</p>
+      </div>
+
+      <div class="flex flex-col items-center text-center px-6 reveal reveal-d2">
+        <div class="w-20 h-20 bg-secondary flex items-center justify-center font-display font-extrabold text-3xl text-white mb-6" style="border-radius:2px;">2</div>
+        <h3 class="font-display font-bold text-xl mb-3">Diagnose &amp; Treat</h3>
+        <p class="font-body text-sm text-on-dark leading-relaxed">We find the source, explain our plan in plain language, and treat the problem at its root.</p>
+      </div>
+
+      <div class="flex flex-col items-center text-center px-6 reveal reveal-d4">
+        <div class="w-20 h-20 bg-secondary flex items-center justify-center font-display font-extrabold text-3xl text-white mb-6" style="border-radius:2px;">3</div>
+        <h3 class="font-display font-bold text-xl mb-3">Pests Gone</h3>
+        <p class="font-body text-sm text-on-dark leading-relaxed">Enjoy your home. If they come back, so do we — at zero extra cost.</p>
+      </div>
+    </div>
+
+    <div class="text-center mt-12 reveal">
+      <a href="#book" class="btn-cta inline-flex items-center gap-2.5 bg-secondary text-white font-display font-bold text-[11px] uppercase tracking-[0.12em] px-10 py-4 hover:bg-secondary-hover" style="border-radius:2px;">
+        Start With a Free Inspection
+        <span class="material-symbols-outlined" style="font-size:16px;">arrow_forward</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     EMERGENCY CTA
+============================================================ -->
+<section class="py-20 px-4 md:px-6 bg-primary-mid text-white text-center">
+  <div class="max-w-2xl mx-auto reveal">
+    <p class="font-body text-[11px] font-semibold uppercase tracking-[0.14em] text-secondary mb-4">Available Now</p>
+    <h2 class="font-display font-bold tracking-tight leading-tight mb-4" style="font-size:clamp(28px,4vw,44px);">
+      Pests Don't Keep Business Hours.<br>Neither Do We.
+    </h2>
+    <p class="font-body text-lg text-on-dark mb-10 leading-relaxed">Same-day service or book online in under 60 seconds.</p>
+    <div class="flex flex-col sm:flex-row justify-center gap-4">
+      <a href="tel:6823424788" class="btn-cta phone-ring bg-secondary text-white font-display font-bold text-sm uppercase tracking-[0.12em] px-10 py-4 hover:bg-secondary-hover flex items-center justify-center gap-2.5" style="border-radius:2px;">
+        <span class="material-symbols-outlined" style="font-size:17px;">call</span>
+        (682) 342-4788
+      </a>
+      <a href="#book" class="btn-cta border-2 border-white text-white font-display font-bold text-sm uppercase tracking-[0.12em] px-10 py-4 hover:bg-white hover:text-primary transition-all" style="border-radius:2px;">
+        Book Online
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     FAQ — functional accordion
+============================================================ -->
+<section class="py-20 md:py-32 px-4 md:px-6 bg-bg">
+  <div class="max-w-[760px] mx-auto">
+    <div class="text-center mb-12 reveal">
+      <p class="font-body text-[11px] font-semibold uppercase tracking-[0.14em] text-secondary mb-3">Common Questions</p>
+      <h2 class="font-display font-bold tracking-tight text-primary" style="font-size:clamp(26px,3vw,36px);">Frequently Asked Questions</h2>
+    </div>
+
+    <div class="space-y-3 reveal">
+
+      <div class="faq-item border border-primary/12 bg-white" style="border-radius:4px;">
+        <button class="w-full flex justify-between items-center px-6 py-5 text-left" onclick="toggleFaq(this)">
+          <span class="font-display font-bold text-base md:text-lg text-primary">How fast can you get here?</span>
+          <span class="material-symbols-outlined text-secondary faq-chevron flex-shrink-0 ml-4" style="font-size:22px;">expand_more</span>
+        </button>
+        <div class="faq-body px-6">
+          <p class="font-body text-sm leading-relaxed pb-5" style="color:#414844;">We offer same-day inspections for most Fort Worth residents who call before noon. Our goal is to have a technician at your door within 24 hours of first contact.</p>
+        </div>
+      </div>
+
+      <div class="faq-item border border-primary/12 bg-white" style="border-radius:4px;">
+        <button class="w-full flex justify-between items-center px-6 py-5 text-left" onclick="toggleFaq(this)">
+          <span class="font-display font-bold text-base md:text-lg text-primary">Is the re-service really free?</span>
+          <span class="material-symbols-outlined text-secondary faq-chevron flex-shrink-0 ml-4" style="font-size:22px;">expand_more</span>
+        </button>
+        <div class="faq-body px-6">
+          <p class="font-body text-sm leading-relaxed pb-5" style="color:#414844;">Yes. For our regular service plans, if you see pests between scheduled visits, we return to re-treat those areas at absolutely no cost. No questions asked.</p>
+        </div>
+      </div>
+
+      <div class="faq-item border border-primary/12 bg-white" style="border-radius:4px;">
+        <button class="w-full flex justify-between items-center px-6 py-5 text-left" onclick="toggleFaq(this)">
+          <span class="font-display font-bold text-base md:text-lg text-primary">How does pricing work?</span>
+          <span class="material-symbols-outlined text-secondary faq-chevron flex-shrink-0 ml-4" style="font-size:22px;">expand_more</span>
+        </button>
+        <div class="faq-body px-6">
+          <p class="font-body text-sm leading-relaxed pb-5" style="color:#414844;">We provide a flat, upfront price after our inspection — before any work begins. No hidden fees, fuel surcharges, or surprise add-ons. The number we quote is the number you pay.</p>
+        </div>
+      </div>
+
+      <div class="faq-item border border-primary/12 bg-white" style="border-radius:4px;">
+        <button class="w-full flex justify-between items-center px-6 py-5 text-left" onclick="toggleFaq(this)">
+          <span class="font-display font-bold text-base md:text-lg text-primary">Are your treatments safe for pets and kids?</span>
+          <span class="material-symbols-outlined text-secondary faq-chevron flex-shrink-0 ml-4" style="font-size:22px;">expand_more</span>
+        </button>
+        <div class="faq-body px-6">
+          <p class="font-body text-sm leading-relaxed pb-5" style="color:#414844;">Yes. We use industry-leading products safe for your family and pets when applied according to label guidelines. We'll give you specific instructions — including any temporary precautions — before each treatment.</p>
+        </div>
+      </div>
+
+      <div class="faq-item border border-primary/12 bg-white" style="border-radius:4px;">
+        <button class="w-full flex justify-between items-center px-6 py-5 text-left" onclick="toggleFaq(this)">
+          <span class="font-display font-bold text-base md:text-lg text-primary">Do you offer plans or one-time treatments?</span>
+          <span class="material-symbols-outlined text-secondary faq-chevron flex-shrink-0 ml-4" style="font-size:22px;">expand_more</span>
+        </button>
+        <div class="faq-body px-6">
+          <p class="font-body text-sm leading-relaxed pb-5" style="color:#414844;">Both. We offer one-time treatments for acute infestations and quarterly maintenance plans for ongoing protection. The free re-service guarantee applies to plan customers.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     FINAL CONVERSION
+============================================================ -->
+<section class="py-20 md:py-32 px-4 md:px-6 bg-bg-alt border-t border-primary/8" id="book">
+  <div class="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-[1fr_420px] gap-12 lg:gap-20 items-start">
+
+    <!-- Left -->
+    <div class="reveal">
+      <p class="font-body text-[11px] font-semibold uppercase tracking-[0.14em] text-secondary mb-4">Get Started Today</p>
+      <h2 class="font-display font-bold tracking-tight text-primary leading-tight mb-6" style="font-size:clamp(28px,4vw,44px);">
+        Stop Wondering If They'll Come Back.<br>
+        <span class="text-secondary">Know That We Will.</span>
+      </h2>
+      <p class="font-body text-[17px] leading-relaxed mb-10 max-w-[460px]" style="color:#414844;">
+        Join Fort Worth families who trust Termicure for permanent pest solutions. Book your free inspection today — no commitment required.
+      </p>
+
+      <!-- Phone block -->
+      <div class="inline-flex items-center gap-5 p-5 bg-white border-l-4 border-secondary" style="border-radius:0 4px 4px 0; box-shadow:0 2px 16px rgba(1,45,29,0.08);">
+        <span class="material-symbols-outlined text-secondary" style="font-size:36px;">phone_in_talk</span>
+        <div>
+          <div class="font-body text-[10px] uppercase tracking-[0.14em] text-muted font-semibold mb-0.5">Call Directly</div>
+          <a href="tel:6823424788" class="font-display font-extrabold text-2xl text-primary hover:text-secondary transition-colors">(682) 342-4788</a>
+        </div>
+      </div>
+
+      <!-- Guarantees -->
+      <div class="flex flex-wrap gap-4 mt-8">
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-primary icon-fill" style="font-size:15px;">verified_user</span>
+          <span class="font-body text-sm" style="color:#414844;">Free re-service guarantee</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-primary icon-fill" style="font-size:15px;">verified_user</span>
+          <span class="font-body text-sm" style="color:#414844;">No contracts required</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-primary icon-fill" style="font-size:15px;">verified_user</span>
+          <span class="font-body text-sm" style="color:#414844;">Licensed &amp; insured</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Form -->
+    <div class="reveal reveal-d2">
+      <div class="bg-white border border-primary/10 p-8" style="border-radius:4px; box-shadow:0 8px 40px -8px rgba(1,45,29,0.12);">
+        <h3 class="font-display font-bold text-xl text-primary mb-1">Schedule Your Inspection</h3>
+        <p class="font-body text-sm text-muted mb-6">Most calls get same-day availability.</p>
+        <form class="space-y-4" onsubmit="handleSubmit(event)">
+          <div>
+            <label class="block font-body font-semibold text-[11px] uppercase tracking-[0.12em] text-charcoal mb-1.5">Full Name</label>
+            <input type="text" placeholder="Your name" class="field-input w-full h-12 border border-border px-4 font-body text-sm transition-all" style="border-radius:2px;">
+          </div>
+          <div class="grid grid-cols-2 gap-3">
+            <div>
+              <label class="block font-body font-semibold text-[11px] uppercase tracking-[0.12em] text-charcoal mb-1.5">Phone</label>
+              <input type="tel" placeholder="(682) ___-____" class="field-input w-full h-12 border border-border px-4 font-body text-sm transition-all" style="border-radius:2px;">
+            </div>
+            <div>
+              <label class="block font-body font-semibold text-[11px] uppercase tracking-[0.12em] text-charcoal mb-1.5">ZIP Code</label>
+              <input type="text" placeholder="76102" class="field-input w-full h-12 border border-border px-4 font-body text-sm transition-all" style="border-radius:2px;">
+            </div>
+          </div>
+          <div>
+            <label class="block font-body font-semibold text-[11px] uppercase tracking-[0.12em] text-charcoal mb-1.5">Service Needed</label>
+            <select class="field-input w-full h-12 border border-border px-4 font-body text-sm bg-white transition-all" style="border-radius:2px;">
+              <option>General Pest Control</option>
+              <option>Termite Inspection</option>
+              <option>Roach Elimination</option>
+              <option>Rodent Removal</option>
+              <option>Ant Control</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-cta w-full h-14 bg-secondary text-white font-display font-bold text-[11px] uppercase tracking-[0.12em] hover:bg-secondary-hover" style="border-radius:2px;">
+            Get My Free Inspection
+          </button>
+        </form>
+        <p class="font-body text-[11px] text-muted text-center mt-4 flex items-center justify-center gap-1.5">
+          <span class="material-symbols-outlined text-border" style="font-size:13px;">lock</span>
+          No spam. No contracts. Cancel anytime.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+     FOOTER
+============================================================ -->
+<footer class="bg-primary py-16 px-4 md:px-6 text-white">
+  <div class="max-w-[1200px] mx-auto">
+    <div class="flex flex-col md:flex-row justify-between items-start gap-10 mb-10">
+      <div>
+        <div class="font-display font-extrabold text-2xl mb-2">Termicure</div>
+        <p class="font-body text-sm text-on-dark max-w-[240px] leading-relaxed">Professional pest control for Fort Worth and Tarrant County homeowners.</p>
+      </div>
+      <div class="grid grid-cols-2 gap-x-16 gap-y-3">
+        <div>
+          <div class="font-body text-[10px] font-semibold uppercase tracking-[0.14em] text-secondary mb-3">Contact</div>
+          <a href="tel:6823424788" class="block font-body text-sm text-on-dark hover:text-white transition-colors mb-1">(682) 342-4788</a>
+          <p class="font-body text-sm text-on-dark">Fort Worth &amp; Tarrant County</p>
+        </div>
+        <div>
+          <div class="font-body text-[10px] font-semibold uppercase tracking-[0.14em] text-secondary mb-3">Services</div>
+          <div class="space-y-1">
+            <p class="font-body text-sm text-on-dark">General Pest Control</p>
+            <p class="font-body text-sm text-on-dark">Termite Treatment</p>
+            <p class="font-body text-sm text-on-dark">Roach Elimination</p>
+            <p class="font-body text-sm text-on-dark">Rodent Removal</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between gap-4">
+      <div class="font-body text-xs text-on-dark space-y-1">
+        <p>© 2024 Termicure Pest Control. Licensed &amp; Insured.</p>
+        <p>TX License #49281 — Texas Department of Agriculture</p>
+      </div>
+      <div class="flex gap-6">
+        <a href="#" class="font-body text-xs text-on-dark hover:text-white transition-colors">Privacy Policy</a>
+        <a href="#" class="font-body text-xs text-on-dark hover:text-white transition-colors">Accessibility</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ============================================================
+     MOBILE STICKY BAR
+============================================================ -->
+<div class="mobile-bar fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-primary/10 px-4 py-3 gap-3" style="box-shadow:0 -4px 20px rgba(0,0,0,0.09);">
+  <a href="tel:6823424788" class="flex-1 flex items-center justify-center gap-2 border-2 border-primary text-primary font-display font-bold text-[11px] uppercase tracking-[0.12em] py-3.5 hover:bg-primary hover:text-white transition-all" style="border-radius:2px;">
+    <span class="material-symbols-outlined" style="font-size:16px;">call</span>
+    Call Now
+  </a>
+  <a href="#book" class="flex-1 btn-cta bg-secondary text-white font-display font-bold text-[11px] uppercase tracking-[0.12em] py-3.5 flex items-center justify-center hover:bg-secondary-hover" style="border-radius:2px;">
+    Book Inspection
+  </a>
+</div>
+
+
+<!-- ============================================================
+     SCRIPTS
+============================================================ -->
+<script>
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -32px 0px' });
+  revealEls.forEach(el => revealObserver.observe(el));
+
+  // FAQ accordion
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const body = item.querySelector('.faq-body');
+    const isOpen = item.classList.contains('open');
+    // Close all
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.faq-body').classList.remove('open');
+    });
+    // Open if was closed
+    if (!isOpen) {
+      item.classList.add('open');
+      body.classList.add('open');
+    }
+  }
+
+  // Form submit feedback
+  function handleSubmit(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('button[type="submit"]');
+    btn.textContent = 'Submitting...';
+    btn.disabled = true;
+    btn.style.opacity = '0.8';
+    setTimeout(() => {
+      btn.textContent = "We'll Call You Within the Hour";
+      btn.style.background = '#012d1d';
+      btn.style.opacity = '1';
+    }, 1100);
+  }
+
+  // Smooth scroll anchor links to #book
+  document.querySelectorAll('a[href="#book"]').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.getElementById('book');
+      if (target) {
+        const top = target.getBoundingClientRect().top + window.pageYOffset - 80;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
