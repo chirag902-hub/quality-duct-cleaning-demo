@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Luke Heating Cooling &amp; Plumbing | Sioux Falls HVAC &amp; Plumbing Specialists</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "surface-container-high": "#eae7e7",
+                        "on-primary": "#ffffff",
+                        "inverse-primary": "#abc9f2",
+                        "inverse-on-surface": "#f3f0ef",
+                        "primary-fixed": "#d2e4ff",
+                        "error-container": "#ffdad6",
+                        "surface-container": "#f0eded",
+                        "on-background": "#1c1b1b",
+                        "tertiary": "#331f00",
+                        "on-secondary-fixed": "#410000",
+                        "surface": "#fcf9f8",
+                        "surface-container-low": "#f6f3f2",
+                        "secondary": "#b02d21",
+                        "background": "#fcf9f8",
+                        "surface-variant": "#e5e2e1",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed-variant": "#8e130c",
+                        "surface-dim": "#dcd9d9",
+                        "primary": "#002444",
+                        "secondary-container": "#fc6451",
+                        "tertiary-container": "#4f3300",
+                        "secondary-fixed": "#ffdad5",
+                        "tertiary-fixed": "#ffddb1",
+                        "on-primary-fixed": "#001c38",
+                        "primary-container": "#1b3a5c",
+                        "surface-bright": "#fcf9f8",
+                        "inverse-surface": "#313030",
+                        "on-tertiary-fixed-variant": "#5f410c",
+                        "on-secondary-container": "#650001",
+                        "on-surface-variant": "#43474e",
+                        "on-primary-container": "#87a4cc",
+                        "outline-variant": "#c3c6cf",
+                        "outline": "#73777f",
+                        "secondary-fixed-dim": "#ffb4a9",
+                        "on-tertiary-container": "#c49b5f",
+                        "error": "#ba1a1a",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed-dim": "#abc9f2",
+                        "on-tertiary-fixed": "#291800",
+                        "on-surface": "#1c1b1b",
+                        "surface-container-highest": "#e5e2e1",
+                        "on-primary-fixed-variant": "#2b486b",
+                        "on-error": "#ffffff",
+                        "surface-tint": "#436084",
+                        "tertiary-fixed-dim": "#ecbf80"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max-width": "1200px",
+                        "section-padding-desktop": "120px",
+                        "section-padding-mobile": "64px",
+                        "gutter": "24px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-sm": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "display-hero": ["Inter"],
+                        "label-bold": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "display-hero-mobile": ["Inter"],
+                        "headline-lg-mobile": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "700"}],
+                        "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "800"}],
+                        "display-hero": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "900"}],
+                        "label-bold": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                        "body-lg": ["20px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display-hero-mobile": ["40px", {"lineHeight": "1.1", "letterSpacing": "-0.01em", "fontWeight": "900"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "800"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-overlay {
+            background: linear-gradient(90deg, rgba(0, 36, 68, 0.95) 0%, rgba(0, 36, 68, 0.7) 100%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md text-body-md">
+<!-- TopAppBar -->
+<header class="bg-surface sticky top-0 z-[100] border-b border-outline-variant w-full h-20 flex justify-between items-center px-base md:px-gutter max-w-container-max-width mx-auto">
+<div class="font-headline-md text-headline-md font-black tracking-tighter text-primary">
+            LUKE HEATING COOLING &amp; PLUMBING
+        </div>
+<div class="flex items-center gap-6">
+<a class="hidden md:block font-label-bold text-label-bold text-primary hover:text-secondary transition-colors" href="tel:6056483488">
+                (605) 648-3488
+            </a>
+<button class="bg-secondary text-on-secondary px-6 py-3 font-label-bold text-label-bold rounded shadow-lg hover:brightness-110 active:scale-95 transition-all">
+                Schedule Service
+            </button>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative bg-primary min-h-[700px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="A professional HVAC technician in a dark blue uniform meticulously inspecting a complex air conditioning unit outdoors. The lighting is dramatic and focused, highlighting the mechanical details and the expert's concentration. The overall mood is serious and technically competent, utilizing a color palette of deep blues and industrial silvers with subtle red tool accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmts_9XHCWofxbaHLIF1YAyfT-hdsmzRasB3AFTlRteM_mkWXzNDEnfMLtsGtWAoQntBINfrPj3DF4avM83idFlhgexewQkkYGxt4mS-l31tM7kipu-PaeZidgGpSPXqPqPMbjkwIHoIZHqwWdu7wqFcjrbGJggXYJje4Q_koPmu-h-zYAYHP4b3zShLQskmXLsS_J3iLY2pB-TEORjSUD5hQ3Bn4vr5BaqAVzqmNl6DoDfNOMl90C-hs23SEBHKgCSZHbV6xzVls"/>
+<div class="absolute inset-0 hero-overlay"></div>
+</div>
+<div class="relative z-10 w-full max-w-container-max-width mx-auto px-base md:px-gutter py-20 flex flex-col md:flex-row gap-12">
+<div class="flex-1 text-on-primary">
+<h1 class="font-display-hero-mobile md:font-display-hero text-display-hero-mobile md:text-display-hero mb-6">
+                    Sioux Falls Heating, Cooling &amp; Plumbing — Done Right By People You Know
+                </h1>
+<p class="font-body-lg text-body-lg mb-8 max-w-2xl opacity-90">
+                    Family-Owned Since 1994. Bryan &amp; Shannon Luke Answer When You Call. No call centers, no runaround, just honest local service.
+                </p>
+<ul class="space-y-4 mb-10">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-label-bold text-label-bold">Same-Day Service Available</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-label-bold text-label-bold">24/7 Emergency Repairs</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-label-bold text-label-bold">Licensed &amp; Insured in South Dakota</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-label-bold text-label-bold">Upfront Flat-Rate Pricing</span>
+</li>
+</ul>
+<a class="inline-flex items-center justify-center bg-secondary text-on-secondary px-8 py-5 font-headline-sm text-headline-sm rounded shadow-xl hover:brightness-110 active:scale-95 transition-all" href="tel:6056483488">
+                    Call Bryan — (605) 648-3488
+                </a>
+</div>
+<!-- PPC Form -->
+<div class="w-full md:w-[400px] bg-white p-8 rounded shadow-2xl">
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Get a Fast Quote</h3>
+<p class="text-on-surface-variant mb-6 font-body-md">We will respond within 15 minutes during business hours.</p>
+<form class="space-y-4">
+<div>
+<label class="block font-label-bold text-label-bold text-primary mb-2 uppercase tracking-wider">Full Name</label>
+<input class="w-full h-14 border border-outline-variant px-4 focus:ring-2 focus:ring-primary-container outline-none transition-all" type="text"/>
+</div>
+<div>
+<label class="block font-label-bold text-label-bold text-primary mb-2 uppercase tracking-wider">Phone Number</label>
+<input class="w-full h-14 border border-outline-variant px-4 focus:ring-2 focus:ring-primary-container outline-none transition-all" type="tel"/>
+</div>
+<div>
+<label class="block font-label-bold text-label-bold text-primary mb-2 uppercase tracking-wider">Service Needed</label>
+<select class="w-full h-14 border border-outline-variant px-4 focus:ring-2 focus:ring-primary-container outline-none transition-all appearance-none">
+<option>AC Repair</option>
+<option>Heating Repair</option>
+<option>Plumbing Service</option>
+<option>New Installation</option>
+</select>
+</div>
+<button class="w-full bg-primary text-on-primary h-16 font-label-bold text-label-bold uppercase tracking-widest hover:bg-primary-container transition-colors">
+                        Send Request Now
+                    </button>
+</form>
+</div>
+</div>
+</section>
+<!-- Trust Bar -->
+<div class="bg-surface-container-low border-b border-outline-variant">
+<div class="max-w-container-max-width mx-auto px-base md:px-gutter py-8 grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
+<div class="flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-3xl" data-weight="fill">family_history</span>
+<span class="font-label-bold text-[12px] uppercase text-primary">Family-Owned</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-3xl" data-weight="fill">verified_user</span>
+<span class="font-label-bold text-[12px] uppercase text-primary">Licensed &amp; Insured</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-3xl" data-weight="fill">emergency</span>
+<span class="font-label-bold text-[12px] uppercase text-primary">Emergency Service</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-3xl" data-weight="fill">payments</span>
+<span class="font-label-bold text-[12px] uppercase text-primary">Flat-Rate Pricing</span>
+</div>
+<div class="flex flex-col items-center gap-2 col-span-2 md:col-span-1">
+<span class="material-symbols-outlined text-secondary text-3xl" data-weight="fill">location_on</span>
+<span class="font-label-bold text-[12px] uppercase text-primary">Sioux Falls Metro</span>
+</div>
+</div>
+</div>
+<!-- Offer Block -->
+<section class="max-w-container-max-width mx-auto px-base md:px-gutter py-16">
+<div class="bg-secondary-container rounded-xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 border-2 border-secondary">
+<div>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-on-secondary-container mb-2">20% Off Your First HVAC Tune-Up</h2>
+<p class="font-body-lg text-on-secondary-container opacity-90">Keep your system running efficient and prevent costly emergency repairs.</p>
+<p class="text-secondary font-black mt-4 animate-pulse">Limited slots remaining for this week!</p>
+</div>
+<button class="bg-secondary text-on-secondary px-10 py-6 font-headline-sm text-headline-sm rounded shadow-lg hover:brightness-110 active:scale-95 transition-all whitespace-nowrap">
+                Claim My Discount
+            </button>
+</div>
+</section>
+<!-- Services Grid (Bento Style) -->
+<section class="bg-surface-container-low py-24">
+<div class="max-w-container-max-width mx-auto px-base md:px-gutter">
+<h2 class="font-headline-lg text-center mb-16 text-primary">Local Service You Can Count On</h2>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<!-- Large Card 1 -->
+<div class="md:col-span-2 bg-white p-8 border border-outline-variant hover:border-primary transition-all">
+<span class="material-symbols-outlined text-secondary text-5xl mb-6">ac_unit</span>
+<h3 class="font-headline-md text-primary mb-4">AC Repair &amp; Maintenance</h3>
+<p class="text-on-surface-variant mb-6">Expert diagnostic and repair for all major air conditioning brands. We focus on efficiency and longevity.</p>
+<ul class="grid grid-cols-2 gap-2 font-label-bold text-label-bold text-primary">
+<li class="flex items-center gap-2"><span class="text-secondary">•</span> Refrigerant Leaks</li>
+<li class="flex items-center gap-2"><span class="text-secondary">•</span> Compressor Issues</li>
+<li class="flex items-center gap-2"><span class="text-secondary">•</span> Tune-Ups</li>
+<li class="flex items-center gap-2"><span class="text-secondary">•</span> Filter Replacements</li>
+</ul>
+</div>
+<!-- Small Cards -->
+<div class="bg-white p-8 border border-outline-variant hover:border-primary transition-all">
+<span class="material-symbols-outlined text-secondary text-4xl mb-4">local_fire_department</span>
+<h3 class="font-headline-sm text-primary mb-2">Furnace Repair</h3>
+<p class="text-on-surface-variant">Stay warm during SD winters with fast heating diagnostics.</p>
+</div>
+<div class="bg-white p-8 border border-outline-variant hover:border-primary transition-all">
+<span class="material-symbols-outlined text-secondary text-4xl mb-4">plumbing</span>
+<h3 class="font-headline-sm text-primary mb-2">Plumbing Repair</h3>
+<p class="text-on-surface-variant">Leaks, clogs, and pipe repairs handled by master plumbers.</p>
+</div>
+<!-- Row 2 -->
+<div class="bg-white p-8 border border-outline-variant hover:border-primary transition-all">
+<span class="material-symbols-outlined text-secondary text-4xl mb-4">water_heater</span>
+<h3 class="font-headline-sm text-primary mb-2">Water Heaters</h3>
+<p class="text-on-surface-variant">Hot water when you need it. Repair and new installations.</p>
+</div>
+<div class="md:col-span-2 bg-primary text-on-primary p-8 hover:bg-primary-container transition-all">
+<span class="material-symbols-outlined text-on-primary-container text-5xl mb-6">hvac</span>
+<h3 class="font-headline-md mb-4">Full System Replacement</h3>
+<p class="opacity-80 mb-6">When it's time for an upgrade, we provide high-efficiency systems from top brands with professional local installation.</p>
+<button class="font-label-bold text-label-bold underline decoration-secondary underline-offset-8">GET A FREE REPLACEMENT ESTIMATE</button>
+</div>
+<div class="bg-white p-8 border border-outline-variant hover:border-primary transition-all">
+<span class="material-symbols-outlined text-secondary text-4xl mb-4">air</span>
+<h3 class="font-headline-sm text-primary mb-2">Air Quality</h3>
+<p class="text-on-surface-variant">Purifiers and filtration for a healthier home environment.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="max-w-container-max-width mx-auto px-base md:px-gutter py-24">
+<div class="flex flex-col md:flex-row items-center gap-16">
+<div class="w-full md:w-1/2">
+<div class="relative">
+<img class="rounded-lg shadow-2xl w-full" data-alt="A warm, professional portrait of Bryan and Shannon Luke, the owners of the company, standing proudly in front of a clean, branded white service van. They are dressed in smart-casual attire with friendly smiles, set against a bright, suburban Sioux Falls neighborhood. The lighting is natural and inviting, emphasizing a local, family-owned business feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEHD_MJsSd9oy2oZk-t5p_ySETd3lfcTmUBBsHP5vrK19WEEWjnXgYdd0XQuQF9y_z1KAUkh1IOTs6s3VrGgMDqxh5mrUAbhedAUG3ujMzuKcpFNfOFV0NGconTTDfHQwx2kUaleNuh225ScylAjYw0mIKCm8gHd0QpwaPKkQu1GgRy6jul5X_LlDn-hHiTI-Zq2fDIUa44ao-yANQXFx0QQJKJwfTtdLVwLNHxLUEtXRpQNrexP5nHLL8_0GpnOU2bKTf0dOKQts"/>
+<div class="absolute -bottom-6 -right-6 bg-secondary p-6 text-on-secondary hidden md:block">
+<p class="font-headline-sm">Established 1994</p>
+</div>
+</div>
+</div>
+<div class="w-full md:w-1/2">
+<h2 class="font-headline-lg text-primary mb-6">You Know Who's Showing Up. That's the Whole Point.</h2>
+<p class="font-body-lg mb-6">When you call Luke Heating Cooling &amp; Plumbing, you aren't talking to a national dispatcher in another time zone. You're talking to us.</p>
+<p class="font-body-md mb-8 text-on-surface-variant">Bryan and Shannon Luke started this business 30 years ago with a simple goal: provide Sioux Falls families with the kind of mechanical expertise and honest pricing they deserve. We live here, we work here, and we stand behind every single job with our family name.</p>
+<div class="flex items-center gap-4">
+<img alt="Luke Family Signature" class="h-12" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1Rca9Ob9hb0fgdi3pzWZISYRDc1kpS8P9R9jjQCDmqjlLSJvLiT1K_M7PRpxRr9I3PEG3A3IMEeBcZI27repBVJ3Sh_uz6GSNj6wyBXWmLHLRq3yyA13gF5D7qH7v2H0038IdWhf2QMLn8Ei5k0sbg4JPQEjOb2bPYujbcL3GDGgrdJv0jIC854g31RHL-yMmel7957LYp2tKEaTda5zAu6ZUZ4EgRdvRKJ0HfUvndCm10oeIYDJEk0ZflD9XE_VRsAGL22FakKM"/>
+<span class="font-label-bold text-label-bold text-primary">— Bryan &amp; Shannon Luke</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="bg-primary py-24">
+<div class="max-w-container-max-width mx-auto px-base md:px-gutter">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-on-primary mb-4">What Your Neighbors Say</h2>
+<div class="flex justify-center items-center gap-2 text-on-secondary-container">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-headline-sm text-on-primary ml-2">4.9/5 Rating</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-white p-8 rounded border-b-4 border-secondary">
+<div class="flex text-secondary mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md italic mb-6">"Our furnace died during the polar vortex. Bryan was here within two hours and had us back up and running. Fair price and great service."</p>
+<p class="font-label-bold text-primary">Mike T. — Sioux Falls, SD</p>
+</div>
+<div class="bg-white p-8 rounded border-b-4 border-secondary">
+<div class="flex text-secondary mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md italic mb-6">"Finally a plumber who doesn't try to upsell you on things you don't need. Clean, polite, and very professional."</p>
+<p class="font-label-bold text-primary">Carla H. — Tea, SD</p>
+</div>
+<div class="bg-white p-8 rounded border-b-4 border-secondary">
+<div class="flex text-secondary mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md italic mb-6">"Luke Plumbing installed our new tankless heater. The process was seamless from start to finish. Highly recommend!"</p>
+<p class="font-label-bold text-primary">Dan &amp; Julie R. — Harrisburg, SD</p>
+</div>
+</div>
+</div>
+</section>
+<!-- How It Works -->
+<section class="py-24 max-w-container-max-width mx-auto px-base md:px-gutter">
+<h2 class="font-headline-lg text-center mb-20 text-primary">Simple Three-Step Service</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center relative">
+<div class="relative z-10">
+<div class="w-20 h-20 bg-secondary text-on-secondary rounded-full flex items-center justify-center font-display-hero-mobile mx-auto mb-6">1</div>
+<h3 class="font-headline-sm text-primary mb-4">Call or Request Online</h3>
+<p class="text-on-surface-variant">Contact us 24/7. Bryan or Shannon will get you scheduled immediately.</p>
+</div>
+<div class="relative z-10">
+<div class="w-20 h-20 bg-secondary text-on-secondary rounded-full flex items-center justify-center font-display-hero-mobile mx-auto mb-6">2</div>
+<h3 class="font-headline-sm text-primary mb-4">Same-Day Diagnosis</h3>
+<p class="text-on-surface-variant">We arrive on time, diagnose the issue, and give you a flat-rate price before work starts.</p>
+</div>
+<div class="relative z-10">
+<div class="w-20 h-20 bg-secondary text-on-secondary rounded-full flex items-center justify-center font-display-hero-mobile mx-auto mb-6">3</div>
+<h3 class="font-headline-sm text-primary mb-4">Problem Solved</h3>
+<p class="text-on-surface-variant">Expert repairs backed by our 100% satisfaction guarantee. No mess left behind.</p>
+</div>
+</div>
+</section>
+<!-- Emergency CTA -->
+<section class="bg-primary text-on-primary py-16">
+<div class="max-w-container-max-width mx-auto px-base md:px-gutter flex flex-col md:flex-row items-center justify-between gap-8">
+<div>
+<h2 class="font-headline-lg-mobile md:font-headline-md mb-2">Furnace Down? AC Out? Don't Wait.</h2>
+<p class="text-on-primary-container font-body-lg">We prioritize emergency calls to keep your family safe and comfortable.</p>
+</div>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="bg-secondary text-on-secondary px-8 py-4 font-label-bold text-label-bold rounded hover:brightness-110 text-center" href="tel:6056483488">Call Bryan Now</a>
+<button class="bg-transparent border border-on-primary text-on-primary px-8 py-4 font-label-bold text-label-bold rounded hover:bg-on-primary hover:text-primary transition-all">Request Emergency Service</button>
+</div>
+</div>
+</section>
+<!-- FAQ -->
+<section class="py-24 max-w-3xl mx-auto px-base">
+<h2 class="font-headline-lg text-center mb-16 text-primary">Frequently Asked Questions</h2>
+<div class="space-y-4">
+<details class="group bg-surface-container p-6 rounded cursor-pointer">
+<summary class="flex justify-between items-center font-headline-sm text-primary list-none">
+                    Do you offer emergency after-hours service?
+                    <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<p class="mt-4 text-on-surface-variant font-body-md">Yes. We provide 24/7 emergency service for critical heating, cooling, and plumbing issues throughout the Sioux Falls metro area.</p>
+</details>
+<details class="group bg-surface-container p-6 rounded cursor-pointer">
+<summary class="flex justify-between items-center font-headline-sm text-primary list-none">
+                    Are your technicians licensed and insured?
+                    <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<p class="mt-4 text-on-surface-variant font-body-md">Absolutely. Every member of our team is fully licensed, background-checked, and we carry comprehensive liability insurance for your protection.</p>
+</details>
+<details class="group bg-surface-container p-6 rounded cursor-pointer">
+<summary class="flex justify-between items-center font-headline-sm text-primary list-none">
+                    How much is a service call?
+                    <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<p class="mt-4 text-on-surface-variant font-body-md">We provide upfront, flat-rate pricing. We charge a standard diagnostic fee which is often waived if you choose to proceed with the repair.</p>
+</details>
+</div>
+</section>
+<!-- Final Close / Form Repeat -->
+<section class="bg-surface-container-low py-24">
+<div class="max-w-container-max-width mx-auto px-base md:px-gutter grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="font-display-hero-mobile text-primary mb-6">Real People. Real Work. Right Here in Sioux Falls.</h2>
+<p class="font-body-lg mb-8">Stop dealing with massive corporations who treat you like a number. Experience the difference 30 years of family ownership makes.</p>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<div class="bg-secondary p-3 rounded-full">
+<span class="material-symbols-outlined text-on-secondary">phone_in_talk</span>
+</div>
+<div>
+<p class="font-label-bold text-label-bold text-on-surface-variant uppercase">Emergency Line</p>
+<p class="font-headline-sm text-primary">(605) 648-3488</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white p-10 rounded shadow-xl border border-outline-variant">
+<h3 class="font-headline-md text-primary mb-8">Schedule Your Service Now</h3>
+<form class="space-y-4">
+<div class="grid grid-cols-2 gap-4">
+<input class="h-14 border border-outline-variant px-4" placeholder="Name" type="text"/>
+<input class="h-14 border border-outline-variant px-4" placeholder="Phone" type="tel"/>
+</div>
+<input class="w-full h-14 border border-outline-variant px-4" placeholder="Email Address" type="email"/>
+<textarea class="w-full h-32 border border-outline-variant px-4 py-2" placeholder="Tell us about your issue..."></textarea>
+<button class="w-full bg-secondary text-on-secondary h-16 font-label-bold text-label-bold uppercase tracking-widest hover:brightness-110 transition-all shadow-lg">
+                        Send My Request
+                    </button>
+</form>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-primary text-on-primary py-12">
+<div class="max-w-container-max-width mx-auto px-base md:px-gutter flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+<div>
+<p class="font-label-bold text-label-bold mb-2">LUKE HEATING COOLING &amp; PLUMBING</p>
+<p class="text-on-primary-container text-body-md">© 2024 Luke Heating Cooling &amp; Plumbing. Family-owned since 1994. Licensed &amp; Insured.</p>
+</div>
+<div class="flex flex-wrap gap-6 text-label-bold text-label-bold text-on-primary-container">
+<a class="hover:text-secondary" href="#">Service Areas</a>
+<a class="hover:text-secondary" href="#">Privacy Policy</a>
+<a class="hover:text-secondary" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+<!-- Mobile Sticky Call Bar -->
+<div class="fixed bottom-0 left-0 w-full z-50 md:hidden flex justify-center items-center">
+<a class="flex flex-row items-center justify-center gap-2 bg-secondary text-on-secondary font-bold w-full py-4 shadow-lg active:scale-98 transition-transform" href="tel:6056483488">
+<span class="material-symbols-outlined">call</span>
+<span class="font-label-bold text-label-bold">Call Bryan Now — (605) 648-3488</span>
+</a>
+</div>
+</body></html>
