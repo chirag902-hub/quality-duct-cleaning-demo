@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>EDDIE THE POOL MAN | North Miami Pool Service</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;0,900;1,700;1,800;1,900&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;0,9..40,800;1,9..40,400&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed-variant": "#1d496f",
+                        "on-tertiary-container": "#a8a49c",
+                        "primary-fixed": "#cfe5ff",
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed": "#a2eeff",
+                        "surface": "#fcf9f8",
+                        "on-tertiary-fixed": "#1d1b16",
+                        "secondary-container": "#5fe6ff",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed": "#e7e2d9",
+                        "on-secondary": "#ffffff",
+                        "surface-dim": "#dcd9d9",
+                        "tertiary-fixed-dim": "#cbc6bd",
+                        "inverse-surface": "#313030",
+                        "surface-container-high": "#eae7e7",
+                        "inverse-primary": "#a2caf7",
+                        "secondary-fixed-dim": "#4dd7f0",
+                        "surface-variant": "#e5e2e1",
+                        "surface-tint": "#386188",
+                        "tertiary": "#27251f",
+                        "on-secondary-fixed-variant": "#004e5a",
+                        "background": "#fcf9f8",
+                        "on-secondary-fixed": "#001f25",
+                        "primary": "#002743",
+                        "outline-variant": "#c2c7cf",
+                        "surface-bright": "#fcf9f8",
+                        "on-primary-fixed": "#001d34",
+                        "on-primary": "#ffffff",
+                        "secondary": "#006877",
+                        "on-tertiary-fixed-variant": "#494640",
+                        "on-surface": "#1b1b1b",
+                        "primary-container": "#0a3d62",
+                        "surface-container-highest": "#e5e2e1",
+                        "on-primary-container": "#80a8d3",
+                        "on-background": "#1b1b1b",
+                        "outline": "#72777f",
+                        "on-error-container": "#93000a",
+                        "surface-container-low": "#f6f3f2",
+                        "error-container": "#ffdad6",
+                        "on-secondary-container": "#006573",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-container": "#3d3a34",
+                        "inverse-on-surface": "#f3f0ef",
+                        "surface-container": "#f0eded",
+                        "error": "#ba1a1a",
+                        "on-surface-variant": "#42474e",
+                        "primary-fixed-dim": "#a2caf7",
+                        "brand-aqua": "#00B4CC",
+                        "brand-sand": "#F5EFE6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "sm": "12px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px",
+                        "md": "24px",
+                        "base": "8px",
+                        "xs": "4px",
+                        "lg": "48px",
+                        "xl": "80px"
+                    },
+                    "fontSize": {
+                        "headline-xl": ["52px", { lineHeight: "1.05", letterSpacing: "0.01em" }],
+                        "headline-xl-mobile": ["38px", { lineHeight: "1.08", letterSpacing: "0.01em" }],
+                        "headline-lg": ["36px", { lineHeight: "1.1", letterSpacing: "0.01em" }],
+                        "headline-md": ["26px", { lineHeight: "1.2", letterSpacing: "0.01em" }],
+                        "body-lg": ["18px", { lineHeight: "1.65" }],
+                        "body-md": ["16px", { lineHeight: "1.55" }],
+                        "label-bold": ["13px", { lineHeight: "1", letterSpacing: "0.12em" }],
+                        "label-sm": ["11px", { lineHeight: "1", letterSpacing: "0.1em" }]
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Barlow Condensed", "sans-serif"],
+                        "headline-xl": ["Barlow Condensed", "sans-serif"],
+                        "label-bold": ["DM Sans", "sans-serif"],
+                        "body-lg": ["DM Sans", "sans-serif"],
+                        "headline-xl-mobile": ["Barlow Condensed", "sans-serif"],
+                        "body-md": ["DM Sans", "sans-serif"],
+                        "label-sm": ["DM Sans", "sans-serif"],
+                        "headline-md": ["Barlow Condensed", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .fill-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+        body {
+            font-family: 'DM Sans', sans-serif;
+        }
+        h1, h2, h3, h4, h5 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 800;
+        }
+        input, select, textarea, button {
+            font-family: 'DM Sans', sans-serif;
+        }
+        /* Eyebrow label with trailing line */
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #00B4CC;
+            margin-bottom: 12px;
+        }
+        .eyebrow::after {
+            content: '';
+            display: block;
+            height: 1px;
+            width: 36px;
+            background: #00B4CC;
+        }
+        /* Decorative large quote mark in testimonials */
+        .quote-mark {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 900;
+            font-size: 88px;
+            color: #00B4CC;
+            opacity: 0.2;
+            line-height: 0.75;
+            display: block;
+            margin-bottom: -12px;
+        }
+        /* Oversized ghost step numbers */
+        .step-ghost-num {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 900;
+            font-size: 130px;
+            line-height: 1;
+            color: rgba(255, 255, 255, 0.05);
+            position: absolute;
+            top: -28px;
+            left: 50%;
+            transform: translateX(-50%);
+            pointer-events: none;
+            white-space: nowrap;
+        }
+        /* Service card hover lift */
+        .service-card {
+            transition: border-color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(0, 39, 67, 0.1);
+        }
+        /* FAQ summary */
+        details summary {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #002743;
+        }
+        /* Brand name in nav and footer */
+        .brand-name {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 900;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+        /* Button base */
+        .btn-primary {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface selection:bg-brand-aqua selection:text-white">
+
+<!-- HEADER -->
+<header class="bg-surface sticky top-0 z-50 border-b border-on-surface/10">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-7xl mx-auto">
+    <div class="brand-name text-[22px] text-primary">EDDIE THE POOL MAN</div>
+    <div class="hidden md:flex items-center gap-gutter">
+        <span style="font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 0.04em;" class="text-primary">(305) 761-1606</span>
+        <button class="bg-brand-aqua text-white btn-primary px-6 py-3 rounded hover:bg-[#009bb0] transition-colors active:scale-95">
+            Text Eddie
+        </button>
+    </div>
+    <div class="md:hidden">
+        <span class="material-symbols-outlined text-primary">menu</span>
+    </div>
+</div>
+</header>
+
+<!-- HERO SECTION -->
+<section class="relative min-h-[870px] flex items-center py-xl">
+<div class="absolute inset-0 z-0">
+    <img class="w-full h-full object-cover brightness-[0.4]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBU81Wf_WVOx_Ft3Ec9c-isXBWHK19352UFzd-yR6Aq9f0dp6bY56F6l2FRoR3LwxWJKL5Kf8DUSomb-8lJRJIjRHFEv2Enz4b3pJyAjizyPpxGmWiCZ3dKvVPsMZxv3EkWJ5X_cRekyiaKCjUs13264gxByk5tBBDht1zXAIxdvOCP3tnS0TH1PZ4GHtc0ZsqE6o7ZzEL-rZy6M36IrsaHjLdBbaIJ9ADbh2e0dS7pWShLdupKPyQRRDQQykmRE92Ymi_0MuTXpnY"/>
+    <div class="absolute inset-0 bg-gradient-to-r from-primary/75 via-primary/40 to-transparent"></div>
+</div>
+<div class="relative z-10 w-full max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+    <div class="md:col-span-7 text-white">
+        <div class="eyebrow" style="color: #00B4CC;">North Miami Pool Service</div>
+        <h1 class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl mb-base font-black">
+            North Miami's Pool Guy.<br>Shows Up Every Week.<br>Keeps It Right.
+        </h1>
+        <p class="font-body-lg text-body-lg mb-lg opacity-90 max-w-xl">
+            Reliable weekly maintenance and expert equipment repair. Your pool stays crystal clear without you lifting a finger.
+        </p>
+        <ul class="space-y-4 mb-xl">
+            <li class="flex items-center gap-base">
+                <span class="material-symbols-outlined text-brand-aqua font-bold">check_circle</span>
+                <span class="font-label-bold text-label-bold uppercase font-bold">Perfect Chemical Balance Every Visit</span>
+            </li>
+            <li class="flex items-center gap-base">
+                <span class="material-symbols-outlined text-brand-aqua font-bold">check_circle</span>
+                <span class="font-label-bold text-label-bold uppercase font-bold">Pumps, Filters, &amp; Salt Systems Repaired</span>
+            </li>
+            <li class="flex items-center gap-base">
+                <span class="material-symbols-outlined text-brand-aqua font-bold">check_circle</span>
+                <span class="font-label-bold text-label-bold uppercase font-bold">Personalized One-Man Precision Service</span>
+            </li>
+        </ul>
+        <a class="inline-block bg-brand-aqua text-white btn-primary px-8 py-5 rounded hover:bg-[#009bb0] transition-colors" href="tel:3057611606">
+            Call or Text Eddie — (305) 761-1606
+        </a>
+    </div>
+    <div class="md:col-span-5">
+        <div class="bg-white p-lg rounded-lg shadow-2xl border-2 border-primary-container">
+            <h3 class="font-headline-md text-headline-md text-primary mb-md">Get a Fast Quote</h3>
+            <form class="space-y-md">
+                <div>
+                    <label class="block font-label-bold text-label-bold text-on-surface-variant mb-xs uppercase">Name</label>
+                    <input class="w-full p-4 border border-on-surface/20 rounded focus:ring-2 focus:ring-brand-aqua focus:border-transparent outline-none" placeholder="Your full name" type="text"/>
+                </div>
+                <div class="grid grid-cols-2 gap-md">
+                    <div>
+                        <label class="block font-label-bold text-label-bold text-on-surface-variant mb-xs uppercase">Phone</label>
+                        <input class="w-full p-4 border border-on-surface/20 rounded outline-none" placeholder="(000) 000-0000" type="tel"/>
+                    </div>
+                    <div>
+                        <label class="block font-label-bold text-label-bold text-on-surface-variant mb-xs uppercase">Email</label>
+                        <input class="w-full p-4 border border-on-surface/20 rounded outline-none" placeholder="email@address.com" type="email"/>
+                    </div>
+                </div>
+                <div>
+                    <label class="block font-label-bold text-label-bold text-on-surface-variant mb-xs uppercase">Service Needed</label>
+                    <select class="w-full p-4 border border-on-surface/20 rounded outline-none appearance-none">
+                        <option>Weekly Maintenance</option>
+                        <option>Equipment Repair</option>
+                        <option>One-Time Cleaning</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <button class="w-full bg-primary-container text-white btn-primary py-5 rounded hover:bg-primary transition-colors">
+                    Send to Eddie
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="bg-primary-container text-white py-base">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop flex flex-wrap justify-between items-center gap-md">
+    <div class="flex items-center gap-xs">
+        <span class="material-symbols-outlined text-brand-aqua fill-icon">star</span>
+        <span class="font-label-bold text-label-bold uppercase font-bold">5-Star Rating</span>
+    </div>
+    <div class="flex items-center gap-xs font-label-bold text-label-bold border-l border-white/20 pl-gutter">
+        <span class="material-symbols-outlined text-brand-aqua">calendar_today</span>
+        <span class="uppercase font-bold">Weekly Service</span>
+    </div>
+    <div class="flex items-center gap-xs font-label-bold text-label-bold border-l border-white/20 pl-gutter">
+        <span class="material-symbols-outlined text-brand-aqua">build</span>
+        <span class="uppercase font-bold">Repairs</span>
+    </div>
+    <div class="flex items-center gap-xs font-label-bold text-label-bold border-l border-white/20 pl-gutter">
+        <span class="material-symbols-outlined text-brand-aqua">science</span>
+        <span class="uppercase font-bold">Water Chemistry</span>
+    </div>
+    <div class="flex items-center gap-xs font-label-bold text-label-bold border-l border-white/20 pl-gutter">
+        <span class="material-symbols-outlined text-brand-aqua">bolt</span>
+        <span class="uppercase font-bold">Fast Response</span>
+    </div>
+</div>
+</div>
+
+<!-- THE EDDIE DIFFERENCE -->
+<section class="py-xl bg-brand-sand/30">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+    <div class="text-center mb-xl">
+        <div class="eyebrow" style="display: inline-flex;">Services</div>
+        <h2 class="font-headline-lg text-headline-lg text-primary">The Eddie Difference</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+        <!-- Card 1 -->
+        <div class="service-card bg-white border border-primary-container/15 p-lg group hover:border-brand-aqua">
+            <div class="w-14 h-14 bg-brand-aqua/10 flex items-center justify-center mb-md border border-brand-aqua/20">
+                <span class="material-symbols-outlined text-brand-aqua text-3xl">pool</span>
+            </div>
+            <h3 class="font-headline-md text-headline-md text-primary mb-base">Weekly Maintenance</h3>
+            <p class="font-body-md text-body-md text-on-surface-variant mb-lg">Full service cleaning, skimming, and vacuuming. No missed weeks, no excuses.</p>
+            <button class="font-label-bold text-label-bold text-brand-aqua flex items-center gap-xs group-hover:gap-md transition-all uppercase font-bold">
+                Get Pricing <span class="material-symbols-outlined" style="font-size: 18px;">arrow_forward</span>
+            </button>
+        </div>
+        <!-- Card 2 -->
+        <div class="service-card bg-white border border-primary-container/15 p-lg group hover:border-brand-aqua">
+            <div class="w-14 h-14 bg-brand-aqua/10 flex items-center justify-center mb-md border border-brand-aqua/20">
+                <span class="material-symbols-outlined text-brand-aqua text-3xl">settings</span>
+            </div>
+            <h3 class="font-headline-md text-headline-md text-primary mb-base">Equipment Repair</h3>
+            <p class="font-body-md text-body-md text-on-surface-variant mb-lg">From noisy pumps to leaking filters, I fix it right the first time using quality parts.</p>
+            <button class="font-label-bold text-label-bold text-brand-aqua flex items-center gap-xs group-hover:gap-md transition-all uppercase font-bold">
+                Fix My Pool <span class="material-symbols-outlined" style="font-size: 18px;">arrow_forward</span>
+            </button>
+        </div>
+        <!-- Card 3 -->
+        <div class="service-card bg-white border border-primary-container/15 p-lg group hover:border-brand-aqua">
+            <div class="w-14 h-14 bg-brand-aqua/10 flex items-center justify-center mb-md border border-brand-aqua/20">
+                <span class="material-symbols-outlined text-brand-aqua text-3xl">water_drop</span>
+            </div>
+            <h3 class="font-headline-md text-headline-md text-primary mb-base">Water Chemistry</h3>
+            <p class="font-body-md text-body-md text-on-surface-variant mb-lg">Precise chemical balancing to keep your water safe, clear, and easy on the eyes.</p>
+            <button class="font-label-bold text-label-bold text-brand-aqua flex items-center gap-xs group-hover:gap-md transition-all uppercase font-bold">
+                Balance Now <span class="material-symbols-outlined" style="font-size: 18px;">arrow_forward</span>
+            </button>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- BEFORE/AFTER -->
+<section class="py-xl">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+    <div class="text-center mb-xl">
+        <div class="eyebrow" style="display: inline-flex;">Results</div>
+        <h2 class="font-headline-lg text-headline-lg text-primary">What Your Pool Looks Like When Eddie Shows Up</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-base bg-on-surface/5 p-base rounded-lg">
+        <div class="relative group overflow-hidden rounded">
+            <img class="w-full aspect-video object-cover grayscale-[0.3]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnaiYopuYGBlQaQ1tKIZR8OTNr0xrelK7SKOEwYqkcUCnDDk9E_cJ1gaJfwjisA3TKnFbfvXxvQEVFnjdio5I3N2lmVLr48EQY8j6d8W5O75mknSGVtDbrgETfZh-7u0ys2eWroG87SPl0d0qhxBE5ONV9peNTY-hO62AK7MI_-qaVRJHnoJYi4aGFMMvWGXOaAT1zSFJYyAu1svtnv_ijX0oEIEKWIjhD7XQMVZyc7H5mWhN8I_IsLtS3cfcT5-Npiv8dnKczysk"/>
+            <div class="absolute top-4 left-4 bg-error text-white btn-primary px-4 py-2 rounded">
+                Before
+            </div>
+        </div>
+        <div class="relative group overflow-hidden rounded">
+            <img class="w-full aspect-video object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKRacVXKFd7J7_7C4C7sqnKuFJHDSNlmEyYOfKpadycq94fDa1LOcx5rdiPE1rOwaQha48a59TfjCxXAZoxO5m67GtS3fuNxNqsOt1QhYev6Pvbhi99HRJTfiU66sl-pBTS0qIJ7MBKWCVLgDkaXYwZfFR4L_XCqMb2pk9Zfu-etDohly7YGmdvFprd-EDrv1zrc59L7-aFjnG2hyDk6e_rnyogPTspctKC4vwBR22a_snvCH8ERqUjTCiSbKz8BFRFqDtQ9PbWD8"/>
+            <div class="absolute top-4 left-4 bg-brand-aqua text-white btn-primary px-4 py-2 rounded">
+                After — Every Week
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- SOCIAL PROOF -->
+<section class="py-xl bg-surface-container">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+    <div class="text-center mb-xl">
+        <div class="eyebrow" style="display: inline-flex;">Reviews</div>
+        <h2 class="font-headline-lg text-headline-lg text-primary">What Clients Say</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+        <div class="bg-white p-lg border border-on-surface/10">
+            <span class="quote-mark">"</span>
+            <div class="flex gap-xs mb-base">
+                <span class="material-symbols-outlined text-[#FFD700] fill-icon">star</span>
+                <span class="material-symbols-outlined text-[#FFD700] fill-icon">star</span>
+                <span class="material-symbols-outlined text-[#FFD700] fill-icon">star</span>
+                <span class="material-symbols-outlined text-[#FFD700] fill-icon">star</span>
+                <span class="material-symbols-outlined text-[#FFD700] fill-icon">star</span>
+            </div>
+            <p class="font-body-md text-body-md mb-md">"Eddie is the first pool guy who actually shows up on the day he says he will. My pool has never looked better."</p>
+            <div class="flex items-center gap-md pt-base border-t border-on-surface/10">
+                <div class="font-label-bold text-label-bold text-primary font-bold uppercase">Patricia R.</div>
+                <div class="font-label-sm text-label-sm text-on-surface-variant uppercase">North Miami</div>
+            </div>
+        </div>
+        <div class="bg-white p-lg border border-on-surface/10">
+            <span class="quote-mark">"</span>
+            <div class="flex gap-xs mb-base">
+                <span class="material-symbols-outlined text-[#FFD700] fill-icon">star</span>
+                <span class="material-symbols-outlined text-[#FFD700] fill-icon">star</span>
+                <span class="material-symbols-outlined text-[#FFD700] fill-icon">star</span>
+                <span class="material-symbols-outlined text-[#FFD700] fill-icon">star</span>
+                <span class="material-symbols-outlined text-[#FFD700] fill-icon">star</span>
+            </div>
+            <p class="font-body-md text-body-md mb-md">"When my pump died, Eddie was there the next morning. Fixed it for a fair price. He really knows his stuff."</p>
+            <div class="flex items-center gap-md pt-base border-t border-on-surface/10">
+                <div class="font-label-bold text-label-bold text-primary font-bold uppercase">Diana B.</div>
+                <div class="font-label-sm text-label-sm text-on-surface-variant uppercase">North Miami</div>
+            </div>
+        </div>
+        <div class="bg-white p-lg border border-on-surface/10">
+            <span class="quote-mark">"</span>
+            <div class="flex gap-xs mb-base">
+                <span class="material-symbols-outlined text-[#FFD700] fill-icon">star</span>
+                <span class="material-symbols-outlined text-[#FFD700] fill-icon">star</span>
+                <span class="material-symbols-outlined text-[#FFD700] fill-icon">star</span>
+                <span class="material-symbols-outlined text-[#FFD700] fill-icon">star</span>
+                <span class="material-symbols-outlined text-[#FFD700] fill-icon">star</span>
+            </div>
+            <p class="font-body-md text-body-md mb-md">"The water chemistry is always perfect. No more stinging eyes for the kids. Highly recommend Eddie."</p>
+            <div class="flex items-center gap-md pt-base border-t border-on-surface/10">
+                <div class="font-label-bold text-label-bold text-primary font-bold uppercase">Andrea W.</div>
+                <div class="font-label-sm text-label-sm text-on-surface-variant uppercase">North Miami</div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- WHY EDDIE -->
+<section class="py-xl">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-xl items-center">
+    <div class="order-2 md:order-1">
+        <img class="w-full aspect-[4/3] object-cover rounded shadow-lg border-b-4 border-brand-aqua" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKKRFCinOxLJEpU0aSAQdxJPXL1yquqXBKH3Ffo3easHOF6iu9vEcDSB0qis7QpPBDzKrjEUVUtiNw6vBiaMBntCtK40YMO1QrhX3g2TOB9B-uY_KXLyVM6xQQ4Ng6TpHSpgFOVLFmT3JAsjyjYDmu-KhSkp5hhrLwrftcssWRR8bz4WgQNZlCRuusXka0No8r4AiexRNgLLiS40GJ4mVNPrlzr7RK7Cr-JMAFg3n-GDaOxj17N-hW_TupFI7RMyviTuW49QS1Mzg"/>
+    </div>
+    <div class="order-1 md:order-2">
+        <div class="eyebrow">About Eddie</div>
+        <h2 class="font-headline-lg text-headline-lg text-primary mb-lg">Why Hire Eddie?</h2>
+        <div class="space-y-lg">
+            <div class="flex gap-md">
+                <span class="material-symbols-outlined text-brand-aqua text-3xl shrink-0">person_search</span>
+                <div>
+                    <h4 class="font-label-bold text-label-bold text-primary mb-xs uppercase font-bold">One Point of Contact</h4>
+                    <p class="font-body-md text-body-md text-on-surface-variant">You deal with me, not a random hourly employee. I know your pool personally.</p>
+                </div>
+            </div>
+            <div class="flex gap-md">
+                <span class="material-symbols-outlined text-brand-aqua text-3xl shrink-0">alarm_on</span>
+                <div>
+                    <h4 class="font-label-bold text-label-bold text-primary mb-xs uppercase font-bold">Reliable Schedule</h4>
+                    <p class="font-body-md text-body-md text-on-surface-variant">Same day, same window, every week. No guessing when your service will happen.</p>
+                </div>
+            </div>
+            <div class="flex gap-md">
+                <span class="material-symbols-outlined text-brand-aqua text-3xl shrink-0">payments</span>
+                <div>
+                    <h4 class="font-label-bold text-label-bold text-primary mb-xs uppercase font-bold">No Hidden Fees</h4>
+                    <p class="font-body-md text-body-md text-on-surface-variant">Flat monthly rates for chemicals and cleaning. Transparent quotes on all repairs.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="py-xl bg-primary text-white overflow-hidden">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop text-center">
+    <div class="eyebrow justify-center" style="display: inline-flex; color: #00B4CC;">Process</div>
+    <h2 class="font-headline-lg text-headline-lg mb-xl">How It Works</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-xl">
+        <div class="relative">
+            <div class="step-ghost-num">01</div>
+            <div class="relative z-10">
+                <div class="w-16 h-16 bg-brand-aqua text-white flex items-center justify-center rounded-full mx-auto mb-md" style="font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 30px;">1</div>
+                <h3 class="font-label-bold text-label-bold mb-base uppercase font-bold">Call or Text</h3>
+                <p class="font-body-md text-body-md opacity-80">Reach out for a quick chat about what your pool needs.</p>
+            </div>
+            <div class="hidden md:block absolute top-8 -right-1/2 w-full h-[1px] bg-brand-aqua/30"></div>
+        </div>
+        <div class="relative">
+            <div class="step-ghost-num">02</div>
+            <div class="relative z-10">
+                <div class="w-16 h-16 bg-brand-aqua text-white flex items-center justify-center rounded-full mx-auto mb-md" style="font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 30px;">2</div>
+                <h3 class="font-label-bold text-label-bold mb-base uppercase font-bold">Fast Assessment</h3>
+                <p class="font-body-md text-body-md opacity-80">I stop by to check your system and give you a firm quote.</p>
+            </div>
+            <div class="hidden md:block absolute top-8 -right-1/2 w-full h-[1px] bg-brand-aqua/30"></div>
+        </div>
+        <div class="relative">
+            <div class="step-ghost-num">03</div>
+            <div class="relative z-10">
+                <div class="w-16 h-16 bg-brand-aqua text-white flex items-center justify-center rounded-full mx-auto mb-md" style="font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 30px;">3</div>
+                <h3 class="font-label-bold text-label-bold mb-base uppercase font-bold">Enjoy Clean Pool</h3>
+                <p class="font-body-md text-body-md opacity-80">Jump into perfectly clear water every single week.</p>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- EMERGENCY BAND -->
+<div class="bg-brand-aqua py-lg text-white">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-lg">
+    <h2 class="font-headline-md text-headline-md text-center md:text-left">Pool Turned Green? Pump Just Quit?</h2>
+    <div class="flex flex-col sm:flex-row gap-md">
+        <a class="bg-primary text-white btn-primary px-8 py-4 rounded text-center hover:bg-primary-container transition-colors" href="tel:3057611606">Call Eddie Now</a>
+        <a class="bg-white text-primary btn-primary px-8 py-4 rounded text-center hover:bg-brand-sand transition-colors" href="sms:3057611606">Send a Quick Text</a>
+    </div>
+</div>
+</div>
+
+<!-- FAQ -->
+<section class="py-xl">
+<div class="max-w-3xl mx-auto px-margin-mobile">
+    <div class="text-center mb-xl">
+        <div class="eyebrow" style="display: inline-flex;">FAQ</div>
+        <h2 class="font-headline-lg text-headline-lg text-primary">Frequently Asked Questions</h2>
+    </div>
+    <div class="space-y-base">
+        <details class="group bg-surface-container-low p-md border border-on-surface/5">
+            <summary class="cursor-pointer list-none flex justify-between items-center">
+                Where Do You Provide Service?
+                <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+            </summary>
+            <p class="font-body-md text-body-md text-on-surface-variant mt-md">I focus exclusively on North Miami and surrounding neighborhoods to ensure I can give every client my full attention and prompt response times.</p>
+        </details>
+        <details class="group bg-surface-container-low p-md border border-on-surface/5">
+            <summary class="cursor-pointer list-none flex justify-between items-center">
+                How Often Will You Visit?
+                <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+            </summary>
+            <p class="font-body-md text-body-md text-on-surface-variant mt-md">Weekly service is standard. I come on the same scheduled day each week to maintain consistency and water quality.</p>
+        </details>
+        <details class="group bg-surface-container-low p-md border border-on-surface/5">
+            <summary class="cursor-pointer list-none flex justify-between items-center">
+                Do You Do Equipment Repairs?
+                <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+            </summary>
+            <p class="font-body-md text-body-md text-on-surface-variant mt-md">Yes. I repair and replace pumps, filters, salt cells, and heaters. I only use high-quality commercial-grade parts.</p>
+        </details>
+        <details class="group bg-surface-container-low p-md border border-on-surface/5">
+            <summary class="cursor-pointer list-none flex justify-between items-center">
+                Do You Offer One-Time Cleanings?
+                <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+            </summary>
+            <p class="font-body-md text-body-md text-on-surface-variant mt-md">Yes, based on availability. I can handle "green to clean" transformations or pre-party deep cleans.</p>
+        </details>
+    </div>
+</div>
+</section>
+
+<!-- FINAL CONVERSION -->
+<section class="py-xl bg-brand-sand">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop text-center mb-xl">
+    <div class="eyebrow" style="display: inline-flex;">Get Started</div>
+    <h2 class="font-headline-lg text-headline-lg text-primary mb-md">Stop Worrying About Your Pool. That's Eddie's Job.</h2>
+    <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Contact me today for a reliable service quote in North Miami.</p>
+</div>
+<div class="max-w-3xl mx-auto px-margin-mobile">
+    <div class="bg-white p-lg rounded-lg border-2 border-primary-container">
+        <form class="grid grid-cols-1 md:grid-cols-2 gap-md">
+            <div class="md:col-span-2">
+                <label class="block font-label-bold text-label-bold mb-xs uppercase">Name</label>
+                <input class="w-full p-4 border border-on-surface/20 rounded" type="text"/>
+            </div>
+            <div>
+                <label class="block font-label-bold text-label-bold mb-xs uppercase">Phone</label>
+                <input class="w-full p-4 border border-on-surface/20 rounded" type="tel"/>
+            </div>
+            <div>
+                <label class="block font-label-bold text-label-bold mb-xs uppercase">Service</label>
+                <select class="w-full p-4 border border-on-surface/20 rounded">
+                    <option>Weekly Service</option>
+                    <option>Repair Service</option>
+                </select>
+            </div>
+            <button class="md:col-span-2 bg-brand-aqua text-white btn-primary py-5 rounded mt-base hover:bg-[#009bb0] transition-colors">Get Your Quote</button>
+        </form>
+    </div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-surface-container-high py-lg px-margin-mobile md:px-margin-desktop">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-base">
+    <div class="text-center md:text-left">
+        <div class="brand-name text-xl text-primary mb-base">EDDIE THE POOL MAN</div>
+        <div class="font-label-bold text-label-bold text-primary mb-xs font-bold">(305) 761-1606</div>
+        <div class="font-body-md text-body-md text-on-surface-variant">Serving North Miami, FL</div>
+    </div>
+    <div class="flex flex-col items-center md:items-end gap-md">
+        <div class="flex gap-gutter font-label-bold text-label-bold text-on-surface-variant uppercase">
+            <a class="hover:text-brand-aqua transition-colors" href="#">Service Area</a>
+            <a class="hover:text-brand-aqua transition-colors" href="#">Google Reviews</a>
+        </div>
+        <div class="font-label-sm text-label-sm text-on-surface-variant/60">
+            © 2025 EDDIE THE POOL MAN. All rights reserved.
+        </div>
+    </div>
+</div>
+</footer>
+
+<!-- MOBILE STICKY NAV -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 bg-primary md:hidden shadow-lg border-t border-white/10">
+<a class="flex flex-col items-center justify-center text-white active:scale-95 transition-transform" href="tel:3057611606">
+    <span class="material-symbols-outlined">phone</span>
+    <span class="font-label-sm text-label-sm uppercase mt-1">Call Now</span>
+</a>
+<a class="flex flex-col items-center justify-center text-white active:scale-95 transition-transform" href="sms:3057611606">
+    <span class="material-symbols-outlined">sms</span>
+    <span class="font-label-sm text-label-sm uppercase mt-1">Text Eddie</span>
+</a>
+</nav>
+
+</body></html>
