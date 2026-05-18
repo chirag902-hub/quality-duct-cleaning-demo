@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Diversified Auto Repair | Honest Mechanic in Coventry, RI</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&amp;family=Public+Sans:wght@400;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-container": "#550f00",
+                    "surface-variant": "#353532",
+                    "secondary-container": "#3f4a59",
+                    "secondary-fixed-dim": "#bcc7da",
+                    "error": "#ffb4ab",
+                    "primary-container": "#f3623c",
+                    "on-secondary-fixed": "#111c2a",
+                    "on-primary-fixed": "#3c0800",
+                    "surface-container-lowest": "#0e0e0c",
+                    "on-secondary-fixed-variant": "#3d4857",
+                    "on-error-container": "#ffdad6",
+                    "tertiary-fixed-dim": "#b9c8d8",
+                    "tertiary": "#b9c8d8",
+                    "surface": "#131411",
+                    "tertiary-fixed": "#d5e4f5",
+                    "surface-container": "#20201d",
+                    "surface-tint": "#ffb4a2",
+                    "secondary-fixed": "#d8e3f6",
+                    "surface-container-low": "#1c1c19",
+                    "tertiary-container": "#8492a2",
+                    "background": "#131411",
+                    "on-tertiary-fixed-variant": "#3a4856",
+                    "on-error": "#690005",
+                    "primary-fixed-dim": "#ffb4a2",
+                    "secondary": "#bcc7da",
+                    "surface-container-highest": "#353532",
+                    "on-tertiary-container": "#1d2b38",
+                    "on-primary": "#611200",
+                    "on-tertiary": "#24323f",
+                    "inverse-on-surface": "#31302d",
+                    "surface-bright": "#3a3936",
+                    "primary": "#f3623c",
+                    "on-secondary": "#263140",
+                    "outline-variant": "#59413b",
+                    "outline": "#a88a82",
+                    "surface-container-high": "#2a2a27",
+                    "on-secondary-container": "#aeb9cc",
+                    "surface-dim": "#131411",
+                    "primary-fixed": "#ffdbd2",
+                    "on-background": "#e5e2dd",
+                    "inverse-primary": "#ae310e",
+                    "on-primary-fixed-variant": "#891e00",
+                    "inverse-surface": "#e5e2dd",
+                    "error-container": "#93000a",
+                    "on-surface-variant": "#e1bfb7",
+                    "on-surface": "#e5e2dd",
+                    "on-tertiary-fixed": "#0e1d29"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "0px"
+            },
+            "spacing": {
+                    "gutter": "16px",
+                    "margin-desktop": "32px",
+                    "container-max": "1200px",
+                    "unit": "8px",
+                    "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Public Sans"],
+                    "headline-xl-mobile": ["Barlow Condensed"],
+                    "body-md": ["Public Sans"],
+                    "headline-lg": ["Barlow Condensed"],
+                    "headline-md": ["Barlow Condensed"],
+                    "label-bold": ["Barlow Condensed"],
+                    "headline-xl": ["Barlow Condensed"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-xl-mobile": ["36px", {"lineHeight": "1.1", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "0.03em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "700"}],
+                    "label-bold": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.08em", "fontWeight": "700"}],
+                    "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "0.05em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        /* Custom UI aesthetics for Modern Industrial */
+        .industrial-border { border: 1px solid #59413b; }
+        .industrial-card { background-color: #20201d; border: 1px solid #353532; }
+        .btn-primary { @apply bg-primary-container text-on-primary-container font-label-bold text-label-bold uppercase px-6 py-4 transition-transform active:scale-95; }
+        .btn-secondary { @apply border-2 border-on-surface text-on-surface font-label-bold text-label-bold uppercase px-6 py-4 hover:bg-on-surface hover:text-surface transition-all; }
+        .zebra-row:nth-child(even) { background-color: #1c1c19; }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- 1. Sticky Header -->
+<header class="sticky top-0 w-full z-50 bg-surface border-b border-outline-variant">
+<div class="flex justify-between items-center w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-4">
+<a class="font-headline-md text-headline-md font-bold uppercase tracking-wider text-on-surface" href="/">
+                Diversified Auto Repair
+            </a>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-bold text-label-bold uppercase text-primary hover:text-primary-fixed-dim transition-colors flex items-center gap-2" href="tel:4016157776">
+<span class="material-symbols-outlined" data-icon="call">call</span>
+                    (401) 615-7776
+                </a>
+<a class="bg-primary-container text-on-primary-container font-label-bold text-label-bold uppercase px-6 py-3 hover:opacity-90 transition-opacity" href="#appointment">
+                    Book Appointment
+                </a>
+</div>
+<a class="md:hidden text-primary" href="tel:4016157776">
+<span class="material-symbols-outlined" data-icon="call">call</span>
+</a>
+</div>
+</header>
+<!-- 2. Hero Section -->
+<section class="relative min-h-[819px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Mechanic working on car" class="w-full h-full object-cover opacity-30" data-alt="A professional, focused automotive mechanic working under the hood of a high-end vehicle in a clean, industrial garage. The lighting is dramatic and moody, emphasizing the metallic textures and tools. The color palette is dominated by deep charcoal and navy slates with warm amber highlights from shop lamps. The overall style is gritty yet precise and professional." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhkwKNEwNCvfPUz-phbaS5_tY8MAE2wYnbn0eMYAq7ux0OTLTCrUoCqmXTrsrRINA8_c0PgsDgAq1yhjOyqADQMZ-wAW8jUST1klMWsE42PlnUnz6bNx_8C-nXHWI1LgDwVLvTSVXnkSrjT_cO1HArIsUC5ZIng14v_gzAiPYTDjHmRO8uP1NH15D_gczJAH2kAeO3p7-Sc4i05Nxp3LkQDUibWr34W1_xzTci5e6GYgYnAJjyNpfWYEFvi2zCmAQNNOF5PFJHXk4"/>
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent"></div>
+</div>
+<div class="relative z-10 w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-7">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-container-high border border-outline-variant mb-6">
+<span class="w-2 h-2 bg-primary-container"></span>
+<span class="font-label-bold text-label-bold uppercase tracking-widest">Serving Coventry since 2004</span>
+</div>
+<h1 class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl mb-6 max-w-2xl">
+                    ALEX HAS BEEN FIXING COVENTRY'S CARS RIGHT SINCE 2004. <span class="text-primary-container">NO OVERSELLING. JUST HONEST WORK.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-xl">
+                    Diagnostics, brakes, AC, exhaust, transmissions, and RI inspections. Done right the first time by a mechanic who still answers his own phone.
+                </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container" data-icon="star" data-weight="fill">star</span>
+<span class="font-label-bold text-label-bold uppercase">4.9 Stars across 324+ reviews</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container" data-icon="verified">verified</span>
+<span class="font-label-bold text-label-bold uppercase">RI Emissions &amp; Safety Inspections</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container" data-icon="thumb_up">thumb_up</span>
+<span class="font-label-bold text-label-bold uppercase">No repair without your approval</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container" data-icon="timer">timer</span>
+<span class="font-label-bold text-label-bold uppercase">Prompt, efficient turnaround</span>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="btn-primary text-center" href="tel:4016157776">
+                        Call Alex — (401) 615-7776
+                    </a>
+<a class="btn-secondary text-center" href="#appointment">
+                        Request an Appointment
+                    </a>
+</div>
+</div>
+<!-- Desktop Appointment Form -->
+<div class="hidden lg:block lg:col-span-5 bg-surface-container border border-outline-variant p-8" id="appointment">
+<h3 class="font-headline-md text-headline-md mb-6 uppercase">Request Service</h3>
+<form class="space-y-4">
+<div>
+<label class="block font-label-bold text-label-bold uppercase mb-2">Name</label>
+<input class="w-full bg-surface-container-low border border-outline-variant focus:border-primary-container focus:ring-0 px-4 py-3 text-on-surface" placeholder="John Doe" type="text"/>
+</div>
+<div>
+<label class="block font-label-bold text-label-bold uppercase mb-2">Phone</label>
+<input class="w-full bg-surface-container-low border border-outline-variant focus:border-primary-container focus:ring-0 px-4 py-3 text-on-surface" placeholder="(401) 555-0123" type="tel"/>
+</div>
+<div>
+<label class="block font-label-bold text-label-bold uppercase mb-2">Vehicle Info</label>
+<input class="w-full bg-surface-container-low border border-outline-variant focus:border-primary-container focus:ring-0 px-4 py-3 text-on-surface" placeholder="Year, Make, Model" type="text"/>
+</div>
+<div>
+<label class="block font-label-bold text-label-bold uppercase mb-2">Service Needed</label>
+<textarea class="w-full bg-surface-container-low border border-outline-variant focus:border-primary-container focus:ring-0 px-4 py-3 text-on-surface" placeholder="How can Alex help you today?" rows="3"></textarea>
+</div>
+<button class="w-full btn-primary" type="submit">Submit Request</button>
+</form>
+</div>
+</div>
+</section>
+<!-- 3. Trust Bar -->
+<section class="bg-secondary-container py-6 border-y border-outline-variant">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop overflow-x-auto">
+<div class="flex items-center justify-between min-w-[1000px] gap-8">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container" data-icon="star" data-weight="fill">star</span>
+<span class="font-label-bold text-label-bold uppercase whitespace-nowrap">4.9 / 5.0 — 324 Verified Reviews</span>
+</div>
+<div class="w-[1px] h-6 bg-outline-variant"></div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-bold text-label-bold uppercase whitespace-nowrap">Coventry's Neighborhood Shop Since 2004</span>
+</div>
+<div class="w-[1px] h-6 bg-outline-variant"></div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined" data-icon="shield">shield</span>
+<span class="font-label-bold text-label-bold uppercase whitespace-nowrap">RI State Inspections</span>
+</div>
+<div class="w-[1px] h-6 bg-outline-variant"></div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined" data-icon="schedule">schedule</span>
+<span class="font-label-bold text-label-bold uppercase whitespace-nowrap">Mon–Sat Hours</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. About Alex -->
+<section class="py-24 bg-surface">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="relative">
+<div class="absolute -top-4 -left-4 w-24 h-24 border-t-4 border-l-4 border-primary-container"></div>
+<img alt="Alex at the shop" class="industrial-border grayscale hover:grayscale-0 transition-all duration-500 w-full" data-alt="A portrait of a seasoned, trustworthy auto mechanic standing proudly in front of his well-equipped service bay in Coventry, Rhode Island. He wears a dark, clean work shirt with a professional name patch. Behind him, high-quality automotive tools and a car on a lift are visible. The atmosphere is hardworking and honest, with natural light filtering through the shop windows, creating a grounded, blue-collar aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEmKIaQrT9DT8lXATW7VmxouDOlA4CtzETuggovw_lczgJtFUpVLbNt-QvgkKW3WYcuMADgYUhD9zKpkSUgj1QCETFEv56InCi4m1IxHnnO3oMieP7tFttJC81McTawRX_CGloeSvVuJBfVwp3tjo4YHaBeIdhtIP5WZFSHP-UJKX-pi3rrBfR7UXtQvbOW6Ex64oAIQ1fFZ2y8nh3pwuKK0mbbASKXP3DQ3Nzt9FwvYkwrjqHNVqa3Wz6o6mFuFEygOAVkMrsDyw"/>
+<div class="absolute -bottom-4 -right-4 w-24 h-24 border-b-4 border-r-4 border-primary-container"></div>
+</div>
+<div>
+<h2 class="font-headline-lg text-headline-lg uppercase mb-2">The Guy Who Actually Fixes Your Car</h2>
+<div class="w-20 h-1 bg-primary-container mb-8"></div>
+<p class="font-body-lg text-body-lg mb-6">
+                    Alex Dues started Diversified Auto Repair with a simple philosophy: treat every car like it’s your own mother’s. Since 2004, he’s been the hands-on expert that Coventry residents trust when they don't want the run-around of a corporate dealership.
+                </p>
+<p class="font-body-lg text-body-lg mb-8">
+                    When you call Diversified, you aren't talking to a call center or a service advisor on commission. You're talking to the man under the hood. Experience honesty, fair pricing, and technical expertise that only comes from twenty years at the bench.
+                </p>
+<a class="btn-primary inline-flex items-center gap-3" href="tel:4016157776">
+<span class="material-symbols-outlined" data-icon="phone_iphone">phone_iphone</span>
+                    Call Alex Directly — (401) 615-7776
+                </a>
+</div>
+</div>
+</section>
+<!-- 5. Customer Reviews -->
+<section class="py-24 bg-surface-container-low border-y border-outline-variant">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div>
+<h2 class="font-headline-lg text-headline-lg uppercase mb-2">What Coventry Drivers Say</h2>
+<p class="text-on-surface-variant">Real testimonials from your neighbors in Rhode Island.</p>
+</div>
+<div class="bg-surface p-4 industrial-border flex items-center gap-4">
+<div class="text-center border-r border-outline-variant pr-4">
+<div class="font-headline-md text-headline-md leading-none">4.9</div>
+<div class="font-label-bold text-label-bold uppercase text-[10px]">Overall Rating</div>
+</div>
+<div class="flex gap-1">
+<span class="material-symbols-outlined text-primary-container" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-primary-container" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-primary-container" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-primary-container" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-primary-container" data-icon="star" data-weight="fill">star</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="industrial-card p-8 flex flex-col justify-between">
+<div>
+<div class="flex gap-1 mb-4">
+<span class="material-symbols-outlined text-primary-container text-sm" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-primary-container text-sm" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-primary-container text-sm" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-primary-container text-sm" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-primary-container text-sm" data-icon="star" data-weight="fill">star</span>
+</div>
+<p class="italic text-on-surface mb-6">"Alex is the only mechanic I trust. He explained exactly what my car needed and didn't try to sell me a bunch of extras. Honest, fast, and local."</p>
+</div>
+<div class="font-label-bold text-label-bold uppercase text-primary">— Jennifer M., Coventry</div>
+</div>
+<div class="industrial-card p-8 flex flex-col justify-between">
+<div>
+<div class="flex gap-1 mb-4">
+<span class="material-symbols-outlined text-primary-container text-sm" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-primary-container text-sm" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-primary-container text-sm" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-primary-container text-sm" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-primary-container text-sm" data-icon="star" data-weight="fill">star</span>
+</div>
+<p class="italic text-on-surface mb-6">"Brought my truck in for RI inspection. He found a minor issue, fixed it on the spot for a fair price, and had me back on the road in an hour."</p>
+</div>
+<div class="font-label-bold text-label-bold uppercase text-primary">— D.B., West Warwick</div>
+</div>
+<div class="industrial-card p-8 flex flex-col justify-between">
+<div>
+<div class="flex gap-1 mb-4">
+<span class="material-symbols-outlined text-primary-container text-sm" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-primary-container text-sm" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-primary-container text-sm" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-primary-container text-sm" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-primary-container text-sm" data-icon="star" data-weight="fill">star</span>
+</div>
+<p class="italic text-on-surface mb-6">"I appreciate a shop where you actually talk to the mechanic. Alex is professional, knowledgeable, and incredibly fair with his pricing."</p>
+</div>
+<div class="font-label-bold text-label-bold uppercase text-primary">— Cera R., Coventry</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. Services Grid -->
+<section class="py-24">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg uppercase mb-4">What We Fix</h2>
+<p class="max-w-2xl mx-auto text-on-surface-variant">Full-service automotive repair for all makes and models. Specialized in domestic and import maintenance and complex diagnostics.</p>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="industrial-card p-8 group hover:border-primary-container transition-colors">
+<span class="material-symbols-outlined text-primary-container mb-4 block scale-125" data-icon="settings_input_component">settings_input_component</span>
+<h4 class="font-label-bold text-label-bold uppercase mb-2">Brake Repair</h4>
+<p class="text-sm text-on-surface-variant">Rotors, pads, and hydraulics.</p>
+</div>
+<div class="industrial-card p-8 group hover:border-primary-container transition-colors">
+<span class="material-symbols-outlined text-primary-container mb-4 block scale-125" data-icon="computer">computer</span>
+<h4 class="font-label-bold text-label-bold uppercase mb-2">Diagnostics</h4>
+<p class="text-sm text-on-surface-variant">Advanced computer scanning.</p>
+</div>
+<div class="industrial-card p-8 group hover:border-primary-container transition-colors">
+<span class="material-symbols-outlined text-primary-container mb-4 block scale-125" data-icon="ac_unit">ac_unit</span>
+<h4 class="font-label-bold text-label-bold uppercase mb-2">AC Service</h4>
+<p class="text-sm text-on-surface-variant">Recharge and leak detection.</p>
+</div>
+<div class="industrial-card p-8 group hover:border-primary-container transition-colors">
+<span class="material-symbols-outlined text-primary-container mb-4 block scale-125" data-icon="factory">factory</span>
+<h4 class="font-label-bold text-label-bold uppercase mb-2">Exhaust</h4>
+<p class="text-sm text-on-surface-variant">Mufflers, pipes, and cats.</p>
+</div>
+<div class="industrial-card p-8 group hover:border-primary-container transition-colors">
+<span class="material-symbols-outlined text-primary-container mb-4 block scale-125" data-icon="verified_user">verified_user</span>
+<h4 class="font-label-bold text-label-bold uppercase mb-2">RI Inspections</h4>
+<p class="text-sm text-on-surface-variant">State safety and emissions.</p>
+</div>
+<div class="industrial-card p-8 group hover:border-primary-container transition-colors">
+<span class="material-symbols-outlined text-primary-container mb-4 block scale-125" data-icon="auto_transmission">auto_transmission</span>
+<h4 class="font-label-bold text-label-bold uppercase mb-2">Transmission</h4>
+<p class="text-sm text-on-surface-variant">Service, repair, and replace.</p>
+</div>
+<div class="industrial-card p-8 group hover:border-primary-container transition-colors">
+<span class="material-symbols-outlined text-primary-container mb-4 block scale-125" data-icon="precision_manufacturing">precision_manufacturing</span>
+<h4 class="font-label-bold text-label-bold uppercase mb-2">Suspension</h4>
+<p class="text-sm text-on-surface-variant">Shocks, struts, and steering.</p>
+</div>
+<div class="industrial-card p-8 group hover:border-primary-container transition-colors">
+<span class="material-symbols-outlined text-primary-container mb-4 block scale-125" data-icon="build">build</span>
+<h4 class="font-label-bold text-label-bold uppercase mb-2">Maintenance</h4>
+<p class="text-sm text-on-surface-variant">Oil changes and fluids.</p>
+</div>
+</div>
+<div class="mt-16 text-center px-margin-mobile">
+<p class="font-headline-md text-headline-md uppercase mb-8">Not sure what your car needs?</p>
+<a class="btn-primary" href="tel:4016157776">
+                Call us and we will figure it out — (401) 615-7776
+            </a>
+</div>
+</section>
+<!-- 7. Offer -->
+<section class="bg-surface-container border-y border-primary-container/30 py-20 relative overflow-hidden">
+<div class="absolute right-0 top-0 opacity-10 pointer-events-none">
+<span class="material-symbols-outlined text-[300px]" data-icon="verified">verified</span>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center relative z-10">
+<div class="inline-block bg-primary-container text-on-primary-container font-label-bold text-label-bold uppercase px-4 py-2 mb-6">Limited Time Offer</div>
+<h2 class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl uppercase mb-4">New customer? First RI inspection on us.</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-2xl mx-auto">Mention the website when you call. We'll cover the cost of your Rhode Island safety inspection during your first service visit.</p>
+<a class="btn-primary px-12 py-6 text-lg" href="tel:4016157776">
+                Call to Claim — (401) 615-7776
+            </a>
+</div>
+</section>
+<!-- 8. Why Diversified Auto -->
+<section class="py-24">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="order-2 lg:order-1">
+<h2 class="font-headline-lg text-headline-lg uppercase mb-8">Why Coventry Drivers Keep Coming Back</h2>
+<ul class="space-y-6 mb-10">
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary-container mt-1" data-icon="check_circle">check_circle</span>
+<div>
+<span class="font-label-bold text-label-bold uppercase block">No Surprises</span>
+<p class="text-on-surface-variant">We never touch your car without an exact price quote and your explicit approval.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary-container mt-1" data-icon="check_circle">check_circle</span>
+<div>
+<span class="font-label-bold text-label-bold uppercase block">Direct Communication</span>
+<p class="text-on-surface-variant">Talk directly to Alex, the owner and mechanic. No middle-men or confusing jargon.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary-container mt-1" data-icon="check_circle">check_circle</span>
+<div>
+<span class="font-label-bold text-label-bold uppercase block">Fair Pricing</span>
+<p class="text-on-surface-variant">Honest labor rates and quality parts. We fix what’s broken and monitor what isn't.</p>
+</div>
+</li>
+</ul>
+<a class="btn-primary" href="tel:4016157776">Call (401) 615-7776</a>
+</div>
+<div class="order-1 lg:order-2">
+<img alt="Mechanic explaining repair" class="industrial-border w-full h-[500px] object-cover" data-alt="An authentic scene of an experienced mechanic with grease-stained hands explaining a vehicle repair to a customer. He is pointing at a car part on a workbench, with clear, respectful communication. The setting is an organized workshop with professional tools in the background. The lighting is warm and natural, creating a mood of transparency and trust. The visual style is crisp and high-contrast." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCivolUA-IKOG9w_zN-5g2rAxh0rHqqx77_xuaXAqnilvZemPh652smiKndjYbxTAtlBiEUgTcRLnSG2-7VG55E2G0zmoassDPi2bxrv7svSfgnYGf1lsbIvehyjY9WKUwtydfbPNcY2VgU6z03wHWA8SPyta0Gn2BWmD1yfuukxdVodhFVJNDZuNK0JgbGwWp4MrDve_y4pUZYRAULoldFNCNOlyKrQj3EtKI8jxWUftPii5qReVtyRXbnc_tAUNPjcKPAWidAvM4"/>
+</div>
+</div>
+</section>
+<!-- 9. How It Works -->
+<section class="py-24 bg-surface-container-low border-y border-outline-variant">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<h2 class="font-headline-lg text-headline-lg uppercase mb-16 text-center">Simple As It Gets</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-0 industrial-border">
+<div class="p-10 border-b md:border-b-0 md:border-r border-outline-variant text-center">
+<div class="w-12 h-12 bg-primary-container text-on-primary-container flex items-center justify-center font-headline-md text-headline-md mx-auto mb-6">1</div>
+<h3 class="font-label-bold text-label-bold uppercase mb-4">Call or Stop In</h3>
+<p class="text-on-surface-variant">Dial Alex at (401) 615-7776 or bring your vehicle to 1176 Main St.</p>
+</div>
+<div class="p-10 border-b md:border-b-0 md:border-r border-outline-variant text-center">
+<div class="w-12 h-12 bg-primary-container text-on-primary-container flex items-center justify-center font-headline-md text-headline-md mx-auto mb-6">2</div>
+<h3 class="font-label-bold text-label-bold uppercase mb-4">Honest Diagnosis</h3>
+<p class="text-on-surface-variant">We inspect your vehicle and give you a straight answer on what's needed.</p>
+</div>
+<div class="p-10 text-center">
+<div class="w-12 h-12 bg-primary-container text-on-primary-container flex items-center justify-center font-headline-md text-headline-md mx-auto mb-6">3</div>
+<h3 class="font-label-bold text-label-bold uppercase mb-4">Pick It Up Fixed</h3>
+<p class="text-on-surface-variant">Drive away with confidence knowing your car was repaired correctly.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 10. Urgency Band -->
+<section class="bg-surface py-12">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop bg-surface-container-highest p-8 md:p-12 flex flex-col lg:flex-row justify-between items-center gap-8">
+<div>
+<h2 class="font-headline-md text-headline-md uppercase mb-2">Coventry's Most Trusted Mechanic Is Open Right Now</h2>
+<p class="text-on-surface-variant">Mon–Fri 8am–5pm. Saturday 8am–2pm. Walk-ins always welcome.</p>
+</div>
+<div class="flex flex-col sm:flex-row gap-4 w-full lg:w-auto">
+<a class="btn-primary text-center" href="tel:4016157776">Call Alex — (401) 615-7776</a>
+<a class="btn-secondary text-center" href="https://maps.google.com" target="_blank">Get Directions</a>
+</div>
+</div>
+</section>
+<!-- 11. FAQ -->
+<section class="py-24">
+<div class="max-w-3xl mx-auto px-margin-mobile">
+<h2 class="font-headline-lg text-headline-lg uppercase mb-12 text-center">Common Questions</h2>
+<div class="space-y-4">
+<details class="industrial-card group">
+<summary class="p-6 font-label-bold text-label-bold uppercase cursor-pointer flex justify-between items-center hover:bg-surface-container-highest transition-colors">
+                        How long will my repair take?
+                        <span class="material-symbols-outlined group-open:rotate-180 transition-transform" data-icon="expand_more">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-on-surface-variant">
+                        Most maintenance and minor repairs are completed same-day. Complex diagnostics or transmission work may take 1-3 days depending on parts availability. Alex will always give you a firm timeline before starting.
+                    </div>
+</details>
+<details class="industrial-card group">
+<summary class="p-6 font-label-bold text-label-bold uppercase cursor-pointer flex justify-between items-center hover:bg-surface-container-highest transition-colors">
+                        Do I need an appointment for RI inspection?
+                        <span class="material-symbols-outlined group-open:rotate-180 transition-transform" data-icon="expand_more">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-on-surface-variant">
+                        While we accept walk-ins, we highly recommend calling ahead to schedule a specific time to ensure minimal wait for your RI State Safety and Emissions inspection.
+                    </div>
+</details>
+<details class="industrial-card group">
+<summary class="p-6 font-label-bold text-label-bold uppercase cursor-pointer flex justify-between items-center hover:bg-surface-container-highest transition-colors">
+                        Are your prices competitive with dealerships?
+                        <span class="material-symbols-outlined group-open:rotate-180 transition-transform" data-icon="expand_more">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-on-surface-variant">
+                        Usually, we are 20-40% more affordable than a dealership. We don't have the massive overhead of a showroom and we only recommend the repairs your car actually needs to be safe and reliable.
+                    </div>
+</details>
+<details class="industrial-card group">
+<summary class="p-6 font-label-bold text-label-bold uppercase cursor-pointer flex justify-between items-center hover:bg-surface-container-highest transition-colors">
+                        Do you work on foreign cars?
+                        <span class="material-symbols-outlined group-open:rotate-180 transition-transform" data-icon="expand_more">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-on-surface-variant">
+                        Yes. Alex has extensive experience with both domestic (Ford, GM, Dodge) and import (Toyota, Honda, Subaru, VW, BMW) vehicles. We use manufacturer-specific diagnostics to ensure accurate repair.
+                    </div>
+</details>
+</div>
+</div>
+</section>
+<!-- 12. Final Conversion -->
+<section class="py-24 bg-surface-container-lowest border-t border-outline-variant">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+<div>
+<h2 class="font-headline-lg text-headline-lg uppercase mb-6">Stop Guessing What Is Wrong With Your Car.</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">Bring it to a pro who will tell you the truth. We're located conveniently on Main St in Coventry.</p>
+<div class="space-y-6 mb-12">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary-container" data-icon="location_on">location_on</span>
+<div>
+<span class="font-label-bold text-label-bold uppercase block mb-1">Address</span>
+<p>1176 Main St, Coventry, RI 02816</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary-container" data-icon="schedule">schedule</span>
+<div>
+<span class="font-label-bold text-label-bold uppercase block mb-1">Hours</span>
+<p>Mon–Fri: 8am – 5pm<br/>Saturday: 8am – 2pm<br/>Sunday: Closed</p>
+</div>
+</div>
+</div>
+<div class="w-full h-80 industrial-border overflow-hidden">
+<img alt="Map of Coventry RI" class="w-full h-full object-cover grayscale" data-alt="A detailed, modern map rendering of the Coventry, Rhode Island area, focused on the Main Street corridor. The map uses a sophisticated dark-mode aesthetic with slate blues and charcoal grays, featuring minimal accents of burnt red to mark the shop's location. The style is clean, cartographic, and professional, reflecting the industrial precision of the brand." data-location="Coventry, RI" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcH6kb20DqNmMzc7RJU3x02MDTo7840e1ZE8XX1-1DWSbSUA20SklP8zhuPmW_uFqN8IGevshch0pxBfU7d8izsPhjzsjbLCoF6qiPEDhapcQZKHlTQL3EAVXlhmKl5pMG0wXVPkyxI-ogZSvZxMeqZrvTih8VLGk-0fPzRdBT8E9Stv2TYojpD8bsA4nqY9AwmKkMAFvBYz8tmuTzjsdoH5nxXpnpjel188JSsE5fegZVSZB5tV1FACvGDmnrSEENZ5yXU_2jlp8"/>
+</div>
+</div>
+<div class="bg-surface-container border border-outline-variant p-8 md:p-12">
+<h3 class="font-headline-md text-headline-md mb-8 uppercase">Send Alex a Message</h3>
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block font-label-bold text-label-bold uppercase mb-2">Name</label>
+<input class="w-full bg-surface-container-low border border-outline-variant focus:border-primary-container px-4 py-3" placeholder="Full Name" type="text"/>
+</div>
+<div>
+<label class="block font-label-bold text-label-bold uppercase mb-2">Phone</label>
+<input class="w-full bg-surface-container-low border border-outline-variant focus:border-primary-container px-4 py-3" placeholder="(401) 555-5555" type="tel"/>
+</div>
+</div>
+<div>
+<label class="block font-label-bold text-label-bold uppercase mb-2">Year/Make/Model</label>
+<input class="w-full bg-surface-container-low border border-outline-variant focus:border-primary-container px-4 py-3" placeholder="e.g. 2018 Ford F-150" type="text"/>
+</div>
+<div>
+<label class="block font-label-bold text-label-bold uppercase mb-2">How can we help?</label>
+<textarea class="w-full bg-surface-container-low border border-outline-variant focus:border-primary-container px-4 py-3" placeholder="Briefly describe the issue..." rows="4"></textarea>
+</div>
+<button class="w-full btn-primary py-5" type="submit">Request Appointment</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- 13. Footer -->
+<footer class="bg-surface-container-low border-t border-outline-variant py-12">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 mb-12">
+<a class="font-headline-sm text-headline-sm font-bold text-primary uppercase" href="/">
+                    Diversified Auto Repair
+                </a>
+<div class="flex flex-wrap gap-8">
+<a class="font-label-bold text-label-bold uppercase hover:text-primary transition-colors" href="tel:4016157776">(401) 615-7776</a>
+<span class="font-label-bold text-label-bold uppercase text-on-surface-variant">1176 Main St, Coventry, RI 02816</span>
+</div>
+</div>
+<div class="pt-8 border-t border-outline-variant flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-on-surface-variant">
+<p>© 2024 Diversified Auto Repair. Coventry, RI. All Rights Reserved.</p>
+<div class="flex gap-6">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-primary transition-colors" href="#">Sitemap</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
