@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Johnson's Auto Service | Auto Repair West Warwick RI</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&amp;family=Work+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "primary-fixed": "#d7e3f8",
+                "error": "#ba1a1a",
+                "on-background": "#1b1c1c",
+                "inverse-primary": "#bbc7db",
+                "secondary-fixed": "#ffdad5",
+                "surface-container-low": "#f6f3f2",
+                "surface-dim": "#dcd9d9",
+                "surface": "#fcf9f8",
+                "on-error": "#ffffff",
+                "surface-variant": "#e4e2e1",
+                "background": "#fcf9f8",
+                "primary-fixed-dim": "#bbc7db",
+                "on-primary-container": "#818da0",
+                "on-secondary-fixed": "#410001",
+                "tertiary-container": "#252522",
+                "primary-container": "#1a2635",
+                "outline": "#75777d",
+                "secondary-fixed-dim": "#ffb4a9",
+                "on-error-container": "#93000a",
+                "surface-bright": "#fcf9f8",
+                "on-tertiary-container": "#8d8c88",
+                "surface-container-lowest": "#ffffff",
+                "on-tertiary-fixed": "#1c1c19",
+                "on-secondary-fixed-variant": "#930004",
+                "on-primary": "#ffffff",
+                "secondary-container": "#dc3227",
+                "on-primary-fixed-variant": "#3c4858",
+                "on-secondary": "#ffffff",
+                "surface-tint": "#535f70",
+                "surface-container": "#f0eded",
+                "tertiary": "#10100d",
+                "error-container": "#ffdad6",
+                "on-surface-variant": "#44474c",
+                "inverse-surface": "#303030",
+                "inverse-on-surface": "#f3f0f0",
+                "tertiary-fixed": "#e5e2dd",
+                "tertiary-fixed-dim": "#c9c6c2",
+                "on-secondary-container": "#fffbff",
+                "primary": "#05111f",
+                "surface-container-highest": "#e4e2e1",
+                "on-primary-fixed": "#101c2b",
+                "on-tertiary": "#ffffff",
+                "surface-container-high": "#eae7e7",
+                "on-surface": "#1b1c1c",
+                "outline-variant": "#c5c6cc",
+                "secondary": "#b71410",
+                "on-tertiary-fixed-variant": "#474743"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "section-padding": "80px",
+                "stack-lg": "48px",
+                "gutter": "24px",
+                "margin-mobile": "16px",
+                "margin-desktop": "48px",
+                "stack-md": "24px",
+                "stack-sm": "8px",
+                "container-max": "1280px",
+                "unit": "8px"
+            },
+            "fontFamily": {
+                "headline-lg": ["Barlow Condensed"],
+                "body-md": ["Work Sans"],
+                "headline-md": ["Barlow Condensed"],
+                "headline-sm": ["Barlow Condensed"],
+                "label-lg": ["Barlow Condensed"],
+                "body-lg": ["Work Sans"],
+                "label-md": ["Barlow Condensed"],
+                "headline-xl": ["Barlow Condensed"]
+            },
+            "fontSize": {
+                "headline-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                "headline-sm": ["24px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                "label-lg": ["18px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                "headline-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .hard-shadow {
+            box-shadow: 4px 4px 0px 0px rgba(5, 17, 31, 1);
+        }
+        .hero-overlay {
+            background: linear-gradient(90deg, rgba(5, 17, 31, 0.95) 0%, rgba(5, 17, 31, 0.7) 100%);
+        }
+        @media (max-width: 1023px) {
+            .hero-overlay {
+                background: linear-gradient(0deg, rgba(5, 17, 31, 0.9) 0%, rgba(5, 17, 31, 0.8) 100%);
+            }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased">
+<!-- Header -->
+<header class="fixed top-0 w-full z-50 bg-surface border-b-2 border-primary hard-shadow">
+<div class="max-w-container-max mx-auto px-4 md:px-margin-desktop py-4 flex justify-between items-center">
+<div class="font-headline-sm md:font-headline-md text-headline-sm md:text-headline-md font-bold text-primary truncate">JOHNSON'S AUTO SERVICE</div>
+<div class="flex items-center gap-2 md:gap-stack-md">
+<a class="hidden sm:block font-label-lg text-label-lg text-primary hover:text-secondary transition-colors" href="tel:4018281818">(401) 828-1818</a>
+<button class="bg-secondary text-on-secondary px-4 md:px-6 py-2 md:py-3 font-label-md md:font-label-lg text-label-md md:text-label-lg uppercase transition-all hover:bg-[#B7281F] active:scale-95 border-none">Call Now</button>
+</div>
+</div>
+</header>
+<main class="pt-[72px] md:pt-[88px]">
+<!-- Hero Section -->
+<section class="relative min-h-[600px] flex items-center overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida/ADBb0ugU4AHpZvVBJrPfvqrPiS8w6obVgStkfaGd5K8j_ZyDybcQAr-WKwwQCyZIkmT-57E8YGTAsNjvjqzByk9FPOuTqZKaWH6k8GM7anO4DimjonCE0OuC2eL3lWnWeG0LKDiOzGQgOQA98SorUijQyFJ5FkbY9U3WzSBf5VfXSgEFIrOtYNDgdAlNhqM8f2NqFNvG3-2PUnQTUpdYYzPJAH15zExCt4wNWZUnjswSex5YDYGkU1NxCKHuYng');"></div>
+<div class="absolute inset-0 hero-overlay"></div>
+<div class="relative z-10 max-w-container-max mx-auto px-4 md:px-margin-desktop grid grid-cols-1 lg:grid-cols-12 gap-stack-lg py-12 md:py-section-padding">
+<div class="lg:col-span-7 flex flex-col justify-center text-center lg:text-left">
+<h1 class="font-headline-lg md:font-headline-xl text-headline-lg md:text-headline-xl text-surface mb-stack-sm uppercase">Dave will tell you exactly what's wrong. And exactly what it will cost.</h1>
+<p class="font-body-md md:font-body-lg text-body-md md:text-body-lg text-surface-variant mb-stack-md max-w-xl mx-auto lg:mx-0">AAA-approved and 5-star rated for precision auto repair in West Warwick. Over 1,000 verified reviews confirm our commitment to honest answers and expert technical work.</p>
+<!-- Trust indicators moved above CTA for mobile as requested -->
+<div class="flex flex-wrap justify-center lg:justify-start gap-y-2 gap-x-4 mb-stack-lg">
+<div class="flex items-center gap-2 text-surface">
+<span class="material-symbols-outlined text-secondary text-lg">verified</span>
+<span class="font-label-md text-[12px] md:text-label-md">AAA APPROVED</span>
+</div>
+<div class="flex items-center gap-2 text-surface">
+<span class="material-symbols-outlined text-secondary text-lg">engineering</span>
+<span class="font-label-md text-[12px] md:text-label-md">ASE L1 CERTIFIED</span>
+</div>
+<div class="flex items-center gap-2 text-surface">
+<span class="material-symbols-outlined text-secondary text-lg">stars</span>
+<span class="font-label-md text-[12px] md:text-label-md">5.0 STARS</span>
+</div>
+<div class="flex items-center gap-2 text-surface">
+<span class="material-symbols-outlined text-secondary text-lg">history</span>
+<span class="font-label-md text-[12px] md:text-label-md">SINCE 1999</span>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+<button class="bg-secondary text-on-secondary px-6 md:px-8 py-4 md:py-5 font-label-lg text-label-lg uppercase hard-shadow hover:bg-[#B7281F] transition-all">Call — (401) 828-1818</button>
+<button class="border-2 border-surface text-surface px-6 md:px-8 py-4 md:py-5 font-label-lg text-label-lg uppercase hover:bg-surface hover:text-primary transition-all">Our Services</button>
+</div>
+</div>
+<div class="lg:col-span-5 mt-10 lg:mt-0">
+<div class="bg-surface p-6 md:p-stack-md border-2 border-primary hard-shadow">
+<h2 class="font-headline-sm text-headline-sm text-primary mb-stack-md uppercase">Schedule your visit</h2>
+<form class="space-y-4">
+<div>
+<label class="block font-label-md text-label-md text-primary mb-1">Full Name</label>
+<input class="w-full border-primary border-2 focus:ring-0 focus:border-secondary p-3" type="text"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-primary mb-1">Phone Number</label>
+<input class="w-full border-primary border-2 focus:ring-0 focus:border-secondary p-3" type="tel"/>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="block font-label-md text-label-md text-primary mb-1">Vehicle YMM</label>
+<input class="w-full border-primary border-2 focus:ring-0 focus:border-secondary p-3" placeholder="e.g. 2018 Ford F150" type="text"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-primary mb-1">Service Needed</label>
+<select class="w-full border-primary border-2 focus:ring-0 focus:border-secondary p-3">
+<option>Select Service</option>
+<option>Oil Change</option>
+<option>Brake Repair</option>
+<option>Diagnostics</option>
+<option>Other</option>
+</select>
+</div>
+</div>
+<button class="w-full bg-primary text-surface py-4 font-label-lg text-label-lg uppercase hover:bg-secondary transition-all">Submit Request</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Bar - Horizontal scroll on mobile -->
+<section class="bg-tertiary-container py-6">
+<div class="max-w-container-max mx-auto px-4 md:px-margin-desktop overflow-x-auto flex flex-nowrap lg:flex-wrap justify-start lg:justify-between items-center gap-8 lg:gap-stack-md no-scrollbar">
+<div class="flex items-center gap-3 shrink-0">
+<span class="material-symbols-outlined text-surface-variant text-3xl md:text-4xl" data-weight="fill">verified</span>
+<span class="text-surface font-label-md md:font-label-lg uppercase tracking-widest whitespace-nowrap">AAA Approved</span>
+</div>
+<div class="flex items-center gap-3 shrink-0">
+<span class="material-symbols-outlined text-surface-variant text-3xl md:text-4xl" data-weight="fill">shield</span>
+<span class="text-surface font-label-md md:font-label-lg uppercase tracking-widest whitespace-nowrap">ASE L1 Master Techs</span>
+</div>
+<div class="flex items-center gap-3 shrink-0">
+<span class="material-symbols-outlined text-surface-variant text-3xl md:text-4xl" data-weight="fill">camera</span>
+<span class="text-surface font-label-md md:font-label-lg uppercase tracking-widest whitespace-nowrap">Digital Inspections</span>
+</div>
+<div class="flex items-center gap-3 shrink-0">
+<span class="material-symbols-outlined text-surface-variant text-3xl md:text-4xl" data-weight="fill">location_on</span>
+<span class="text-surface font-label-md md:font-label-lg uppercase tracking-widest whitespace-nowrap">Serving RI Since 1999</span>
+</div>
+</div>
+</section>
+<!-- Offer Section -->
+<section class="bg-primary py-12 md:py-section-padding">
+<div class="max-w-container-max mx-auto px-4 md:px-margin-desktop text-center">
+<span class="text-secondary font-label-md md:font-label-lg text-label-md md:text-label-lg uppercase tracking-widest mb-4 block">Limited Time Offer</span>
+<h2 class="font-headline-md md:font-headline-lg text-headline-md md:text-headline-lg text-surface mb-stack-md uppercase">Free digital inspection with any repair</h2>
+<p class="font-body-md md:font-body-lg text-body-md md:text-body-lg text-surface-variant mb-stack-lg max-w-3xl mx-auto">See what our technicians see. We send high-resolution photos and technical notes directly to your phone so you can make informed decisions about your car's health. No surprises, just facts.</p>
+<button class="bg-secondary text-on-secondary px-8 md:px-10 py-4 md:py-5 font-label-lg text-label-lg uppercase hard-shadow hover:bg-[#B7281F] transition-all">Book your inspection</button>
+</div>
+</section>
+<!-- Services Grid - 1 col mobile, 2 col sm, 4 col lg -->
+<section class="py-12 md:py-section-padding bg-surface">
+<div class="max-w-container-max mx-auto px-4 md:px-margin-desktop">
+<h2 class="font-headline-md md:font-headline-lg text-headline-md md:text-headline-lg text-primary mb-stack-lg uppercase text-center md:text-left">Technical Expertise for Every System</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-gutter">
+<!-- Service Card -->
+<div class="bg-surface border-2 border-primary p-6 md:p-stack-md transition-all hover:bg-primary-container group">
+<span class="material-symbols-outlined text-secondary text-4xl mb-4 group-hover:text-surface">oil_barrel</span>
+<h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-surface uppercase mb-2">Oil Changes</h3>
+<p class="font-body-md text-body-md text-on-surface-variant group-hover:text-surface-variant">Full synthetic and high-mileage blends to maximize engine longevity and efficiency.</p>
+</div>
+<div class="bg-surface border-2 border-primary p-6 md:p-stack-md transition-all hover:bg-primary-container group">
+<span class="material-symbols-outlined text-secondary text-4xl mb-4 group-hover:text-surface">minor_crash</span>
+<h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-surface uppercase mb-2">Brake Repair</h3>
+<p class="font-body-md text-body-md text-on-surface-variant group-hover:text-surface-variant">Precision rotor resurfacing and high-performance pad installation for ultimate stopping power.</p>
+</div>
+<div class="bg-surface border-2 border-primary p-6 md:p-stack-md transition-all hover:bg-primary-container group">
+<span class="material-symbols-outlined text-secondary text-4xl mb-4 group-hover:text-surface">analytics</span>
+<h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-surface uppercase mb-2">Engine Diagnostics</h3>
+<p class="font-body-md text-body-md text-on-surface-variant group-hover:text-surface-variant">Advanced scope testing and ECU scanning to pinpoint root causes fast.</p>
+</div>
+<div class="bg-surface border-2 border-primary p-6 md:p-stack-md transition-all hover:bg-primary-container group">
+<span class="material-symbols-outlined text-secondary text-4xl mb-4 group-hover:text-surface">ac_unit</span>
+<h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-surface uppercase mb-2">AC Service</h3>
+<p class="font-body-md text-body-md text-on-surface-variant group-hover:text-surface-variant">Refrigerant recharge and leak detection to keep your cabin comfortable year-round.</p>
+</div>
+<div class="bg-surface border-2 border-primary p-6 md:p-stack-md transition-all hover:bg-primary-container group">
+<span class="material-symbols-outlined text-secondary text-4xl mb-4 group-hover:text-surface">eco</span>
+<h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-surface uppercase mb-2">Emissions</h3>
+<p class="font-body-md text-body-md text-on-surface-variant group-hover:text-surface-variant">Certified state inspection and exhaust system repairs to meet RI standards.</p>
+</div>
+<div class="bg-surface border-2 border-primary p-6 md:p-stack-md transition-all hover:bg-primary-container group">
+<span class="material-symbols-outlined text-secondary text-4xl mb-4 group-hover:text-surface">error</span>
+<h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-surface uppercase mb-2">Check Engine Light</h3>
+<p class="font-body-md text-body-md text-on-surface-variant group-hover:text-surface-variant">Don't guess. We use dealer-level equipment to solve persistent warnings.</p>
+</div>
+<div class="bg-surface border-2 border-primary p-6 md:p-stack-md transition-all hover:bg-primary-container group">
+<span class="material-symbols-outlined text-secondary text-4xl mb-4 group-hover:text-surface">settings_input_component</span>
+<h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-surface uppercase mb-2">Suspension</h3>
+<p class="font-body-md text-body-md text-on-surface-variant group-hover:text-surface-variant">Shocks, struts, and steering component replacement for a smooth, safe ride.</p>
+</div>
+<div class="bg-surface border-2 border-primary p-6 md:p-stack-md transition-all hover:bg-primary-container group">
+<span class="material-symbols-outlined text-secondary text-4xl mb-4 group-hover:text-surface">settings</span>
+<h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-surface uppercase mb-2">Transmission</h3>
+<p class="font-body-md text-body-md text-on-surface-variant group-hover:text-surface-variant">Fluid flushes and technical repairs to ensure reliable gear transitions.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials - Vertical Stack on mobile -->
+<section class="py-12 md:py-section-padding bg-surface-container">
+<div class="max-w-container-max mx-auto px-4 md:px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-center md:items-end mb-stack-lg gap-6 text-center md:text-left">
+<div>
+<h2 class="font-headline-md md:font-headline-lg text-headline-md md:text-headline-lg text-primary uppercase">What West Warwick drivers say</h2>
+<div class="flex items-center justify-center md:justify-start gap-2 mt-2">
+<div class="flex text-secondary">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-label-md md:font-label-lg text-label-md md:text-label-lg text-primary">5.0 OVERALL RATING</span>
+</div>
+</div>
+<div class="flex gap-4">
+<img alt="AAA Logo" class="h-8 md:h-10 grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWlYJ4gJlXALijQSL7WvzYoiujQuAuElKpY6Kclxp5q_rRt0jGtkiE42kStkliIYN4HXdW9sQ2wiJnnXcsP1RgKGm3Ndm-80YDW0bf0G_6aUuQ46YURyh7vGShyKkN6jDur9tDKLg319xkf1GOsA1x9OAOivFYTETUzQFURf9o-w8lnL1LB5ieJNOeO6i48ysc2V0UIIRTi-pqziWGY2Wlzoy3XZU9oZHcsqDq8tgTTZepag8KRB2o0kAA7IbaPExaBk4m16jOfMQ"/>
+<img alt="SureCritic Logo" class="h-8 md:h-10 grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5_XJB-V8BfVPwT0qbEJnXjdP3KgcJvg1_u8XOyVbvLnfMZc2X_Etz5l8QuEbdUkwK8u5BUSAqMNei0Mg_OOo_EqJpJLTqB6QKy8cIsc8gguVTSBNPjX2MuyBzychSQFUw33gbnN3lxGSlb3rH8U1Mg44JXxIu8Xiar9o4dhHyR41C3F-gk9462pYz0coRE3rdSry923CvoCEhKaHVC8lOCvJ3yw6ZjPXUFCSSPqRdqBOEnaeXKVSWyZU-APULVwYJtq6HF-bbf3I"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-gutter">
+<div class="bg-surface p-6 md:p-stack-md border-2 border-primary-fixed hard-shadow">
+<div class="flex text-secondary mb-3">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md mb-4 italic">"Dave is the most honest mechanic I've found in RI. He showed me the photos of my brakes and explained why I could wait another 5k miles. No one does that."</p>
+<div class="font-label-md text-label-md text-primary uppercase">— MICHAEL R., WEST WARWICK</div>
+</div>
+<div class="bg-surface p-6 md:p-stack-md border-2 border-primary-fixed hard-shadow">
+<div class="flex text-secondary mb-3">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md mb-4 italic">"The digital inspection was a game changer. I could see the actual leak on my phone while I was at work. Excellent service and very fast."</p>
+<div class="font-label-md text-label-md text-primary uppercase">— SARAH J., COVENTRY</div>
+</div>
+<div class="bg-surface p-6 md:p-stack-md border-2 border-primary-fixed hard-shadow">
+<div class="flex text-secondary mb-3">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md mb-4 italic">"Top notch work. Dave handled my complex engine diagnostic that the dealership couldn't figure out. Highly recommended for anything car related."</p>
+<div class="font-label-md text-label-md text-primary uppercase">— KEVIN L., CRANSTON</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Johnson's - Stack Vertically on Mobile -->
+<section class="py-12 md:py-section-padding bg-surface">
+<div class="max-w-container-max mx-auto px-4 md:px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-stack-lg items-center">
+<div class="relative order-1 lg:order-1">
+<img alt="Technician with customer" class="w-full h-auto border-2 border-primary hard-shadow" src="https://lh3.googleusercontent.com/aida/ADBb0uigUX_3j236YDhinUWFy9dXKKk0Np5DvYo-5c4Ai8jgHzyh14rK4GgOvtLIHGW7PnhE52sCabM_m9zqjBGcjrGI-Uz_njj6Ymd3hP9a1iiyNvnAT3ZtkPTaMSKT5OXjrjEJAELnPjMmo4TEQEWLfBNIStLqd-aym_bufl5JtoxEBUSFBXZeulh-0nRFsQzjs3WNObjXg-zw7Nb7tKz1PWvJVjd0z2ZnIMNXdOUDTLij32tLUMmqBpOiHaw"/>
+<div class="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 bg-secondary text-on-secondary p-4 md:p-8 border-2 border-primary">
+<div class="font-headline-md md:font-headline-lg text-headline-md md:text-headline-lg leading-none">25+</div>
+<div class="font-label-md text-[12px] md:text-label-md uppercase">Years of Service</div>
+</div>
+</div>
+<div class="lg:pl-stack-lg order-2 lg:order-2 mt-8 lg:mt-0">
+<h2 class="font-headline-md md:font-headline-lg text-headline-md md:text-headline-lg text-primary uppercase mb-6 md:mb-stack-md text-center lg:text-left">Why local drivers choose Johnson's</h2>
+<ul class="space-y-4 md:space-y-6">
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-secondary font-bold shrink-0">check_circle</span>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-primary uppercase">ASE L1 Master Technicians</h4>
+<p class="font-body-md text-body-md">Our lead techs hold the highest certification possible in the automotive industry.</p>
+</div>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-secondary font-bold shrink-0">check_circle</span>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-primary uppercase">AAA-Approved Integrity</h4>
+<p class="font-body-md text-body-md">We meet the rigorous standards for facility cleanliness, equipment, and customer service.</p>
+</div>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-secondary font-bold shrink-0">check_circle</span>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-primary uppercase">No Sales Pressure</h4>
+<p class="font-body-md text-body-md">We provide honest answers and technical data. You decide what work gets done and when.</p>
+</div>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-secondary font-bold shrink-0">check_circle</span>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-primary uppercase">Modern Digital Workflow</h4>
+<p class="font-body-md text-body-md">Text-based updates and photographic proof of all findings sent directly to your phone.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- How it Works - Vertical stack on mobile -->
+<section class="py-12 md:py-section-padding bg-tertiary text-surface">
+<div class="max-w-container-max mx-auto px-4 md:px-margin-desktop text-center">
+<h2 class="font-headline-md md:font-headline-lg text-headline-md md:text-headline-lg uppercase mb-10 md:mb-stack-lg">Professional service in 3 simple steps</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-stack-lg relative">
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 md:w-20 md:h-20 bg-secondary flex items-center justify-center text-3xl md:text-4xl font-headline-lg mb-6 hard-shadow">1</div>
+<h3 class="font-headline-sm text-headline-sm uppercase mb-3">Call or Request</h3>
+<p class="font-body-md text-surface-variant px-4">Contact us to secure your appointment. We schedule quickly to keep you on the road.</p>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 md:w-20 md:h-20 bg-secondary flex items-center justify-center text-3xl md:text-4xl font-headline-lg mb-6 hard-shadow">2</div>
+<h3 class="font-headline-sm text-headline-sm uppercase mb-3">Inspect &amp; Explain</h3>
+<p class="font-body-md text-surface-variant px-4">We perform a digital inspection and send photos of our findings to your phone.</p>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 md:w-20 md:h-20 bg-secondary flex items-center justify-center text-3xl md:text-4xl font-headline-lg mb-6 hard-shadow">3</div>
+<h3 class="font-headline-sm text-headline-sm uppercase mb-3">Pick up Fixed</h3>
+<p class="font-body-md text-surface-variant px-4">Review the quote, approve the work, and pick up your vehicle. Fully repaired and tested.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Urgency Band -->
+<section class="bg-secondary py-8 md:py-10">
+<div class="max-w-container-max mx-auto px-4 md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-6 md:gap-stack-md text-center md:text-left">
+<div>
+<h2 class="font-headline-md text-headline-md text-surface uppercase">We schedule fast. Slots go quick.</h2>
+<p class="font-label-md md:font-label-lg text-label-md md:text-label-lg text-surface-variant uppercase tracking-wider">Don't wait until you're stranded. Book today.</p>
+</div>
+<div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+<button class="bg-primary text-surface px-6 md:px-8 py-3 md:py-4 font-label-lg text-label-lg uppercase transition-all hover:bg-tertiary">Call (401) 828-1818</button>
+<button class="border-2 border-surface text-surface px-6 md:px-8 py-3 md:py-4 font-label-lg text-label-lg uppercase hover:bg-surface hover:text-secondary transition-all">Request Slot</button>
+</div>
+</div>
+</section>
+<!-- FAQ -->
+<section class="py-12 md:py-section-padding bg-surface">
+<div class="max-w-3xl mx-auto px-4 md:px-margin-desktop">
+<h2 class="font-headline-md md:font-headline-lg text-headline-md md:text-headline-lg text-primary uppercase mb-stack-lg text-center">Frequently asked questions</h2>
+<div class="space-y-4">
+<div class="border-2 border-primary-fixed p-4">
+<h4 class="font-headline-sm text-[18px] md:text-headline-sm text-primary uppercase cursor-pointer flex justify-between items-center text-left">
+                            How long do digital inspections take?
+                            <span class="material-symbols-outlined">expand_more</span>
+</h4>
+<p class="font-body-md mt-3 text-on-surface-variant">Our technicians perform the inspection during the diagnostic phase. You'll typically receive the full report with photos via text within 1-2 hours of drop-off.</p>
+</div>
+<div class="border-2 border-primary-fixed p-4">
+<h4 class="font-headline-sm text-[18px] md:text-headline-sm text-primary uppercase cursor-pointer flex justify-between items-center text-left">
+                            What makes and models do you service?
+                            <span class="material-symbols-outlined">expand_more</span>
+</h4>
+<p class="font-body-md mt-3 text-on-surface-variant">We service all domestic and foreign vehicles, including European brands. Our diagnostic equipment is updated regularly to match dealer-level capabilities.</p>
+</div>
+<div class="border-2 border-primary-fixed p-4">
+<h4 class="font-headline-sm text-[18px] md:text-headline-sm text-primary uppercase cursor-pointer flex justify-between items-center text-left">
+                            Do you provide a warranty on repairs?
+                            <span class="material-symbols-outlined">expand_more</span>
+</h4>
+<p class="font-body-md mt-3 text-on-surface-variant">Yes, we stand behind our technical precision with a 24-month/24,000-mile warranty on most parts and labor. Ask Dave for specific details on your repair.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Final Conversion -->
+<section class="py-12 md:py-section-padding bg-surface-container-high border-t-2 border-primary">
+<div class="max-w-container-max mx-auto px-4 md:px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-stack-lg">
+<div class="text-center lg:text-left">
+<h2 class="font-headline-md md:font-headline-lg text-headline-md md:text-headline-lg text-primary uppercase mb-stack-md">Stop guessing who to trust.</h2>
+<p class="font-body-md md:font-body-lg text-body-md md:text-body-lg text-on-surface-variant mb-stack-lg">Get precision automotive repair from local experts who value transparency. Visit Johnson's Auto Service for an honest assessment and professional technical work.</p>
+<div class="space-y-4 mb-stack-lg inline-block lg:block text-left">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary">location_on</span>
+<div>
+<h4 class="font-label-lg text-label-lg text-primary uppercase">Our Shop</h4>
+<p class="font-body-md">1501 Main St, West Warwick, RI 02893</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary">schedule</span>
+<div>
+<h4 class="font-label-lg text-label-lg text-primary uppercase">Hours</h4>
+<p class="font-body-md">Mon - Fri: 8:00 AM - 5:00 PM<br/>Sat - Sun: Closed</p>
+</div>
+</div>
+</div>
+<div class="w-full h-48 md:h-64 border-2 border-primary hard-shadow overflow-hidden mt-6">
+<img alt="Map of West Warwick area" class="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida/ADBb0ugU4AHpZvVBJrPfvqrPiS8w6obVgStkfaGd5K8j_ZyDybcQAr-WKwwQCyZIkmT-57E8YGTAsNjvjqzByk9FPOuTqZKaWH6k8GM7anO4DimjonCE0OuC2eL3lWnWeG0LKDiOzGQgOQA98SorUijQyFJ5FkbY9U3WzSBf5VfXSgEFIrOtYNDgdAlNhqM8f2NqFNvG3-2PUnQTUpdYYzPJAH15zExCt4wNWZUnjswSex5YDYGkU1NxCKHuYng"/>
+</div>
+</div>
+<div class="bg-surface p-6 md:p-stack-md border-2 border-primary hard-shadow mt-10 lg:mt-0">
+<h2 class="font-headline-sm text-headline-sm text-primary mb-stack-md uppercase">Request an appointment</h2>
+<form class="space-y-4">
+<div>
+<label class="block font-label-md text-label-md text-primary mb-1">Full Name</label>
+<input class="w-full border-primary border-2 focus:ring-0 focus:border-secondary p-3" type="text"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-primary mb-1">Phone Number</label>
+<input class="w-full border-primary border-2 focus:ring-0 focus:border-secondary p-3" type="tel"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-primary mb-1">Vehicle Year / Make / Model</label>
+<input class="w-full border-primary border-2 focus:ring-0 focus:border-secondary p-3" type="text"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-primary mb-1">Briefly describe the issue</label>
+<textarea class="w-full border-primary border-2 focus:ring-0 focus:border-secondary p-3" rows="3"></textarea>
+</div>
+<button class="w-full bg-secondary text-on-secondary py-4 md:py-5 font-label-lg text-label-lg uppercase hard-shadow hover:bg-[#B7281F] transition-all">Submit Request</button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary py-12 md:py-stack-lg border-t-2 border-primary-fixed mb-[80px] md:mb-0">
+<div class="max-w-container-max mx-auto px-4 md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-10 md:gap-stack-md">
+<div class="flex flex-col items-center md:items-start text-center md:text-left">
+<div class="font-headline-sm text-headline-sm text-surface uppercase font-bold mb-2">JOHNSON'S AUTO SERVICE</div>
+<p class="font-label-md text-[12px] md:text-label-md text-surface-variant uppercase tracking-widest">© 2024 JOHNSON'S AUTO SERVICE. PRECISION GUARANTEED.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-4 md:gap-6">
+<a class="font-label-md text-[12px] md:text-label-md text-surface-variant hover:text-secondary-fixed transition-all underline decoration-1 underline-offset-4" href="#">Privacy</a>
+<a class="font-label-md text-[12px] md:text-label-md text-surface-variant hover:text-secondary-fixed transition-all underline decoration-1 underline-offset-4" href="#">Terms</a>
+<a class="font-label-md text-[12px] md:text-label-md text-surface-variant hover:text-secondary-fixed transition-all underline decoration-1 underline-offset-4" href="#">Areas</a>
+<a class="font-label-md text-[12px] md:text-label-md text-surface-variant hover:text-secondary-fixed transition-all underline decoration-1 underline-offset-4" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<img alt="ASE Logo" class="h-8 brightness-0 invert opacity-50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9mJrXBY0oWHycYDHjt-fz5HfP6vwLK9zxEq8zk3jRFjzTKd7wYFD5FX0wv7LHginV8KHFmCXIXkI4FRPNq6uflTWlq9hOmlJ5eJLUVTu5Hbjoq5HbtG_AdtmteVbYiznbdSP2SmJvV2i7ggCAxcXYSV_fMHLWD5Q0GBwxG0V56pSr4kjGNCjmt1Nkw-o9EGZzmXSn_QDlxkfUWUzaUjM8LHOCcLW-Qma1kgWZBZaS7lYFA0rHjf2Sc2MtbDBcKDtiTfwhpwiVBZQ"/>
+<img alt="AAA Logo" class="h-8 brightness-0 invert opacity-50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBotEksGCtR_ckq4c39EYRSlvSNbJjWiz4eGL7SNmWX-R1BfIFrU_HckA1UpaS4ulBJrfWtlcrjtJMAJJOhPPZoVpBMSg3ZDv4Thd0qePGDHn8shh7mv6z8CAV7Nm8yUrhVUNrArhuUZUv-bNaiaczgYTxgd-GWvRMMciQZgmRgLcYmQyJsGQiP7h8iPeTK4rfqePd_q9pZtEHguWIz-GbnhN0Qxh4fbWJ5oWo5t4pHlRfqWYoJI9ZUgGdMavuCIwb4PLw7D1P1n84"/>
+</div>
+</div>
+</footer>
+<!-- Persistent Appointment Bar (Mobile Only) -->
+<div class="md:hidden fixed bottom-0 left-0 w-full bg-primary p-4 z-50 border-t border-primary-fixed">
+<button class="w-full bg-secondary text-on-secondary py-4 font-label-lg text-label-lg uppercase border-none hard-shadow">Schedule Now — (401) 828-1818</button>
+</div>
+<style>
+        /* Custom scrollbar hiding for horizontal scroll section */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</body></html>
