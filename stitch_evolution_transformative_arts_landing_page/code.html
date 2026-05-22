@@ -1,0 +1,1760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evolution Transformative Arts — Pacific Grove, CA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+
+    /* ================================================
+       DESIGN TOKENS
+    ================================================ */
+    :root {
+      --bg:           #F7F4EF;
+      --bg-dark:      #1A1916;
+      --bg-darker:    #111009;
+      --accent:       #3D5A47;
+      --accent-light: #5B7A68;
+      --accent-dim:   rgba(61, 90, 71, 0.12);
+      --earth:        #8B7355;
+      --sand:         #C8B89A;
+      --sand-light:   #EDE5D6;
+      --text:         #2A2720;
+      --text-muted:   #7A6E63;
+      --text-faint:   #A89E93;
+      --white:        #FFFFFF;
+      --line:         rgba(42, 39, 32, 0.10);
+      --line-dark:    rgba(255, 255, 255, 0.07);
+
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-body:    'Outfit', system-ui, sans-serif;
+
+      --ease:         cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-out:     cubic-bezier(0.0, 0.0, 0.2, 1);
+    }
+
+    /* ================================================
+       RESET & BASE
+    ================================================ */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    img { display: block; max-width: 100%; }
+    a   { color: inherit; text-decoration: none; }
+    ul  { list-style: none; }
+
+    /* ================================================
+       SCROLL REVEAL SYSTEM
+    ================================================ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.75s var(--ease), transform 0.75s var(--ease);
+    }
+    .reveal.in { opacity: 1; transform: translateY(0); }
+    .reveal-left {
+      opacity: 0;
+      transform: translateX(-28px);
+      transition: opacity 0.75s var(--ease), transform 0.75s var(--ease);
+    }
+    .reveal-left.in { opacity: 1; transform: translateX(0); }
+    .reveal-right {
+      opacity: 0;
+      transform: translateX(28px);
+      transition: opacity 0.75s var(--ease), transform 0.75s var(--ease);
+    }
+    .reveal-right.in { opacity: 1; transform: translateX(0); }
+    .d1 { transition-delay: 0.08s; }
+    .d2 { transition-delay: 0.16s; }
+    .d3 { transition-delay: 0.24s; }
+    .d4 { transition-delay: 0.32s; }
+    .d5 { transition-delay: 0.40s; }
+
+    /* ================================================
+       NAVIGATION
+    ================================================ */
+    .nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 200;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.625rem 3rem;
+      transition: padding 0.5s var(--ease),
+                  background 0.5s var(--ease),
+                  backdrop-filter 0.5s var(--ease),
+                  box-shadow 0.5s var(--ease);
+    }
+
+    .nav.scrolled {
+      padding: 1rem 3rem;
+      background: rgba(247, 244, 239, 0.90);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      box-shadow: 0 1px 0 var(--line);
+    }
+
+    .nav-logo {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      color: rgba(255, 255, 255, 0.92);
+      transition: color 0.4s var(--ease);
+      white-space: nowrap;
+    }
+    .nav-logo em { font-style: italic; font-weight: 300; }
+    .nav.scrolled .nav-logo { color: var(--text); }
+
+    .nav-center {
+      display: flex;
+      gap: 2.75rem;
+      align-items: center;
+    }
+
+    .nav-link {
+      font-size: 0.75rem;
+      font-weight: 400;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.60);
+      position: relative;
+      transition: color 0.3s;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      left: 0; bottom: -3px;
+      width: 0; height: 1px;
+      background: var(--accent-light);
+      transition: width 0.35s var(--ease);
+    }
+    .nav-link:hover { color: rgba(255,255,255,0.95); }
+    .nav-link:hover::after { width: 100%; }
+    .nav.scrolled .nav-link { color: var(--text-muted); }
+    .nav.scrolled .nav-link:hover { color: var(--text); }
+    .nav.scrolled .nav-link::after { background: var(--accent); }
+
+    .nav-book {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 0.55rem 1.375rem;
+      border: 1px solid rgba(255,255,255,0.45);
+      color: rgba(255,255,255,0.85);
+      transition: all 0.3s var(--ease);
+      border-radius: 2px;
+    }
+    .nav-book:hover {
+      background: rgba(255,255,255,0.12);
+      border-color: rgba(255,255,255,0.70);
+      color: #fff;
+    }
+    .nav.scrolled .nav-book {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+    .nav.scrolled .nav-book:hover {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .nav-mobile-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .nav-mobile-toggle span {
+      display: block;
+      width: 22px;
+      height: 1px;
+      background: rgba(255,255,255,0.75);
+      transition: background 0.3s;
+    }
+    .nav.scrolled .nav-mobile-toggle span { background: var(--text); }
+
+    /* ================================================
+       HERO — Asymmetric Split (Image Left / Dark Right)
+    ================================================ */
+    .hero {
+      display: grid;
+      grid-template-columns: 55% 45%;
+      min-height: 100dvh;
+      position: relative;
+    }
+
+    /* LEFT — photographic panel */
+    .hero-visual {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+      transform: scale(1.07);
+      animation: heroUnzoom 1.8s 0.2s var(--ease) forwards;
+      filter: brightness(0.75) saturate(0.85);
+    }
+
+    @keyframes heroUnzoom {
+      to { transform: scale(1.0); }
+    }
+
+    /* fade into the right panel */
+    .hero-visual::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, transparent 55%, #1A1916 100%);
+    }
+
+    /* thin vertical accent line */
+    .hero-visual-line {
+      position: absolute;
+      top: 12%; bottom: 12%;
+      right: 0;
+      width: 1px;
+      background: linear-gradient(to bottom, transparent, rgba(91,122,104,0.5) 40%, rgba(91,122,104,0.5) 60%, transparent);
+      z-index: 2;
+    }
+
+    /* floating location tag on image */
+    .hero-location {
+      position: absolute;
+      bottom: 2.75rem;
+      left: 2.75rem;
+      z-index: 3;
+      font-size: 0.6875rem;
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      opacity: 0;
+      animation: fadeIn 0.8s 1.5s forwards;
+    }
+    .hero-location::before {
+      content: '';
+      display: block;
+      width: 28px;
+      height: 1px;
+      background: rgba(255,255,255,0.3);
+    }
+
+    /* RIGHT — content panel */
+    .hero-content {
+      background: var(--bg-dark);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 7.5rem 4.5rem 5rem 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* ambient glow */
+    .hero-content::before {
+      content: '';
+      position: absolute;
+      top: 20%; left: -20%;
+      width: 480px; height: 480px;
+      background: radial-gradient(ellipse, rgba(61,90,71,0.18) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-est {
+      font-size: 0.6875rem;
+      font-weight: 400;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--accent-light);
+      margin-bottom: 2.25rem;
+      opacity: 0;
+      transform: translateY(16px);
+      animation: slideUp 0.7s 0.5s var(--ease) forwards;
+    }
+
+    .hero-h1 {
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 4.5vw, 5.25rem);
+      font-weight: 300;
+      line-height: 1.0;
+      letter-spacing: -0.01em;
+      color: #fff;
+      margin-bottom: 2rem;
+      opacity: 0;
+      transform: translateY(22px);
+      animation: slideUp 0.85s 0.7s var(--ease) forwards;
+    }
+    .hero-h1 em {
+      font-style: italic;
+      color: var(--sand);
+    }
+
+    .hero-body {
+      font-size: 0.9375rem;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.45);
+      max-width: 36ch;
+      margin-bottom: 3rem;
+      opacity: 0;
+      transform: translateY(16px);
+      animation: slideUp 0.75s 0.95s var(--ease) forwards;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      opacity: 0;
+      transform: translateY(16px);
+      animation: slideUp 0.75s 1.15s var(--ease) forwards;
+    }
+
+    /* scroll indicator — absolute inside content panel */
+    .hero-scroll {
+      position: absolute;
+      bottom: 2.75rem;
+      right: 4.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      opacity: 0;
+      animation: fadeIn 1s 1.8s forwards;
+    }
+    .hero-scroll-track {
+      width: 1px;
+      height: 48px;
+      background: linear-gradient(to bottom, rgba(255,255,255,0.25), transparent);
+      animation: scrollBounce 2.2s 1.8s ease-in-out infinite;
+    }
+    @keyframes scrollBounce {
+      0%, 100% { transform: scaleY(1); opacity: 0.4; }
+      50%       { transform: scaleY(0.6); opacity: 0.9; }
+    }
+    .hero-scroll-label {
+      font-size: 0.5875rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.25);
+      writing-mode: vertical-rl;
+    }
+
+    /* shared animation keyframes */
+    @keyframes slideUp { to { opacity: 1; transform: translateY(0); } }
+    @keyframes fadeIn  { to { opacity: 1; } }
+
+    /* ================================================
+       BUTTONS
+    ================================================ */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.625rem;
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      cursor: pointer;
+      border: none;
+      transition: all 0.3s var(--ease);
+    }
+    .btn:active { transform: scale(0.98); }
+
+    .btn-solid {
+      padding: 0.875rem 2rem;
+      background: var(--accent);
+      color: #fff;
+    }
+    .btn-solid:hover {
+      background: var(--accent-light);
+      transform: translateY(-2px);
+    }
+    .btn-solid:active { transform: translateY(0) scale(0.98); }
+
+    .btn-ghost-light {
+      color: rgba(255,255,255,0.50);
+      display: flex;
+      align-items: center;
+      gap: 0.625rem;
+    }
+    .btn-ghost-light:hover { color: rgba(255,255,255,0.9); }
+
+    .btn-ghost-dark {
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 0.625rem;
+    }
+    .btn-ghost-dark:hover { color: var(--text); }
+
+    .arrow-line {
+      display: inline-block;
+      width: 22px;
+      height: 1px;
+      background: currentColor;
+      position: relative;
+      transition: width 0.3s var(--ease);
+    }
+    .arrow-line::after {
+      content: '';
+      position: absolute;
+      right: 0; top: -3px;
+      width: 6px; height: 6px;
+      border-right: 1px solid currentColor;
+      border-top: 1px solid currentColor;
+      transform: rotate(45deg);
+    }
+    .btn-ghost-light:hover .arrow-line,
+    .btn-ghost-dark:hover .arrow-line { width: 34px; }
+
+    /* ================================================
+       MARQUEE BAND
+    ================================================ */
+    .marquee {
+      background: var(--accent);
+      padding: 0.875rem 0;
+      overflow: hidden;
+    }
+    .marquee-track {
+      display: flex;
+      white-space: nowrap;
+      animation: marqueeRoll 35s linear infinite;
+    }
+    .marquee:hover .marquee-track { animation-play-state: paused; }
+    @keyframes marqueeRoll {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+    .marquee-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 1.25rem;
+      padding: 0 1.75rem;
+      font-size: 0.6875rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.82);
+    }
+    .marquee-pip {
+      width: 3px; height: 3px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.4);
+      flex-shrink: 0;
+    }
+
+    /* ================================================
+       PHILOSOPHY SECTION
+    ================================================ */
+    .philosophy {
+      padding: 9rem 3rem;
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1.35fr;
+      gap: 7rem;
+      align-items: start;
+    }
+
+    .section-eyebrow {
+      font-size: 0.6875rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+    .section-eyebrow::before {
+      content: '';
+      display: block;
+      width: 24px; height: 1px;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .section-eyebrow-light {
+      font-size: 0.6875rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--accent-light);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+    .section-eyebrow-light::before {
+      content: '';
+      display: block;
+      width: 24px; height: 1px;
+      background: var(--accent-light);
+      flex-shrink: 0;
+    }
+
+    .philosophy-sticky {
+      position: sticky;
+      top: 8rem;
+    }
+
+    .philosophy-heading {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 3.5vw, 4.25rem);
+      font-weight: 300;
+      line-height: 1.08;
+      letter-spacing: -0.01em;
+      color: var(--text);
+      margin-bottom: 2.5rem;
+    }
+    .philosophy-heading em {
+      font-style: italic;
+      color: var(--earth);
+    }
+
+    .philosophy-intro {
+      font-size: 0.9375rem;
+      line-height: 1.78;
+      color: var(--text-muted);
+      max-width: 42ch;
+    }
+
+    .pillar {
+      padding: 2.75rem 0;
+      border-top: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      gap: 1.75rem;
+      align-items: start;
+      opacity: 0;
+      transform: translateX(24px);
+      transition: opacity 0.65s var(--ease), transform 0.65s var(--ease);
+    }
+    .pillar.in { opacity: 1; transform: translateX(0); }
+    .pillar:last-child { border-bottom: 1px solid var(--line); }
+
+    .pillar-num {
+      font-family: var(--font-display);
+      font-size: 0.875rem;
+      font-weight: 400;
+      color: var(--accent-light);
+      letter-spacing: 0.06em;
+      padding-top: 0.2rem;
+    }
+
+    .pillar-title {
+      font-family: var(--font-display);
+      font-size: 1.625rem;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      color: var(--text);
+      margin-bottom: 0.625rem;
+      line-height: 1.2;
+    }
+
+    .pillar-text {
+      font-size: 0.9rem;
+      line-height: 1.78;
+      color: var(--text-muted);
+      max-width: 50ch;
+    }
+
+    /* ================================================
+       SERVICES SECTION
+    ================================================ */
+    .services {
+      background: var(--bg-dark);
+      padding: 8rem 3rem;
+    }
+
+    .services-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .services-header {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: end;
+      margin-bottom: 5rem;
+    }
+
+    .services-heading {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 3.5vw, 4rem);
+      font-weight: 300;
+      line-height: 1.08;
+      color: #fff;
+      letter-spacing: -0.01em;
+    }
+    .services-heading em { font-style: italic; color: var(--sand); }
+
+    .services-sub {
+      font-size: 0.9rem;
+      line-height: 1.78;
+      color: rgba(255,255,255,0.38);
+      max-width: 42ch;
+      align-self: end;
+    }
+
+    /* Asymmetric 3-col grid, first card spans 2 rows */
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1.8fr 1fr 1fr;
+      grid-template-rows: 340px 280px;
+      gap: 2px;
+    }
+
+    .s-card {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      background: #242220;
+    }
+    .s-card:first-child {
+      grid-row: 1 / 3;
+    }
+
+    .s-card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.9s var(--ease), filter 0.6s;
+      filter: brightness(0.65) saturate(0.75);
+    }
+    .s-card:hover .s-card-img {
+      transform: scale(1.07);
+      filter: brightness(0.55) saturate(0.65);
+    }
+
+    .s-card-shade {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top,
+        rgba(26,25,22,0.92) 0%,
+        rgba(26,25,22,0.25) 45%,
+        transparent 100%
+      );
+    }
+
+    .s-card-body {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 1.75rem 2rem;
+    }
+
+    .s-card-tag {
+      display: inline-block;
+      font-size: 0.5875rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--accent-light);
+      border: 1px solid rgba(91,122,104,0.4);
+      padding: 0.22rem 0.6rem;
+      margin-bottom: 0.625rem;
+      border-radius: 1px;
+    }
+
+    .s-card-name {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: #fff;
+      line-height: 1.2;
+    }
+    .s-card:first-child .s-card-name { font-size: 2rem; }
+
+    .s-card-arrow {
+      position: absolute;
+      top: 1.25rem; right: 1.25rem;
+      width: 32px; height: 32px;
+      border: 1px solid rgba(255,255,255,0.18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transform: translate(6px, -6px);
+      transition: opacity 0.3s, transform 0.3s var(--ease), border-color 0.3s;
+    }
+    .s-card:hover .s-card-arrow {
+      opacity: 1;
+      transform: translate(0,0);
+      border-color: rgba(91,122,104,0.55);
+    }
+
+    /* ================================================
+       ABOUT SECTION
+    ================================================ */
+    .about {
+      padding: 9rem 3rem;
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      align-items: center;
+    }
+
+    .about-image-wrap {
+      position: relative;
+    }
+
+    .about-img {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    /* floating stat badge */
+    .about-stat {
+      position: absolute;
+      bottom: -2rem;
+      right: -1.5rem;
+      background: var(--accent);
+      padding: 1.5rem 2rem;
+      z-index: 2;
+    }
+    .about-stat-number {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      font-weight: 300;
+      color: #fff;
+      line-height: 1;
+    }
+    .about-stat-label {
+      font-size: 0.6875rem;
+      font-weight: 400;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.65);
+      margin-top: 0.375rem;
+    }
+
+    /* thin decorative line on the left edge of image */
+    .about-image-wrap::before {
+      content: '';
+      position: absolute;
+      top: 3rem; bottom: 3rem;
+      left: -1.5rem;
+      width: 1px;
+      background: linear-gradient(to bottom, transparent, var(--sand) 40%, var(--sand) 60%, transparent);
+    }
+
+    .about-content { padding-left: 1rem; }
+
+    .about-heading {
+      font-family: var(--font-display);
+      font-size: clamp(2.25rem, 3vw, 3.5rem);
+      font-weight: 300;
+      line-height: 1.1;
+      color: var(--text);
+      margin-bottom: 2rem;
+      letter-spacing: -0.01em;
+    }
+    .about-heading em { font-style: italic; color: var(--earth); }
+
+    .about-bio {
+      font-size: 0.9375rem;
+      line-height: 1.82;
+      color: var(--text-muted);
+      max-width: 52ch;
+      margin-bottom: 1.25rem;
+    }
+
+    .credentials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 2.25rem 0 2.75rem;
+    }
+    .cred {
+      font-size: 0.6875rem;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      border: 1px solid var(--sand);
+      padding: 0.35rem 0.875rem;
+      border-radius: 1px;
+      transition: border-color 0.3s, color 0.3s;
+    }
+    .cred:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    /* ================================================
+       EVENTS / WORKSHOPS
+    ================================================ */
+    .events {
+      background: var(--sand-light);
+      padding: 8rem 3rem;
+    }
+
+    .events-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .events-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 4rem;
+    }
+
+    .events-heading {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 3vw, 3.25rem);
+      font-weight: 300;
+      line-height: 1.1;
+      color: var(--text);
+      letter-spacing: -0.01em;
+    }
+    .events-heading em { font-style: italic; color: var(--earth); }
+
+    .events-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .e-card {
+      background: var(--bg);
+      overflow: hidden;
+      transition: transform 0.45s var(--ease), box-shadow 0.45s;
+    }
+    .e-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 28px 56px -16px rgba(42,39,32,0.14);
+    }
+
+    .e-card-thumb {
+      overflow: hidden;
+      aspect-ratio: 4 / 3;
+    }
+    .e-card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: saturate(0.8);
+      transition: transform 0.65s var(--ease), filter 0.5s;
+    }
+    .e-card:hover .e-card-img {
+      transform: scale(1.06);
+      filter: saturate(1);
+    }
+
+    .e-card-body { padding: 1.75rem 1.75rem 1.5rem; }
+
+    .e-tag {
+      font-size: 0.6rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+
+    .e-title {
+      font-family: var(--font-display);
+      font-size: 1.375rem;
+      font-weight: 500;
+      line-height: 1.25;
+      color: var(--text);
+      margin-bottom: 0.75rem;
+    }
+
+    .e-excerpt {
+      font-size: 0.875rem;
+      line-height: 1.7;
+      color: var(--text-muted);
+    }
+
+    .e-card-foot {
+      padding: 1rem 1.75rem 1.5rem;
+      border-top: 1px solid var(--line);
+    }
+    .e-link {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: gap 0.3s;
+    }
+    .e-card:hover .e-link { gap: 0.875rem; }
+
+    /* ================================================
+       QUOTE / PULL
+    ================================================ */
+    .pull-quote {
+      background: var(--bg-dark);
+      padding: 7rem 3rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .pull-quote::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 100%, rgba(61,90,71,0.14) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .pq-mark {
+      font-family: var(--font-display);
+      font-size: 8rem;
+      font-weight: 300;
+      color: rgba(61,90,71,0.25);
+      line-height: 0.6;
+      margin-bottom: 2rem;
+    }
+    .pq-text {
+      font-family: var(--font-display);
+      font-size: clamp(1.75rem, 3.5vw, 3rem);
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.45;
+      color: rgba(255,255,255,0.88);
+      max-width: 24ch;
+      margin: 0 auto 2rem;
+    }
+    .pq-text em { font-style: normal; color: var(--sand); }
+    .pq-attr {
+      font-size: 0.75rem;
+      font-weight: 400;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.3);
+    }
+
+    /* ================================================
+       NEWSLETTER / CTA
+    ================================================ */
+    .cta {
+      background: var(--bg-dark);
+      padding: 8rem 3rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 700px; height: 700px;
+      background: radial-gradient(ellipse, rgba(61,90,71,0.10) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    .cta-heading {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 5vw, 5.5rem);
+      font-weight: 300;
+      line-height: 1.05;
+      color: #fff;
+      max-width: 16ch;
+      margin: 0 auto 1.5rem;
+      letter-spacing: -0.01em;
+    }
+    .cta-heading em { font-style: italic; color: var(--sand); }
+
+    .cta-sub {
+      font-size: 0.9375rem;
+      line-height: 1.78;
+      color: rgba(255,255,255,0.38);
+      max-width: 42ch;
+      margin: 0 auto 3rem;
+    }
+
+    .email-form {
+      display: flex;
+      max-width: 440px;
+      margin: 0 auto;
+    }
+    .email-input {
+      flex: 1;
+      padding: 1rem 1.375rem;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.10);
+      border-right: none;
+      color: #fff;
+      font-family: var(--font-body);
+      font-size: 0.875rem;
+      outline: none;
+      transition: border-color 0.3s;
+      border-radius: 0;
+    }
+    .email-input::placeholder { color: rgba(255,255,255,0.25); }
+    .email-input:focus { border-color: rgba(61,90,71,0.5); }
+
+    .email-btn {
+      padding: 1rem 1.75rem;
+      background: var(--accent);
+      color: #fff;
+      font-family: var(--font-body);
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s;
+      border-radius: 0;
+      white-space: nowrap;
+    }
+    .email-btn:hover { background: var(--accent-light); }
+    .email-btn:active { transform: scale(0.98); }
+
+    /* ================================================
+       FOOTER
+    ================================================ */
+    .footer {
+      background: var(--bg-darker);
+      padding: 5.5rem 3rem 2.75rem;
+    }
+
+    .footer-top {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr 1.1fr;
+      gap: 4rem;
+      padding-bottom: 4rem;
+      border-bottom: 1px solid var(--line-dark);
+    }
+
+    .footer-brand {
+      font-family: var(--font-display);
+      font-size: 1.125rem;
+      font-weight: 400;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 1.125rem;
+    }
+    .footer-brand em { font-style: italic; color: var(--sand); font-weight: 300; }
+
+    .footer-tagline {
+      font-size: 0.875rem;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.28);
+      max-width: 28ch;
+      margin-bottom: 2rem;
+    }
+
+    .footer-socials {
+      display: flex;
+      gap: 0.875rem;
+    }
+    .f-social {
+      width: 34px; height: 34px;
+      border: 1px solid rgba(255,255,255,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.30);
+      transition: border-color 0.3s, color 0.3s;
+    }
+    .f-social:hover {
+      border-color: var(--accent);
+      color: var(--accent-light);
+    }
+
+    .footer-col-head {
+      font-size: 0.6rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.28);
+      margin-bottom: 1.75rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.875rem;
+    }
+    .footer-links a {
+      font-size: 0.875rem;
+      color: rgba(255,255,255,0.32);
+      transition: color 0.3s;
+    }
+    .footer-links a:hover { color: rgba(255,255,255,0.75); }
+
+    .f-contact-line {
+      font-size: 0.875rem;
+      color: rgba(255,255,255,0.32);
+      line-height: 1.6;
+      margin-bottom: 0.875rem;
+    }
+    .f-contact-line a { transition: color 0.3s; }
+    .f-contact-line a:hover { color: var(--accent-light); }
+    .f-note {
+      font-size: 0.6875rem;
+      color: rgba(255,255,255,0.15);
+      margin-top: 0.25rem;
+    }
+
+    .footer-bottom {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding-top: 2.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .f-copy {
+      font-size: 0.6875rem;
+      letter-spacing: 0.06em;
+      color: rgba(255,255,255,0.15);
+    }
+
+    /* ================================================
+       RESPONSIVE
+    ================================================ */
+    @media (max-width: 1100px) {
+      .hero              { grid-template-columns: 1fr; grid-template-rows: 55vh 1fr; }
+      .hero-content      { padding: 4rem 2.5rem 4.5rem; }
+      .hero-scroll       { display: none; }
+      .hero-visual-line  { display: none; }
+
+      .philosophy        { grid-template-columns: 1fr; gap: 3.5rem; padding: 6rem 2rem; }
+      .philosophy-sticky { position: static; }
+
+      .services          { padding: 6rem 2rem; }
+      .services-header   { grid-template-columns: 1fr; gap: 1.5rem; }
+      .services-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+      }
+      .services-grid .s-card:first-child {
+        grid-column: 1 / -1;
+        grid-row: auto;
+        height: 360px;
+      }
+      .services-grid .s-card:not(:first-child) { height: 280px; }
+
+      .about             { grid-template-columns: 1fr; gap: 5rem; padding: 6rem 2rem; }
+      .about-image-wrap::before { display: none; }
+      .about-stat        { right: 0; }
+      .about-content     { padding-left: 0; }
+
+      .events-grid       { grid-template-columns: 1fr 1fr; }
+      .events-header     { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
+
+      .footer-top        { grid-template-columns: 1fr 1fr; gap: 3rem; }
+    }
+
+    @media (max-width: 768px) {
+      .nav               { padding: 1.25rem 1.5rem; }
+      .nav-center        { display: none; }
+      .nav-book          { display: none; }
+      .nav-mobile-toggle { display: flex; }
+
+      .hero-h1           { font-size: 2.75rem; }
+
+      .services-grid     { grid-template-columns: 1fr; }
+      .services-grid .s-card:first-child { grid-column: auto; height: 320px; }
+      .services-grid .s-card:not(:first-child) { height: 240px; }
+
+      .events-grid       { grid-template-columns: 1fr; }
+
+      .footer-top        { grid-template-columns: 1fr; gap: 2.5rem; }
+      .footer-bottom     { flex-direction: column; gap: 0.75rem; text-align: center; }
+
+      .pull-quote        { padding: 5rem 1.5rem; }
+      .pq-text           { font-size: 1.5rem; }
+
+      .email-form        { flex-direction: column; }
+      .email-input       { border-right: 1px solid rgba(255,255,255,0.10); border-bottom: none; }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="nav" id="mainNav">
+    <a href="#" class="nav-logo">Evolution <em>Transformative Arts</em></a>
+    <div class="nav-center">
+      <a href="#philosophy" class="nav-link">Philosophy</a>
+      <a href="#services"   class="nav-link">Services</a>
+      <a href="#about"      class="nav-link">About</a>
+      <a href="#events"     class="nav-link">Events</a>
+    </div>
+    <a href="#connect" class="nav-book">Book a Session</a>
+    <div class="nav-mobile-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+
+  <!-- ==================== HERO ==================== -->
+  <section class="hero">
+
+    <!-- Left: Photo Panel -->
+    <div class="hero-visual">
+      <img
+        class="hero-img"
+        src="https://static.wixstatic.com/media/4e4722_2687104cb4bd4a6e99f23306d7ed9913~mv2.jpg/v1/fill/w_1200,h_1600,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/4e4722_2687104cb4bd4a6e99f23306d7ed9913~mv2.jpg"
+        alt="Movement practice at Evolution Transformative Arts, Pacific Grove"
+      >
+      <div class="hero-visual-line"></div>
+      <div class="hero-location">Pacific Grove, California</div>
+    </div>
+
+    <!-- Right: Content Panel -->
+    <div class="hero-content">
+      <div class="hero-est">Est. 2013 &nbsp;—&nbsp; Monterey Peninsula</div>
+
+      <h1 class="hero-h1">
+        Where bodies<br>
+        <em>learn to move</em><br>
+        and minds find<br>
+        stillness
+      </h1>
+
+      <p class="hero-body">
+        A sanctuary for movement, healing arts, and community in Pacific Grove — built on the belief that personal wellbeing is inseparable from the world around us.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#services" class="btn btn-solid">
+          Explore Programs
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2 6.5h9M8 3l3.5 3.5L8 10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#about" class="btn btn-ghost-light">
+          Meet Jennifer <span class="arrow-line"></span>
+        </a>
+      </div>
+
+      <!-- Scroll hint -->
+      <div class="hero-scroll">
+        <div class="hero-scroll-track"></div>
+        <div class="hero-scroll-label">Scroll</div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- ==================== MARQUEE ==================== -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span class="marquee-item">Yoga <span class="marquee-pip"></span></span>
+      <span class="marquee-item">Pilates <span class="marquee-pip"></span></span>
+      <span class="marquee-item">Freestyle Dance <span class="marquee-pip"></span></span>
+      <span class="marquee-item">Thai Yoga Massage <span class="marquee-pip"></span></span>
+      <span class="marquee-item">Deep Body Work <span class="marquee-pip"></span></span>
+      <span class="marquee-item">Healing Arts <span class="marquee-pip"></span></span>
+      <span class="marquee-item">Kids Playshops <span class="marquee-pip"></span></span>
+      <span class="marquee-item">Esalen Bodywork <span class="marquee-pip"></span></span>
+      <span class="marquee-item">Salon Series <span class="marquee-pip"></span></span>
+      <span class="marquee-item">Community Outreach <span class="marquee-pip"></span></span>
+      <!-- duplicate for seamless loop -->
+      <span class="marquee-item">Yoga <span class="marquee-pip"></span></span>
+      <span class="marquee-item">Pilates <span class="marquee-pip"></span></span>
+      <span class="marquee-item">Freestyle Dance <span class="marquee-pip"></span></span>
+      <span class="marquee-item">Thai Yoga Massage <span class="marquee-pip"></span></span>
+      <span class="marquee-item">Deep Body Work <span class="marquee-pip"></span></span>
+      <span class="marquee-item">Healing Arts <span class="marquee-pip"></span></span>
+      <span class="marquee-item">Kids Playshops <span class="marquee-pip"></span></span>
+      <span class="marquee-item">Esalen Bodywork <span class="marquee-pip"></span></span>
+      <span class="marquee-item">Salon Series <span class="marquee-pip"></span></span>
+      <span class="marquee-item">Community Outreach <span class="marquee-pip"></span></span>
+    </div>
+  </div>
+
+
+  <!-- ==================== PHILOSOPHY ==================== -->
+  <section class="philosophy" id="philosophy">
+
+    <div class="philosophy-sticky reveal-left">
+      <div class="section-eyebrow">Our Philosophy</div>
+      <h2 class="philosophy-heading">
+        More than<br>a studio.<br>A <em>calling</em>.
+      </h2>
+      <p class="philosophy-intro">
+        This is a calling steeped in passion and purpose. We show up day in and day out — to nourish, to inspire, and to cultivate a healthier community through healing and artistic expression.
+      </p>
+    </div>
+
+    <div>
+      <div class="pillar" data-pillar>
+        <span class="pillar-num">01</span>
+        <div>
+          <div class="pillar-title">Connection</div>
+          <p class="pillar-text">Personal wellbeing is inextricably linked to our environment and community. When one thrives, the other follows. We practice in ways that honor that feedback loop.</p>
+        </div>
+      </div>
+
+      <div class="pillar" data-pillar style="transition-delay: 0.1s">
+        <span class="pillar-num">02</span>
+        <div>
+          <div class="pillar-title">Communication</div>
+          <p class="pillar-text">The body speaks truths the mind hasn't yet articulated. Movement is language — we teach you to listen, then to respond with intention and grace.</p>
+        </div>
+      </div>
+
+      <div class="pillar" data-pillar style="transition-delay: 0.2s">
+        <span class="pillar-num">03</span>
+        <div>
+          <div class="pillar-title">Collaboration</div>
+          <p class="pillar-text">We co-create alongside artists, healers, and community activists. Health is a collective practice — we are nourished by the intelligence of the group.</p>
+        </div>
+      </div>
+
+      <div class="pillar" data-pillar style="transition-delay: 0.3s">
+        <span class="pillar-num">04</span>
+        <div>
+          <div class="pillar-title">Creativity</div>
+          <p class="pillar-text">Whether you dance, stretch, receive a healing touch, or simply breathe — you are the artist of your own body. Movement is art-making, at any age or stage of life.</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- ==================== SERVICES ==================== -->
+  <section class="services" id="services">
+    <div class="services-inner">
+
+      <div class="services-header">
+        <div>
+          <div class="section-eyebrow-light reveal">Programs &amp; Offerings</div>
+          <h2 class="services-heading reveal d1">
+            Every practice,<br><em>a doorway</em>
+          </h2>
+        </div>
+        <p class="services-sub reveal d2">
+          From somatic bodywork to freestyle dance, from healing touch to kids' movement play — find the door that opens for you, right now, exactly as you are.
+        </p>
+      </div>
+
+      <div class="services-grid">
+
+        <!-- Large card — Yoga & Pilates -->
+        <div class="s-card reveal">
+          <img
+            class="s-card-img"
+            src="https://static.wixstatic.com/media/4e4722_08191187cc724bca8f36b7eed7311ab5~mv2.jpg/v1/fill/w_900,h_1400,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/4e4722_08191187cc724bca8f36b7eed7311ab5~mv2.jpg"
+            alt="Yoga and Pilates classes"
+          >
+          <div class="s-card-shade"></div>
+          <div class="s-card-body">
+            <span class="s-card-tag">Movement</span>
+            <h3 class="s-card-name">Yoga &amp; Pilates</h3>
+          </div>
+          <div class="s-card-arrow">
+            <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M1.5 9.5L9.5 1.5M9.5 1.5H3.5M9.5 1.5V7.5" stroke="white" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+
+        <!-- Top right: Dance -->
+        <div class="s-card reveal d1">
+          <img
+            class="s-card-img"
+            src="https://static.wixstatic.com/media/4e4722_8096275745e746008804fc8c4cf21b8a~mv2.jpg/v1/fill/w_800,h_600,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/4e4722_8096275745e746008804fc8c4cf21b8a~mv2.jpg"
+            alt="Freestyle DanceJam"
+          >
+          <div class="s-card-shade"></div>
+          <div class="s-card-body">
+            <span class="s-card-tag">Dance</span>
+            <h3 class="s-card-name">Freestyle DanceJam</h3>
+          </div>
+          <div class="s-card-arrow">
+            <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M1.5 9.5L9.5 1.5M9.5 1.5H3.5M9.5 1.5V7.5" stroke="white" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+
+        <!-- Top right: Bodywork -->
+        <div class="s-card reveal d2">
+          <img
+            class="s-card-img"
+            src="https://static.wixstatic.com/media/081c34_bb6ee5fda0dc409c89e3ca05e860c3a1~mv2.jpeg/v1/fill/w_800,h_600,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/081c34_bb6ee5fda0dc409c89e3ca05e860c3a1~mv2.jpeg"
+            alt="Thai Yoga Massage and Deep Bodywork"
+          >
+          <div class="s-card-shade"></div>
+          <div class="s-card-body">
+            <span class="s-card-tag">Healing Arts</span>
+            <h3 class="s-card-name">Thai Yoga &amp; Bodywork</h3>
+          </div>
+          <div class="s-card-arrow">
+            <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M1.5 9.5L9.5 1.5M9.5 1.5H3.5M9.5 1.5V7.5" stroke="white" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+
+        <!-- Bottom right: Kids -->
+        <div class="s-card reveal d3">
+          <img
+            class="s-card-img"
+            src="https://static.wixstatic.com/media/4e4722_5a8726bb432140e9938d20eff97a743d~mv2.jpg/v1/fill/w_800,h_600,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/4e4722_5a8726bb432140e9938d20eff97a743d~mv2.jpg"
+            alt="Kids Fitness and Yoganimal Playshops"
+          >
+          <div class="s-card-shade"></div>
+          <div class="s-card-body">
+            <span class="s-card-tag">Kids</span>
+            <h3 class="s-card-name">Yoganimal Playshops</h3>
+          </div>
+          <div class="s-card-arrow">
+            <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M1.5 9.5L9.5 1.5M9.5 1.5H3.5M9.5 1.5V7.5" stroke="white" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+
+        <!-- Bottom right: Salon -->
+        <div class="s-card reveal d4">
+          <img
+            class="s-card-img"
+            src="https://static.wixstatic.com/media/081c34_999074bdc61e4a9dbbecbf2d6a5e5242~mv2.jpg/v1/fill/w_800,h_600,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/081c34_999074bdc61e4a9dbbecbf2d6a5e5242~mv2.jpg"
+            alt="Salon Series — Live Music in the Studio"
+          >
+          <div class="s-card-shade"></div>
+          <div class="s-card-body">
+            <span class="s-card-tag">Arts</span>
+            <h3 class="s-card-name">Salon Series</h3>
+          </div>
+          <div class="s-card-arrow">
+            <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M1.5 9.5L9.5 1.5M9.5 1.5H3.5M9.5 1.5V7.5" stroke="white" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== ABOUT ==================== -->
+  <section class="about" id="about">
+
+    <div class="about-image-wrap reveal-left">
+      <img
+        class="about-img"
+        src="https://static.wixstatic.com/media/081c34_11c179d455ab43f7bb1e63cf6122cab4~mv2.jpg/v1/fill/w_800,h_1000,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/081c34_11c179d455ab43f7bb1e63cf6122cab4~mv2.jpg"
+        alt="Jennifer Haydu, founder of Evolution Transformative Arts"
+      >
+      <div class="about-stat">
+        <div class="about-stat-number">30+</div>
+        <div class="about-stat-label">Years of teaching</div>
+      </div>
+    </div>
+
+    <div class="about-content">
+      <div class="section-eyebrow reveal">Jennifer Haydu &mdash; Founder</div>
+
+      <h2 class="about-heading reveal d1">
+        Teacher, healer,<br><em>lifelong student</em>
+      </h2>
+
+      <p class="about-bio reveal d2">
+        Jennifer has spent over three decades at the intersection of movement, healing, and community. She earned national certifications as a personal trainer, medical exercise specialist, and Pilates and yoga instructor — building a practice that weaves together the dance world, Thai Yoga Massage, Esalen bodywork, and deep compassionate presence.
+      </p>
+
+      <p class="about-bio reveal d3">
+        She completed the Yoga Therapy training program at the Niroga Institute in Oakland and channels those lessons through community outreach to schools, non-profits, and underserved populations across Monterey. Her specialty is meeting students where they are, at any age, and helping them access their own sense of wellbeing and grace.
+      </p>
+
+      <div class="credentials reveal d3">
+        <span class="cred">Personal Trainer</span>
+        <span class="cred">Medical Exercise Specialist</span>
+        <span class="cred">Pilates Instructor</span>
+        <span class="cred">Yoga Therapist</span>
+        <span class="cred">Thai Yoga Massage</span>
+        <span class="cred">Esalen Bodywork</span>
+      </div>
+
+      <a href="#connect" class="btn btn-solid reveal d4">
+        Book a Session
+        <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2 6.5h9M8 3l3.5 3.5L8 10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+
+  </section>
+
+
+  <!-- ==================== EVENTS ==================== -->
+  <section class="events" id="events">
+    <div class="events-inner">
+
+      <div class="events-header">
+        <div>
+          <div class="section-eyebrow reveal">Workshops &amp; Events</div>
+          <h2 class="events-heading reveal d1">Latest <em>offerings</em></h2>
+        </div>
+        <a href="#" class="btn btn-ghost-dark reveal">
+          View all events <span class="arrow-line"></span>
+        </a>
+      </div>
+
+      <div class="events-grid">
+
+        <div class="e-card reveal">
+          <div class="e-card-thumb">
+            <img
+              class="e-card-img"
+              src="https://static.wixstatic.com/media/081c34_4fd3eecddae44e8ba55176a420c6cb62~mv2.jpeg/v1/fill/w_800,h_600,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/081c34_4fd3eecddae44e8ba55176a420c6cb62~mv2.jpeg"
+              alt="Gentle Beast Movement Workshop"
+            >
+          </div>
+          <div class="e-card-body">
+            <div class="e-tag">Workshop</div>
+            <h3 class="e-title">Gentle Beast Movement Workshop</h3>
+            <p class="e-excerpt">Explore primal movement patterns that awaken the body's natural intelligence. Ground down, open up. All levels welcome.</p>
+          </div>
+          <div class="e-card-foot">
+            <a href="#" class="e-link">
+              Read More
+              <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 5.5h7M6.5 3l3 2.5-3 2.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="e-card reveal d1">
+          <div class="e-card-thumb">
+            <img
+              class="e-card-img"
+              src="https://static.wixstatic.com/media/081c34_4b543a95a7474171820ddc16e40d07a4~mv2.png/v1/fill/w_800,h_600,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/081c34_4b543a95a7474171820ddc16e40d07a4~mv2.png"
+              alt="Partner Massage Workshop"
+            >
+          </div>
+          <div class="e-card-body">
+            <div class="e-tag">Workshop</div>
+            <h3 class="e-title">Partner Massage Workshop</h3>
+            <p class="e-excerpt">Learn the art of therapeutic touch — practical techniques rooted in loving presence and attunement with another person.</p>
+          </div>
+          <div class="e-card-foot">
+            <a href="#" class="e-link">
+              Read More
+              <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 5.5h7M6.5 3l3 2.5-3 2.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="e-card reveal d2">
+          <div class="e-card-thumb">
+            <img
+              class="e-card-img"
+              src="https://static.wixstatic.com/media/4e4722_8096275745e746008804fc8c4cf21b8a~mv2.jpg/v1/fill/w_800,h_600,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/4e4722_8096275745e746008804fc8c4cf21b8a~mv2.jpg"
+              alt="Freestyle DanceJam Monterey Bay"
+            >
+          </div>
+          <div class="e-card-body">
+            <div class="e-tag">Recurring</div>
+            <h3 class="e-title">Freestyle DanceJam Monterey Bay</h3>
+            <p class="e-excerpt">A freeform movement practice that reconnects you to rhythm, community, and your own uninhibited sense of play.</p>
+          </div>
+          <div class="e-card-foot">
+            <a href="#" class="e-link">
+              Read More
+              <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 5.5h7M6.5 3l3 2.5-3 2.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== PULL QUOTE ==================== -->
+  <div class="pull-quote">
+    <div class="pq-mark reveal">&ldquo;</div>
+    <blockquote class="pq-text reveal d1">
+      "I am continually humbled at the healing power and grace of this practice. It has changed my <em>life profoundly</em>, and is my great joy to share it."
+    </blockquote>
+    <cite class="pq-attr reveal d2">Jennifer Haydu &mdash; Founder, Evolution Transformative Arts</cite>
+  </div>
+
+
+  <!-- ==================== CTA / NEWSLETTER ==================== -->
+  <section class="cta" id="connect">
+    <div class="section-eyebrow-light reveal" style="justify-content: center;">Stay Connected</div>
+    <h2 class="cta-heading reveal d1">
+      Begin your<br><em>evolution</em><br>today
+    </h2>
+    <p class="cta-sub reveal d2">
+      Drop us a note to receive updates about upcoming classes, workshops, and community events in Pacific Grove.
+    </p>
+    <form class="email-form reveal d3" onsubmit="handleSubscribe(event)">
+      <input
+        type="email"
+        class="email-input"
+        placeholder="Your email address"
+        required
+        aria-label="Email address"
+      >
+      <button type="submit" class="email-btn">Subscribe</button>
+    </form>
+  </section>
+
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="footer-top">
+
+      <!-- Brand col -->
+      <div>
+        <div class="footer-brand">Evolution <em>Transformative Arts</em></div>
+        <p class="footer-tagline">Health and wellness through movement, music, play, and healing arts. Rooted in community, Pacific Grove, CA.</p>
+        <div class="footer-socials">
+          <a href="#" class="f-social" aria-label="Instagram">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" class="f-social" aria-label="Facebook">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" class="f-social" aria-label="YouTube">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Navigate col -->
+      <div>
+        <div class="footer-col-head">Navigate</div>
+        <ul class="footer-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#philosophy">Philosophy</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About Jennifer</a></li>
+          <li><a href="#events">Events</a></li>
+        </ul>
+      </div>
+
+      <!-- Services col -->
+      <div>
+        <div class="footer-col-head">Services</div>
+        <ul class="footer-links">
+          <li><a href="#">Yoga &amp; Pilates</a></li>
+          <li><a href="#">Freestyle Dance</a></li>
+          <li><a href="#">Thai Yoga Massage</a></li>
+          <li><a href="#">Deep Body Work</a></li>
+          <li><a href="#">Kids Playshops</a></li>
+          <li><a href="#">Salon Series</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact col -->
+      <div>
+        <div class="footer-col-head">Contact</div>
+        <div class="f-contact-line">
+          <a href="tel:8316010427">831 . 601 . 0427</a>
+        </div>
+        <div class="f-contact-line">
+          <a href="mailto:jennifer@evolutiontransformativearts.com">jennifer@evolutiontransformativearts.com</a>
+        </div>
+        <div class="f-contact-line">
+          125 Oceanview Blvd, Ste 211<br>
+          Pacific Grove, CA 93950
+          <div class="f-note">entrance on Sloat Ave</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span class="f-copy">&copy; 2013&ndash;2026 Evolution Transformative Arts. All rights reserved.</span>
+      <span class="f-copy">Pacific Grove, California</span>
+    </div>
+  </footer>
+
+
+  <!-- ==================== SCRIPTS ==================== -->
+  <script>
+    // Nav scroll behavior
+    const nav = document.getElementById('mainNav');
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          nav.classList.toggle('scrolled', window.scrollY > 64);
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+
+    // Scroll reveal — generic .reveal / .reveal-left / .reveal-right
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => {
+      revealObserver.observe(el);
+    });
+
+    // Pillar scroll reveal
+    const pillarObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          pillarObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.18 });
+
+    document.querySelectorAll('[data-pillar]').forEach(el => {
+      pillarObserver.observe(el);
+    });
+
+    // Newsletter form
+    function handleSubscribe(e) {
+      e.preventDefault();
+      const btn = e.target.querySelector('.email-btn');
+      const input = e.target.querySelector('.email-input');
+      btn.textContent = 'Subscribed';
+      btn.style.background = '#5B7A68';
+      btn.style.pointerEvents = 'none';
+      input.value = '';
+      input.placeholder = 'Thank you — stay tuned.';
+    }
+  </script>
+
+</body>
+</html>
