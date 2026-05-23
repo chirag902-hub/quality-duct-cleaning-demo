@@ -1,0 +1,608 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>GIZZE CONSTRUCTION INC. | Treasure Coast General Contractor</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;700&amp;family=Public+Sans:wght@400;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Industrial Blueprint Background Pattern */
+        .blueprint-bg {
+            background-color: #fef9f1;
+            background-image: radial-gradient(#2B3A42 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+            background-opacity: 0.05;
+        }
+        .hard-shadow {
+            box-shadow: 4px 4px 0px 0px #1E1E1E;
+        }
+        .hard-shadow-hover:hover {
+            box-shadow: 6px 6px 0px 0px #1E1E1E;
+            transform: translate(-2px, -2px);
+        }
+        .active-tab {
+            transform: translateY(2px);
+        }
+
+        /* ── Hero Video: Ken Burns slow zoom-out ─────────────────── */
+        @keyframes heroZoom {
+            from { transform: scale(1.07); }
+            to   { transform: scale(1.00); }
+        }
+        .hero-video {
+            animation: heroZoom 12s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+        }
+
+        /* ── Staggered hero reveals ──────────────────────────────── */
+        @keyframes fadeUpIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to   { opacity: 1; transform: translateY(0);    }
+        }
+        .hero-badge  { animation: fadeUpIn 0.65s cubic-bezier(0.16,1,0.3,1) 0.20s both; }
+        .hero-h1     { animation: fadeUpIn 0.70s cubic-bezier(0.16,1,0.3,1) 0.40s both; }
+        .hero-body   { animation: fadeUpIn 0.70s cubic-bezier(0.16,1,0.3,1) 0.60s both; }
+        .hero-stats  { animation: fadeUpIn 0.70s cubic-bezier(0.16,1,0.3,1) 0.80s both; }
+        .hero-form   { animation: fadeUpIn 0.80s cubic-bezier(0.16,1,0.3,1) 0.50s both; }
+
+        /* ── Precision scan line (industrial) ───────────────────── */
+        @keyframes scanLine {
+            0%   { top: -2px; opacity: 0;   }
+            4%   { opacity: 0.35; }
+            96%  { opacity: 0.35; }
+            100% { top: 100%;   opacity: 0; }
+        }
+        .hero-scan {
+            position: absolute;
+            left: 0; right: 0;
+            height: 1px;
+            pointer-events: none;
+            background: linear-gradient(90deg, transparent 0%, #E84B13 30%, #E84B13 70%, transparent 100%);
+            animation: scanLine 7s linear infinite;
+        }
+
+        /* ── Blueprint corner marks ─────────────────────────────── */
+        @keyframes cornerPulse {
+            0%, 100% { opacity: 0.45; }
+            50%       { opacity: 1.00; }
+        }
+        .corner-mark { animation: cornerPulse 3s ease-in-out infinite; }
+        .corner-mark-delay { animation: cornerPulse 3s ease-in-out 1.5s infinite; }
+
+        /* ── Scroll indicator ───────────────────────────────────── */
+        @keyframes scrollDrop {
+            0%   { transform: scaleY(0); opacity: 0; transform-origin: top;    }
+            45%  { transform: scaleY(1); opacity: 1; transform-origin: top;    }
+            55%  { transform: scaleY(1); opacity: 1; transform-origin: bottom; }
+            100% { transform: scaleY(0); opacity: 0; transform-origin: bottom; }
+        }
+        .scroll-line { animation: scrollDrop 2.2s cubic-bezier(0.16,1,0.3,1) infinite; }
+
+        /* ── Live dot pulse ─────────────────────────────────────── */
+        @keyframes livePulse {
+            0%, 100% { opacity: 1; transform: scale(1);    }
+            50%       { opacity: 0.5; transform: scale(0.7); }
+        }
+        .live-dot { animation: livePulse 1.4s ease-in-out infinite; }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary": "#040505",
+                      "safety-orange": "#E84B13",
+                      "gunmetal": "#1E1E1E",
+                      "steel-gray": "#2B3A42",
+                      "concrete": "#F2EDE6",
+                      "pure-white": "#FFFFFF",
+                      "surface": "#fef9f1"
+              },
+              "spacing": {
+                      "unit": "8px",
+                      "container-max": "1280px",
+                      "margin-desktop": "64px",
+                      "gutter": "24px",
+                      "section-gap": "120px",
+                      "margin-mobile": "20px"
+              },
+              "fontFamily": {
+                      "headline-xl": ["Archivo Narrow"],
+                      "body-md": ["Public Sans"],
+                      "label-bold": ["Archivo Narrow"],
+                      "headline-lg": ["Archivo Narrow"],
+                      "headline-md": ["Archivo Narrow"]
+              },
+              "fontSize": {
+                      "headline-xl": ["60px", {"lineHeight": "60px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "label-bold": ["14px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                      "headline-lg": ["40px", {"lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "headline-md": ["24px", {"lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-surface text-primary font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface dark:bg-gunmetal border-b-2 border-gunmetal dark:border-steel-gray">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md uppercase tracking-tighter text-primary dark:text-pure-white">
+                GIZZE CONSTRUCTION INC.
+            </div>
+<div class="hidden md:flex items-center gap-6">
+<a class="font-label-bold text-label-bold text-gunmetal dark:text-concrete hover:text-safety-orange transition-colors" href="tel:7723335655">
+                    (772) 333-5655
+                </a>
+<button class="bg-safety-orange text-gunmetal font-label-bold text-label-bold uppercase px-6 py-3 border-2 border-gunmetal hard-shadow-hover transition-all">
+                    Get Free Estimate
+                </button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-[100dvh] flex items-center border-b-8 border-gunmetal overflow-hidden">
+
+    <!-- ── Video Background ──────────────────────────────────────── -->
+    <video autoplay loop muted playsinline class="hero-video absolute inset-0 w-full h-full object-cover z-0">
+        <source src="Luxury_kitchen_remodel_video_202605230025.mp4" type="video/mp4">
+    </video>
+
+    <!-- ── Layered cinematic overlays ────────────────────────────── -->
+    <!-- Left-heavy directional: keeps text readable, right stays open on the video -->
+    <div class="absolute inset-0 z-[1]" style="background:linear-gradient(112deg,rgba(30,30,30,0.92) 0%,rgba(30,30,30,0.78) 38%,rgba(30,30,30,0.42) 62%,rgba(30,30,30,0.18) 100%);"></div>
+    <!-- Safety-orange warm tint from bottom (brand pull) -->
+    <div class="absolute inset-0 z-[1]" style="background:linear-gradient(to top,rgba(232,75,19,0.10) 0%,transparent 55%);"></div>
+    <!-- Bottom vignette -->
+    <div class="absolute inset-x-0 bottom-0 h-36 z-[1]" style="background:linear-gradient(to top,rgba(30,30,30,0.65) 0%,transparent 100%);"></div>
+    <!-- Top edge darkening (nav bleed) -->
+    <div class="absolute inset-x-0 top-0 h-28 z-[1]" style="background:linear-gradient(to bottom,rgba(30,30,30,0.55) 0%,transparent 100%);"></div>
+
+    <!-- ── Industrial precision scan line ────────────────────────── -->
+    <div class="hero-scan z-[2]"></div>
+
+    <!-- ── Main content grid ─────────────────────────────────────── -->
+    <div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full pt-28 pb-20 grid grid-cols-1 lg:grid-cols-[1fr_440px] gap-12 xl:gap-20 items-center">
+
+        <!-- Hero Text Content -->
+        <div class="relative">
+
+            <!-- Blueprint corner marks -->
+            <div class="corner-mark hidden lg:block absolute -top-8 -left-4 w-5 h-5" style="border-left:2px solid #E84B13;border-top:2px solid #E84B13;"></div>
+            <div class="corner-mark-delay hidden lg:block absolute -bottom-8 -left-4 w-5 h-5" style="border-left:2px solid #E84B13;border-bottom:2px solid #E84B13;"></div>
+
+            <!-- Badge -->
+            <div class="hero-badge inline-flex items-center gap-2 bg-safety-orange text-gunmetal px-3 py-1.5 font-label-bold text-label-bold uppercase mb-6">
+                <span class="live-dot w-1.5 h-1.5 bg-gunmetal inline-block"></span>
+                Professional General Contractor — Treasure Coast, FL
+            </div>
+
+            <!-- Headline -->
+            <h1 class="hero-h1 uppercase mb-6 text-pure-white" style="font-family:'Archivo Narrow',sans-serif;font-weight:700;font-size:clamp(38px,5.2vw,82px);line-height:0.96;letter-spacing:-0.03em;">
+                Fourth-generation<br>builders. Every project<br><span style="color:#E84B13;">on time</span> and on budget.
+            </h1>
+
+            <!-- Body -->
+            <p class="hero-body text-lg max-w-lg mb-10 leading-relaxed" style="font-family:'Public Sans',sans-serif;color:rgba(242,237,230,0.85);">
+                Specializing in high-end kitchen remodels, luxury bathroom renovations, and structural additions. Built with industrial-grade precision and a family legacy of reliability.
+            </p>
+
+            <!-- Stats row -->
+            <div class="hero-stats flex flex-wrap items-center gap-6 md:gap-8">
+                <div>
+                    <div style="font-family:'Archivo Narrow',sans-serif;font-weight:700;font-size:34px;line-height:1;color:#E84B13;">40+</div>
+                    <div class="font-label-bold text-label-bold uppercase" style="color:rgba(242,237,230,0.50);">Years Active</div>
+                </div>
+                <div class="w-px h-10" style="background:rgba(242,237,230,0.18);"></div>
+                <div>
+                    <div style="font-family:'Archivo Narrow',sans-serif;font-weight:700;font-size:34px;line-height:1;color:#E84B13;">4th Gen</div>
+                    <div class="font-label-bold text-label-bold uppercase" style="color:rgba(242,237,230,0.50);">Family Builders</div>
+                </div>
+                <div class="w-px h-10" style="background:rgba(242,237,230,0.18);"></div>
+                <div>
+                    <div style="font-family:'Archivo Narrow',sans-serif;font-weight:700;font-size:34px;line-height:1;color:#E84B13;">19+</div>
+                    <div class="font-label-bold text-label-bold uppercase" style="color:rgba(242,237,230,0.50);">Active Projects</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hero Form -->
+        <div class="hero-form relative bg-pure-white border-2 border-gunmetal p-8 md:p-10 hard-shadow">
+            <!-- Orange accent bar -->
+            <div class="absolute top-0 left-0 right-0 h-1 bg-safety-orange"></div>
+            <h3 class="font-headline-md text-headline-md uppercase mb-1 mt-2">Request a free estimate</h3>
+            <p class="font-body-md text-steel-gray mb-7">Get a quote within 24 hours. No hidden fees.</p>
+            <form class="space-y-4">
+                <div>
+                    <label class="block font-label-bold text-label-bold uppercase mb-2">Full Name</label>
+                    <input class="w-full border-2 border-gunmetal p-3 focus:ring-0 focus:border-safety-orange outline-none" placeholder="Your full name" type="text">
+                </div>
+                <div>
+                    <label class="block font-label-bold text-label-bold uppercase mb-2">Phone Number</label>
+                    <input class="w-full border-2 border-gunmetal p-3 focus:ring-0 focus:border-safety-orange outline-none" placeholder="(772) 000-0000" type="tel">
+                </div>
+                <div>
+                    <label class="block font-label-bold text-label-bold uppercase mb-2">Project Type</label>
+                    <select class="w-full border-2 border-gunmetal p-3 focus:ring-0 focus:border-safety-orange outline-none">
+                        <option>Kitchen Remodel</option>
+                        <option>Bathroom Renovation</option>
+                        <option>Home Addition</option>
+                        <option>Other Service</option>
+                    </select>
+                </div>
+                <button class="w-full bg-safety-orange text-gunmetal font-label-bold text-label-bold uppercase py-4 border-2 border-gunmetal hard-shadow-hover transition-all mt-4">
+                    Send Request
+                </button>
+            </form>
+            <div class="mt-6 flex items-center gap-3 text-steel-gray opacity-70">
+                <span class="material-symbols-outlined">verified_user</span>
+                <span class="text-xs font-bold uppercase tracking-widest">Licensed &amp; Insured Florida GC</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ── Scroll indicator (left edge) ──────────────────────────── -->
+    <div class="absolute bottom-10 left-8 z-10 hidden md:flex flex-col items-center gap-2">
+        <div class="scroll-line w-px h-14" style="background:rgba(242,237,230,0.45);"></div>
+        <span class="font-label-bold uppercase" style="writing-mode:vertical-rl;letter-spacing:0.15em;font-size:10px;color:rgba(242,237,230,0.32);">Scroll</span>
+    </div>
+
+    <!-- ── Video caption (bottom-right) ──────────────────────────── -->
+    <div class="absolute bottom-10 right-8 z-10 hidden md:flex items-center gap-2">
+        <div class="live-dot w-2 h-2 bg-safety-orange"></div>
+        <span class="font-label-bold uppercase" style="font-size:10px;letter-spacing:0.12em;color:rgba(242,237,230,0.28);">Luxury Kitchen Remodel — Treasure Coast</span>
+    </div>
+
+</section>
+<!-- Trust Bar -->
+<div class="bg-steel-gray py-6 overflow-hidden border-b-4 border-safety-orange">
+<div class="max-w-container-max mx-auto px-margin-mobile flex flex-wrap justify-between items-center gap-8 text-pure-white">
+<div class="flex items-center gap-2">
+<span class="text-safety-orange font-bold uppercase">Licensed GC</span>
+<span class="font-label-bold">CBC1264261</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-safety-orange font-bold uppercase">Heritage</span>
+<span class="font-label-bold">4th Gen Builders</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-safety-orange font-bold uppercase">Experience</span>
+<span class="font-label-bold">40+ Years</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-safety-orange font-bold uppercase">Active Projects</span>
+<span class="font-label-bold">19+ Permitted</span>
+</div>
+</div>
+</div>
+<!-- Services Grid -->
+<section class="py-section-gap bg-concrete">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div>
+<div class="bg-safety-orange text-gunmetal px-2 py-0.5 inline-block font-label-bold text-label-bold uppercase mb-4">What We Build</div>
+<h2 class="font-headline-lg text-headline-lg uppercase max-w-xl">Comprehensive construction solutions for Florida homes.</h2>
+</div>
+<button class="border-2 border-gunmetal px-8 py-3 font-label-bold text-label-bold uppercase hover:bg-gunmetal hover:text-pure-white transition-all">View All Services</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Service Cards -->
+<div class="bg-pure-white border-2 border-gunmetal p-8 hard-shadow-hover transition-all">
+<span class="material-symbols-outlined text-4xl text-safety-orange mb-6">countertops</span>
+<h4 class="font-headline-md text-headline-md uppercase mb-3">Kitchen</h4>
+<p class="font-body-md text-steel-gray mb-6">Custom cabinetry, islands, and high-end finishes built for functionality.</p>
+</div>
+<div class="bg-pure-white border-2 border-gunmetal p-8 hard-shadow-hover transition-all">
+<span class="material-symbols-outlined text-4xl text-safety-orange mb-6">bathtub</span>
+<h4 class="font-headline-md text-headline-md uppercase mb-3">Bath</h4>
+<p class="font-body-md text-steel-gray mb-6">Spa-grade wet rooms and master suite renovations with precision plumbing.</p>
+</div>
+<div class="bg-pure-white border-2 border-gunmetal p-8 hard-shadow-hover transition-all">
+<span class="material-symbols-outlined text-4xl text-safety-orange mb-6">add_business</span>
+<h4 class="font-headline-md text-headline-md uppercase mb-3">Additions</h4>
+<p class="font-body-md text-steel-gray mb-6">Structural expansions that blend seamlessly with your existing architecture.</p>
+</div>
+<div class="bg-pure-white border-2 border-gunmetal p-8 hard-shadow-hover transition-all">
+<span class="material-symbols-outlined text-4xl text-safety-orange mb-6">foundation</span>
+<h4 class="font-headline-md text-headline-md uppercase mb-3">New Build</h4>
+<p class="font-body-md text-steel-gray mb-6">Ground-up construction managed by 4th generation site supervisors.</p>
+</div>
+<div class="bg-pure-white border-2 border-gunmetal p-8 hard-shadow-hover transition-all">
+<span class="material-symbols-outlined text-4xl text-safety-orange mb-6">roofing</span>
+<h4 class="font-headline-md text-headline-md uppercase mb-3">Roof</h4>
+<p class="font-body-md text-steel-gray mb-6">Durable roofing systems designed to withstand South Florida hurricanes.</p>
+</div>
+<div class="bg-pure-white border-2 border-gunmetal p-8 hard-shadow-hover transition-all">
+<span class="material-symbols-outlined text-4xl text-safety-orange mb-6">door_front</span>
+<h4 class="font-headline-md text-headline-md uppercase mb-3">Windows</h4>
+<p class="font-body-md text-steel-gray mb-6">Impact-rated glass and doors for maximum protection and efficiency.</p>
+</div>
+<div class="bg-pure-white border-2 border-gunmetal p-8 hard-shadow-hover transition-all">
+<span class="material-symbols-outlined text-4xl text-safety-orange mb-6">apartment</span>
+<h4 class="font-headline-md text-headline-md uppercase mb-3">Commercial</h4>
+<p class="font-body-md text-steel-gray mb-6">Tenant build-outs and commercial facility maintenance at scale.</p>
+</div>
+<div class="bg-pure-white border-2 border-gunmetal p-8 hard-shadow-hover transition-all">
+<span class="material-symbols-outlined text-4xl text-safety-orange mb-6">handyman</span>
+<h4 class="font-headline-md text-headline-md uppercase mb-3">General</h4>
+<p class="font-body-md text-steel-gray mb-6">Full-scale home transformations and structural repairs.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Irresistible Offer -->
+<section class="py-24 bg-safety-orange border-y-8 border-gunmetal">
+<div class="max-w-container-max mx-auto px-margin-mobile text-center">
+<h2 class="font-headline-xl text-headline-xl text-gunmetal uppercase mb-8">Free on-site estimate. No sales pressure.</h2>
+<p class="font-headline-md text-headline-md text-gunmetal uppercase mb-12 opacity-80">We walk your site, evaluate the scope, and give you a real number.</p>
+<button class="bg-gunmetal text-safety-orange font-headline-md text-headline-md uppercase px-12 py-6 border-4 border-gunmetal hard-shadow hover:translate-y-1 transition-all">
+                Book Your Free Estimate
+            </button>
+</div>
+</section>
+<!-- Why Us -->
+<section class="py-section-gap">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="relative">
+<div class="absolute -top-4 -left-4 bg-safety-orange w-32 h-32 -z-10"></div>
+<div class="border-2 border-gunmetal hard-shadow">
+<img alt="Anthony and John Gizze on site" class="w-full h-auto object-cover aspect-[4/5]" data-alt="A gritty, professional portrait of two experienced construction supervisors, Anthony and John, standing on a residential job site in Florida. They are wearing high-visibility gear and hard hats, looking directly at the camera with confidence. The lighting is harsh midday sun, reflecting the tough reality of construction work. The background shows the skeletal frame of a new home under a clear blue sky, emphasizing the industrial brutalism and honesty of the brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFKg6oWs-wZExEP3-BlIcw6BH5_S1US3d-QXOZJZ_gJXkOZ7ElUME6oQBpESjCcmAj2WA6-_hWlKoh0KRuYFMH5iNWTSf23r6gmrRNlk1YYAgC8GHDfULHV1zQ5rX-GvJQ-Dvl-zapxcZXMKbSMIMWYyukSF6xU_Yb3_FJ9cibTqSyGOETo6bMHJ52q4nwuVa6aVeNHaPqxWb6qqWpO-Q5oL6HAoLiB1FKP1mN6K_eDnj8HXYp-vs3PpDxGHxP9z4ilz8rkNI8XJS5">
+</div>
+<div class="absolute bottom-6 left-6 bg-gunmetal text-pure-white p-4 font-label-bold uppercase">
+                    Anthony &amp; John Gizze, Owners
+                </div>
+</div>
+<div>
+<div class="bg-gunmetal text-pure-white px-2 py-0.5 inline-block font-label-bold text-label-bold uppercase mb-4">The Gizze Legacy</div>
+<h2 class="font-headline-lg text-headline-lg uppercase mb-8">Four generations of building the Treasure Coast.</h2>
+<ul class="space-y-6">
+<li class="flex gap-4">
+<div class="w-6 h-6 bg-safety-orange shrink-0"></div>
+<div>
+<h4 class="font-label-bold text-lg uppercase">4th Generation Expertise</h4>
+<p class="text-steel-gray">Construction isn't just our job; it's our heritage. We bring 100 years of family knowledge to your site.</p>
+</div>
+</li>
+<li class="flex gap-4">
+<div class="w-6 h-6 bg-safety-orange shrink-0"></div>
+<div>
+<h4 class="font-label-bold text-lg uppercase">Licensed Since 2000</h4>
+<p class="text-steel-gray">Continuous licensure in Florida for over two decades. We know the codes, the permits, and the inspectors.</p>
+</div>
+</li>
+<li class="flex gap-4">
+<div class="w-6 h-6 bg-safety-orange shrink-0"></div>
+<div>
+<h4 class="font-label-bold text-lg uppercase">Direct Owner Oversight</h4>
+<p class="text-steel-gray">Anthony or John personally oversee every job. You deal with the guys whose name is on the truck.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Social Proof -->
+<section class="py-section-gap bg-steel-gray text-pure-white">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row items-center justify-between mb-16 border-b-2 border-pure-white pb-8">
+<h2 class="font-headline-lg text-headline-lg uppercase mb-4 md:mb-0">Client Reliability Reports</h2>
+<div class="flex items-center gap-4">
+<div class="text-3xl font-headline-xl text-safety-orange">3.8/5</div>
+<div>
+<div class="flex text-safety-orange">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined">star_half</span>
+</div>
+<p class="text-xs font-label-bold uppercase">Verified Reviews</p>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-gunmetal p-8 border-t-4 border-safety-orange">
+<p class="italic mb-8">"Gizze Construction transformed our kitchen on a tight timeline. John was on site every day making sure the subs stayed on track. High quality work."</p>
+<h5 class="font-label-bold uppercase text-safety-orange">— Bradford G.</h5>
+</div>
+<div class="bg-gunmetal p-8 border-t-4 border-safety-orange">
+<p class="italic mb-8">"The only contractors who actually show up when they say they will. No fluff, no excuses. Just hard work and a great result on our roof replacement."</p>
+<h5 class="font-label-bold uppercase text-safety-orange">— Kyle F.</h5>
+</div>
+<div class="bg-gunmetal p-8 border-t-4 border-safety-orange">
+<p class="italic mb-8">"Solid guys. Handled the permitting process for our home addition perfectly. Worth every penny for the peace of mind."</p>
+<h5 class="font-label-bold uppercase text-safety-orange">— Joseph H.</h5>
+</div>
+</div>
+</div>
+</section>
+<!-- Gallery Masonry -->
+<section class="py-section-gap">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<h2 class="font-headline-lg text-headline-lg uppercase mb-12 text-center">Selected Works</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+<div class="relative group border-2 border-gunmetal overflow-hidden">
+<img alt="Bathroom Addition" class="w-full aspect-square object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A master bathroom remodel with clean minimalist lines, featuring a walk-in shower with grey slate tiles and industrial matte black fixtures. High-contrast lighting captures the geometric precision of the tile layout. The image conveys a sense of high-end quality and architectural stability typical of Gizze Construction." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKI6b3LREyK3D0rWEquOOy3HA8Vu48K2d7DPksxTw6G1Mp0pqTZ9cPv4Dz7nI9ZUZWtef9jV39n4yokeijifsVkAV3GCqTFnAeZnpFdcyjZ8RDJhAT5VeNuv-RrU9hX5mVNtgt6I2IMFuiezi-eDY9_QqYlzTzWiisW5MHK5i6Ny50ECg51GB0s4nXRK7onyYFqUAG2XNvyqyy0oq31UxH_nvBRMzE8gIDoM8bqzG7X-Z1A0Qp92PagvbBHWOTGxRMAV7yxSU5IR4K">
+<div class="absolute inset-0 bg-gunmetal/80 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
+<span class="text-safety-orange font-label-bold uppercase">Bathroom</span>
+<h4 class="text-pure-white font-headline-md uppercase">Vero Beach Master Suite</h4>
+</div>
+</div>
+<div class="relative group border-2 border-gunmetal overflow-hidden lg:row-span-2">
+<img alt="New Construction" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Exterior of a modern industrial-style home under construction in Florida. The image highlights the raw structural elements like concrete blocks and steel framing against a stark white sky. The photography is sharp and architectural, focusing on the strength and precision of the build. The scene embodies the no-fluff, honest construction brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8rOSfoP-iRLTJdU354ZbrC1rmixb3DNN6-u_xB02zaBelVi_W3uSg8XphwNvCLRSEH9G9xNDywv2jFQw17hLRKyyKQzZ8B6Yc8KOrr5pB6SLuTLxR_vayoIeBxdAy_QMUO5XW75fWzB4inlTZTOjenTTIQbRVDlX792l1vAbtXrl98V-QAxbvTjdymgjWTjaiYn0GSdvpdl5A1J3wU4HEd4eoBCRWX9whlV8kIBlj2vCS3v6cpc-MyxpEICDbkvtZOzwC_CkTVEXH">
+<div class="absolute inset-0 bg-gunmetal/80 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
+<span class="text-safety-orange font-label-bold uppercase">New Build</span>
+<h4 class="text-pure-white font-headline-md uppercase">Palm City Estate</h4>
+</div>
+</div>
+<div class="relative group border-2 border-gunmetal overflow-hidden">
+<img alt="Window Project" class="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Close-up of high-impact window installation on a coastal Florida residence. The focus is on the heavy frame and the clean seal between the wall and the window unit. Bright tropical light reflects off the glass, emphasizing protection and durability. The style is professional and grounded in technical excellence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvFBinrk_g7g7SpYtDNcn2hdMb_juOIMxiq_SKWlHuBWnC04tc4q17hPLgEHYnTKCXdawa36Y8fSC7agok49cezX6plm46darWXYcoPmZnpg9Pnpqa32bO3HmrlKKvwtjywYV6AgYdjS6Hh9SAN73byuj0_Tuwkd0a2UIU5ln1oG9mz9HZhJa9eWf4bL668sxdnrFG0KNyUmPhG4mTI50ljXWpG8lK7spGzP9EKBmsSoWGAHjEeNUyaDIy3dJ_rpSMNQ3dZA5WTGic">
+<div class="absolute inset-0 bg-gunmetal/80 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
+<span class="text-safety-orange font-label-bold uppercase">Windows</span>
+<h4 class="text-pure-white font-headline-md uppercase">Stuart Impact Project</h4>
+</div>
+</div>
+<div class="relative group border-2 border-gunmetal overflow-hidden">
+<img alt="Kitchen Island" class="w-full aspect-square object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A massive kitchen island with a dark concrete countertop being installed in a luxury home. The image captures the 'work in progress' feel with high-end materials. Tools and safety gear are visible in the background, adding to the industrial honesty. The lighting is focused and dramatic, highlighting the texture of the concrete and wood cabinetry." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTuLqhLSDT4zaMNwuZe60jwuOPHnUQd1z4Ivf3SQkakhPkwA_Y631y1big8N76Ygrwgcc3t754EkNxSL29wfSrOuRmd2eONBajT_a3p3SE21RRR7QQr8s2fLL47y9P1Qyoc6DgfUA5DBKQpfEVx8SzYmv-2-iVXGHYU3GvSUDveCGvmwjNaJti1HsmG8lLOkHLrovQUUABz992DBxzvzvm-GXPis5-qyABBKKcAnTBMYnBgJY7e12n8SIGt4BCM9v_SDWVYKi7xXcN">
+<div class="absolute inset-0 bg-gunmetal/80 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
+<span class="text-safety-orange font-label-bold uppercase">Kitchen</span>
+<h4 class="text-pure-white font-headline-md uppercase">Jupiter Island Modern</h4>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Urgency Band -->
+<section class="bg-gunmetal py-16 border-y-4 border-safety-orange">
+<div class="max-w-container-max mx-auto px-margin-mobile flex flex-col md:flex-row items-center justify-between gap-8">
+<div class="text-center md:text-left">
+<h2 class="font-headline-md text-headline-md text-pure-white uppercase">Estimate slots book out weeks in advance.</h2>
+<p class="text-concrete opacity-70">Claim your spot for a free on-site consultation today.</p>
+</div>
+<div class="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
+<button class="bg-safety-orange text-gunmetal px-8 py-4 font-label-bold uppercase border-2 border-safety-orange hard-shadow-hover transition-all">Call Now</button>
+<button class="bg-transparent text-pure-white px-8 py-4 font-label-bold uppercase border-2 border-pure-white hover:bg-pure-white hover:text-gunmetal transition-all">Book Online</button>
+</div>
+</div>
+</section>
+<!-- FAQ Accordion -->
+<section class="py-section-gap bg-surface">
+<div class="max-w-3xl mx-auto px-margin-mobile">
+<h2 class="font-headline-lg text-headline-lg uppercase mb-12 text-center">Frequently Asked Questions</h2>
+<div class="space-y-4">
+<!-- FAQ Item -->
+<div class="border-2 border-gunmetal bg-pure-white overflow-hidden">
+<button class="w-full flex justify-between items-center p-6 text-left hover:bg-concrete transition-colors" onclick="this.nextElementSibling.classList.toggle('hidden')">
+<span class="font-label-bold uppercase">What areas do you service?</span>
+<span class="material-symbols-outlined">expand_more</span>
+</button>
+<div class="hidden p-6 pt-0 text-steel-gray border-t-2 border-gunmetal bg-concrete">
+                        We service the entire Treasure Coast and parts of South Florida, including Stuart, Palm City, Vero Beach, Jupiter, Port St. Lucie, and Hobe Sound.
+                    </div>
+</div>
+<!-- FAQ Item -->
+<div class="border-2 border-gunmetal bg-pure-white overflow-hidden">
+<button class="w-full flex justify-between items-center p-6 text-left hover:bg-concrete transition-colors" onclick="this.nextElementSibling.classList.toggle('hidden')">
+<span class="font-label-bold uppercase">Do you handle the permits?</span>
+<span class="material-symbols-outlined">expand_more</span>
+</button>
+<div class="hidden p-6 pt-0 text-steel-gray border-t-2 border-gunmetal bg-concrete">
+                        Yes, as a fully licensed General Contractor (CBC1264261), we handle the entire permitting process from initial application to final inspection.
+                    </div>
+</div>
+<!-- FAQ Item -->
+<div class="border-2 border-gunmetal bg-pure-white overflow-hidden">
+<button class="w-full flex justify-between items-center p-6 text-left hover:bg-concrete transition-colors" onclick="this.nextElementSibling.classList.toggle('hidden')">
+<span class="font-label-bold uppercase">What is your typical timeline?</span>
+<span class="material-symbols-outlined">expand_more</span>
+</button>
+<div class="hidden p-6 pt-0 text-steel-gray border-t-2 border-gunmetal bg-concrete">
+                        Timelines vary by scope. A kitchen remodel typically takes 6–10 weeks, while additions or new builds can range from 4–9 months. We provide a detailed schedule with every contract.
+                    </div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA / Contact -->
+<section class="py-section-gap bg-concrete border-t-8 border-gunmetal">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-16">
+<div>
+<h2 class="font-headline-lg text-headline-lg uppercase mb-8">Start your build.</h2>
+<div class="space-y-8 mb-12">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-safety-orange">location_on</span>
+<div>
+<h5 class="font-label-bold uppercase">Main Office</h5>
+<p class="text-steel-gray">Stuart, FL 34994<br>Serving Treasure Coast &amp; South Florida</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-safety-orange">call</span>
+<div>
+<h5 class="font-label-bold uppercase">Direct Line</h5>
+<p class="text-steel-gray font-headline-md">(772) 333-5655</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-safety-orange">mail</span>
+<div>
+<h5 class="font-label-bold uppercase">Estimating Dept</h5>
+<p class="text-steel-gray">office@gizzeconstruction.com</p>
+</div>
+</div>
+</div>
+<div class="border-2 border-gunmetal h-64 grayscale contrast-125 hard-shadow">
+<img alt="Map location" class="w-full h-full object-cover" data-alt="A stylized, high-contrast map of the Treasure Coast area in Florida, specifically focused on Stuart and Palm City. The map is rendered in black and white with a single high-visibility orange marker indicating the service hub. The style matches the industrial, brutalist UI with heavy lines and no soft decorative elements." data-location="Stuart, Florida" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGFY6q6CIDdi9AcW98l0LuNEQZn73eXq1n5i7IKh719sR19-usYSp-LKxYewEeFg5vxXKH5zr6ZDOozr5a7cQHMigDS2lBKuWjBuWUL2INkOMTkvacNDPjUx9K_CuJLkPro1GElp51XZD49GWvxzeI0213en7fuutUaoKaZ7tNPr6MjbeBTyuNk6bEpNzCRZmT8nqTo85gMkAa29wrrdPCVYflkP4Qc89x6gvsoT-_NhFuRGSorl0XEVFOZC2G30UAcHnaMlDS2VLU">
+</div>
+</div>
+<div class="bg-pure-white border-2 border-gunmetal p-10 hard-shadow">
+<h3 class="font-headline-md text-headline-md uppercase mb-8">Secure your estimate slot</h3>
+<form class="space-y-6">
+<div>
+<label class="block font-label-bold text-label-bold uppercase mb-2">Name</label>
+<input class="w-full border-2 border-gunmetal p-4 focus:ring-0 focus:border-safety-orange outline-none" placeholder="Enter name" type="text">
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block font-label-bold text-label-bold uppercase mb-2">Phone</label>
+<input class="w-full border-2 border-gunmetal p-4 focus:ring-0 focus:border-safety-orange outline-none" placeholder="(772) ..." type="tel">
+</div>
+<div>
+<label class="block font-label-bold text-label-bold uppercase mb-2">Email</label>
+<input class="w-full border-2 border-gunmetal p-4 focus:ring-0 focus:border-safety-orange outline-none" placeholder="email@address.com" type="email">
+</div>
+</div>
+<div>
+<label class="block font-label-bold text-label-bold uppercase mb-2">Brief Scope of Work</label>
+<textarea class="w-full border-2 border-gunmetal p-4 h-32 focus:ring-0 focus:border-safety-orange outline-none" placeholder="E.g. Kitchen remodel, new roof, master bath addition..."></textarea>
+</div>
+<button class="w-full bg-gunmetal text-safety-orange font-headline-md text-headline-md uppercase py-5 border-2 border-gunmetal hover:bg-safety-orange hover:text-gunmetal transition-all">
+                        Request Site Visit
+                    </button>
+</form>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-gunmetal dark:bg-primary border-t-8 border-gunmetal py-12">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop py-section-gap max-w-container-max mx-auto text-center md:text-left">
+<div>
+<div class="font-headline-md text-headline-md text-pure-white uppercase mb-4">GIZZE CONSTRUCTION INC.</div>
+<p class="text-concrete opacity-60 font-label-bold text-xs uppercase tracking-widest">
+                    © 2024 GIZZE CONSTRUCTION INC. | LICENSED &amp; INSURED | CBC1264261
+                </p>
+</div>
+<div class="flex gap-8 mt-8 md:mt-0">
+<a class="text-concrete opacity-80 hover:text-safety-orange transition-colors font-label-bold text-label-bold uppercase" href="#">Privacy Policy</a>
+<a class="text-concrete opacity-80 hover:text-safety-orange transition-colors font-label-bold text-label-bold uppercase" href="#">Terms of Service</a>
+<a class="text-concrete opacity-80 hover:text-safety-orange transition-colors font-label-bold text-label-bold uppercase" href="#">Contact</a>
+</div>
+</div>
+</footer>
+<!-- SideNavBar (Mobile Active Bottom Bar) -->
+<nav class="fixed bottom-0 left-0 w-full flex md:hidden z-50 border-t-4 border-gunmetal bg-safety-orange shadow-[0_-4px_0_0_rgba(30,30,30,1)]">
+<a class="bg-safety-orange text-gunmetal flex flex-1 items-center justify-center py-4 gap-2 hover:bg-steel-gray transition-all" href="tel:7723335655">
+<span class="material-symbols-outlined">call</span>
+<span class="font-label-bold text-label-bold uppercase">Call Now</span>
+</a>
+<a class="bg-gunmetal text-safety-orange flex flex-1 items-center justify-center py-4 gap-2 active:scale-95 transition-all" href="#estimate">
+<span class="material-symbols-outlined">construction</span>
+<span class="font-label-bold text-label-bold uppercase">Get Estimate</span>
+</a>
+</nav>
+<!-- Steel Beam Divider (Decorative Element) -->
+<div class="fixed right-0 top-0 h-full w-2 bg-gunmetal/10 z-0 pointer-events-none hidden lg:block"></div>
+<div class="fixed left-0 top-0 h-full w-2 bg-gunmetal/10 z-0 pointer-events-none hidden lg:block"></div>
+
+
+
+
+</body></html>
