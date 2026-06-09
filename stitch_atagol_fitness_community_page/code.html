@@ -1,619 +1,836 @@
 <!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atagol Fitness | Women's Small Group Training · Pacific Grove</title>
 
-<html class="scroll-smooth" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Atagol Fitness | Women's Small Group Training Pacific Grove</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&amp;family=Montserrat:wght@400;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://unpkg.com/framer-motion@11.0.8/dist/framer-motion.js"></script>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .organic-curve {
-            clip-path: ellipse(100% 55% at 50% 45%);
-        }
-        .circular-frame {
-            border-radius: 50% 50% 45% 55% / 55% 45% 50% 50%;
-        }
-        .wave-divider {
-            aspect-ratio: 960/100;
-            width: 100%;
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-        }
-        details > summary::-webkit-details-marker {
-            display: none;
-        }
-    </style>
-<script id="tailwind-config">
-        tailwind.config = {
-          darkMode: "class",
-          theme: {
-            extend: {
-              "colors": {
-                      "on-tertiary-container": "#bdaea5",
-                      "on-secondary": "#ffffff",
-                      "on-surface-variant": "#424844",
-                      "on-surface": "#1c1c19",
-                      "surface-tint": "#476558",
-                      "primary-container": "#2d4a3e",
-                      "inverse-primary": "#adcebe",
-                      "tertiary-fixed-dim": "#d3c4ba",
-                      "primary-fixed": "#c9ead9",
-                      "on-primary-fixed-variant": "#304d40",
-                      "secondary-fixed": "#ffdbd0",
-                      "on-tertiary-fixed": "#221a14",
-                      "pale-sage": "#EFF4F0",
-                      "primary-fixed-dim": "#adcebe",
-                      "surface-variant": "#e6e2dd",
-                      "background": "#fdf9f4",
-                      "on-primary-container": "#99b9a9",
-                      "secondary": "#9f4123",
-                      "surface-container-low": "#f7f3ee",
-                      "secondary-fixed-dim": "#ffb59f",
-                      "tertiary": "#352c26",
-                      "surface-container-lowest": "#ffffff",
-                      "primary": "#163328",
-                      "on-error-container": "#93000a",
-                      "surface-container-high": "#ebe8e3",
-                      "white": "#FFFFFF",
-                      "on-primary-fixed": "#022016",
-                      "outline": "#727974",
-                      "on-tertiary": "#ffffff",
-                      "inverse-surface": "#31302d",
-                      "on-tertiary-fixed-variant": "#4f453e",
-                      "outline-variant": "#c1c8c3",
-                      "surface": "#fdf9f4",
-                      "secondary-container": "#ff8b67",
-                      "on-error": "#ffffff",
-                      "surface-bright": "#fdf9f4",
-                      "error": "#ba1a1a",
-                      "on-background": "#1c1c19",
-                      "surface-container": "#f1ede8",
-                      "on-secondary-fixed": "#3a0a00",
-                      "inverse-on-surface": "#f4f0eb",
-                      "on-secondary-container": "#752307",
-                      "on-secondary-fixed-variant": "#7f2a0e",
-                      "on-primary": "#ffffff",
-                      "surface-container-highest": "#e6e2dd",
-                      "surface-dim": "#ddd9d5",
-                      "tertiary-container": "#4c423b",
-                      "tertiary-fixed": "#efdfd6",
-                      "error-container": "#ffdad6"
-              },
-              "borderRadius": {
-                      "DEFAULT": "0.25rem",
-                      "lg": "0.5rem",
-                      "xl": "0.75rem",
-                      "full": "9999px"
-              },
-              "spacing": {
-                      "container-max": "1120px",
-                      "section-gap-desktop": "120px",
-                      "section-gap-mobile": "64px",
-                      "margin-mobile": "20px",
-                      "base": "8px",
-                      "gutter": "24px"
-              },
-              "fontFamily": {
-                      "headline-xl-mobile": ["Playfair Display"],
-                      "headline-xl": ["Playfair Display"],
-                      "headline-md": ["Playfair Display"],
-                      "body-md": ["Montserrat"],
-                      "body-lg": ["Montserrat"],
-                      "label-bold": ["Montserrat"],
-                      "caption": ["Montserrat"],
-                      "headline-lg": ["Playfair Display"]
-              },
-              "fontSize": {
-                      "headline-xl-mobile": ["36px", {"lineHeight": "1.2", "fontWeight": "700"}],
-                      "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-                      "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
-                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                      "label-bold": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "700"}],
-                      "caption": ["14px", {"lineHeight": "1.4", "fontWeight": "400"}],
-                      "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}]
-              }
-            },
+  <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300..400,0..1,0" rel="stylesheet"/>
+
+  <style>
+    /* ── Base ─────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; }
+
+    h1, h2, h3, h4, h5, h6 { text-wrap: balance; }
+    p { text-wrap: pretty; }
+
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      line-height: 1;
+    }
+    .icon-filled { font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 20; }
+
+    details > summary::-webkit-details-marker { display: none; }
+
+    /* ── Hero entrance ────────────────────────────────── */
+    @keyframes fade-up {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-seq > * {
+      opacity: 0;
+      animation: fade-up 0.75s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    .hero-seq > *:nth-child(1) { animation-delay: 0.08s; }
+    .hero-seq > *:nth-child(2) { animation-delay: 0.22s; }
+    .hero-seq > *:nth-child(3) { animation-delay: 0.38s; }
+    .hero-seq > *:nth-child(4) { animation-delay: 0.55s; }
+    .hero-seq > *:nth-child(5) { animation-delay: 0.70s; }
+
+    .hero-image-reveal {
+      animation: fade-up 1.1s cubic-bezier(0.16, 1, 0.3, 1) 0.05s both;
+    }
+
+    /* ── Scroll reveals ───────────────────────────────── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal.in { opacity: 1; transform: none; }
+
+    .stagger-group .stagger-item {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .stagger-group.in .stagger-item:nth-child(1) { transition-delay: 0.00s; }
+    .stagger-group.in .stagger-item:nth-child(2) { transition-delay: 0.10s; }
+    .stagger-group.in .stagger-item:nth-child(3) { transition-delay: 0.20s; }
+    .stagger-group.in .stagger-item:nth-child(4) { transition-delay: 0.30s; }
+    .stagger-group.in .stagger-item:nth-child(5) { transition-delay: 0.40s; }
+    .stagger-group.in .stagger-item:nth-child(6) { transition-delay: 0.50s; }
+    .stagger-group.in .stagger-item { opacity: 1; transform: none; }
+
+    /* ── Reduced motion ───────────────────────────────── */
+    @media (prefers-reduced-motion: reduce) {
+      .hero-seq > *, .hero-image-reveal,
+      .reveal, .stagger-group .stagger-item {
+        animation: none !important;
+        transition: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    }
+
+    /* ── Program row hover ────────────────────────────── */
+    .program-row .prog-cta {
+      opacity: 0;
+      transform: translateX(-8px);
+      transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+    @media (hover: hover) {
+      .program-row:hover .prog-cta {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    @media (hover: none) {
+      .program-row .prog-cta { opacity: 1; transform: none; }
+    }
+
+    /* ── Organic image frame ──────────────────────────── */
+    .organic-frame {
+      border-radius: 52% 48% 55% 45% / 48% 52% 48% 52%;
+    }
+
+    /* ── Mobile menu slide ────────────────────────────── */
+    #mobile-menu {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    #mobile-menu.open { max-height: 480px; }
+
+    /* ── FAQ expand icon ──────────────────────────────── */
+    details[open] .faq-icon { transform: rotate(180deg); }
+    .faq-icon { transition: transform 0.25s ease; }
+
+    /* ── Nav transition ───────────────────────────────── */
+    #site-header { transition: background-color 0.3s ease, box-shadow 0.3s ease; }
+  </style>
+
+  <script id="tw-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "forest":      "#163328",
+            "forest-mid":  "#1e4436",
+            "forest-warm": "#2a5441",
+            "forest-muted":"#4a7260",
+            "sage":        "#f4f7f2",
+            "sage-100":    "#e4ede0",
+            "sage-200":    "#c8dcc3",
+            "terra":       "#8b3118",
+            "terra-mid":   "#b54119",
+            "terra-bright":"#c7491f",
+            "ink":         "#0d1c12",
+            "muted":       "#3d5242",
+            "subdued":     "#5d7264",
+            "white":       "#ffffff",
+            "err":         "#ba1a1a",
           },
-        }
-    </script>
+          fontFamily: {
+            "display": ['"Libre Baskerville"', "Georgia", "serif"],
+            "sans":    ['"Source Sans 3"', "system-ui", "sans-serif"],
+          },
+        },
+      },
+    };
+  </script>
 </head>
-<body class="bg-background text-on-surface font-body-md selection:bg-secondary/30">
-<!-- TopNavBar -->
-<header class="fixed top-0 w-full z-50 bg-background/90 backdrop-blur-md">
-<nav class="flex justify-between items-center px-margin-mobile md:px-gutter max-w-container-max mx-auto h-20">
-<div class="font-headline-md text-headline-md text-primary tracking-tight">Atagol Fitness</div>
-<div class="hidden md:flex gap-8 items-center">
-<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#programs">Programs</a>
-<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#about">About</a>
-<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#testimonials">Reviews</a>
-<a class="font-label-bold text-label-bold text-primary hover:text-secondary transition-colors duration-300" href="tel:8312040761">(831) 204-0761</a>
-<a class="bg-secondary text-white px-6 py-3 rounded-[16px] font-label-bold text-label-bold hover:brightness-90 transition-all active:scale-95 duration-150" href="#consultation">Book a free consultation</a>
-</div>
-<!-- Mobile Menu Toggle (Simplified) -->
-<button class="md:hidden text-primary">
-<span class="material-symbols-outlined" data-icon="menu">menu</span>
-</button>
-</nav>
+
+<body class="bg-sage text-ink font-sans antialiased selection:bg-terra/20">
+
+<!-- ════════════════════════════════════════════════════════
+     NAV
+════════════════════════════════════════════════════════ -->
+<header id="site-header" class="fixed top-0 w-full z-50">
+  <nav class="flex justify-between items-center px-6 md:px-10 max-w-7xl mx-auto h-[68px]">
+
+    <a href="#" id="nav-logo" class="font-display text-lg font-bold text-white tracking-tight transition-colors duration-300">
+      Atagol Fitness
+    </a>
+
+    <div class="hidden md:flex gap-8 items-center">
+      <a href="#programs"     class="nav-link text-sm font-semibold text-white/80 hover:text-white transition-colors duration-200">Programs</a>
+      <a href="#about"        class="nav-link text-sm font-semibold text-white/80 hover:text-white transition-colors duration-200">About</a>
+      <a href="#testimonials" class="nav-link text-sm font-semibold text-white/80 hover:text-white transition-colors duration-200">Reviews</a>
+      <a href="tel:8312040761" class="nav-link text-sm font-semibold text-white/80 hover:text-white transition-colors duration-200">(831) 204-0761</a>
+      <a href="#consultation" class="bg-terra-bright text-white text-sm font-bold px-5 py-2.5 rounded hover:bg-terra transition-colors duration-200">
+        Book a consultation
+      </a>
+    </div>
+
+    <button id="menu-btn" class="md:hidden p-2 text-white" aria-label="Toggle menu">
+      <span class="material-symbols-outlined" id="menu-icon">menu</span>
+    </button>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="md:hidden bg-forest border-t border-white/10">
+    <div class="px-6 py-5 space-y-1">
+      <a href="#programs"     class="block py-3 border-b border-white/10 text-sm font-semibold text-white/80 hover:text-white">Programs</a>
+      <a href="#about"        class="block py-3 border-b border-white/10 text-sm font-semibold text-white/80 hover:text-white">About</a>
+      <a href="#testimonials" class="block py-3 border-b border-white/10 text-sm font-semibold text-white/80 hover:text-white">Reviews</a>
+      <a href="tel:8312040761" class="block py-3 border-b border-white/10 text-sm font-semibold text-white/80">(831) 204-0761</a>
+      <a href="#consultation" class="block mt-4 bg-terra-bright text-white text-center text-sm font-bold py-3 rounded hover:bg-terra">Book a consultation</a>
+    </div>
+  </div>
 </header>
-<main class="pt-20">
-<!-- Hero Section -->
-<section class="relative overflow-hidden bg-background py-section-gap-mobile md:py-section-gap-desktop px-margin-mobile md:px-gutter">
-<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-<div class="space-y-8">
-<h1 class="font-headline-xl text-headline-xl text-primary max-w-xl">Real coaching. Real community. Real results.</h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">Dedicated small group training for women in Pacific Grove who value progress over pretense. Start your journey with an intimate community that knows your name.</p>
-<div class="flex flex-wrap gap-6 items-center">
-<a class="bg-secondary text-white px-8 py-4 rounded-[16px] font-label-bold text-label-bold hover:brightness-90 transition-all shadow-lg" href="#consultation">Start your transformation</a>
-<div class="flex -space-x-4">
-<div class="w-12 h-12 rounded-full border-2 border-white overflow-hidden bg-surface-variant">
-<img alt="Client" data-alt="Close-up portrait of a smiling middle-aged woman with a natural, healthy glow, looking directly into the camera with confidence. The lighting is warm and golden, reflecting a coastal sunset atmosphere. The background is softly blurred with hints of Pacific Grove greenery, emphasizing a human-centric and neighborly brand vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZ_4Qva0MwnJPMlScBYpAxoLGjiztk30hMiFcm2F-OdO1p7yjtBbKWWwhmEwlOJAqdhssNoYeUH18KZPmEckhYGMyHP_DegjywovTi50oT0T-94678uess3XLEVqvqNfCxu5oJT9T4cP1ZZ9Us6BBbi4oCo6ed7oYf9BpaanB3Q_nEFvyCkW5Q9T4-P554m1jNZlTvMdhhHj5evh88b2tUH8UO-9BMHvHoRw3ZZecqqAr9xCkBZEi9gFMw4iyPkurILj9S8n_qgnhZ"/>
-</div>
-<div class="w-12 h-12 rounded-full border-2 border-white overflow-hidden bg-surface-variant">
-<img alt="Client" data-alt="A portrait of a cheerful woman in her late 30s with a genuine laugh, wearing athletic gear. The image captures a candid moment in a bright, boutique fitness studio setting. The lighting is high-end and airy, using soft linen and pale sage tones to create an inviting, domestic feeling consistent with a premium wellness brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQo8G_4_r2mrnxqkaIxH_9gi-ydX85XnxOAFTSZqAzbR1npPYeAl-Tlcd8_E3MajvR25LoEiNXlLl3V3djhCNWbsHbCXZSpuFPuIxjxl30k3F322DwAGHHOwX__RA9ne55ANZBrjNuQjagxvEpCttzeh8c9BpZSij3VWxT65ZzSUXAN2V8wjg4C1yaYGmpU5GvmcZtpR2r_5510chGNDqiUXO1eaz67Z65KnOkxXn7oo1GvnSTW8W_WTm47l4IPqRNxe9fnxYkog80"/>
-</div>
-<div class="w-12 h-12 rounded-full border-2 border-white flex items-center justify-center bg-secondary text-white font-label-bold text-caption">50+</div>
-</div>
-<p class="font-caption text-caption text-on-surface-variant">Joined this month</p>
-</div>
-</div>
-<div class="relative">
-<div class="absolute -z-10 -top-10 -right-10 w-64 h-64 bg-pale-sage rounded-full opacity-50 blur-3xl"></div>
-<div class="circular-frame overflow-hidden w-full aspect-square shadow-2xl relative">
-<img alt="Women working out" class="w-full h-full object-cover" data-alt="A high-energy but intimate group of women in their 40s and 50s participating in a circuit training session. The environment is a boutique studio with natural wood floors and warm linen walls. Soft sunlight streams through large windows, creating a welcoming and empowered atmosphere. The focus is on authentic connection and shared progress in a serene, high-end space." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGHlnMYrf0MgMhb2ZeZLRK7j4c0Yb4bArmqA895cKD_xGkAHQS5HlH6M4b1yac8TS9gCJ9TTR2RjsjFY4S_UkznH9JbrD5mOlnZqjr0ExZYIFE3Jok4uy3mzEreE1JtEUC2dKmeQnUGL-M7yIo9aoYI5n8ZXCrrAPKwwhtW35gxQE4IuP3mjUwu1bQ70F1vQ7mvRkfCOy-dFduHTlJWJ9xwLj8b1CsBNDepbFfqQMefcOm_6E0XyjXQ7ZG71Ol2b_XBjoPA7LBzrGq"/>
-<div class="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
-</div>
-<!-- Form Overlay for Desktop -->
-<div class="mt-8 md:mt-0 md:absolute md:-bottom-20 md:-left-10 bg-white p-8 rounded-[24px] shadow-xl md:w-80 border border-surface-variant">
-<h3 class="font-headline-md text-headline-md text-primary mb-4">Get started</h3>
-<form class="space-y-4">
-<input class="w-full bg-background border-outline-variant/20 rounded-xl p-3 font-body-md focus:border-tertiary focus:ring-0 transition-all" placeholder="Name" type="text"/>
-<input class="w-full bg-background border-outline-variant/20 rounded-xl p-3 font-body-md focus:border-tertiary focus:ring-0 transition-all" placeholder="Email" type="email"/>
-<button class="w-full bg-primary text-white font-label-bold py-3 rounded-xl hover:bg-primary-container transition-colors">Send message</button>
-</form>
-</div>
-</div>
-</div>
+
+<main>
+
+<!-- ════════════════════════════════════════════════════════
+     HERO — split viewport: dark forest left, full-bleed image right
+════════════════════════════════════════════════════════ -->
+<section class="min-h-screen grid grid-cols-1 md:grid-cols-2">
+
+  <!-- Left panel: forest green -->
+  <div class="bg-forest flex items-center px-8 md:px-14 lg:px-20 pt-28 pb-16 md:pt-0 md:pb-0 order-2 md:order-1">
+    <div class="max-w-md hero-seq">
+
+      <p class="text-terra-bright text-xs font-bold tracking-widest uppercase mb-7">
+        Pacific Grove, CA &nbsp;·&nbsp; Women-only studio
+      </p>
+
+      <h1 class="font-display text-white leading-[1.08] mb-7"
+          style="font-size: clamp(2.1rem, 3.8vw, 3.4rem);">
+        Real coaching.<br/>Real community.<br/>Real results.
+      </h1>
+
+      <p class="text-sage-100/80 text-lg leading-relaxed mb-10 max-w-sm">
+        Intimate small group training for women who value progress over pretense. A community that knows your name.
+      </p>
+
+      <div class="flex flex-wrap gap-4 mb-10">
+        <a href="#consultation"
+           class="bg-terra-bright text-white px-7 py-3.5 rounded text-sm font-bold hover:bg-terra transition-colors shadow-lg">
+          Start your transformation
+        </a>
+        <a href="tel:8312040761"
+           class="border border-white/25 text-white/80 px-7 py-3.5 rounded text-sm font-semibold hover:border-white/60 hover:text-white transition-colors">
+          (831) 204-0761
+        </a>
+      </div>
+
+      <div class="flex items-center gap-3 pt-8 border-t border-white/12">
+        <div class="flex gap-0.5">
+          <span class="material-symbols-outlined icon-filled text-terra-bright" style="font-size:17px">star</span>
+          <span class="material-symbols-outlined icon-filled text-terra-bright" style="font-size:17px">star</span>
+          <span class="material-symbols-outlined icon-filled text-terra-bright" style="font-size:17px">star</span>
+          <span class="material-symbols-outlined icon-filled text-terra-bright" style="font-size:17px">star</span>
+          <span class="material-symbols-outlined icon-filled text-terra-bright" style="font-size:17px">star</span>
+        </div>
+        <span class="text-sage-100/70 text-sm">5.0 on Google &nbsp;·&nbsp; 50+ members joined this month</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Right panel: full-bleed image -->
+  <div class="relative overflow-hidden min-h-72 md:min-h-screen order-1 md:order-2 hero-image-reveal">
+    <img
+      src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGHlnMYrf0MgMhb2ZeZLRK7j4c0Yb4bArmqA895cKD_xGkAHQS5HlH6M4b1yac8TS9gCJ9TTR2RjsjFY4S_UkznH9JbrD5mOlnZqjr0ExZYIFE3Jok4uy3mzEreE1JtEUC2dKmeQnUGL-M7yIo9aoYI5n8ZXCrrAPKwwhtW35gxQE4IuP3mjUwu1bQ70F1vQ7mvRkfCOy-dFduHTlJWJ9xwLj8b1CsBNDepbFfqQMefcOm_6E0XyjXQ7ZG71Ol2b_XBjoPA7LBzrGq"
+      alt="Women training together at Atagol Fitness in Pacific Grove"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 bg-forest/25 mix-blend-multiply"></div>
+  </div>
+
 </section>
-<!-- Trust Bar -->
-<section class="bg-primary-container py-12 px-margin-mobile md:px-gutter">
-<div class="max-w-container-max mx-auto flex flex-wrap justify-center md:justify-between items-center gap-8 text-on-primary-container">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-secondary-container" data-icon="location_on">location_on</span>
-<span class="font-label-bold text-white">Pacific Grove, CA</span>
-</div>
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-secondary-container" data-icon="schedule">schedule</span>
-<span class="font-label-bold text-white">Mon–Sat: 6am – 7pm</span>
-</div>
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-secondary-container" data-icon="groups">groups</span>
-<span class="font-label-bold text-white">Small Groups (Max 6)</span>
-</div>
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-secondary-container" data-icon="verified_user">verified_user</span>
-<span class="font-label-bold text-white">Women-Only Studio</span>
-</div>
-</div>
+
+
+<!-- ════════════════════════════════════════════════════════
+     TRUST BAR
+════════════════════════════════════════════════════════ -->
+<section class="bg-forest-mid py-4 border-t border-white/8">
+  <div class="max-w-7xl mx-auto px-6 md:px-10">
+    <div class="flex flex-wrap justify-center md:justify-between items-center gap-5">
+      <div class="flex items-center gap-2 text-sage-100">
+        <span class="material-symbols-outlined text-terra-bright" style="font-size:17px">location_on</span>
+        <span class="text-sm font-semibold">Pacific Grove, CA</span>
+      </div>
+      <div class="flex items-center gap-2 text-sage-100">
+        <span class="material-symbols-outlined text-terra-bright" style="font-size:17px">schedule</span>
+        <span class="text-sm font-semibold">Mon–Sat &nbsp;·&nbsp; 6 AM – 7 PM</span>
+      </div>
+      <div class="flex items-center gap-2 text-sage-100">
+        <span class="material-symbols-outlined text-terra-bright" style="font-size:17px">groups</span>
+        <span class="text-sm font-semibold">Max 6 per group</span>
+      </div>
+      <div class="flex items-center gap-2 text-sage-100">
+        <span class="material-symbols-outlined text-terra-bright" style="font-size:17px">verified_user</span>
+        <span class="text-sm font-semibold">Women-only studio</span>
+      </div>
+    </div>
+  </div>
 </section>
-<!-- Pain vs Solution -->
-<section class="py-section-gap-mobile md:py-section-gap-desktop px-margin-mobile md:px-gutter bg-background">
-<div class="max-w-container-max mx-auto">
-<div class="grid md:grid-cols-2 gap-16 items-center">
-<div class="p-8 md:p-12 bg-surface-container rounded-[48px] relative overflow-hidden">
-<div class="absolute top-0 right-0 p-6 opacity-10">
-<span class="material-symbols-outlined text-9xl" data-icon="block">block</span>
-</div>
-<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Tired of the big gym noise?</h2>
-<ul class="space-y-4">
-<li class="flex items-start gap-3 text-on-surface-variant">
-<span class="material-symbols-outlined text-error mt-1" data-icon="close">close</span>
-<span class="font-body-md">Feeling invisible in crowded, impersonal classes.</span>
-</li>
-<li class="flex items-start gap-3 text-on-surface-variant">
-<span class="material-symbols-outlined text-error mt-1" data-icon="close">close</span>
-<span class="font-body-md">Uncertain form leading to nagging injuries.</span>
-</li>
-<li class="flex items-start gap-3 text-on-surface-variant">
-<span class="material-symbols-outlined text-error mt-1" data-icon="close">close</span>
-<span class="font-body-md">One-size-fits-all programs that don't respect your pace.</span>
-</li>
-</ul>
-</div>
-<div class="space-y-8">
-<div class="inline-block px-4 py-2 bg-secondary-fixed text-on-secondary-fixed-variant rounded-full font-label-bold text-caption">The Atagol Shift</div>
-<h2 class="font-headline-lg text-headline-lg text-primary">A fitness home designed for how you live and move.</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant">We stripped away the ego and the mirrors to create a space where actual coaching happens. At Atagol, we don't just count reps; we refine movement, build bone density, and foster a neighborly energy that keeps you coming back.</p>
-<div class="grid grid-cols-2 gap-6">
-<div class="p-6 bg-pale-sage rounded-[24px]">
-<h4 class="font-headline-md text-primary mb-2">100%</h4>
-<p class="font-caption text-on-surface-variant">Women-focused</p>
-</div>
-<div class="p-6 bg-pale-sage rounded-[24px]">
-<h4 class="font-headline-md text-primary mb-2">Personal</h4>
-<p class="font-caption text-on-surface-variant">Small group attention</p>
-</div>
-</div>
-</div>
-</div>
-</div>
+
+
+<!-- ════════════════════════════════════════════════════════
+     PAIN vs SOLUTION
+════════════════════════════════════════════════════════ -->
+<section class="py-24 md:py-32 px-6 md:px-10 bg-white">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 md:gap-24 items-start">
+
+    <!-- Pain -->
+    <div class="reveal">
+      <h2 class="font-display text-3xl md:text-[2.3rem] text-ink mb-8 leading-tight">
+        Tired of the big gym?
+      </h2>
+      <ul class="space-y-5">
+        <li class="flex gap-4">
+          <span class="material-symbols-outlined text-err mt-0.5 flex-shrink-0" style="font-size:20px">close</span>
+          <p class="text-muted leading-relaxed">Feeling invisible in crowded, impersonal classes.</p>
+        </li>
+        <li class="flex gap-4">
+          <span class="material-symbols-outlined text-err mt-0.5 flex-shrink-0" style="font-size:20px">close</span>
+          <p class="text-muted leading-relaxed">Uncertain form leading to nagging injuries.</p>
+        </li>
+        <li class="flex gap-4">
+          <span class="material-symbols-outlined text-err mt-0.5 flex-shrink-0" style="font-size:20px">close</span>
+          <p class="text-muted leading-relaxed">One-size-fits-all programs that don't respect your pace.</p>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Solution -->
+    <div class="reveal">
+      <h2 class="font-display text-3xl md:text-[2.3rem] text-ink mb-6 leading-tight">
+        A fitness home designed around you.
+      </h2>
+      <p class="text-muted text-lg leading-relaxed mb-8">
+        We stripped away the ego and the mirrors to create a space where actual coaching happens. At Atagol, we refine movement, build bone density, and foster a neighborly energy that keeps you coming back.
+      </p>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="bg-sage p-5 rounded border border-sage-100">
+          <p class="font-display text-2xl text-forest font-bold mb-1">100%</p>
+          <p class="text-subdued text-sm">Women-focused</p>
+        </div>
+        <div class="bg-sage p-5 rounded border border-sage-100">
+          <p class="font-display text-2xl text-forest font-bold mb-1">Max 6</p>
+          <p class="text-subdued text-sm">Per training group</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </section>
-<!-- Programs Grid -->
-<section class="py-section-gap-mobile md:py-section-gap-desktop px-margin-mobile md:px-gutter bg-surface-container-low" id="programs">
-<div class="max-w-container-max mx-auto">
-<div class="text-center mb-16">
-<h2 class="font-headline-xl text-headline-xl text-primary mb-4">Specialized programs</h2>
-<p class="font-body-lg text-on-surface-variant max-w-2xl mx-auto">Intelligent training designed to support women through every stage of life, from building strength to preserving vitality.</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<!-- Card 1 -->
-<div class="bg-white p-8 rounded-[24px] shadow-sm hover:shadow-md transition-shadow group border border-pale-sage">
-<div class="w-12 h-12 bg-secondary-fixed rounded-full flex items-center justify-center mb-6 text-secondary">
-<span class="material-symbols-outlined" data-icon="fitness_center">fitness_center</span>
-</div>
-<h3 class="font-headline-md text-primary mb-4">Circuit training</h3>
-<p class="font-body-md text-on-surface-variant mb-6">High-energy, low-impact sessions that torch calories while building functional strength for daily life.</p>
-<a class="text-secondary font-label-bold flex items-center gap-2 group-hover:underline" href="#consultation">Learn more <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span></a>
-</div>
-<!-- Card 2 -->
-<div class="bg-white p-8 rounded-[24px] shadow-sm hover:shadow-md transition-shadow group border border-pale-sage">
-<div class="w-12 h-12 bg-secondary-fixed rounded-full flex items-center justify-center mb-6 text-secondary">
-<span class="material-symbols-outlined" data-icon="health_and_safety">health_and_safety</span>
-</div>
-<h3 class="font-headline-md text-primary mb-4">Bone builders</h3>
-<p class="font-body-md text-on-surface-variant mb-6">Science-backed resistance training specifically designed to improve bone density and joint stability.</p>
-<a class="text-secondary font-label-bold flex items-center gap-2 group-hover:underline" href="#consultation">Learn more <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span></a>
-</div>
-<!-- Card 3 -->
-<div class="bg-white p-8 rounded-[24px] shadow-sm hover:shadow-md transition-shadow group border border-pale-sage">
-<div class="w-12 h-12 bg-secondary-fixed rounded-full flex items-center justify-center mb-6 text-secondary">
-<span class="material-symbols-outlined" data-icon="self_improvement">self_improvement</span>
-</div>
-<h3 class="font-headline-md text-primary mb-4">Restorative yoga</h3>
-<p class="font-body-md text-on-surface-variant mb-6">Find your flow and release tension with mindful movement that prioritizes flexibility and mental clarity.</p>
-<a class="text-secondary font-label-bold flex items-center gap-2 group-hover:underline" href="#consultation">Learn more <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span></a>
-</div>
-<!-- Card 4 -->
-<div class="bg-white p-8 rounded-[24px] shadow-sm hover:shadow-md transition-shadow group border border-pale-sage">
-<div class="w-12 h-12 bg-secondary-fixed rounded-full flex items-center justify-center mb-6 text-secondary">
-<span class="material-symbols-outlined" data-icon="bolt">bolt</span>
-</div>
-<h3 class="font-headline-md text-primary mb-4">Core essentials</h3>
-<p class="font-body-md text-on-surface-variant mb-6">Targeted training to strengthen your foundation, improving posture and protecting your back.</p>
-<a class="text-secondary font-label-bold flex items-center gap-2 group-hover:underline" href="#consultation">Learn more <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span></a>
-</div>
-<!-- Card 5 -->
-<div class="bg-white p-8 rounded-[24px] shadow-sm hover:shadow-md transition-shadow group border border-pale-sage">
-<div class="w-12 h-12 bg-secondary-fixed rounded-full flex items-center justify-center mb-6 text-secondary">
-<span class="material-symbols-outlined" data-icon="monitor_heart">monitor_heart</span>
-</div>
-<h3 class="font-headline-md text-primary mb-4">HIIT for longevity</h3>
-<p class="font-body-md text-on-surface-variant mb-6">Smart interval training that boosts cardiovascular health without overtaxing your nervous system.</p>
-<a class="text-secondary font-label-bold flex items-center gap-2 group-hover:underline" href="#consultation">Learn more <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span></a>
-</div>
-<!-- Card 6 -->
-<div class="bg-white p-8 rounded-[24px] shadow-sm hover:shadow-md transition-shadow group border border-pale-sage">
-<div class="w-12 h-12 bg-secondary-fixed rounded-full flex items-center justify-center mb-6 text-secondary">
-<span class="material-symbols-outlined" data-icon="person_celebrate">person_celebrate</span>
-</div>
-<h3 class="font-headline-md text-primary mb-4">Private coaching</h3>
-<p class="font-body-md text-on-surface-variant mb-6">One-on-one attention for specific goals, injury rehabilitation, or accelerated progress.</p>
-<a class="text-secondary font-label-bold flex items-center gap-2 group-hover:underline" href="#consultation">Learn more <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span></a>
-</div>
-</div>
-</div>
+
+
+<!-- ════════════════════════════════════════════════════════
+     PROGRAMS — editorial list rows, no icon cards
+════════════════════════════════════════════════════════ -->
+<section class="py-24 md:py-32 px-6 md:px-10 bg-sage" id="programs">
+  <div class="max-w-5xl mx-auto">
+
+    <div class="mb-16 reveal">
+      <h2 class="font-display text-3xl md:text-[2.5rem] text-ink mb-4">Specialized programs</h2>
+      <p class="text-muted text-lg max-w-xl leading-relaxed">
+        Intelligent training designed to support women through every stage of life.
+      </p>
+    </div>
+
+    <div class="divide-y divide-sage-200 stagger-group" id="programs-list">
+
+      <div class="program-row py-8 grid grid-cols-1 md:grid-cols-[2fr_2fr_auto] gap-4 md:gap-8 items-start stagger-item">
+        <h3 class="font-display text-xl md:text-2xl text-ink">Circuit training</h3>
+        <p class="text-muted text-base leading-relaxed">High-energy, low-impact sessions that build functional strength for daily life.</p>
+        <a href="#consultation" class="prog-cta text-terra text-sm font-semibold flex items-center gap-1.5 whitespace-nowrap hover:text-terra-mid transition-colors">
+          Book a session
+          <span class="material-symbols-outlined" style="font-size:15px">arrow_forward</span>
+        </a>
+      </div>
+
+      <div class="program-row py-8 grid grid-cols-1 md:grid-cols-[2fr_2fr_auto] gap-4 md:gap-8 items-start stagger-item">
+        <h3 class="font-display text-xl md:text-2xl text-ink">Bone builders</h3>
+        <p class="text-muted text-base leading-relaxed">Science-backed resistance training to improve bone density and joint stability.</p>
+        <a href="#consultation" class="prog-cta text-terra text-sm font-semibold flex items-center gap-1.5 whitespace-nowrap hover:text-terra-mid transition-colors">
+          Book a session
+          <span class="material-symbols-outlined" style="font-size:15px">arrow_forward</span>
+        </a>
+      </div>
+
+      <div class="program-row py-8 grid grid-cols-1 md:grid-cols-[2fr_2fr_auto] gap-4 md:gap-8 items-start stagger-item">
+        <h3 class="font-display text-xl md:text-2xl text-ink">Restorative yoga</h3>
+        <p class="text-muted text-base leading-relaxed">Mindful movement that prioritizes flexibility, tension release, and mental clarity.</p>
+        <a href="#consultation" class="prog-cta text-terra text-sm font-semibold flex items-center gap-1.5 whitespace-nowrap hover:text-terra-mid transition-colors">
+          Book a session
+          <span class="material-symbols-outlined" style="font-size:15px">arrow_forward</span>
+        </a>
+      </div>
+
+      <div class="program-row py-8 grid grid-cols-1 md:grid-cols-[2fr_2fr_auto] gap-4 md:gap-8 items-start stagger-item">
+        <h3 class="font-display text-xl md:text-2xl text-ink">Core essentials</h3>
+        <p class="text-muted text-base leading-relaxed">Targeted training to strengthen your foundation, improving posture and protecting your back.</p>
+        <a href="#consultation" class="prog-cta text-terra text-sm font-semibold flex items-center gap-1.5 whitespace-nowrap hover:text-terra-mid transition-colors">
+          Book a session
+          <span class="material-symbols-outlined" style="font-size:15px">arrow_forward</span>
+        </a>
+      </div>
+
+      <div class="program-row py-8 grid grid-cols-1 md:grid-cols-[2fr_2fr_auto] gap-4 md:gap-8 items-start stagger-item">
+        <h3 class="font-display text-xl md:text-2xl text-ink">HIIT for longevity</h3>
+        <p class="text-muted text-base leading-relaxed">Smart interval training that boosts cardiovascular health without overtaxing your nervous system.</p>
+        <a href="#consultation" class="prog-cta text-terra text-sm font-semibold flex items-center gap-1.5 whitespace-nowrap hover:text-terra-mid transition-colors">
+          Book a session
+          <span class="material-symbols-outlined" style="font-size:15px">arrow_forward</span>
+        </a>
+      </div>
+
+      <div class="program-row py-8 grid grid-cols-1 md:grid-cols-[2fr_2fr_auto] gap-4 md:gap-8 items-start stagger-item">
+        <h3 class="font-display text-xl md:text-2xl text-ink">Private coaching</h3>
+        <p class="text-muted text-base leading-relaxed">One-on-one attention for specific goals, injury rehabilitation, or accelerated progress.</p>
+        <a href="#consultation" class="prog-cta text-terra text-sm font-semibold flex items-center gap-1.5 whitespace-nowrap hover:text-terra-mid transition-colors">
+          Book a session
+          <span class="material-symbols-outlined" style="font-size:15px">arrow_forward</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
 </section>
-<!-- Testimonials -->
-<section class="py-section-gap-mobile md:py-section-gap-desktop px-margin-mobile md:px-gutter bg-background" id="testimonials">
-<div class="max-w-container-max mx-auto">
-<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
-<div>
-<h2 class="font-headline-xl text-headline-xl text-primary mb-4">What our community says</h2>
-<div class="flex items-center gap-2">
-<div class="flex text-secondary">
-<span class="material-symbols-outlined" data-icon="star" data-weight="fill">star</span>
-<span class="material-symbols-outlined" data-icon="star" data-weight="fill">star</span>
-<span class="material-symbols-outlined" data-icon="star" data-weight="fill">star</span>
-<span class="material-symbols-outlined" data-icon="star" data-weight="fill">star</span>
-<span class="material-symbols-outlined" data-icon="star" data-weight="fill">star</span>
-</div>
-<span class="font-label-bold text-on-surface-variant">5.0 on Google Reviews</span>
-</div>
-</div>
-</div>
-<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-<!-- Testimonial 1 -->
-<div class="p-8 bg-pale-sage rounded-[24px] flex flex-col justify-between">
-<p class="font-body-md text-on-surface italic mb-8">"I finally found a place where I don't feel judged. Julie's coaching has completely changed how I think about aging and strength."</p>
-<div class="flex items-center gap-4">
-<img alt="Sarah" class="w-12 h-12 rounded-full object-cover" data-alt="A portrait of a vibrant woman in her 50s with sparkling eyes and a warm smile. She is wearing a soft linen shirt in a natural boutique fitness setting. The image uses a shallow depth of field to focus on her genuine expression, embodying the 'neighborly energy' and 'human-centric' pillars of the brand style guidance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuANzziIYAC7AeWlwcbenSKR1vSpJes0ZDtiirHsjm6ghxs7d9yo_awyz7VamLBAtsJjiDn-11WPZStnX2v40t6XaoX-bvWzlv3IFxptEFDnO8FWrBBHx_5Jd2n2QdwmrigF6lltNsKhNAWDcLhbazxeQkRLGSxZWbEQNQJzpbtR02Lc--Ieunbj96X1aGX7EDx_Xe8Heu7a9Gwjl3jmAvwU4vSAgt8CkCRUVcyYa0J3XzNKvNEbOKnUDZ2e0IN5Pru4Qio3NKKPJOWc"/>
-<div>
-<p class="font-label-bold text-primary">Sarah M.</p>
-<p class="font-caption text-on-surface-variant">Member since 2022</p>
-</div>
-</div>
-</div>
-<!-- Testimonial 2 -->
-<div class="p-8 bg-pale-sage rounded-[24px] flex flex-col justify-between">
-<p class="font-body-md text-on-surface italic mb-8">"The bone builders class is exactly what I needed. It's safe, effective, and actually fun to lift weights with such a great group of women."</p>
-<div class="flex items-center gap-4">
-<img alt="Elena" class="w-12 h-12 rounded-full object-cover" data-alt="A close-up of a graceful woman in her late 40s with a peaceful, confident expression. The lighting is soft and ambient, characteristic of a high-end coastal boutique. The color palette emphasizes pale sage and warm linen tones, perfectly aligning with the organic and breathable aesthetic of the Atagol Fitness brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDCwTGVx72EsloyYmt0bZxKNbLEX6roARwmkZzC4yjID_WMQvOb0CPZ2_kq_Ctgg9aP3WvHRwH5M8jx0WC-cEheaddUQya8m1tN0vIoHM_niphHugIPGQ68sZEPBHpwZ6MMAVjWo5scxwclv9khmVuRrbqL6nNsxwICdYOgRkLOZg1oS2obcK_fJN_7RDelTYCFdAwnf3HMlwRqkMucO2OVEv6yB5ofdf8RMXtOZXinnrnQ00mW17kaIE3io0q-iuv2VspzHNsG13c"/>
-<div>
-<p class="font-label-bold text-primary">Elena R.</p>
-<p class="font-caption text-on-surface-variant">Member since 2023</p>
-</div>
-</div>
-</div>
-<!-- Testimonial 3 -->
-<div class="p-8 bg-pale-sage rounded-[24px] flex flex-col justify-between">
-<p class="font-body-md text-on-surface italic mb-8">"Atagol is more than a gym; it's a community. I've made actual friends here while getting into the best shape of my life."</p>
-<div class="flex items-center gap-4">
-<img alt="Karen" class="w-12 h-12 rounded-full object-cover" data-alt="A portrait of a woman laughing naturally, capturing an authentic moment of connection. She has a grounded and integrated feel, similar to coastal stones resting on sand. The lighting is bright and modern, avoiding clinical perfection in favor of a tactile, editorial look that feels premium yet accessible for a women-only fitness community." src="https://lh3.googleusercontent.com/aida-public/AB6AXuACkRrQblruVyB-Ib2-jHFfp2_eT2e1lMwnlF1QvGokMXVZXTtyVmRcJ6PA5siPTchBVDQlW07e-XNhnjrMmtrYdYvudFZvYGCfKo5ESwDCDAWd6Wh-wsXWO-KOJLXHP3E0mG3vlt3zwNQNrZ4BG0ei8p8tAD1V7rIxSxZc36VxoQCmQ2TnZgHglb45hy3BURuamPQOXNozlo1OmaqxU2REupWpAlzG9vH-Ny5W793D9AO-nT46qH_5xMaa3NMXK0cyU8PKUj3PjGB8"/>
-<div>
-<p class="font-label-bold text-primary">Karen T.</p>
-<p class="font-caption text-on-surface-variant">Member since 2021</p>
-</div>
-</div>
-</div>
-<!-- Testimonial 4 -->
-<div class="p-8 bg-pale-sage rounded-[24px] flex flex-col justify-between">
-<p class="font-body-md text-on-surface italic mb-8">"The attention to detail and personalized coaching is unlike anything I've experienced. Julie really knows her stuff!"</p>
-<div class="flex items-center gap-4">
-<img alt="Linda" class="w-12 h-12 rounded-full object-cover" data-alt="A sophisticated woman in her early 60s with a kind, intelligent expression, reflecting the 'high-end boutique' and 'refined' nature of the brand. The photo is taken in a brightly lit, organic-styled studio with soft curves and natural textures in the background, conveying a sense of grounded empowerment and premium wellness." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNHhZqyCZdAze7iztW_LCXo9aUx68ybxpQx0u-qxv04Q9XNA9rksfTuzhrADwUMasK_a7iydmfG3LWa0LVgPJoUq5X300YQSZZs1gIx3gWlcytUv98DM-opf-bn0Vgnwo6auL41bksZfyo60eoTu_4DDt9Cykg9o88Xzc8oe01FN3qphXFtdm8HxmX4n4me55PNNIN63KmxuvxLC9ubQYNoVo1g9EOfl_Kk3JY0AU2QCTVs_5AyUEZOtJRgUqePI4iRh2w-S3sOHRj"/>
-<div>
-<p class="font-label-bold text-primary">Linda J.</p>
-<p class="font-caption text-on-surface-variant">Member since 2023</p>
-</div>
-</div>
-</div>
-</div>
-</div>
+
+
+<!-- ════════════════════════════════════════════════════════
+     TESTIMONIALS — featured pull-quote + 3 smaller
+════════════════════════════════════════════════════════ -->
+<section id="testimonials">
+
+  <!-- Featured: dark forest panel -->
+  <div class="bg-forest py-20 md:py-28 px-6 md:px-10 reveal">
+    <div class="max-w-3xl mx-auto text-center">
+      <div class="flex justify-center gap-0.5 mb-8">
+        <span class="material-symbols-outlined icon-filled text-terra-bright" style="font-size:20px">star</span>
+        <span class="material-symbols-outlined icon-filled text-terra-bright" style="font-size:20px">star</span>
+        <span class="material-symbols-outlined icon-filled text-terra-bright" style="font-size:20px">star</span>
+        <span class="material-symbols-outlined icon-filled text-terra-bright" style="font-size:20px">star</span>
+        <span class="material-symbols-outlined icon-filled text-terra-bright" style="font-size:20px">star</span>
+      </div>
+      <blockquote>
+        <p class="font-display text-2xl md:text-[1.85rem] text-white italic leading-relaxed mb-10">
+          "I finally found a place where I don't feel judged. Julie's coaching has completely changed how I think about aging and strength."
+        </p>
+        <cite class="not-italic flex items-center justify-center gap-4">
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuANzziIYAC7AeWlwcbenSKR1vSpJes0ZDtiirHsjm6ghxs7d9yo_awyz7VamLBAtsJjiDn-11WPZStnX2v40t6XaoX-bvWzlv3IFxptEFDnO8FWrBBHx_5Jd2n2QdwmrigF6lltNsKhNAWDcLhbazxeQkRLGSxZWbEQNQJzpbtR02Lc--Ieunbj96X1aGX7EDx_Xe8Heu7a9Gwjl3jmAvwU4vSAgt8CkCRUVcyYa0J3XzNKvNEbOKnUDZ2e0IN5Pru4Qio3NKKPJOWc"
+            alt="Sarah M."
+            class="w-14 h-14 rounded-full object-cover border-2 border-terra-bright flex-shrink-0"
+          />
+          <div class="text-left">
+            <p class="font-semibold text-white">Sarah M.</p>
+            <p class="text-sage-100/60 text-sm">Member since 2022</p>
+          </div>
+        </cite>
+      </blockquote>
+      <p class="text-sage-100/40 text-xs mt-10 tracking-wide font-semibold uppercase">
+        5.0 on Google Reviews &nbsp;·&nbsp; Pacific Grove's top-rated women's fitness studio
+      </p>
+    </div>
+  </div>
+
+  <!-- 3 supporting testimonials -->
+  <div class="bg-white py-16 px-6 md:px-10">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 stagger-group">
+
+      <div class="stagger-item border-t-2 border-terra pt-8">
+        <p class="text-muted leading-relaxed italic mb-7">
+          "The bone builders class is exactly what I needed. Safe, effective, and actually fun to lift with such a great group of women."
+        </p>
+        <div class="flex items-center gap-3">
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDCwTGVx72EsloyYmt0bZxKNbLEX6roARwmkZzC4yjID_WMQvOb0CPZ2_kq_Ctgg9aP3WvHRwH5M8jx0WC-cEheaddUQya8m1tN0vIoHM_niphHugIPGQ68sZEPBHpwZ6MMAVjWo5scxwclv9khmVuRrbqL6nNsxwICdYOgRkLOZg1oS2obcK_fJN_7RDelTYCFdAwnf3HMlwRqkMucO2OVEv6yB5ofdf8RMXtOZXinnrnQ00mW17kaIE3io0q-iuv2VspzHNsG13c"
+            alt="Elena R."
+            class="w-10 h-10 rounded-full object-cover flex-shrink-0"
+          />
+          <div>
+            <p class="font-semibold text-ink text-sm">Elena R.</p>
+            <p class="text-subdued text-xs">Member since 2023</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="stagger-item border-t-2 border-terra pt-8">
+        <p class="text-muted leading-relaxed italic mb-7">
+          "Atagol is more than a gym — it's a community. I've made actual friends here while getting into the best shape of my life."
+        </p>
+        <div class="flex items-center gap-3">
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuACkRrQblruVyB-Ib2-jHFfp2_eT2e1lMwnlF1QvGokMXVZXTtyVmRcJ6PA5siPTchBVDQlW07e-XNhnjrMmtrYdYvudFZvYGCfKo5ESwDCDAWd6Wh-wsXWO-KOJLXHP3E0mG3vlt3zwNQNrZ4BG0ei8p8tAD1V7rIxSxZc36VxoQCmQ2TnZgHglb45hy3BURuamPQOXNozlo1OmaqxU2REupWpAlzG9vH-Ny5W793D9AO-nT46qH_5xMaa3NMXK0cyU8PKUj3PjGB8"
+            alt="Karen T."
+            class="w-10 h-10 rounded-full object-cover flex-shrink-0"
+          />
+          <div>
+            <p class="font-semibold text-ink text-sm">Karen T.</p>
+            <p class="text-subdued text-xs">Member since 2021</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="stagger-item border-t-2 border-terra pt-8">
+        <p class="text-muted leading-relaxed italic mb-7">
+          "The attention to detail and personalized coaching is unlike anything I've experienced. Julie really knows her stuff."
+        </p>
+        <div class="flex items-center gap-3">
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNHhZqyCZdAze7iztW_LCXo9aUx68ybxpQx0u-qxv04Q9XNA9rksfTuzhrADwUMasK_a7iydmfG3LWa0LVgPJoUq5X300YQSZZs1gIx3gWjcytUv98DM-opf-bn0Vgnwo6auL41bksZfyo60eoTu_4DDt9Cykg9o88Xzc8oe01FN3qphXFtdm8HxmX4n4me55PNNIN63KmxuvxLC9ubQYNoVo1g9EOfl_Kk3JY0AU2QCTVs_5AyUEZOtJRgUqePI4iRh2w-S3sOHRj"
+            alt="Linda J."
+            class="w-10 h-10 rounded-full object-cover flex-shrink-0"
+          />
+          <div>
+            <p class="font-semibold text-ink text-sm">Linda J.</p>
+            <p class="text-subdued text-xs">Member since 2023</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
 </section>
-<!-- About Section -->
-<section class="py-section-gap-mobile md:py-section-gap-desktop px-margin-mobile md:px-gutter bg-surface-container overflow-hidden" id="about">
-<div class="max-w-container-max mx-auto grid md:grid-cols-2 gap-16 items-center">
-<div class="order-2 md:order-1 relative">
-<div class="circular-frame overflow-hidden w-full aspect-[4/5] shadow-xl">
-<img alt="Julie Coaching" class="w-full h-full object-cover" data-alt="A focused female coach with a warm, encouraging smile guiding a client through a controlled strength movement. The setting is a bright, airy boutique studio with soft sage accents and high-quality fitness equipment. The composition uses organic curves and circular framing, emphasizing a tactile and grounded human-centric approach to coaching." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzq9WWdRSBzdJQ4FV_qBeFCHhoX9daRSDSocfGzaqV8VWwbe-S9g7aAL3U9z0px7YhNo9WM-pT59z75CPGFtmJ_TLFeZhvxFY-bckN0P28DpJGRf_nFvYyfAHh3EmZIUgR1tGySHD-j2g_p3p6E-_Fj6oe3H0B5Udc1W1emggRoaTU7HzOGvuPcFJXJTiAjuOX1HOW2Q2O6sDAklkWJiTQzWiXbyzgIpfckIrmtwfOF_dr6uQyjPiq5eh4c8WPYki0vlNF4oFhq2bp"/>
-</div>
-<div class="absolute -bottom-6 -right-6 bg-secondary p-8 rounded-[24px] text-white hidden md:block">
-<p class="font-headline-md">15+</p>
-<p class="font-caption">Years of experience</p>
-</div>
-</div>
-<div class="order-1 md:order-2 space-y-8">
-<h2 class="font-headline-xl text-headline-xl text-primary">Meet Julie &amp; the Atagol story</h2>
-<p class="font-body-lg text-on-surface-variant">ATAGOL stands for **All Things Are Gifts Of Life**. Founded by Julie, Atagol Fitness was born from a desire to create a sanctuary where women could reclaim their strength without the typical gym intimidation.</p>
-<p class="font-body-md text-on-surface-variant">Our mission is simple: to provide high-level coaching in an environment that feels like home. We believe that movement is a gift, and our role is to help you unwrap it safely, effectively, and with joy.</p>
-<div class="pt-4">
-<a class="font-label-bold text-secondary text-headline-md flex items-center gap-2" href="tel:8312040761">(831) 204-0761</a>
-<p class="font-caption text-on-surface-variant mt-2">Call Julie directly for a chat</p>
-</div>
-</div>
-</div>
+
+
+<!-- ════════════════════════════════════════════════════════
+     ABOUT
+════════════════════════════════════════════════════════ -->
+<section class="py-24 md:py-32 px-6 md:px-10 bg-sage" id="about">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 md:gap-24 items-center">
+
+    <!-- Image -->
+    <div class="relative reveal order-1">
+      <div class="organic-frame overflow-hidden aspect-[4/5] shadow-2xl">
+        <img
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzq9WWdRSBzdJQ4FV_qBeFCHhoX9daRSDSocfGzaqV8VWwbe-S9g7aAL3U9z0px7YhNo9WM-pT59z75CPGFtmJ_TLFeZhvxFY-bckN0P28DpJGRf_nFvYyfAHh3EmZIUgR1tGySHD-j2g_p3p6E-_Fj6oe3H0B5Udc1W1emggRoaTU7HzOGvuPcFJXJTiAjuOX1HOW2Q2O6sDAklkWJiTQzWiXbyzgIpfckIrmtwfOF_dr6uQyjPiq5eh4c8WPYki0vlNF4oFhq2bp"
+          alt="Julie coaching a client at Atagol Fitness, Pacific Grove"
+          class="w-full h-full object-cover"
+        />
+      </div>
+      <div class="absolute -bottom-4 -right-2 md:-bottom-6 md:-right-4 bg-terra-bright text-white py-5 px-6 rounded">
+        <p class="font-display text-2xl font-bold leading-none">15+</p>
+        <p class="text-xs font-semibold mt-1 opacity-90">Years of experience</p>
+      </div>
+    </div>
+
+    <!-- Text -->
+    <div class="space-y-6 reveal order-2">
+      <h2 class="font-display text-3xl md:text-[2.4rem] text-ink leading-tight">
+        Meet Julie &amp; the Atagol story
+      </h2>
+      <p class="text-muted text-lg leading-relaxed">
+        ATAGOL stands for <strong class="text-ink font-bold">All Things Are Gifts Of Life.</strong> Founded by Julie, Atagol Fitness was born from a desire to create a sanctuary where women could reclaim their strength without the typical gym intimidation.
+      </p>
+      <p class="text-muted leading-relaxed">
+        Our mission is simple: to provide high-level coaching in an environment that feels like home. We believe that movement is a gift, and our role is to help you unwrap it safely, effectively, and with joy.
+      </p>
+      <div class="pt-4 border-t border-sage-200">
+        <a href="tel:8312040761" class="font-display text-2xl text-terra font-bold hover:text-terra-mid transition-colors block">
+          (831) 204-0761
+        </a>
+        <p class="text-subdued text-sm mt-1">Call Julie directly for a chat</p>
+      </div>
+    </div>
+
+  </div>
 </section>
-<!-- How It Works -->
-<section class="py-section-gap-mobile md:py-section-gap-desktop px-margin-mobile md:px-gutter bg-background">
-<div class="max-w-container-max mx-auto">
-<div class="text-center mb-16">
-<h2 class="font-headline-xl text-headline-xl text-primary">Your path to progress</h2>
-</div>
-<div class="grid md:grid-cols-3 gap-12 relative">
-<!-- Line connector (Desktop) -->
-<div class="hidden md:block absolute top-12 left-1/4 right-1/4 h-px bg-secondary-fixed-dim -z-10"></div>
-<div class="text-center space-y-6">
-<div class="w-16 h-16 bg-secondary text-white rounded-full flex items-center justify-center mx-auto font-headline-md text-headline-md shadow-lg">1</div>
-<h3 class="font-headline-md text-primary">Free consultation</h3>
-<p class="font-body-md text-on-surface-variant">A no-pressure 30-minute meeting to discuss your goals, history, and any concerns you have.</p>
-</div>
-<div class="text-center space-y-6">
-<div class="w-16 h-16 bg-secondary text-white rounded-full flex items-center justify-center mx-auto font-headline-md text-headline-md shadow-lg">2</div>
-<h3 class="font-headline-md text-primary">Movement assessment</h3>
-<p class="font-body-md text-on-surface-variant">We'll look at how you move to ensure we place you in the right group and tailor every exercise to your needs.</p>
-</div>
-<div class="text-center space-y-6">
-<div class="w-16 h-16 bg-secondary text-white rounded-full flex items-center justify-center mx-auto font-headline-md text-headline-md shadow-lg">3</div>
-<h3 class="font-headline-md text-primary">Join your group</h3>
-<p class="font-body-md text-on-surface-variant">Step into your first session and start experiencing the benefits of expert-led small group training.</p>
-</div>
-</div>
-</div>
+
+
+<!-- ════════════════════════════════════════════════════════
+     HOW IT WORKS — large numerals, not template circles
+════════════════════════════════════════════════════════ -->
+<section class="py-24 md:py-32 px-6 md:px-10 bg-white">
+  <div class="max-w-5xl mx-auto">
+
+    <h2 class="font-display text-3xl md:text-[2.5rem] text-ink mb-16 reveal">Your path to progress</h2>
+
+    <div class="grid md:grid-cols-3 gap-12 md:gap-16 stagger-group">
+
+      <div class="stagger-item">
+        <p class="font-display text-5xl text-terra-bright font-bold leading-none mb-5">01</p>
+        <h3 class="font-display text-xl text-ink mb-3">Free consultation</h3>
+        <p class="text-muted leading-relaxed">A no-pressure 30-minute meeting to discuss your goals, history, and any concerns you have.</p>
+      </div>
+
+      <div class="stagger-item">
+        <p class="font-display text-5xl text-terra-bright font-bold leading-none mb-5">02</p>
+        <h3 class="font-display text-xl text-ink mb-3">Movement assessment</h3>
+        <p class="text-muted leading-relaxed">We'll look at how you move to ensure we place you in the right group and tailor every exercise to your needs.</p>
+      </div>
+
+      <div class="stagger-item">
+        <p class="font-display text-5xl text-terra-bright font-bold leading-none mb-5">03</p>
+        <h3 class="font-display text-xl text-ink mb-3">Join your group</h3>
+        <p class="text-muted leading-relaxed">Step into your first session and start experiencing the benefits of expert-led small group training.</p>
+      </div>
+
+    </div>
+  </div>
 </section>
-<!-- FAQ Section -->
-<section class="py-section-gap-mobile md:py-section-gap-desktop px-margin-mobile md:px-gutter bg-pale-sage">
-<div class="max-w-3xl mx-auto">
-<h2 class="font-headline-xl text-headline-xl text-primary text-center mb-12">Common questions</h2>
-<div class="space-y-4">
-<details class="group bg-white rounded-[24px] overflow-hidden border border-surface-variant/20">
-<summary class="flex justify-between items-center p-6 cursor-pointer list-none">
-<span class="font-label-bold text-body-lg text-primary">I haven't exercised in years. Is Atagol right for me?</span>
-<span class="material-symbols-outlined transition-transform group-open:rotate-180" data-icon="expand_more">expand_more</span>
-</summary>
-<div class="px-6 pb-6 font-body-md text-on-surface-variant">
-                            Absolutely. Most of our members started right where you are. Our small group format allows us to scale every single exercise to your current fitness level, ensuring you're safe and successful from day one.
-                        </div>
-</details>
-<details class="group bg-white rounded-[24px] overflow-hidden border border-surface-variant/20">
-<summary class="flex justify-between items-center p-6 cursor-pointer list-none">
-<span class="font-label-bold text-body-lg text-primary">What exactly is Bone Builders?</span>
-<span class="material-symbols-outlined transition-transform group-open:rotate-180" data-icon="expand_more">expand_more</span>
-</summary>
-<div class="px-6 pb-6 font-body-md text-on-surface-variant">
-                            Bone Builders is a specialized resistance training program designed to combat osteopenia and osteoporosis. We focus on progressive loading and weight-bearing exercises that stimulate bone growth and improve overall stability.
-                        </div>
-</details>
-<details class="group bg-white rounded-[24px] overflow-hidden border border-surface-variant/20">
-<summary class="flex justify-between items-center p-6 cursor-pointer list-none">
-<span class="font-label-bold text-body-lg text-primary">How many people are in a group?</span>
-<span class="material-symbols-outlined transition-transform group-open:rotate-180" data-icon="expand_more">expand_more</span>
-</summary>
-<div class="px-6 pb-6 font-body-md text-on-surface-variant">
-                            We keep our groups intentionally small, typically between 4 to 6 women. This ensures you get personalized attention from the coach while still enjoying the energy of a supportive community.
-                        </div>
-</details>
-<details class="group bg-white rounded-[24px] overflow-hidden border border-surface-variant/20">
-<summary class="flex justify-between items-center p-6 cursor-pointer list-none">
-<span class="font-label-bold text-body-lg text-primary">Do I need to bring my own equipment?</span>
-<span class="material-symbols-outlined transition-transform group-open:rotate-180" data-icon="expand_more">expand_more</span>
-</summary>
-<div class="px-6 pb-6 font-body-md text-on-surface-variant">
-                            Nope! Our studio is fully equipped with everything you need. Just bring a water bottle, comfortable workout clothes, and your sneakers.
-                        </div>
-</details>
-</div>
-</div>
+
+
+<!-- ════════════════════════════════════════════════════════
+     FAQ
+════════════════════════════════════════════════════════ -->
+<section class="py-24 md:py-32 px-6 md:px-10 bg-sage">
+  <div class="max-w-2xl mx-auto">
+
+    <h2 class="font-display text-3xl md:text-[2.5rem] text-ink mb-12 reveal">Common questions</h2>
+
+    <div class="space-y-0 reveal">
+
+      <details class="group border-b border-sage-200">
+        <summary class="flex justify-between items-center py-5 cursor-pointer list-none gap-6">
+          <span class="font-semibold text-ink">I haven't exercised in years. Is Atagol right for me?</span>
+          <span class="material-symbols-outlined faq-icon text-terra flex-shrink-0" style="font-size:22px">expand_more</span>
+        </summary>
+        <p class="pb-6 text-muted leading-relaxed">
+          Absolutely. Most of our members started right where you are. Our small group format allows us to scale every exercise to your current fitness level, ensuring you're safe and successful from day one.
+        </p>
+      </details>
+
+      <details class="group border-b border-sage-200">
+        <summary class="flex justify-between items-center py-5 cursor-pointer list-none gap-6">
+          <span class="font-semibold text-ink">What exactly is Bone Builders?</span>
+          <span class="material-symbols-outlined faq-icon text-terra flex-shrink-0" style="font-size:22px">expand_more</span>
+        </summary>
+        <p class="pb-6 text-muted leading-relaxed">
+          Bone Builders is a specialized resistance training program designed to combat osteopenia and osteoporosis. We focus on progressive loading and weight-bearing exercises that stimulate bone growth and improve overall stability.
+        </p>
+      </details>
+
+      <details class="group border-b border-sage-200">
+        <summary class="flex justify-between items-center py-5 cursor-pointer list-none gap-6">
+          <span class="font-semibold text-ink">How many people are in a group?</span>
+          <span class="material-symbols-outlined faq-icon text-terra flex-shrink-0" style="font-size:22px">expand_more</span>
+        </summary>
+        <p class="pb-6 text-muted leading-relaxed">
+          We keep our groups intentionally small, typically between 4 and 6 women. This ensures you get personalized attention from the coach while still enjoying the energy of a supportive community.
+        </p>
+      </details>
+
+      <details class="group border-b border-sage-200">
+        <summary class="flex justify-between items-center py-5 cursor-pointer list-none gap-6">
+          <span class="font-semibold text-ink">Do I need to bring my own equipment?</span>
+          <span class="material-symbols-outlined faq-icon text-terra flex-shrink-0" style="font-size:22px">expand_more</span>
+        </summary>
+        <p class="pb-6 text-muted leading-relaxed">
+          Nope. Our studio is fully equipped with everything you need. Just bring a water bottle, comfortable workout clothes, and your sneakers.
+        </p>
+      </details>
+
+    </div>
+  </div>
 </section>
-<!-- Final CTA / Contact -->
-<section class="py-section-gap-mobile md:py-section-gap-desktop px-margin-mobile md:px-gutter bg-background" id="consultation">
-<div class="max-w-container-max mx-auto">
-<div class="grid md:grid-cols-2 gap-16 items-start">
-<div>
-<h2 class="font-headline-xl text-headline-xl text-primary mb-6">Ready for your first session?</h2>
-<p class="font-body-lg text-on-surface-variant mb-8">Fill out the form below or call us directly. We'd love to hear about your goals and show you why our members call Atagol their second home.</p>
-<div class="space-y-6">
-<div class="flex items-center gap-4">
-<div class="w-12 h-12 rounded-full bg-pale-sage flex items-center justify-center text-primary">
-<span class="material-symbols-outlined" data-icon="phone_in_talk">phone_in_talk</span>
-</div>
-<a class="font-headline-md text-primary hover:text-secondary transition-colors" href="tel:8312040761">(831) 204-0761</a>
-</div>
-<div class="flex items-center gap-4">
-<div class="w-12 h-12 rounded-full bg-pale-sage flex items-center justify-center text-primary">
-<span class="material-symbols-outlined" data-icon="mail">mail</span>
-</div>
-<span class="font-body-lg text-on-surface">hello@atagolfitness.com</span>
-</div>
-<div class="flex items-center gap-4">
-<div class="w-12 h-12 rounded-full bg-pale-sage flex items-center justify-center text-primary">
-<span class="material-symbols-outlined" data-icon="location_on">location_on</span>
-</div>
-<span class="font-body-lg text-on-surface">205 17th St, Pacific Grove, CA 93950</span>
-</div>
-</div>
-<!-- Map Placeholder -->
-<div class="mt-12 rounded-[24px] overflow-hidden h-64 bg-surface-container relative">
-<div class="absolute inset-0 flex items-center justify-center text-on-surface-variant/40">
-<span class="material-symbols-outlined text-6xl" data-icon="map">map</span>
-</div>
-<img alt="Map Location" class="w-full h-full object-cover mix-blend-multiply opacity-50" data-location="Pacific Grove" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9MusJ7cN7OA01xf3dj6Xi6nnaMxqGxSOkJ9ikXGBjZNEvf2knOAeXa1uNE0QQft3W9M_nQt1L-mROkfM5E3hmUM9O7KXHryS1iK4nXuLQDzYrntCciMGxcOjLp9U5y8Bgh_yT8Lh48wjEj3GbSk-fnsmoJ-VeAj6QeruFI8cfFkZjPQmjqmQe4btd764xM-8mlHFe_sa0u73hNcJCTtXJtsRmV4ckP_iNwp7Z249Nf4gkC14JNbbTT2nnQqsqeb3mSp_o5r3iZOWK"/>
-</div>
-</div>
-<div class="bg-pale-sage p-8 md:p-12 rounded-[48px] border border-white">
-<form class="space-y-6">
-<div class="grid grid-cols-2 gap-4">
-<div class="space-y-2">
-<label class="font-label-bold text-caption text-on-surface-variant">First name</label>
-<input class="w-full bg-white border-transparent rounded-xl p-4 focus:ring-secondary/20 focus:border-secondary transition-all" type="text"/>
-</div>
-<div class="space-y-2">
-<label class="font-label-bold text-caption text-on-surface-variant">Last name</label>
-<input class="w-full bg-white border-transparent rounded-xl p-4 focus:ring-secondary/20 focus:border-secondary transition-all" type="text"/>
-</div>
-</div>
-<div class="space-y-2">
-<label class="font-label-bold text-caption text-on-surface-variant">Phone number</label>
-<input class="w-full bg-white border-transparent rounded-xl p-4 focus:ring-secondary/20 focus:border-secondary transition-all" type="tel"/>
-</div>
-<div class="space-y-2">
-<label class="font-label-bold text-caption text-on-surface-variant">What brings you here?</label>
-<select class="w-full bg-white border-transparent rounded-xl p-4 focus:ring-secondary/20 focus:border-secondary transition-all appearance-none">
-<option>Building Strength</option>
-<option>Bone Health</option>
-<option>Weight Management</option>
-<option>Community &amp; Social</option>
-</select>
-</div>
-<div class="space-y-2">
-<label class="font-label-bold text-caption text-on-surface-variant">Message (Optional)</label>
-<textarea class="w-full bg-white border-transparent rounded-xl p-4 focus:ring-secondary/20 focus:border-secondary transition-all" rows="4"></textarea>
-</div>
-<button class="w-full bg-secondary text-white font-label-bold py-5 rounded-[16px] shadow-lg hover:brightness-90 active:scale-[0.98] transition-all" type="submit">Submit consultation request</button>
-</form>
-</div>
-</div>
-</div>
+
+
+<!-- ════════════════════════════════════════════════════════
+     CTA / CONTACT
+════════════════════════════════════════════════════════ -->
+<section class="py-24 md:py-32 px-6 md:px-10 bg-forest" id="consultation">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 md:gap-24 items-start">
+
+    <!-- Left -->
+    <div class="reveal">
+      <h2 class="font-display text-3xl md:text-[2.4rem] text-white mb-6 leading-tight">
+        Ready for your first session?
+      </h2>
+      <p class="text-sage-100/75 text-lg leading-relaxed mb-10">
+        Fill out the form or call us directly. We'd love to hear about your goals and show you why our members call Atagol their second home.
+      </p>
+
+      <div class="space-y-5 mb-12">
+        <a href="tel:8312040761" class="flex items-center gap-4 group">
+          <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-terra-bright flex-shrink-0 group-hover:bg-white/20 transition-colors">
+            <span class="material-symbols-outlined" style="font-size:18px">phone_in_talk</span>
+          </div>
+          <span class="font-display text-xl text-white font-bold group-hover:text-sage-100 transition-colors">(831) 204-0761</span>
+        </a>
+        <div class="flex items-center gap-4">
+          <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-terra-bright flex-shrink-0">
+            <span class="material-symbols-outlined" style="font-size:18px">mail</span>
+          </div>
+          <span class="text-sage-100/80">hello@atagolfitness.com</span>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-terra-bright flex-shrink-0">
+            <span class="material-symbols-outlined" style="font-size:18px">location_on</span>
+          </div>
+          <span class="text-sage-100/80">205 17th St, Pacific Grove, CA 93950</span>
+        </div>
+      </div>
+
+      <!-- Map -->
+      <div class="rounded overflow-hidden h-48 bg-forest-mid relative">
+        <img
+          alt="Map showing Atagol Fitness location at 205 17th St, Pacific Grove"
+          class="w-full h-full object-cover opacity-50"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9MusJ7cN7OA01xf3dj6Xi6nnaMxqGxSOkJ9ikXGBjZNEvf2knOAeXa1uNE0QQft3W9M_nQt1L-mROkfM5E3hmUM9O7KXHryS1iK4nXuLQDzYrntCciMGxcOjLp9U5y8Bgh_yT8Lh48wjEj3GbSk-fnsmoJ-VeAj6QeruFI8cfFkZjPQmjqmQe4btd764xM-8mlHFe_sa0u73hNcJCTtXJtsRmV4ckP_iNwp7Z249Nf4gkC14JNbbTT2nnQqsqeb3mSp_o5r3iZOWK"
+        />
+      </div>
+    </div>
+
+    <!-- Form -->
+    <div class="bg-white p-8 md:p-10 rounded reveal">
+      <h3 class="font-display text-xl text-ink mb-6">Book your free consultation</h3>
+      <form class="space-y-5">
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-bold text-subdued mb-1.5 uppercase tracking-wider">First name</label>
+            <input type="text" class="w-full border border-sage-200 rounded px-4 py-3 text-ink text-sm focus:border-terra focus:ring-1 focus:ring-terra/30 outline-none transition-colors" />
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-subdued mb-1.5 uppercase tracking-wider">Last name</label>
+            <input type="text" class="w-full border border-sage-200 rounded px-4 py-3 text-ink text-sm focus:border-terra focus:ring-1 focus:ring-terra/30 outline-none transition-colors" />
+          </div>
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-subdued mb-1.5 uppercase tracking-wider">Phone number</label>
+          <input type="tel" class="w-full border border-sage-200 rounded px-4 py-3 text-ink text-sm focus:border-terra focus:ring-1 focus:ring-terra/30 outline-none transition-colors" />
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-subdued mb-1.5 uppercase tracking-wider">What brings you here?</label>
+          <select class="w-full border border-sage-200 rounded px-4 py-3 text-ink text-sm focus:border-terra focus:ring-1 focus:ring-terra/30 outline-none transition-colors bg-white appearance-none">
+            <option>Building strength</option>
+            <option>Bone health</option>
+            <option>Weight management</option>
+            <option>Community &amp; social</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-subdued mb-1.5 uppercase tracking-wider">Message (optional)</label>
+          <textarea rows="4" class="w-full border border-sage-200 rounded px-4 py-3 text-ink text-sm focus:border-terra focus:ring-1 focus:ring-terra/30 outline-none transition-colors resize-none"></textarea>
+        </div>
+        <button type="submit" class="w-full bg-terra-bright text-white font-bold py-4 rounded hover:bg-terra transition-colors text-sm">
+          Submit consultation request
+        </button>
+      </form>
+    </div>
+
+  </div>
 </section>
+
 </main>
-<!-- Footer -->
-<footer class="bg-tertiary text-white w-full rounded-t-[48px] pt-16 pb-8 px-margin-mobile md:px-gutter">
-<div class="max-w-container-max mx-auto">
-<div class="flex flex-col md:flex-row justify-between gap-12 mb-16">
-<div class="space-y-6 max-w-sm">
-<div class="font-headline-md text-headline-md text-white">Atagol Fitness</div>
-<p class="font-body-md text-on-tertiary-container">Empowering women in Pacific Grove through intelligent movement and community-focused coaching.</p>
-<div class="flex gap-4">
-<a class="w-10 h-10 rounded-full border border-on-tertiary-container flex items-center justify-center hover:bg-white hover:text-tertiary transition-all" href="#">
-<span class="material-symbols-outlined text-sm" data-icon="facebook">social_leaderboard</span>
-</a>
-<a class="w-10 h-10 rounded-full border border-on-tertiary-container flex items-center justify-center hover:bg-white hover:text-tertiary transition-all" href="#">
-<span class="material-symbols-outlined text-sm" data-icon="camera">camera</span>
-</a>
-</div>
-</div>
-<div class="grid grid-cols-2 gap-12">
-<div class="space-y-4">
-<h4 class="font-label-bold text-secondary-container">Explore</h4>
-<ul class="space-y-2 font-body-md text-on-tertiary/80">
-<li><a class="hover:text-white transition-colors" href="#programs">Programs</a></li>
-<li><a class="hover:text-white transition-colors" href="#about">Our Story</a></li>
-<li><a class="hover:text-white transition-colors" href="#testimonials">Reviews</a></li>
-<li><a class="hover:text-white transition-colors" href="#">Schedule</a></li>
-</ul>
-</div>
-<div class="space-y-4">
-<h4 class="font-label-bold text-secondary-container">Legal</h4>
-<ul class="space-y-2 font-body-md text-on-tertiary/80">
-<li><a class="hover:text-white transition-colors" href="#">Privacy Policy</a></li>
-<li><a class="hover:text-white transition-colors" href="#">Terms of Service</a></li>
-<li><a class="hover:text-white transition-colors" href="#">Careers</a></li>
-<li><a class="hover:text-white transition-colors" href="#">Contact Us</a></li>
-</ul>
-</div>
-</div>
-</div>
-<div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-center">
-<p class="font-caption text-on-tertiary/60">© 2024 Atagol Fitness LLC. Empowering women in Pacific Grove.</p>
-<div class="flex gap-6 font-caption text-on-tertiary/60">
-<span>Handcrafted for the Central Coast</span>
-</div>
-</div>
-</div>
+
+
+<!-- ════════════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════════════ -->
+<footer class="bg-forest-mid text-white pt-16 pb-8 px-6 md:px-10">
+  <div class="max-w-6xl mx-auto">
+
+    <div class="flex flex-col md:flex-row justify-between gap-12 mb-12">
+      <div class="max-w-xs">
+        <p class="font-display text-xl font-bold mb-4">Atagol Fitness</p>
+        <p class="text-sage-100/65 text-sm leading-relaxed">
+          Empowering women in Pacific Grove through intelligent movement and community-focused coaching.
+        </p>
+        <div class="flex gap-3 mt-6">
+          <a href="#" aria-label="Facebook" class="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center hover:border-white/50 hover:bg-white/10 transition-all">
+            <span class="material-symbols-outlined text-sage-100/60" style="font-size:15px">social_leaderboard</span>
+          </a>
+          <a href="#" aria-label="Instagram" class="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center hover:border-white/50 hover:bg-white/10 transition-all">
+            <span class="material-symbols-outlined text-sage-100/60" style="font-size:15px">camera</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 gap-10">
+        <div>
+          <h4 class="text-xs font-bold tracking-widest uppercase text-sage-100/50 mb-4">Explore</h4>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="#programs"     class="text-sage-100/70 hover:text-white transition-colors">Programs</a></li>
+            <li><a href="#about"        class="text-sage-100/70 hover:text-white transition-colors">Our story</a></li>
+            <li><a href="#testimonials" class="text-sage-100/70 hover:text-white transition-colors">Reviews</a></li>
+            <li><a href="#"             class="text-sage-100/70 hover:text-white transition-colors">Schedule</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-xs font-bold tracking-widest uppercase text-sage-100/50 mb-4">Legal</h4>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="#" class="text-sage-100/70 hover:text-white transition-colors">Privacy policy</a></li>
+            <li><a href="#" class="text-sage-100/70 hover:text-white transition-colors">Terms of service</a></li>
+            <li><a href="#" class="text-sage-100/70 hover:text-white transition-colors">Careers</a></li>
+            <li><a href="#" class="text-sage-100/70 hover:text-white transition-colors">Contact us</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-3 text-center">
+      <p class="text-sage-100/35 text-xs">© 2024 Atagol Fitness LLC. Empowering women in Pacific Grove.</p>
+      <p class="text-sage-100/35 text-xs">Handcrafted for the Central Coast</p>
+    </div>
+
+  </div>
 </footer>
+
+
 <script>
-        // Simple Framer Motion like fade-in implementation
-        const observerOptions = {
-            threshold: 0.1
-        };
+  // ── Nav: transparent-on-forest → solid-on-light ──────────────
+  const header     = document.getElementById('site-header');
+  const navLogo    = document.getElementById('nav-logo');
+  const navLinks   = document.querySelectorAll('.nav-link');
+  const menuBtn    = document.getElementById('menu-btn');
+  const menuIcon   = document.getElementById('menu-icon');
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.remove('opacity-0', 'translate-y-10');
-                    entry.target.classList.add('opacity-100', 'translate-y-0');
-                }
-            });
-        }, observerOptions);
+  function updateNav() {
+    const scrolled = window.scrollY > 80;
+    if (scrolled) {
+      header.style.backgroundColor = '#ffffff';
+      header.style.boxShadow = '0 1px 0 0 #e4ede0';
+      navLogo.style.color = '#163328';
+      navLinks.forEach(l => { l.style.color = '#3d5242'; });
+      menuBtn.style.color = '#163328';
+    } else {
+      header.style.backgroundColor = 'transparent';
+      header.style.boxShadow = 'none';
+      navLogo.style.color = '#ffffff';
+      navLinks.forEach(l => { l.style.color = 'rgba(255,255,255,0.8)'; });
+      menuBtn.style.color = '#ffffff';
+    }
+  }
+  updateNav();
+  window.addEventListener('scroll', updateNav, { passive: true });
 
-        document.querySelectorAll('section > div').forEach(el => {
-            el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
-            observer.observe(el);
-        });
+  // ── Mobile menu toggle ────────────────────────────────────────
+  const mobileMenu = document.getElementById('mobile-menu');
+  let menuOpen = false;
 
-        // Sticky Nav logic
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 20) {
-                header.classList.add('shadow-md');
-            } else {
-                header.classList.remove('shadow-md');
-            }
-        });
-    </script>
-</body></html>
+  menuBtn.addEventListener('click', () => {
+    menuOpen = !menuOpen;
+    mobileMenu.classList.toggle('open', menuOpen);
+    menuIcon.textContent = menuOpen ? 'close' : 'menu';
+  });
+
+  mobileMenu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      menuOpen = false;
+      mobileMenu.classList.remove('open');
+      menuIcon.textContent = 'menu';
+    });
+  });
+
+  // ── Scroll reveals ────────────────────────────────────────────
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -32px 0px' });
+
+  document.querySelectorAll('.reveal, .stagger-group').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
